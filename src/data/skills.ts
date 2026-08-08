@@ -53,14 +53,6 @@ const classSkillsRawTyped = classSkillsRaw as Record<string, RawClassSkills>;
 
 export type SkillStatus = "class" | "crossClass" | "unavailable";
 
-export function skillStatusForClass(className: string, skillName: string): SkillStatus {
-  const entry = classSkillsRawTyped[className];
-  if (!entry) return "crossClass";
-  if (entry.classSkills.includes(skillName)) return "class";
-  if (entry.unavailable.includes(skillName)) return "unavailable";
-  return "crossClass";
-}
-
 /** A skill is usable at all for a build if at least one taken class allows it (not unavailable for that class). */
 export function classSkillSet(className: string): { classSkills: Set<string>; unavailable: Set<string> } {
   const entry = classSkillsRawTyped[className];

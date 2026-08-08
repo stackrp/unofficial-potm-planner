@@ -1,8 +1,6 @@
 import { ABILITY_KEYS, type AbilityKey, type AbilityScores } from "../types";
-import { pointBuyCost } from "../lib/calculator";
+import { POINT_BUY_BUDGET, pointBuyCost } from "../lib/calculator";
 import { getRace } from "../data/races";
-
-const POINT_BUY_BUDGET = 30;
 
 const LABELS: Record<AbilityKey, string> = {
   STR: "Strength",

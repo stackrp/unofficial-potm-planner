@@ -1,6 +1,5 @@
 import raw from "./raceCategories.json";
 
-// Sourced from the "Subrace and Template options" table on the PotM forum thread.
 // NWN's character creation only offers 7 base races; every subrace is a PW-applied
 // template layered on top of one of them. The first entry in each category is that
 // base race's own default Ravenloft subrace (no template applied). "Templates" are a
@@ -15,8 +14,6 @@ export const BASE_RACE_CATEGORIES = [
   "Half-Orcs",
   "Humans",
 ] as const;
-
-export type BaseRaceCategory = (typeof BASE_RACE_CATEGORIES)[number];
 
 type RaceCategoryMap = Record<string, string[]>;
 const CATEGORIES = raw as RaceCategoryMap;

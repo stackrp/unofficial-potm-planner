@@ -10,10 +10,15 @@ interface Props {
 
 const MAX_CHAR_LEVEL = 40;
 
+/** "-" for a level with no class chosen yet (and thus no snapshot), otherwise the stat itself. */
+function statCell(value: string | number | undefined): string | number {
+  return value ?? "-";
+}
+
 export function LevelPlanner({ levels, onChange, snapshots }: Props) {
   function addLevel() {
     if (levels.length >= MAX_CHAR_LEVEL) return;
-    const prevClass = levels[levels.length - 1]?.className ?? CLASS_NAMES[0];
+    const prevClass = levels[levels.length - 1]?.className ?? "";
     onChange([...levels, { level: levels.length + 1, className: prevClass }]);
   }
 
@@ -75,7 +80,7 @@ export function LevelPlanner({ levels, onChange, snapshots }: Props) {
           </thead>
           <tbody>
             {levels.map((entry, i) => {
-              const snap = snapshots[i];
+              const snap = entry.className ? snapshots[i] : undefined;
               const canIncreaseAbility = entry.level % 4 === 0;
               return (
                 <tr key={entry.level} className="border-b border-neutral-800">
@@ -86,6 +91,7 @@ export function LevelPlanner({ levels, onChange, snapshots }: Props) {
                       onChange={(e) => setClass(i, e.target.value)}
                       className="bg-neutral-950 border border-neutral-700 rounded px-1 py-0.5 text-neutral-100"
                     >
+                      <option value="">Choose class...</option>
                       {CLASS_NAMES.map((name) => (
                         <option key={name} value={name}>
                           {name}
@@ -113,13 +119,13 @@ export function LevelPlanner({ levels, onChange, snapshots }: Props) {
                       <span className="text-neutral-600">—</span>
                     )}
                   </td>
-                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{snap?.hp ?? "-"}</td>
-                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{snap ? `+${snap.bab}` : "-"}</td>
-                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{snap?.skillPointsGained ?? "-"}</td>
-                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{snap?.featsGained ?? "-"}</td>
-                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{snap ? `+${snap.fort}` : "-"}</td>
-                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{snap ? `+${snap.ref}` : "-"}</td>
-                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{snap ? `+${snap.will}` : "-"}</td>
+                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{statCell(snap?.hp)}</td>
+                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{statCell(snap && `+${snap.bab}`)}</td>
+                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{statCell(snap?.skillPointsGained)}</td>
+                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{statCell(snap?.featsGained)}</td>
+                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{statCell(snap && `+${snap.fort}`)}</td>
+                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{statCell(snap && `+${snap.ref}`)}</td>
+                  <td className="py-1 pr-2 text-right font-mono text-neutral-300">{statCell(snap && `+${snap.will}`)}</td>
                 </tr>
               );
             })}

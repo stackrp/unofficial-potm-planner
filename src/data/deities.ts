@@ -24,11 +24,10 @@ interface RawPantheon {
 
 const RAW_PANTHEONS = raw as RawPantheon[];
 
-// Sourced from the PotM forum's "Religion Resource Thread" (topic 18979) — the Ravenloft
-// native pantheon plus every Outlander D&D-setting and Gothic Earth mythological pantheon
-// it lists. Flattened to one deity list; `pantheon` traces each entry back to its source
-// table, and `subgroup` preserves finer groupings some pantheons use internally
-// (e.g. "The Gods of Light" within Dragonlance Deities).
+// The Ravenloft native pantheon plus every Outlander D&D-setting and Gothic Earth
+// mythological pantheon recognized on PotM. Flattened to one deity list; `pantheon`
+// traces each entry back to its source table, and `subgroup` preserves finer groupings
+// some pantheons use internally (e.g. "The Gods of Light" within Dragonlance Deities).
 export const DEITIES: DeityDef[] = RAW_PANTHEONS.flatMap((p) =>
   p.deities.map((d) => ({
     ...d,
@@ -36,18 +35,6 @@ export const DEITIES: DeityDef[] = RAW_PANTHEONS.flatMap((p) =>
     weaponAlternatives: splitWeaponAlternatives(d.favoredWeapon ?? ""),
   }))
 );
-
-export const PANTHEON_NAMES: string[] = RAW_PANTHEONS.map((p) => p.pantheon);
-
-export function deitiesByPantheon(): Map<string, DeityDef[]> {
-  const map = new Map<string, DeityDef[]>();
-  for (const d of DEITIES) {
-    const list = map.get(d.pantheon) ?? [];
-    list.push(d);
-    map.set(d.pantheon, list);
-  }
-  return map;
-}
 
 const DEITIES_BY_KEY = new Map(DEITIES.map((d) => [`${d.pantheon}::${d.name}`, d]));
 

@@ -3,8 +3,11 @@ import { AbilityScorePanel } from "./components/AbilityScorePanel";
 import { RacePicker } from "./components/RacePicker";
 import { BackgroundPicker } from "./components/BackgroundPicker";
 import { LevelPlanner } from "./components/LevelPlanner";
+import { ClassAbilities } from "./components/ClassAbilities";
+import { PrestigeRequirements } from "./components/PrestigeRequirements";
 import { DeityPicker } from "./components/DeityPicker";
 import { FeatTracker } from "./components/FeatTracker";
+import { SkillPlanner } from "./components/SkillPlanner";
 import { SkillList } from "./components/SkillList";
 import { SummaryPanel } from "./components/SummaryPanel";
 import { calculateBuild, finalAbilityScores, abilityModifier } from "./lib/calculator";
@@ -63,6 +66,13 @@ function App() {
           onChange={(backgrounds) => setBuild((prev) => ({ ...prev, backgrounds }))}
         />
 
+        <DeityPicker
+          deity={build.deity}
+          onChange={(deity) => setBuild((prev) => ({ ...prev, deity }))}
+          alignment={build.alignment}
+          onAlignmentChange={(alignment) => setBuild((prev) => ({ ...prev, alignment }))}
+        />
+
         <AbilityScorePanel
           scores={build.baseAbilityScores}
           onChange={(scores) => setBuild((prev) => ({ ...prev, baseAbilityScores: scores }))}
@@ -79,12 +89,9 @@ function App() {
           snapshots={calculated.perLevel}
         />
 
-        <DeityPicker
-          deity={build.deity}
-          onChange={(deity) => setBuild((prev) => ({ ...prev, deity }))}
-          alignment={build.alignment}
-          onAlignmentChange={(alignment) => setBuild((prev) => ({ ...prev, alignment }))}
-        />
+        <ClassAbilities levels={build.levels} />
+
+        <PrestigeRequirements build={build} perLevel={calculated.perLevel} />
 
         <FeatTracker
           feats={build.feats}
@@ -93,11 +100,16 @@ function App() {
           maxLevel={build.levels.length}
         />
 
-        <SkillList
-          allocations={build.skills}
+        <SkillPlanner
+          build={build}
           onChange={(skills) => setBuild((prev) => ({ ...prev, skills }))}
+          perLevel={calculated.perLevel}
+        />
+
+        <SkillList
           skills={calculated.skills}
-          skillPointsAvailable={calculated.totals.skillPoints}
+          totalEarned={calculated.totals.skillPoints}
+          totalBanked={calculated.totals.skillPointsBanked}
         />
       </main>
     </div>

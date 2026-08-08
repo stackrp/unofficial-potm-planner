@@ -339,7 +339,7 @@
  },
  {
   "name": "Mists",
-  "specialAbility": "Shield of Ezra: The form of protection granted is determined by the cleric's alignment.\n<nowiki> </nowiki> -Lawful Neutral: Damage reduction +1/15 versus all physical.\u00a0\n<nowiki> </nowiki> -Lawful Good: Damage reduction +5/25 lasting until 50 damage has been absorbed.\n<nowiki> </nowiki> -True Neutral: +5 bonus to all Fortitude and Reflex saves\n<nowiki> </nowiki> -Lawful Evil: +10 bonus to Will saves versus mind-affecting spells and effects.\n\nThis effect lasts for 1 round per cleric level.",
+  "specialAbility": "Shield of Ezra: The form of protection granted is determined by the cleric's alignment.\n -Lawful Neutral: Damage reduction +1/15 versus all physical.\u00a0\n -Lawful Good: Damage reduction +5/25 lasting until 50 damage has been absorbed.\n -True Neutral: +5 bonus to all Fortitude and Reflex saves\n -Lawful Evil: +10 bonus to Will saves versus mind-affecting spells and effects.\n\nThis effect lasts for 1 round per cleric level.",
   "bonusSpells": [
    {
     "level": 2,

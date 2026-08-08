@@ -1,10 +1,3 @@
-import raw from "./favoredWeapons.json";
-
-// Derived from every distinct favoredWeapon value across the deity dataset (deities.json),
-// splitting "X or Y" / "X, Y" alternates into individual options. Finite because the set of
-// gods is finite — see data/deities.ts.
-export const FAVORED_WEAPONS: string[] = raw as string[];
-
 // A couple of source entries abbreviate the second alternate's word stem, e.g.
 // "Great or Bastard Sword" meaning "Greatsword or Bastard Sword" — naive splitting on
 // " or " would otherwise produce a bare "Great" fragment.

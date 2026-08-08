@@ -1,0 +1,2443 @@
+{
+  "Archivist": [
+    {
+      "level": 1,
+      "title": "Dark Knowledge (3x/day)",
+      "description": "Grants allies benefits against the creatures they face."
+    },
+    {
+      "level": 1,
+      "title": "Dark Knowledge (Tactics)",
+      "description": "Grants allies an attack bonus against the target's racial type."
+    },
+    {
+      "level": 2,
+      "title": "Lore Mastery I",
+      "description": "+2 bonus to Lore and Use Magic Device."
+    },
+    {
+      "level": 3,
+      "title": "Dark Knowledge (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 4,
+      "title": "Still Mind",
+      "description": "+2 bonus on saving throws vs. mind effects."
+    },
+    {
+      "level": 5,
+      "title": "Dark Knowledge (Puissance)",
+      "description": "Grants allies a saving throw bonus against the target's racial type."
+    },
+    {
+      "level": 6,
+      "title": "Dark Knowledge (5x/day)",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Lore Mastery II",
+      "description": "+3 bonus to Lore and Use Magic Device."
+    },
+    {
+      "level": 8,
+      "title": "Dark Knowledge (Foe)",
+      "description": "Grants allies a damage bonus against the target's racial type."
+    },
+    {
+      "level": 9,
+      "title": "Dark Knowledge (6x/day)",
+      "description": ""
+    },
+    {
+      "level": 11,
+      "title": "Dark Knowledge (Dread Secret)",
+      "description": "Target creature is stunned."
+    },
+    {
+      "level": 12,
+      "title": "Dark Knowledge (7x/day)",
+      "description": ""
+    },
+    {
+      "level": 13,
+      "title": "Lore Mastery III",
+      "description": "+4 bonus to Lore and Use Magic Device."
+    },
+    {
+      "level": 14,
+      "title": "Dark Knowledge (Foreknowledge)",
+      "description": "Grants allies an AC bonus against the target's racial type."
+    },
+    {
+      "level": 15,
+      "title": "Dark Knowledge (8x/day)",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "Lore Mastery IV",
+      "description": "+5 bonus to Lore and Use Magic Device."
+    },
+    {
+      "level": 18,
+      "title": "Dark Knowledge (9x/day)",
+      "description": ""
+    }
+  ],
+  "Barbarian": [
+    {
+      "level": 1,
+      "title": "Barbarian Fast Movement",
+      "description": "+10% bonus to movement speed."
+    },
+    {
+      "level": 1,
+      "title": "Barbarian Rage (1x/day)",
+      "description": "Gain +4 Str, +4 Con, +2 Will, -2 AC."
+    },
+    {
+      "level": 1,
+      "title": "Illiteracy",
+      "description": "Barbarians who are not multiclassed do not know how to read or write."
+    },
+    {
+      "level": 2,
+      "title": "Uncanny Dodge I",
+      "description": "Retain Dexterity bonus to AC, even when flat-footed."
+    },
+    {
+      "level": 3,
+      "title": "Uncanny Dodge II",
+      "description": "+1 bonus on Reflex saves vs. traps. Grants immunity to sneak attacks from a flanking attacker unless the attacker has at least four more combined class levels of rogue, assassin, barbarian, and shadowdancer than the defender."
+    },
+    {
+      "level": 4,
+      "title": "Barbarian Rage (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Uncanny Dodge III",
+      "description": "+2 bonus on Reflex saves vs. traps."
+    },
+    {
+      "level": 7,
+      "title": "Damage Reduction I",
+      "description": "Ignore 1 physical damage per hit."
+    },
+    {
+      "level": 8,
+      "title": "Barbarian Rage (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Uncanny Dodge IV",
+      "description": "+3 bonus on Reflex saves vs. traps."
+    },
+    {
+      "level": 10,
+      "title": "Damage Reduction II",
+      "description": "Ignore 2 physical damage per hit."
+    },
+    {
+      "level": 11,
+      "title": "Greater Rage",
+      "description": "Gain +6 Str, +6 Con, +3 Will, -2 AC."
+    },
+    {
+      "level": 12,
+      "title": "Greater Rage (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 12,
+      "title": "Uncanny Dodge V",
+      "description": "+4 bonus on Reflex saves vs. traps."
+    },
+    {
+      "level": 13,
+      "title": "Damage Reduction III",
+      "description": "Ignore 3 physical damage per hit."
+    },
+    {
+      "level": 14,
+      "title": "Indomitable Will",
+      "description": "Gain an additional +4 to Will saves vs. mind effects during rage."
+    },
+    {
+      "level": 15,
+      "title": "Uncanny Dodge VI",
+      "description": "+5 bonus on Reflex saves vs traps."
+    },
+    {
+      "level": 16,
+      "title": "Damage Reduction IV",
+      "description": "Ignore 4 physical damage per hit."
+    },
+    {
+      "level": 16,
+      "title": "Greater Rage (5x/day)",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "Tireless Rage",
+      "description": "No longer become fatigued when rage ends."
+    },
+    {
+      "level": 19,
+      "title": "Damage Reduction V",
+      "description": "Ignore 5 physical damage per hit."
+    },
+    {
+      "level": 20,
+      "title": "Mighty Rage (6x/day)",
+      "description": "Gain +8 Str, +8 Con, +4 Will, -2 AC."
+    }
+  ],
+  "Bard": [
+    {
+      "level": 1,
+      "title": "Bardic Knowledge",
+      "description": "+1 skill bonus to Lore for every Bard level."
+    },
+    {
+      "level": 1,
+      "title": "Bard Song",
+      "description": "Provides bonuses to you and your allies."
+    }
+  ],
+  "Beguiler": [
+    {
+      "level": 1,
+      "title": "Armored Mage",
+      "description": "No spell failure from light armor."
+    },
+    {
+      "level": 2,
+      "title": "Cloaked Casting I",
+      "description": "+1 spell DC when target is flat-footed."
+    },
+    {
+      "level": 5,
+      "title": "Silent Spell",
+      "description": "Gain Silent Spell as a bonus feat."
+    },
+    {
+      "level": 8,
+      "title": "Cloaked Casting II",
+      "description": "+2 bonus vs spell resistance when target is flat-footed."
+    },
+    {
+      "level": 10,
+      "title": "Still Spell",
+      "description": "Gain Still Spell as a bonus feat."
+    },
+    {
+      "level": 14,
+      "title": "Cloaked Casting III",
+      "description": "+2 spell DC when target is flat-footed."
+    },
+    {
+      "level": 20,
+      "title": "Cloaked Casting IV",
+      "description": "Automatically overcome spell resistance when target is flat-footed."
+    }
+  ],
+  "Cleric": [
+    {
+      "level": 1,
+      "title": "Turn Undead",
+      "description": "Cause undead to flee in terror."
+    }
+  ],
+  "Druid": [
+    {
+      "level": 1,
+      "title": "Animal Companion",
+      "description": "Summon an animal ally."
+    },
+    {
+      "level": 1,
+      "title": "Nature Sense",
+      "description": "+2 attack bonus when fighting in wilderness areas."
+    },
+    {
+      "level": 2,
+      "title": "Woodland Stride",
+      "description": "Immunity to Grease, Web, and Entangle spells."
+    },
+    {
+      "level": 3,
+      "title": "Trackless Step",
+      "description": "+4 skill bonus to Hide and Move Silently in wilderness areas."
+    },
+    {
+      "level": 4,
+      "title": "Resist Nature's Lure",
+      "description": "+2 bonus on saving throws vs. fear."
+    },
+    {
+      "level": 5,
+      "title": "Wild Shape (1x/day)",
+      "description": "Polymorph into an animal."
+    },
+    {
+      "level": 5,
+      "title": "Wild Shape (non-aggressive)",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Wild Shape (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Wild Shape (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Venom Immunity",
+      "description": "Immune to poison."
+    },
+    {
+      "level": 10,
+      "title": "Wild Shape (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 12,
+      "title": "Dire Wild Shape",
+      "description": "Polymorph into a dire animal."
+    },
+    {
+      "level": 14,
+      "title": "Wild Shape (5x/day)",
+      "description": ""
+    },
+    {
+      "level": 16,
+      "title": "Elemental Shape (1x/day)",
+      "description": "Polymorph into an elemental."
+    },
+    {
+      "level": 17,
+      "title": "Elemental Shape (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 18,
+      "title": "Wild Shape (6x/day)",
+      "description": ""
+    },
+    {
+      "level": 19,
+      "title": "Elemental Shape (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 20,
+      "title": "Elder Elemental Shape",
+      "description": "Polymorph into an elder elemental."
+    }
+  ],
+  "Duskblade": [
+    {
+      "level": 1,
+      "title": "Arcane Attunement (3x/day + Int)",
+      "description": "Cast amanuensis, daze, flare, light, and open/close as spell-like abilities."
+    },
+    {
+      "level": 1,
+      "title": "Armored Mage",
+      "description": "No spell failure from light armor and small shields."
+    },
+    {
+      "level": 2,
+      "title": "Combat Casting",
+      "description": ""
+    },
+    {
+      "level": 3,
+      "title": "Arcane Channeling",
+      "description": "Deliver a melee touch spell through a melee attack."
+    },
+    {
+      "level": 4,
+      "title": "Armored Mage",
+      "description": "No spell failure from medium armor."
+    },
+    {
+      "level": 5,
+      "title": "Quick cast (1x/day)",
+      "description": "Quicken one spell per day."
+    },
+    {
+      "level": 6,
+      "title": "Spell Power + 2",
+      "description": "Bonus to overcome spell resistance after injuring an opponent with a melee attack."
+    },
+    {
+      "level": 7,
+      "title": "Armored Mage",
+      "description": "No spell failure from large shields."
+    },
+    {
+      "level": 10,
+      "title": "Quick cast (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 11,
+      "title": "Spell Power + 3",
+      "description": ""
+    },
+    {
+      "level": 13,
+      "title": "Arcane Channeling",
+      "description": "Deliver a melee touch spell through all melee attacks in a round."
+    },
+    {
+      "level": 15,
+      "title": "Quick cast (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 16,
+      "title": "Spell Power + 4",
+      "description": ""
+    },
+    {
+      "level": 18,
+      "title": "Spell Power + 5",
+      "description": ""
+    },
+    {
+      "level": 20,
+      "title": "Quick cast (4x/day)",
+      "description": ""
+    }
+  ],
+  "Favored Soul": [
+    {
+      "level": 2,
+      "title": "Favored Weapon",
+      "description": "Gain weapon proficiency for the deity's favored weapon."
+    },
+    {
+      "level": 3,
+      "title": "Deity's Weapon Focus",
+      "description": "Weapon Focus in deity's favored weapon."
+    },
+    {
+      "level": 5,
+      "title": "Energy Resistance",
+      "description": "Gain 10 damage resistance vs 1 type of energy."
+    },
+    {
+      "level": 10,
+      "title": "Energy Resistance",
+      "description": "Gain 10 damage resistance vs 2 types of energy."
+    },
+    {
+      "level": 12,
+      "title": "Deity's Weapon Specialization",
+      "description": "Weapon Specialization in deity's favored weapon."
+    },
+    {
+      "level": 15,
+      "title": "Energy Resistance",
+      "description": "Gain 10 damage resistance vs 3 types of energy."
+    },
+    {
+      "level": 17,
+      "title": "Stalwart Soul",
+      "description": "Gain immunity to fear."
+    },
+    {
+      "level": 20,
+      "title": "Damage Reduction",
+      "description": "Gain 10/+3 damage reduction."
+    }
+  ],
+  "Fighter": [],
+  "Healer": [
+    {
+      "level": 1,
+      "title": "Healing Hands",
+      "description": "Add Wisdom modifier to hit point damage healed from healing spells."
+    },
+    {
+      "level": 2,
+      "title": "Skill Focus (Heal)",
+      "description": ""
+    },
+    {
+      "level": 3,
+      "title": "Cleanse Paralysis (1x/day)",
+      "description": "Cast Remove Paralysis as per the spell."
+    },
+    {
+      "level": 4,
+      "title": "Cleanse Disease (1x/day)",
+      "description": "Cast Remove Disease as per the spell."
+    },
+    {
+      "level": 5,
+      "title": "Cleanse Fear (1x/day)",
+      "description": "Cast Remove Fear as per the spell."
+    },
+    {
+      "level": 5,
+      "title": "Cleanse Paralysis (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Cleanse Poison (1x/day)",
+      "description": "Cast Neutralize Poison as per the spell."
+    },
+    {
+      "level": 6,
+      "title": "Cleanse Disease (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Combat Casting",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Cleanse Fear (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Cleanse Paralysis (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Cleanse Poison (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Cleanse Disease (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Cleanse Blindness (1x/day)",
+      "description": "Cast Remove Blindness/Deafness as per the spell."
+    },
+    {
+      "level": 9,
+      "title": "Cleanse Fear (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Cleanse Paralysis (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Cleanse Petrification (1x/day)",
+      "description": "Cast Stone to Flesh as per the spell."
+    },
+    {
+      "level": 10,
+      "title": "Cleanse Poison (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Cleanse Disease (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 11,
+      "title": "New Breath (1x/day)",
+      "description": "Remove exhaustion from a single target."
+    },
+    {
+      "level": 11,
+      "title": "Cleanse Blindness (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 11,
+      "title": "Cleanse Fear (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 11,
+      "title": "Cleanse Paralysis (unlimited)",
+      "description": ""
+    },
+    {
+      "level": 12,
+      "title": "Cleanse Petrification (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 12,
+      "title": "Cleanse Poison (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 12,
+      "title": "Cleanse Disease (unlimited)",
+      "description": ""
+    },
+    {
+      "level": 13,
+      "title": "Cleanse Spirit (1x/day)",
+      "description": "Cast Greater Restoration as per the spell."
+    },
+    {
+      "level": 13,
+      "title": "New Breath (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 13,
+      "title": "Cleanse Blindness (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 13,
+      "title": "Cleanse Fear (unlimited)",
+      "description": ""
+    },
+    {
+      "level": 14,
+      "title": "Cleanse Petrification (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 14,
+      "title": "Cleanse Poison (unlimited)",
+      "description": ""
+    },
+    {
+      "level": 15,
+      "title": "Improved Combat Casting",
+      "description": "No attacks of opportunities when casting in combat."
+    },
+    {
+      "level": 15,
+      "title": "New Limb (1x/day)",
+      "description": "Cast Regenerate as per the spell."
+    },
+    {
+      "level": 15,
+      "title": "Cleanse Spirit (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 15,
+      "title": "New Breath (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 15,
+      "title": "Cleanse Blindness (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 16,
+      "title": "Cleanse Petrification (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "New Limb (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "Cleanse Spirit (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "New Breath (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "Cleanse Blindness (unlimited)",
+      "description": ""
+    },
+    {
+      "level": 18,
+      "title": "Cleanse Petrification (unlimited)",
+      "description": ""
+    },
+    {
+      "level": 19,
+      "title": "New Limb (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 19,
+      "title": "Cleanse Spirit (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 19,
+      "title": "New Breath (unlimited)",
+      "description": ""
+    },
+    {
+      "level": 20,
+      "title": "New Life (1x/day)",
+      "description": "Cast Resurrection as per the spell."
+    }
+  ],
+  "Hexblade": [
+    {
+      "level": 1,
+      "title": "Hexblade's Curse (1x/day + Cha)",
+      "description": "Target takes a -2 penalty on attacks, saves, armor class, skills, and damage rolls."
+    },
+    {
+      "level": 2,
+      "title": "Arcane Resistance",
+      "description": "Add Charisma modifier to saving throws versus spells and spell-like effects."
+    },
+    {
+      "level": 3,
+      "title": "Mettle",
+      "description": "No partial effects when successfully saving against Fortitude and Will saving throws."
+    },
+    {
+      "level": 4,
+      "title": "Summon Familiar",
+      "description": "Summon a magical creature as an ally."
+    },
+    {
+      "level": 5,
+      "title": "Hexblade's Curse (2x/day + Cha)",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Greater Hexblade's Curse",
+      "description": "Penalty from hexblade's curse increases to -4."
+    },
+    {
+      "level": 9,
+      "title": "Hexblade's Curse (3x/day + Cha)",
+      "description": ""
+    },
+    {
+      "level": 12,
+      "title": "Aura of Unluck (1x/day)",
+      "description": "50% miss chance to melee or ranged attack against the hexblade."
+    },
+    {
+      "level": 13,
+      "title": "Hexblade's Curse (4x/day + Cha)",
+      "description": ""
+    },
+    {
+      "level": 16,
+      "title": "Aura of Unluck (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "Hexblade's Curse (5x/day + Cha)",
+      "description": ""
+    },
+    {
+      "level": 19,
+      "title": "Dire Hexblade's Curse",
+      "description": "Penalty from hexblade's curse increases to -6."
+    },
+    {
+      "level": 20,
+      "title": "Aura of Unluck (3x/day)",
+      "description": ""
+    }
+  ],
+  "Monk": [
+    {
+      "level": 1,
+      "title": "Cleave",
+      "description": "Make a free attack on a nearby enemy when you land a killing blow."
+    },
+    {
+      "level": 1,
+      "title": "Evasion",
+      "description": "A successful Reflex save for half damage results in no damage."
+    },
+    {
+      "level": 1,
+      "title": "Flurry of Blows",
+      "description": "Gain an extra attack per round when fighting unarmed or with monk weapons."
+    },
+    {
+      "level": 1,
+      "title": "Improved Unarmed Strike",
+      "description": "Unarmed attacks no longer incur attacks of opportunity."
+    },
+    {
+      "level": 1,
+      "title": "Monk AC Bonus",
+      "description": "Add Wisdom Modifier to AC."
+    },
+    {
+      "level": 1,
+      "title": "Stunning Fist",
+      "description": "Special attack that can stun an opponent."
+    },
+    {
+      "level": 2,
+      "title": "Deflect Arrows",
+      "description": "Reflex save to parry incoming projectiles."
+    },
+    {
+      "level": 2,
+      "title": "Fiery Fist",
+      "description": "Can use one Stunning Fist use to deal extra fire damage."
+    },
+    {
+      "level": 3,
+      "title": "Monk Speed",
+      "description": "Movement speed increases by 10% for every 3 levels."
+    },
+    {
+      "level": 3,
+      "title": "Still Mind",
+      "description": "+2 bonus on saving throws vs. mind effects."
+    },
+    {
+      "level": 5,
+      "title": "Purity of Body",
+      "description": "Immune to disease."
+    },
+    {
+      "level": 6,
+      "title": "Improved Knockdown",
+      "description": "Knockdown attempts are made as if made by a larger creature."
+    },
+    {
+      "level": 7,
+      "title": "Wholeness of Body",
+      "description": "Can heal self of damage equal to two times class level."
+    },
+    {
+      "level": 8,
+      "title": "Fiery Ki Defense",
+      "description": "Can use one Stunning Fist use to cover the body in flames, causing fire damage to melee attackers."
+    },
+    {
+      "level": 8,
+      "title": "Ki Blast",
+      "description": "Can channel and throw an orb of ki energy at a target."
+    },
+    {
+      "level": 9,
+      "title": "Improved Evasion",
+      "description": "Take half damage even on a failed Reflex save."
+    },
+    {
+      "level": 10,
+      "title": "Ki Strike +1",
+      "description": "Unarmed strikes act as +1 weapons for the purposes of bypassing damage reduction only."
+    },
+    {
+      "level": 11,
+      "title": "Diamond Body",
+      "description": "Immune to poison."
+    },
+    {
+      "level": 12,
+      "title": "Diamond Soul",
+      "description": "Gain spell resistance equal to class level + 10."
+    },
+    {
+      "level": 13,
+      "title": "Ki Strike +2",
+      "description": ""
+    },
+    {
+      "level": 15,
+      "title": "Quivering Palm",
+      "description": "Special attack that can instantly slay an opponent."
+    },
+    {
+      "level": 16,
+      "title": "Ki Strike +3",
+      "description": ""
+    },
+    {
+      "level": 18,
+      "title": "Empty Body",
+      "description": "Assume an ethereal state, as though using the spell Ethereal Jaunt."
+    },
+    {
+      "level": 20,
+      "title": "Perfect Self",
+      "description": "Immune to mind-affecting spells, and gain 20/+1 damage reduction. Racial type changes to Outsider."
+    }
+  ],
+  "Paladin": [
+    {
+      "level": 1,
+      "title": "Divine Grace",
+      "description": "Add Charisma modifier to all saving throws."
+    },
+    {
+      "level": 1,
+      "title": "Divine Health",
+      "description": "Immune to disease."
+    },
+    {
+      "level": 1,
+      "title": "Lay on Hands",
+      "description": "Can heal damage equal to class level multiplied by Charisma modifier."
+    },
+    {
+      "level": 2,
+      "title": "Aura of Courage",
+      "description": "Immune to magical fear. At will, grant nearby allies a bonus on saving throws vs. fear."
+    },
+    {
+      "level": 2,
+      "title": "Courage",
+      "description": "+4 bonus on saving throws vs. fear."
+    },
+    {
+      "level": 2,
+      "title": "Detect Evil",
+      "description": "Detect chaotic auras."
+    },
+    {
+      "level": 2,
+      "title": "Smite Evil",
+      "description": "A special attack that grants bonus attack and damage against evil creatures."
+    },
+    {
+      "level": 3,
+      "title": "Remove Disease",
+      "description": "Cure disease and ability loss once per day."
+    },
+    {
+      "level": 3,
+      "title": "Turn Undead",
+      "description": "Cause undead to flee in terror."
+    }
+  ],
+  "Ranger": [
+    {
+      "level": 1,
+      "title": "Trackless Step",
+      "description": "+4 skill bonus to Hide and Move Silently in wilderness areas."
+    },
+    {
+      "level": 1,
+      "title": "Dual-Wield",
+      "description": "Gain the benefits of Ambidexterity and Two-Weapon Fighting when wearing light armor."
+    },
+    {
+      "level": 3,
+      "title": "Endurance",
+      "description": "Better saves against environmental hazards and exhaustion."
+    },
+    {
+      "level": 6,
+      "title": "Animal Companion",
+      "description": "Summon an animal ally."
+    },
+    {
+      "level": 6,
+      "title": "Improved Two-Weapon Fighting",
+      "description": "Gain an extra attack per round when dual-wielding."
+    },
+    {
+      "level": 8,
+      "title": "Keen Sense",
+      "description": "Detect Mode becomes permanently activated with no movement penalties."
+    },
+    {
+      "level": 9,
+      "title": "Evasion",
+      "description": "A successful Reflex save for half damage results in no damage."
+    },
+    {
+      "level": 17,
+      "title": "Hide in Plain Sight",
+      "description": "In wilderness areas, rangers can hide even while being observed."
+    }
+  ],
+  "Rogue": [
+    {
+      "level": 1,
+      "title": "Sneak Attack 1d6",
+      "description": "Deal bonus damage when flanking."
+    },
+    {
+      "level": 2,
+      "title": "Evasion",
+      "description": "A successful Reflex save for half damage results in no damage."
+    },
+    {
+      "level": 3,
+      "title": "Sneak Attack 2d6",
+      "description": ""
+    },
+    {
+      "level": 3,
+      "title": "Uncanny Dodge I",
+      "description": "Retain Dexterity bonus to AC, even when flat-footed."
+    },
+    {
+      "level": 5,
+      "title": "Sneak Attack 3d6",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Uncanny Dodge II",
+      "description": "+1 bonus on Reflex saves vs. traps. Grants immunity to sneak attacks from a flanking attacker unless the attacker has at least four more combined class levels of rogue, assassin, barbarian, and shadowdancer than the defender."
+    },
+    {
+      "level": 7,
+      "title": "Sneak Attack 4d6",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Sneak Attack 5d6",
+      "description": ""
+    },
+    {
+      "level": 11,
+      "title": "Sneak Attack 6d6",
+      "description": ""
+    },
+    {
+      "level": 11,
+      "title": "Uncanny Dodge III",
+      "description": "+2 bonus on Reflex saves vs. traps."
+    },
+    {
+      "level": 13,
+      "title": "Sneak Attack 7d6",
+      "description": ""
+    },
+    {
+      "level": 14,
+      "title": "Uncanny Dodge IV",
+      "description": "+3 bonus on Reflex saves vs. traps."
+    },
+    {
+      "level": 15,
+      "title": "Sneak Attack 8d6",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "Sneak Attack 9d6",
+      "description": ""
+    },
+    {
+      "level": 17,
+      "title": "Uncanny Dodge V",
+      "description": "+4 bonus on Reflex saves vs. traps."
+    },
+    {
+      "level": 19,
+      "title": "Sneak Attack 10d6",
+      "description": ""
+    },
+    {
+      "level": 20,
+      "title": "Uncanny Dodge VI",
+      "description": "+5 bonus on Reflex saves vs. traps."
+    }
+  ],
+  "Shaman": [
+    {
+      "level": 1,
+      "title": "Animal Companion",
+      "description": "Summon an animal ally."
+    },
+    {
+      "level": 1,
+      "title": "Improved Unarmed Strike",
+      "description": "Unarmed attacks no longer incur attacks of opportunity."
+    },
+    {
+      "level": 2,
+      "title": "Spirit Sight",
+      "description": "Cast See Invisibility (self only) 3x/day."
+    },
+    {
+      "level": 3,
+      "title": "Turn Undead",
+      "description": "Cause undead to flee in terror."
+    },
+    {
+      "level": 5,
+      "title": "Divine Grace (Spirits' Favor)",
+      "description": "Add Charisma modifier to all saving throws."
+    }
+  ],
+  "Sorcerer": [
+    {
+      "level": 1,
+      "title": "Summon Familiar",
+      "description": "Summon a magical creature as an ally."
+    }
+  ],
+  "Voodan": [
+    {
+      "level": 1,
+      "title": "Turn Spirit",
+      "description": "Cause one creature type (Animals, Elementals, Fey, Outsider, Undead) to flee in terror."
+    },
+    {
+      "level": 1,
+      "title": "Bestow Gris-Gris",
+      "description": "Give a spell as an item to another character."
+    },
+    {
+      "level": 4,
+      "title": "Mount of the Loa (1x/day)",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Turn Spirit",
+      "description": "Cause two creature types (Animals, Elementals, Fey, Outsider, Undead) to flee in terror."
+    },
+    {
+      "level": 10,
+      "title": "Mount of the Loa (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 16,
+      "title": "Mount of the Loa (3x/day)",
+      "description": ""
+    }
+  ],
+  "Warlock": [
+    {
+      "level": 1,
+      "title": "Eldritch Blast",
+      "description": "At will, use eldritch power to deal magical damage."
+    },
+    {
+      "level": 3,
+      "title": "Damage Reduction I",
+      "description": "Gain 1/+1 damage reduction."
+    },
+    {
+      "level": 7,
+      "title": "Damage Reduction II",
+      "description": "Gain 2/+1 damage reduction."
+    },
+    {
+      "level": 8,
+      "title": "Fiendish Resilience I (1x/day)",
+      "description": "Fast healing 1."
+    },
+    {
+      "level": 10,
+      "title": "*Energy Resistance I",
+      "description": "Gain 5 damage resistance vs 2 types of energy."
+    },
+    {
+      "level": 11,
+      "title": "Damage Reduction III",
+      "description": "Gain 3/+2 damage reduction."
+    },
+    {
+      "level": 13,
+      "title": "Fiendish Resilience II (1x/day)",
+      "description": "Fast healing 2."
+    },
+    {
+      "level": 15,
+      "title": "Damage Reduction IV",
+      "description": "Gain 4/+2 damage reduction."
+    },
+    {
+      "level": 18,
+      "title": "Fiendish Resilience III (1x/day)",
+      "description": "Fast healing 5."
+    },
+    {
+      "level": 19,
+      "title": "Damage Reduction V",
+      "description": "Gain 5/+3 damage reduction."
+    },
+    {
+      "level": 20,
+      "title": "Energy Resistance II",
+      "description": "Damage resistance increases to 10."
+    }
+  ],
+  "Warmage": [
+    {
+      "level": 1,
+      "title": "Armored Mage",
+      "description": "No spell failure from light armor and small shields."
+    },
+    {
+      "level": 1,
+      "title": "Warmage Edge",
+      "description": "Add Intelligence modifier to damage rolls from spells."
+    },
+    {
+      "level": 8,
+      "title": "Medium Armor Proficiency",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Armored Mage",
+      "description": "No spell failure from medium armor."
+    },
+    {
+      "level": 20,
+      "title": "Improved Combat Casting",
+      "description": "No attacks of opportunities when casting in combat."
+    }
+  ],
+  "Wizard": [
+    {
+      "level": 1,
+      "title": "Summon Familiar",
+      "description": "Summon a magical creature as an ally."
+    }
+  ],
+  "Arcane Archer": [
+    {
+      "level": 1,
+      "title": "Enchant Arrow +1",
+      "description": "Gain +1 attack bonus when using a bow, and arrows fired act as +1 weapons."
+    },
+    {
+      "level": 2,
+      "title": "Imbue Arrow",
+      "description": "Shoot a fireball arrow three times a day."
+    },
+    {
+      "level": 3,
+      "title": "Enchant Arrow +2",
+      "description": ""
+    },
+    {
+      "level": 4,
+      "title": "Seeker Arrow (1x/day)",
+      "description": "Fire an arrow that cannot miss."
+    },
+    {
+      "level": 5,
+      "title": "Enchant Arrow +3",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Seeker Arrow (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Enchant Arrow +4",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Hail of Arrows",
+      "description": "Fire arrows at multiple targets within range."
+    },
+    {
+      "level": 9,
+      "title": "Enchant Arrow +5",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Arrow of Death",
+      "description": "Fire an arrow that can instantly kill an opponent."
+    }
+  ],
+  "Avenger Knight": [
+    {
+      "level": 1,
+      "title": "Sacred Defense I",
+      "description": "+1 to all saving throws."
+    },
+    {
+      "level": 1,
+      "title": "Virtue is its Own Reward I",
+      "description": "+1 to Lore and Influence skills."
+    },
+    {
+      "level": 2,
+      "title": "Improved Expertise",
+      "description": "Defensive stance +10 AC / -10 AB."
+    },
+    {
+      "level": 2,
+      "title": "Renewed Vitality",
+      "description": "Healing Circle spell can be cast 3x/day."
+    },
+    {
+      "level": 3,
+      "title": "Virtue is its Own Reward II",
+      "description": "+2 to Lore and Influence skills."
+    },
+    {
+      "level": 4,
+      "title": "Sacred Alliance I",
+      "description": "+1 AB, +1 Will ST vs Fear, +2 weapons EB on itself and allies."
+    },
+    {
+      "level": 5,
+      "title": "Sacred Defense II",
+      "description": "+2 to all saving throws."
+    },
+    {
+      "level": 5,
+      "title": "Virtue is its Own Reward III",
+      "description": "+3 to Lore and Influence skills."
+    },
+    {
+      "level": 5,
+      "title": "Renewed Vitality II",
+      "description": "The amount of HP healed increases to 2d8."
+    },
+    {
+      "level": 6,
+      "title": "Uncanny Dodge I",
+      "description": "Retain Dexterity bonus to AC, even when flat-footed."
+    },
+    {
+      "level": 7,
+      "title": "Virtue is its Own Reward IV",
+      "description": "+4 to Lore and Influence skills."
+    },
+    {
+      "level": 8,
+      "title": "Sacred Alliance II",
+      "description": "Weapon EB increased to +3, 1d8 temporary hit points gained."
+    },
+    {
+      "level": 8,
+      "title": "Renewed Vitality III",
+      "description": "The amount of HP healed increases to 3d8."
+    },
+    {
+      "level": 9,
+      "title": "Virtue is its Own Reward V",
+      "description": "+5 to Lore and Influence skills."
+    },
+    {
+      "level": 10,
+      "title": "Sacred Defense III",
+      "description": "+3 to all saving throws."
+    },
+    {
+      "level": 10,
+      "title": "Damage Reduction V",
+      "description": "Ignore 5 physical damage per hit."
+    },
+    {
+      "level": 10,
+      "title": "Sacred Alliance III",
+      "description": "Weapon EB increased to +4."
+    }
+  ],
+  "Crypt Raider": [
+    {
+      "level": 1,
+      "title": "Grave Robber",
+      "description": "Penalty to stealth skills when picking up items, opening locks, or opening or closing doors lowered by 25%."
+    },
+    {
+      "level": 1,
+      "title": "Sepulchral Savvy",
+      "description": "+1 bonus on saving throws vs. traps and to Disable Trap, Open Lock and Search checks in crypts and ruins."
+    },
+    {
+      "level": 2,
+      "title": "Slippery Soul",
+      "description": "+2 bonus on saving throws vs. curses."
+    },
+    {
+      "level": 2,
+      "title": "Witness to Horror",
+      "description": "+1 bonus on saving throws vs. fear."
+    },
+    {
+      "level": 3,
+      "title": "Sepulchral Savvy",
+      "description": "+2 bonus on saving throws vs. traps and to Disable Trap, Open Lock and Search checks in crypts and ruins."
+    },
+    {
+      "level": 4,
+      "title": "Grave Robber",
+      "description": "Penalty to stealth skills when picking up items, opening locks, or opening or closing doors lowered by 50%."
+    },
+    {
+      "level": 5,
+      "title": "Witness to Horror",
+      "description": "+2 bonus on saving throws vs. fear."
+    },
+    {
+      "level": 5,
+      "title": "Sepulchral Savvy",
+      "description": "+3 bonus on saving throws vs. traps and to Disable Trap, Open Lock and Search checks in crypts and ruins."
+    },
+    {
+      "level": 6,
+      "title": "Slippery Soul",
+      "description": "+4 bonus on saving throws vs. curses."
+    },
+    {
+      "level": 7,
+      "title": "Grave Robber",
+      "description": "Penalty to stealth skills when picking up items, opening locks, or opening or closing doors lowered by 75%."
+    },
+    {
+      "level": 7,
+      "title": "Sepulchral Savvy",
+      "description": "+4 bonus on saving throws vs. traps and to Disable Trap, Open Lock and Search checks in crypts and ruins."
+    },
+    {
+      "level": 8,
+      "title": "Witness to Horror",
+      "description": "+3 bonus on saving throws vs. fear."
+    },
+    {
+      "level": 9,
+      "title": "Sepulchral Savvy",
+      "description": "+5 bonus on saving throws vs. traps and to Disable Trap, Open Lock and Search checks in crypts and ruins."
+    },
+    {
+      "level": 10,
+      "title": "Slippery Soul",
+      "description": "+6 bonus on saving throws vs. curses."
+    },
+    {
+      "level": 10,
+      "title": "Grave Robber",
+      "description": "No penalty to stealth skills when picking up items, opening locks, or opening or closing doors."
+    },
+    {
+      "level": 10,
+      "title": "Witness to Horror",
+      "description": "Immune to the magical fear aura of undead."
+    }
+  ],
+  "Dirgist": [
+    {
+      "level": 1,
+      "title": "Lament for the Fallen",
+      "description": "Enemies who fail their saving throw suffer -2 attack and skill checks."
+    },
+    {
+      "level": 1,
+      "title": "Whispers of the Dead",
+      "description": "+1 skill bonus to Lore for each Dirgist level."
+    },
+    {
+      "level": 3,
+      "title": "Graveyard Sonata",
+      "description": "As long as no action is performed, the dirgist can walk among the undead without being seen."
+    },
+    {
+      "level": 5,
+      "title": "Crescendo of Blood",
+      "description": "The dirgist and his allies gain +1 attack bonus and damage for each living enemy they kill (maximum +6)."
+    },
+    {
+      "level": 7,
+      "title": "Requiem",
+      "description": "Enemies who fail their saving throw suffer 1d6 sonic damage each round for each unconscious or dead ally of the dirgist."
+    }
+  ],
+  "Divine Champion": [
+    {
+      "level": 1,
+      "title": "Lay on Hands",
+      "description": "Can heal damage equal to class level multiplied by Charisma modifier."
+    },
+    {
+      "level": 2,
+      "title": "Sacred Defense",
+      "description": "+1 to all saving throws."
+    },
+    {
+      "level": 3,
+      "title": "Smite Evil",
+      "description": "Once per day may add Charisma bonus to attack roll and do +1 point of damage per level of Champion and Paladin."
+    },
+    {
+      "level": 4,
+      "title": "Sacred Defense",
+      "description": "+2 to all saving throws."
+    },
+    {
+      "level": 5,
+      "title": "Divine Wrath",
+      "description": "Once per day +3 to attack, damage and saving throws and Damage Reduction 5/+10."
+    },
+    {
+      "level": 6,
+      "title": "Sacred Defense",
+      "description": "+3 to all saving throws."
+    },
+    {
+      "level": 8,
+      "title": "Sacred Defense",
+      "description": "+4 to all saving throws."
+    },
+    {
+      "level": 10,
+      "title": "Sacred Defense",
+      "description": "+5 to all saving throws."
+    },
+    {
+      "level": 10,
+      "title": "Divine Wrath",
+      "description": "Damage Reduction becomes 10/+10."
+    }
+  ],
+  "Duelist": [
+    {
+      "level": 1,
+      "title": "Canny Defense",
+      "description": "Add Intelligence bonus to AC when wearing light or no armor."
+    },
+    {
+      "level": 2,
+      "title": "Precise Strike I",
+      "description": "+1d6 damage when fighting one-handed with piercing weapons."
+    },
+    {
+      "level": 3,
+      "title": "Spring Attack",
+      "description": "Enemies do not get attacks of opportunities when moving in combat."
+    },
+    {
+      "level": 4,
+      "title": "Grace",
+      "description": "+2 bonus on reflex saving throws when wearing light or no armor."
+    },
+    {
+      "level": 6,
+      "title": "Precise Strike II",
+      "description": "+2d6 damage when fighting one-handed with piercing weapons."
+    },
+    {
+      "level": 7,
+      "title": "Elaborate Parry",
+      "description": "+1 AC per duelist level when in Parry Mode."
+    },
+    {
+      "level": 8,
+      "title": "Superior Initiative",
+      "description": "+ 8 bonus to Initiative."
+    },
+    {
+      "level": 9,
+      "title": "Deflect Arrows",
+      "description": "Reflex save to parry incoming projectiles."
+    },
+    {
+      "level": 10,
+      "title": "Precise Strike III",
+      "description": "+3d6 damage when fighting one-handed with piercing weapons."
+    }
+  ],
+  "Dwarven Defender": [
+    {
+      "level": 1,
+      "title": "Defensive Stance (1x/day)",
+      "description": "Gain +2 Str, +4 Con, +2 on all saves, +4 dodge bonus on AC."
+    },
+    {
+      "level": 1,
+      "title": "Base AC increases by 1",
+      "description": ""
+    },
+    {
+      "level": 2,
+      "title": "Uncanny Dodge I",
+      "description": "Retain Dexterity bonus to AC, even when flat-footed."
+    },
+    {
+      "level": 3,
+      "title": "Defensive Stance (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 4,
+      "title": "Base AC increases by 1",
+      "description": ""
+    },
+    {
+      "level": 4,
+      "title": "Uncanny Dodge II",
+      "description": "+1 bonus on reflex saves vs traps."
+    },
+    {
+      "level": 5,
+      "title": "Defensive Stance (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Uncanny Dodge II",
+      "description": "+1 bonus on Reflex saves vs. traps. Grants immunity to sneak attacks from a flanking attacker unless the attacker has at least four more combined class levels of rogue, assassin, barbarian, and shadowdancer than the defender."
+    },
+    {
+      "level": 6,
+      "title": "Damage Reduction III",
+      "description": "Ignore 3 physical damage per hit."
+    },
+    {
+      "level": 7,
+      "title": "Defensive Stance (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Base AC increases by 1",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Uncanny Dodge III",
+      "description": "+2 bonus on reflex saves vs traps"
+    },
+    {
+      "level": 9,
+      "title": "Defensive Stance (5x/day)",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Damage Reduction VI",
+      "description": "Ignore 6 physical damage per hit."
+    },
+    {
+      "level": 10,
+      "title": "Base AC increases by 1",
+      "description": ""
+    }
+  ],
+  "Grimetrekker": [
+    {
+      "level": 1,
+      "title": "Favored Enemy (Vermin)",
+      "description": "Bonuses to damage and Listen, Spot, and Antagonize checks against vermin."
+    },
+    {
+      "level": 1,
+      "title": "Sewer Stalker",
+      "description": "+2 bonus to Hide, Listen, Move Silently, Search and Spot checks in sewers for every 2 grimetrekker levels."
+    },
+    {
+      "level": 2,
+      "title": "Hale and Hearty",
+      "description": "+1 bonus on saving throws vs. diseases, poisons, and the special abilities of oozes and slimes."
+    },
+    {
+      "level": 2,
+      "title": "Darkvision",
+      "description": "Able to see in unlit areas."
+    },
+    {
+      "level": 3,
+      "title": "Deep Breath",
+      "description": "Can hold breath underwater for a number of rounds equal to twice his Constitution modifier."
+    },
+    {
+      "level": 4,
+      "title": "Sewer Legs",
+      "description": "10% increased movement speed while in sewers."
+    },
+    {
+      "level": 5,
+      "title": "Hale and Hearty",
+      "description": "+2 bonus on saving throws vs. diseases, poisons, and the special abilities of oozes and slimes."
+    },
+    {
+      "level": 6,
+      "title": "Deep Breath",
+      "description": "Can hold breath underwater for a number of rounds equal to three times his Constitution modifier."
+    },
+    {
+      "level": 7,
+      "title": "Hale and Hearty",
+      "description": "+3 bonus on saving throws vs. diseases, poisons, and the special abilities of oozes and slimes."
+    },
+    {
+      "level": 8,
+      "title": "Sewer Legs",
+      "description": "20% increased movement speed while in sewers."
+    },
+    {
+      "level": 8,
+      "title": "Hide in Plain Sight",
+      "description": "In underground areas, grimetrekkers can hide even while being observed."
+    },
+    {
+      "level": 9,
+      "title": "Hale and Hearty",
+      "description": "Immune to disease and poison."
+    }
+  ],
+  "Monster Hunter": [
+    {
+      "level": 1,
+      "title": "1st Favored Enemy [Excluding Human, Halfling, Elf, Dwarf, & Half Elf, but not Half Orc.]",
+      "description": ""
+    },
+    {
+      "level": 2,
+      "title": "Studied Foe",
+      "description": "Once per day gain a bonus to attack and damage rolls, armor class and saving throws vs favored enemies."
+    },
+    {
+      "level": 3,
+      "title": "Turn Undead",
+      "description": "Cause undead to flee in terror."
+    },
+    {
+      "level": 4,
+      "title": "2nd Favored Enemy",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "3rd Favored Enemy",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "4th Favored Enemy",
+      "description": ""
+    }
+  ],
+  "Tattooed Monk": [
+    {
+      "level": 1,
+      "title": "Gain one tattoo",
+      "description": ""
+    },
+    {
+      "level": 3,
+      "title": "Gain one tattoo",
+      "description": ""
+    },
+    {
+      "level": 5,
+      "title": "Gain one tattoo",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Gain one tattoo",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Gain one tattoo",
+      "description": ""
+    }
+  ],
+  "Weapon Master": [
+    {
+      "level": 1,
+      "title": "Ki Damage",
+      "description": "Weapon of choice deals maximum damage for one attack."
+    },
+    {
+      "level": 1,
+      "title": "*Weapon of Choice",
+      "description": "Pick a type of weapon and thereafter all Weapon Master special abilities will only work while that type is equipped."
+    },
+    {
+      "level": 5,
+      "title": "Increased Multiplier",
+      "description": "Add 1x to weapon of choice critical damage multiplier (i.e. 2x becomes 3x, 3x becomes 4x, etc.)."
+    },
+    {
+      "level": 5,
+      "title": "Superior Weapon Focus",
+      "description": "+1 attack bonus when using weapon of choice."
+    },
+    {
+      "level": 7,
+      "title": "Ki Critical",
+      "description": "Add +2 to weapon of choice critical threat range (i.e. 20/x3 becomes 18-20/x3, etc.)."
+    }
+  ],
+  "Assassin": [
+    {
+      "level": 1,
+      "title": "Death Attack 1d6",
+      "description": "Special sneak attack that has a chance of paralyzing opponent."
+    },
+    {
+      "level": 1,
+      "title": "Use Poison",
+      "description": "Automatic success when coating a weapon with poison."
+    },
+    {
+      "level": 2,
+      "title": "Poison Save",
+      "description": "Gain a +1 bonus to saving throws vs. poison for every 2 assassin levels."
+    },
+    {
+      "level": 2,
+      "title": "Uncanny Dodge I",
+      "description": "Retain Dexterity bonus to AC, even when flat-footed."
+    },
+    {
+      "level": 3,
+      "title": "Death Attack 2d6",
+      "description": ""
+    },
+    {
+      "level": 5,
+      "title": "Death Attack 3d6",
+      "description": ""
+    },
+    {
+      "level": 5,
+      "title": "Uncanny Dodge II",
+      "description": "+1 bonus on Reflex saves vs. traps. Grants immunity to sneak attacks from a flanking attacker unless the attacker has at least four more combined class levels of rogue, assassin, barbarian, and shadowdancer than the defender."
+    },
+    {
+      "level": 7,
+      "title": "Death Attack 4d6",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Hide in Plain Sight",
+      "description": "Can hide even while being observed."
+    },
+    {
+      "level": 9,
+      "title": "Death Attack 5d6",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Uncanny Dodge III",
+      "description": "+2 bonus on Reflex saves vs. traps."
+    }
+  ],
+  "Blackguard": [
+    {
+      "level": 1,
+      "title": "Use Poison",
+      "description": "Automatic success when coating a weapon with poison."
+    },
+    {
+      "level": 1,
+      "title": "Detect Good",
+      "description": "Detect lawful auras."
+    },
+    {
+      "level": 2,
+      "title": "Dark Blessing",
+      "description": "Add Charisma modifier to all saving throws."
+    },
+    {
+      "level": 2,
+      "title": "Smite Good",
+      "description": "A special attack that grants bonus attack and damage against good creatures."
+    },
+    {
+      "level": 3,
+      "title": "Create Undead",
+      "description": "Summon an undead ally."
+    },
+    {
+      "level": 3,
+      "title": "Turn Undead",
+      "description": "Cause undead to flee in terror."
+    },
+    {
+      "level": 3,
+      "title": "Aura of Despair",
+      "description": "Fill nearby enemies with despair, lowering their saving throws."
+    },
+    {
+      "level": 4,
+      "title": "Sneak Attack 1d6",
+      "description": "Deal bonus damage when flanking."
+    },
+    {
+      "level": 5,
+      "title": "Summon Fiend",
+      "description": "Summon a fiendish ally."
+    },
+    {
+      "level": 7,
+      "title": "Sneak Attack 2d6",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Sneak Attack 3d6",
+      "description": ""
+    }
+  ],
+  "Black Powder Avenger": [
+    {
+      "level": 1,
+      "title": "Signature Weapon",
+      "description": "At 1st level, the Black Powder Avenger chooses either the pistol or musket as the instrument of his vengeance. The character sacrifices one point of Wisdom; from the moment the sacrifice is made, the character gains a bonus to attack and damage of +1 when firing his signature weapon. This bonus increases by +1 at levels 4, 7, and 10 (maximum +4). Most Black Powder Avengers give their signature weapon a name and treat it as if their lives depended on it."
+    },
+    {
+      "level": 1,
+      "title": "Black Crafts",
+      "description": "Starting at 1st level, the Black Powder Avenger is able to prepare a number of supplies to aid him in his quest as a wizard would prepare his spells. The Black Powder Avenger knows all his available crafts for his given level."
+    },
+    {
+      "level": 4,
+      "title": "Signature Weapon II",
+      "description": "Attack and damage bonus improves to + 2."
+    },
+    {
+      "level": 7,
+      "title": "Quick Reload",
+      "description": "Load gunpowder and bullets automatically."
+    },
+    {
+      "level": 7,
+      "title": "Signature Critical",
+      "description": "The Black Powder Avenger gains an additional +1 to the threat range of their signature weapon."
+    },
+    {
+      "level": 7,
+      "title": "Signature Weapon III",
+      "description": "Attack and damage bonus improves to + 3."
+    },
+    {
+      "level": 9,
+      "title": "Evasion",
+      "description": "A successful Reflex save for half damage results in no damage."
+    },
+    {
+      "level": 10,
+      "title": "Detonation (3x/day)",
+      "description": "\"Overtamp\" signature weapon to gain +4 attack bonus and maximize ranged damage. Weapon must be repaired after."
+    },
+    {
+      "level": 10,
+      "title": "Signature Weapon IV",
+      "description": "Attack and damage bonus improves to + 4."
+    }
+  ],
+  "Hallowed Witch": [
+    {
+      "level": 1,
+      "title": "Minor Witchcraft Ability",
+      "description": "Cast a minor spell as a spell-like ability 3 times / day."
+    },
+    {
+      "level": 1,
+      "title": "Gain one Witchcraft Ability",
+      "description": ""
+    },
+    {
+      "level": 2,
+      "title": "Weave Protection",
+      "description": "Gain spell resistance equal to 10 + class level / 2."
+    },
+    {
+      "level": 3,
+      "title": "Medium Witchcraft Ability",
+      "description": "Cast a medium spell as a spell-like ability 2 times / day."
+    },
+    {
+      "level": 3,
+      "title": "Gain two Witchcraft Abilities",
+      "description": ""
+    },
+    {
+      "level": 5,
+      "title": "Gain one Witchcraft Ability",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Major Witchcraft Ability",
+      "description": "Cast a major spell as a spell-like ability 1 time / day."
+    },
+    {
+      "level": 6,
+      "title": "Gain two Witchcraft Abilities",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Gain one Witchcraft Ability",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Gain one Witchcraft Ability",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Gain two Witchcraft Abilities",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Gain one Witchcraft Ability",
+      "description": ""
+    }
+  ],
+  "Shifter": [
+    {
+      "level": 1,
+      "title": "Shifter's Speech",
+      "description": "Can speak in any form."
+    },
+    {
+      "level": 1,
+      "title": "Wild Shape (1x/day)",
+      "description": "Additional uses of Wild Shape."
+    },
+    {
+      "level": 1,
+      "title": "Improved Wild Shape I",
+      "description": "Can change into a wyrmling."
+    },
+    {
+      "level": 2,
+      "title": "Wild Shape (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 2,
+      "title": "1st Extra Disguise",
+      "description": ""
+    },
+    {
+      "level": 3,
+      "title": "Wild Shape (3x/day)",
+      "description": ""
+    },
+    {
+      "level": 3,
+      "title": "Improved Wild Shape II",
+      "description": "Can change into a harpy, minotaur, or gargoyle."
+    },
+    {
+      "level": 4,
+      "title": "Wild Shape (4x/day)",
+      "description": ""
+    },
+    {
+      "level": 4,
+      "title": "2nd Extra Disguise",
+      "description": ""
+    },
+    {
+      "level": 5,
+      "title": "Wild Shape (5x/day)",
+      "description": ""
+    },
+    {
+      "level": 5,
+      "title": "Improved Wild Shape III",
+      "description": "Can change into a basilisk, drider, or manticore."
+    },
+    {
+      "level": 6,
+      "title": "Wild Shape (6x/day)",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Supernatural Ease",
+      "description": "Wild Shape ability becomes supernatural."
+    },
+    {
+      "level": 6,
+      "title": "3rd Extra Disguise",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Wild Shape (7x/day)",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Humanoid Shape",
+      "description": "Can change into a drow, lizardfolk, or kobold."
+    },
+    {
+      "level": 8,
+      "title": "Wild Shape (8x/day)",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "4th Extra Disguise",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Wild Shape (9x/day)",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Elemental Shape",
+      "description": "Can change into an elemental."
+    },
+    {
+      "level": 10,
+      "title": "Evershifting Form",
+      "description": "Racial type changes to Shapechanger. Can change forms at will."
+    },
+    {
+      "level": 10,
+      "title": "Wild Shape (10x/day)",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Improved Wild Shape IV",
+      "description": "Can change into a dire tiger, medusa, or mindflayer."
+    },
+    {
+      "level": 10,
+      "title": "5th Extra Disguise",
+      "description": ""
+    }
+  ],
+  "Pale Master": [
+    {
+      "level": 1,
+      "title": "Bone Skin +2",
+      "description": "Base AC is increased by 2."
+    },
+    {
+      "level": 2,
+      "title": "Animate Dead",
+      "description": "Cast Animate Dead as a spell-like ability."
+    },
+    {
+      "level": 3,
+      "title": "Darkvision",
+      "description": "Able to see in unlit areas."
+    },
+    {
+      "level": 4,
+      "title": "Bone Skin +4",
+      "description": ""
+    },
+    {
+      "level": 4,
+      "title": "Summon Undead",
+      "description": "Summon an undead ally."
+    },
+    {
+      "level": 5,
+      "title": "Deathless Vigor",
+      "description": "+3 Hit Points per level. This change is not retroactive."
+    },
+    {
+      "level": 6,
+      "title": "Paralyzing Touch (Graft)",
+      "description": "Perform a touch attack that can paralyze an opponent."
+    },
+    {
+      "level": 6,
+      "title": "Undead Graft (1x/day)",
+      "description": "Gain an undead arm that can perform special attacks."
+    },
+    {
+      "level": 6,
+      "title": "Undead Graft Strength",
+      "description": "The undead arm provides a permanent +4 Strength bonus."
+    },
+    {
+      "level": 7,
+      "title": "Tough as Bone",
+      "description": "Immune to paralysis and stun."
+    },
+    {
+      "level": 7,
+      "title": "Weakening Touch (Graft)",
+      "description": "Perform a touch attack that drains an opponent's Strength."
+    },
+    {
+      "level": 8,
+      "title": "Bone Skin +6",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Destructive Touch (Graft)",
+      "description": "Perform a touch attack that drains an opponent's Constitution."
+    },
+    {
+      "level": 8,
+      "title": "Undead Graft (2x/day)",
+      "description": ""
+    },
+    {
+      "level": 8,
+      "title": "Undead Graft II",
+      "description": "Paralyze touch can be used three times a day."
+    },
+    {
+      "level": 9,
+      "title": "Degenerative Touch (Graft)",
+      "description": "Perform a touch attack that causes level drain."
+    },
+    {
+      "level": 9,
+      "title": "Summon Greater Undead",
+      "description": "Summon a powerful undead ally."
+    },
+    {
+      "level": 10,
+      "title": "Deathless Master's Touch (Graft)",
+      "description": "Perform a touch attack that can kill instantly."
+    },
+    {
+      "level": 10,
+      "title": "Deathless Mastery",
+      "description": "Immune to critical hits."
+    },
+    {
+      "level": 10,
+      "title": "Undead Graft (3x/day)",
+      "description": ""
+    }
+  ],
+  "People's Champion": [
+    {
+      "level": 1,
+      "title": "Eye for Detail",
+      "description": "+2 bonus to Appraise, Listen, Search and Spot checks."
+    },
+    {
+      "level": 2,
+      "title": "Righteous Anger",
+      "description": "Once per day add Wisdom modifier to attack and damage (minimum +1); this lasts for one turn, plus one round per level of People's Champion."
+    },
+    {
+      "level": 4,
+      "title": "Aura of Confidence",
+      "description": "+4 bonus on saving throws vs. fear. At will, grant nearby allies a +1 bonus on attack and saving throws vs. fear."
+    },
+    {
+      "level": 5,
+      "title": "Unyielding Devotion",
+      "description": "+4 bonus on saving throws vs. mind-affecting."
+    }
+  ],
+  "Shadowdancer": [
+    {
+      "level": 1,
+      "title": "Hide in Plain Sight",
+      "description": "Can hide even while being observed."
+    },
+    {
+      "level": 2,
+      "title": "Darkvision",
+      "description": "Able to see in unlit areas."
+    },
+    {
+      "level": 2,
+      "title": "Evasion",
+      "description": "A successful Reflex save for half damage results in no damage."
+    },
+    {
+      "level": 2,
+      "title": "Uncanny Dodge I",
+      "description": "Retain Dexterity bonus to AC, even when flat-footed."
+    },
+    {
+      "level": 3,
+      "title": "Shadow Daze",
+      "description": "Inflict an illusory daze upon an enemy."
+    },
+    {
+      "level": 3,
+      "title": "Summon Shadow",
+      "description": "Able to summon a shadow."
+    },
+    {
+      "level": 4,
+      "title": "Shadow Evade",
+      "description": "Temporary AC, concealment and damage reduction bonuses."
+    },
+    {
+      "level": 5,
+      "title": "Defensive Roll",
+      "description": "Avoid killing blows with a Reflex save."
+    },
+    {
+      "level": 5,
+      "title": "Uncanny Dodge II",
+      "description": "+1 bonus on reflex saves vs traps. Grants immunity to sneak attacks from a flanking attacker unless the attacker has at least four more combined class levels of rogue, assassin, barbarian, and shadowdancer than the defender."
+    },
+    {
+      "level": 6,
+      "title": "Summon Shadow",
+      "description": "Able to summon two shadows."
+    },
+    {
+      "level": 7,
+      "title": "Slippery Mind",
+      "description": "Failed Will saving throws get an automatic re-roll."
+    },
+    {
+      "level": 9,
+      "title": "Summon Shadow",
+      "description": "Able to summon three shadows."
+    },
+    {
+      "level": 10,
+      "title": "Improved Evasion",
+      "description": "Take half damage even on a failed Reflex save."
+    },
+    {
+      "level": 10,
+      "title": "Uncanny Dodge III",
+      "description": "+2 bonus on Reflex saves vs. traps."
+    }
+  ],
+  "Dragon Disciple": [
+    {
+      "level": 1,
+      "title": "Draconic Armor +1",
+      "description": "Base AC increases by 1."
+    },
+    {
+      "level": 1,
+      "title": "Hit Die (d6)",
+      "description": "Roll d6 for hit points."
+    },
+    {
+      "level": 2,
+      "title": "Draconic Abilities",
+      "description": "Strength +2."
+    },
+    {
+      "level": 2,
+      "title": "Claws and Bite",
+      "description": "Gains claw and bite attacks."
+    },
+    {
+      "level": 3,
+      "title": "Breath Weapon 2d10",
+      "description": "Breathe a cone of elemental damage depending on color."
+    },
+    {
+      "level": 4,
+      "title": "Draconic Abilities",
+      "description": "Strength +2."
+    },
+    {
+      "level": 4,
+      "title": "Hit Die (d8)",
+      "description": "Roll d8 for hit points. This change is not retroactive."
+    },
+    {
+      "level": 5,
+      "title": "Draconic Armor +2",
+      "description": ""
+    },
+    {
+      "level": 6,
+      "title": "Hit Die (d10)",
+      "description": "Roll d10 for hit points. This change is not retroactive."
+    },
+    {
+      "level": 7,
+      "title": "Breath Weapon 4d10",
+      "description": ""
+    },
+    {
+      "level": 7,
+      "title": "Draconic Abilities",
+      "description": "Constitution +2."
+    },
+    {
+      "level": 8,
+      "title": "Draconic Armor +3",
+      "description": ""
+    },
+    {
+      "level": 9,
+      "title": "Draconic Abilities",
+      "description": "Intelligence +2."
+    },
+    {
+      "level": 9,
+      "title": "Wings",
+      "description": "The dragon disciple grows wings."
+    },
+    {
+      "level": 10,
+      "title": "Breath Weapon 6d10",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Darkvision",
+      "description": "Able to see in unlit areas."
+    },
+    {
+      "level": 10,
+      "title": "Draconic Abilities",
+      "description": "Strength +4, Charisma +2."
+    },
+    {
+      "level": 10,
+      "title": "Draconic Armor +4",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Immune to one elemental damage type depending on color",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Immune to paralysis",
+      "description": ""
+    },
+    {
+      "level": 10,
+      "title": "Immune to sleep. Racial type changes to Dragon",
+      "description": ""
+    }
+  ]
+}

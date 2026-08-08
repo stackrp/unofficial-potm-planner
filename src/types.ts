@@ -24,7 +24,11 @@ export interface FeatEntry {
   name: string;
 }
 
+/** Ranks purchased AT this specific level (a delta, not a running total) — lets the planner
+ * price each rank using the class/cross-class status you actually had at that level, and show
+ * where banking points for a later, cheaper level pays off. */
 export interface SkillAllocation {
+  level: number;
   skillName: string;
   ranks: number;
 }
