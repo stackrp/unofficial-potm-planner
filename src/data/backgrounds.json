@@ -1,0 +1,184 @@
+[
+ {
+  "name": "Acrobat",
+  "skillBonuses": [
+   "Tumble",
+   "Hide"
+  ]
+ },
+ {
+  "name": "Actor",
+  "skillBonuses": [
+   "Disguise",
+   "Perform"
+  ]
+ },
+ {
+  "name": "Artist",
+  "skillBonuses": [
+   "Influence",
+   "Perform"
+  ]
+ },
+ {
+  "name": "Brawler",
+  "skillBonuses": [
+   "Antagonize",
+   "Tumble"
+  ]
+ },
+ {
+  "name": "Burglar",
+  "skillBonuses": [
+   "Open Lock",
+   "Move Silently"
+  ]
+ },
+ {
+  "name": "Child of the Wild",
+  "skillBonuses": [
+   "Animal Empathy",
+   "Listen"
+  ]
+ },
+ {
+  "name": "Deep Miner",
+  "skillBonuses": [
+   "Listen",
+   "Discipline"
+  ]
+ },
+ {
+  "name": "Diplomat",
+  "skillBonuses": [
+   "Influence",
+   "Antagonize"
+  ]
+ },
+ {
+  "name": "Gem Miner",
+  "skillBonuses": [
+   "Appraise",
+   "Search"
+  ]
+ },
+ {
+  "name": "Guard",
+  "skillBonuses": [
+   "Spot",
+   "Discipline"
+  ]
+ },
+ {
+  "name": "Historian",
+  "skillBonuses": [
+   "Lore",
+   "Appraise"
+  ]
+ },
+ {
+  "name": "Hunter",
+  "skillBonuses": [
+   "Spot",
+   "Move Silently"
+  ]
+ },
+ {
+  "name": "Locksmith",
+  "skillBonuses": [
+   "Open Lock",
+   "Disable Trap"
+  ]
+ },
+ {
+  "name": "Magical Scholar",
+  "skillBonuses": [
+   "Spellcraft",
+   "Concentration"
+  ]
+ },
+ {
+  "name": "Magician",
+  "skillBonuses": [
+   "Spellcraft",
+   "Use Magic Device"
+  ]
+ },
+ {
+  "name": "Merchant",
+  "skillBonuses": [
+   "Influence",
+   "Appraise"
+  ]
+ },
+ {
+  "name": "Military Trained",
+  "skillBonuses": [
+   "Discipline",
+   "Antagonize"
+  ]
+ },
+ {
+  "name": "Nurse",
+  "skillBonuses": [
+   "Heal",
+   "Influence"
+  ]
+ },
+ {
+  "name": "Scholar",
+  "skillBonuses": [
+   "Lore",
+   "Concentration"
+  ]
+ },
+ {
+  "name": "Scout",
+  "skillBonuses": [
+   "Search",
+   "Spot"
+  ]
+ },
+ {
+  "name": "Spy",
+  "skillBonuses": [
+   "Disguise",
+   "Move Silently"
+  ]
+ },
+ {
+  "name": "Stalker",
+  "skillBonuses": [
+   "Hide",
+   "Move Silently"
+  ]
+ },
+ {
+  "name": "Technician",
+  "skillBonuses": [
+   "Set Trap",
+   "Use Magic Device"
+  ]
+ },
+ {
+  "name": "Treasure Hunter",
+  "skillBonuses": [
+   "Search",
+   "Appraise"
+  ]
+ },
+ {
+  "name": "Trapper",
+  "skillBonuses": [
+   "Set Trap",
+   "Disable Trap"
+  ]
+ },
+ {
+  "name": "Watchman",
+  "skillBonuses": [
+   "Spot",
+   "Listen"
+  ]
+ }
+]

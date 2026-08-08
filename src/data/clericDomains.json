@@ -1,0 +1,639 @@
+[
+ {
+  "name": "Air",
+  "specialAbility": "Able to turn elementals as if they were undead.",
+  "bonusSpells": [
+   {
+    "level": 3,
+    "spell": "Call Lightning"
+   },
+   {
+    "level": 6,
+    "spell": "Chain Lightning"
+   }
+  ],
+  "notes": [
+   "The cleric can turn elementals without penalty as if they were undead.",
+   "Sun domain improves the strength of turning."
+  ]
+ },
+ {
+  "name": "Animal",
+  "specialAbility": "Able to summon more powerful creatures using Summon Creature I through VIII.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Cat's Grace"
+   },
+   {
+    "level": 3,
+    "spell": "True Seeing"
+   },
+   {
+    "level": 5,
+    "spell": "Polymorph"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Bindings",
+  "specialAbility": "Spell Focus (Enchantment): The cleric becomes even more adept with spells of enchantment. The cleric gains a +2 bonus to the spell save DC for all spells of the enchantment school of magic.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Hold Person"
+   },
+   {
+    "level": 4,
+    "spell": "Hold Monster"
+   },
+   {
+    "level": 9,
+    "spell": "Dominate Monster"
+   }
+  ],
+  "notes": [
+   "Available to the Lawgiver Faith only."
+  ]
+ },
+ {
+  "name": "Chaos",
+  "specialAbility": "Slippery Mind: The cleric gets an automatic re-roll when failing their will save vs. mind-affecting spells.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Color Spray"
+   },
+   {
+    "level": 5,
+    "spell": "Confusion"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Curse",
+  "specialAbility": "Wrathful Curses: The cleric adds a +4 bonus to the DC of all his curses and curse spells.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Bestow Curse"
+   },
+   {
+    "level": 5,
+    "spell": "Feeblemind"
+   },
+   {
+    "level": 8,
+    "spell": "Horrid Wilting"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Darkness",
+  "specialAbility": "Blind-Fight: The cleric has the ability to fight well even if blinded or against invisible creatures. The cleric gets to re-roll its miss chance percentile one time to see if it actually hits. Furthermore, invisible creatures get no bonus to hit the cleric in melee.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Blindness/Deafness"
+   },
+   {
+    "level": 5,
+    "spell": "Shadow Conjuration"
+   },
+   {
+    "level": 8,
+    "spell": "Mass Blindness/Deafness"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Death",
+  "specialAbility": "Negative plane avatar:  The cleric is able to summon a shadow that scales according to the cleric's class level.",
+  "bonusSpells": [
+   {
+    "level": 4,
+    "spell": "Phantasmal Killer"
+   },
+   {
+    "level": 5,
+    "spell": "Enervation"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Destruction",
+  "specialAbility": "Able to damage constructs while using the turn ability. Constructs are not turned, but instead are damaged 1d3 per turn level, e.g. 1d3 to 40d3, to the limit of the hit dice turned. The damage type is magical.",
+  "bonusSpells": [
+   {
+    "level": 3,
+    "spell": "Stinking Cloud"
+   },
+   {
+    "level": 6,
+    "spell": "Acid Fog"
+   }
+  ],
+  "notes": [
+   "The cleric can damage constructs with their turning ability."
+  ]
+ },
+ {
+  "name": "Dream",
+  "specialAbility": "Immunity to Sleep: The cleric is immune to all sleep spells and effects.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Sleep"
+   },
+   {
+    "level": 5,
+    "spell": "Phantasmal Killer"
+   },
+   {
+    "level": 8,
+    "spell": "Mind Blank"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Earth",
+  "specialAbility": "Able to turn elementals as if they were undead.",
+  "bonusSpells": [
+   {
+    "level": 4,
+    "spell": "Stoneskin"
+   },
+   {
+    "level": 5,
+    "spell": "Energy Buffer"
+   }
+  ],
+  "notes": [
+   "The cleric can turn elementals without penalty as if they were undead."
+  ]
+ },
+ {
+  "name": "Evil",
+  "specialAbility": "Able to turn outsiders as if they were undead.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Negative Energy Ray"
+   },
+   {
+    "level": 3,
+    "spell": "Negative Energy Burst"
+   },
+   {
+    "level": 5,
+    "spell": "Enervation"
+   }
+  ],
+  "notes": [
+   "The cleric can turn outsiders without penalty as if they were undead."
+  ]
+ },
+ {
+  "name": "Fire",
+  "specialAbility": "Able to turn elementals as if they were undead.",
+  "bonusSpells": [
+   {
+    "level": 4,
+    "spell": "Wall of Fire"
+   },
+   {
+    "level": 5,
+    "spell": "Energy Buffer"
+   }
+  ],
+  "notes": [
+   "The cleric can turn elementals without penalty as if they were undead.",
+   "Sun domain improves the strength of turning."
+  ]
+ },
+ {
+  "name": "Good",
+  "specialAbility": "Able to turn outsiders as if they were undead.",
+  "bonusSpells": [
+   {
+    "level": 4,
+    "spell": "Stoneskin"
+   },
+   {
+    "level": 5,
+    "spell": "Lesser Planar Binding"
+   }
+  ],
+  "notes": [
+   "The cleric can turn outsiders without penalty as if they were undead."
+  ]
+ },
+ {
+  "name": "Healing",
+  "specialAbility": "Empower Healing - The following healing spells are cast as if with the empower spell feat: cure minor wounds, cure light wounds, cure moderate wounds, cure serious wounds, and cure critical wounds.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Cure Serious Wounds"
+   },
+   {
+    "level": 5,
+    "spell": "Heal"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Knowledge",
+  "specialAbility": "None.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Identify"
+   },
+   {
+    "level": 2,
+    "spell": "Knock"
+   },
+   {
+    "level": 3,
+    "spell": "Clairaudience/Clairvoyance"
+   },
+   {
+    "level": 4,
+    "spell": "True Seeing"
+   },
+   {
+    "level": 6,
+    "spell": "Legend Lore"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Law",
+  "specialAbility": "Stoic Mind: The cleric gains a +4 bonus to all Will saves.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Clarity"
+   },
+   {
+    "level": 5,
+    "spell": "Hold Monster"
+   },
+   {
+    "level": 8,
+    "spell": "Mass Charm"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Luck",
+  "specialAbility": "Defensive Roll: If the cleric is struck by a potentially lethal blow (one that would put them below 0 hps), he makes a Reflex saving throw (DC is damage dealt). If successful, the cleric takes only half damage from the blow.",
+  "bonusSpells": [
+   {
+    "level": 3,
+    "spell": "Freedom of Movement"
+   },
+   {
+    "level": 8,
+    "spell": "Spell Mantle"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Magic",
+  "specialAbility": "None.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Mage Armor"
+   },
+   {
+    "level": 2,
+    "spell": "Melf's Acid Arrow"
+   },
+   {
+    "level": 3,
+    "spell": "Negative Energy Burst"
+   },
+   {
+    "level": 4,
+    "spell": "Stoneskin"
+   },
+   {
+    "level": 5,
+    "spell": "Ice Storm"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Mists",
+  "specialAbility": "Shield of Ezra: The form of protection granted is determined by the cleric's alignment.\n<nowiki> </nowiki> -Lawful Neutral: Damage reduction +1/15 versus all physical.\u00a0\n<nowiki> </nowiki> -Lawful Good: Damage reduction +5/25 lasting until 50 damage has been absorbed.\n<nowiki> </nowiki> -True Neutral: +5 bonus to all Fortitude and Reflex saves\n<nowiki> </nowiki> -Lawful Evil: +10 bonus to Will saves versus mind-affecting spells and effects.\n\nThis effect lasts for 1 round per cleric level.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Cloud of Bewilderment"
+   },
+   {
+    "level": 5,
+    "spell": "Mind Fog"
+   }
+  ],
+  "notes": [
+   "Available to the Ezra Faith only."
+  ]
+ },
+ {
+  "name": "Mora",
+  "specialAbility": "Heavenly Song: Once per day, the cleric may use Bard Song and receive a bonus to Perform equal to his level. This effect lasts for 5 rounds + the cleric's Charisma modifier.",
+  "bonusSpells": [
+   {
+    "level": 6,
+    "spell": "Legend Lore"
+   },
+   {
+    "level": 9,
+    "spell": "Wail of the Banshee"
+   }
+  ],
+  "notes": [
+   "Available to the Ancestral Choir Faith only."
+  ]
+ },
+ {
+  "name": "Plant",
+  "specialAbility": "Able to turn vermin as if they were undead.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Barkskin"
+   },
+   {
+    "level": 7,
+    "spell": "Creeping Doom"
+   }
+  ],
+  "notes": [
+   "The cleric can turn vermin without penalty as if they were undead."
+  ]
+ },
+ {
+  "name": "Protection",
+  "specialAbility": "Divine protection - The cleric is able to cast an improved form of sanctuary that sets the save DC at 10 + charisma modifier + clerical level. The effect has a duration of 1 round per caster level + charisma modifier.",
+  "bonusSpells": [
+   {
+    "level": 4,
+    "spell": "Minor Globe of Invulnerability"
+   },
+   {
+    "level": 5,
+    "spell": "Energy Buffer"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Repose",
+  "specialAbility": "Final Rest: If the cleric has twice as many levels as the undead have Hit Die, the undead are instantly destroyed.",
+  "bonusSpells": [
+   {
+    "level": 4,
+    "spell": "Raise Dead"
+   },
+   {
+    "level": 6,
+    "spell": "Resurrection"
+   },
+   {
+    "level": 8,
+    "spell": "Undeath's Eternal Foe"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Salvation",
+  "specialAbility": "Alleviate Suffering: The cleric can heal a target a number of Hit Points equal to his own, suffering damage equal to what was healed up to a maximum of the cleric's current Hit Points minus one.",
+  "bonusSpells": [
+   {
+    "level": 6,
+    "spell": "Stone to Flesh"
+   },
+   {
+    "level": 7,
+    "spell": "Mass Heal"
+   }
+  ],
+  "notes": [
+   "Available to the Morninglord Faith only."
+  ]
+ },
+ {
+  "name": "Scrutiny",
+  "specialAbility": "Keen Sense: The cleric may apply their full search skill even when making a passive search.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Amplify"
+   },
+   {
+    "level": 3,
+    "spell": "Clairaudience/Clairvoyance"
+   }
+  ],
+  "notes": [
+   "Available to clerics of the Lawgiver and Tepestani Inquisitors."
+  ]
+ },
+ {
+  "name": "Slaughter",
+  "specialAbility": "Frightful Presence: Once per day, the cleric can activate the frightful presence extraordinary ability automatically as he attacks an opponent. This ability has a range of 30 feet and affects any opponent with less Hit Dice than the character who can see him. The Will save has a DC of 10 + 1/2 the cleric's level + Charisma modifier. Affected creatures remain frightened or shaken for 5d6 rounds. This is a fear effect.",
+  "bonusSpells": [
+   {
+    "level": 3,
+    "spell": "Greater Magic Fang"
+   },
+   {
+    "level": 4,
+    "spell": "Fear"
+   },
+   {
+    "level": 6,
+    "spell": "Tenser's Transformation"
+   }
+  ],
+  "notes": [
+   "Available to the Wolf God Faith only."
+  ]
+ },
+ {
+  "name": "Strength",
+  "specialAbility": "Divine strength - The cleric gains a bonus to strength equal to 2 + 1 per 3 cleric levels. The effect lasts for 5 rounds + the cleric's charisma modifier.",
+  "bonusSpells": [
+   {
+    "level": 3,
+    "spell": "Divine Power"
+   },
+   {
+    "level": 5,
+    "spell": "Stoneskin"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Sun",
+  "specialAbility": "Exceptional turning - Add 1d6 to all turning checks to determine the maximum hit dice of undead turned. Also add 1d4 to the number of undead hit dice turned.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Searing Light"
+   },
+   {
+    "level": 7,
+    "spell": "Sunbeam"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Time",
+  "specialAbility": "Improved Initiative: The cleric gets a +4 bonus to Initiative Checks.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Expeditious Retreat"
+   },
+   {
+    "level": 3,
+    "spell": "Haste"
+   },
+   {
+    "level": 6,
+    "spell": "Mass Haste"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Travel",
+  "specialAbility": "None.",
+  "bonusSpells": [
+   {
+    "level": 1,
+    "spell": "Entangle"
+   },
+   {
+    "level": 2,
+    "spell": "Web"
+   },
+   {
+    "level": 3,
+    "spell": "Freedom of Movement"
+   },
+   {
+    "level": 4,
+    "spell": "Slow"
+   },
+   {
+    "level": 5,
+    "spell": "Haste"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Trickery",
+  "specialAbility": "Divine Trickery - Bonus to Hide, Influence, Search, Disable Trap, Disguise, Move Silently, Open Lock, and Sleight of Hand checks equal to 1 per 2 levels. This effect lasts for 5 turns + the cleric's Charisma modifier.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Invisibility"
+   },
+   {
+    "level": 3,
+    "spell": "Invisibility Sphere"
+   },
+   {
+    "level": 5,
+    "spell": "Improved Invisibility"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Undeath",
+  "specialAbility": "Extra Turning: the cleric can turn undead six additional times per day.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Animate Dead"
+   },
+   {
+    "level": 7,
+    "spell": "Create Greater Undead"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "War",
+  "specialAbility": "Battle Mastery - The cleric gains a bonus of 1 + 1 per 5 cleric levels to dexterity, constitution, attack rolls and damage. As well, the cleric receives double this value as damage reduction. The effect will last for 5 rounds + charisma modifier.",
+  "bonusSpells": [
+   {
+    "level": 2,
+    "spell": "Cat's Grace"
+   },
+   {
+    "level": 7,
+    "spell": "Aura of Vitality"
+   }
+  ],
+  "notes": []
+ },
+ {
+  "name": "Water",
+  "specialAbility": "Able to turn elementals as if they were undead.",
+  "bonusSpells": [
+   {
+    "level": 3,
+    "spell": "Poison"
+   },
+   {
+    "level": 5,
+    "spell": "Ice Storm"
+   }
+  ],
+  "notes": [
+   "The cleric can turn elementals without penalty as if they were undead."
+  ]
+ },
+ {
+  "name": "Weave",
+  "specialAbility": "Spell Penetration: The cleric gains a +2 bonus to caster level checks to beat a creature's spell resistance.",
+  "bonusSpells": [
+   {
+    "level": 4,
+    "spell": "Spell Resistance"
+   },
+   {
+    "level": 8,
+    "spell": "Premonition"
+   }
+  ],
+  "notes": [
+   "Available to the Church of Hala Faith only."
+  ]
+ }
+]

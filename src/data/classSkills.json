@@ -1,0 +1,713 @@
+{
+  "Archivist": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Search",
+      "Spellcraft",
+      "Spot",
+      "Use Magic Device"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Barbarian": {
+    "classSkills": [
+      "Antagonize",
+      "Discipline",
+      "Heal",
+      "Listen",
+      "Lore",
+      "Parry"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Bard": {
+    "classSkills": [
+      "Antagonize",
+      "Appraise",
+      "Concentration",
+      "Discipline",
+      "Disguise",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Perform",
+      "Sleight of Hand",
+      "Speak Language",
+      "Spellcraft",
+      "Tumble",
+      "Use Magic Device"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Beguiler": {
+    "classSkills": [
+      "Appraise",
+      "Concentration",
+      "Disable Trap",
+      "Disguise",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Open Lock",
+      "Parry",
+      "Search",
+      "Sleight of Hand",
+      "Speak Language",
+      "Spellcraft",
+      "Spot",
+      "Tumble",
+      "Use Magic Device"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Cleric": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Parry",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Druid": {
+    "classSkills": [
+      "Animal Empathy",
+      "Concentration",
+      "Heal",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Parry",
+      "Spellcraft",
+      "Spot"
+    ],
+    "unavailable": [
+      "Use Magic Device"
+    ]
+  },
+  "Duskblade": {
+    "classSkills": [
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Lore",
+      "Parry",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Favored Soul": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Parry",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Fighter": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Lore",
+      "Parry"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Healer": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Parry",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Hexblade": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Parry",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Monk": {
+    "classSkills": [
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Perform",
+      "Spot",
+      "Tumble"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Paladin": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Parry"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Ranger": {
+    "classSkills": [
+      "Animal Empathy",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Hide",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Search",
+      "Set Trap",
+      "Spot"
+    ],
+    "unavailable": [
+      "Use Magic Device"
+    ]
+  },
+  "Rogue": {
+    "classSkills": [
+      "Antagonize",
+      "Appraise",
+      "Disable Trap",
+      "Disguise",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Open Lock",
+      "Parry",
+      "Perform",
+      "Search",
+      "Set Trap",
+      "Sleight of Hand",
+      "Spot",
+      "Tumble",
+      "Use Magic Device"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Shaman": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Parry",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Sorcerer": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Voodan": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Parry",
+      "Spellcraft",
+      "Spot"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Warlock": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Disguise",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Parry",
+      "Spellcraft",
+      "Use Magic Device"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Warmage": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Lore",
+      "Parry",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Wizard": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Lore",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Arcane Archer": {
+    "classSkills": [
+      "Heal",
+      "Hide",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Spot"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Avenger Knight": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Disguise",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Crypt Raider": {
+    "classSkills": [
+      "Appraise",
+      "Concentration",
+      "Disable Trap",
+      "Hide",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Open Lock",
+      "Parry",
+      "Search",
+      "Spellcraft",
+      "Spot",
+      "Tumble",
+      "Use Magic Device"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Dirgist": {
+    "classSkills": [
+      "Antagonize",
+      "Appraise",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Perform",
+      "Spellcraft",
+      "Use Magic Device"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Divine Champion": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Influence",
+      "Lore",
+      "Parry"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Duelist": {
+    "classSkills": [
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Parry",
+      "Perform",
+      "Spot",
+      "Tumble"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Dwarven Defender": {
+    "classSkills": [
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Listen",
+      "Lore",
+      "Parry",
+      "Spot"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Grimetrekker": {
+    "classSkills": [
+      "Animal Empathy",
+      "Concentration",
+      "Disable Trap",
+      "Discipline",
+      "Hide",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Search",
+      "Spot"
+    ],
+    "unavailable": [
+      "Use Magic Device"
+    ]
+  },
+  "Monster Hunter": {
+    "classSkills": [
+      "Concentration",
+      "Disable Trap",
+      "Discipline",
+      "Heal",
+      "Hide",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Open Lock",
+      "Parry",
+      "Search",
+      "Set Trap",
+      "Spot"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Tattooed Monk": {
+    "classSkills": [
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Perform",
+      "Spot",
+      "Tumble"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Weapon Master": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Listen",
+      "Lore",
+      "Parry",
+      "Spot"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Assassin": {
+    "classSkills": [
+      "Antagonize",
+      "Appraise",
+      "Disable Trap",
+      "Disguise",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Open Lock",
+      "Parry",
+      "Search",
+      "Set Trap",
+      "Sleight of Hand",
+      "Spot",
+      "Tumble",
+      "Use Magic Device"
+    ],
+    "unavailable": [
+      "Animal Empathy"
+    ]
+  },
+  "Blackguard": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Lore",
+      "Parry"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Black Powder Avenger": {
+    "classSkills": [
+      "Antagonize",
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Lore",
+      "Parry",
+      "Search",
+      "Set Trap"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Hallowed Witch": {
+    "classSkills": [
+      "Animal Empathy",
+      "Concentration",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Lore",
+      "Move Silently",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Use Magic Device"
+    ]
+  },
+  "Shifter": {
+    "classSkills": [
+      "Animal Empathy",
+      "Concentration",
+      "Disguise",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Spot"
+    ],
+    "unavailable": [
+      "Use Magic Device"
+    ]
+  },
+  "Pale Master": {
+    "classSkills": [
+      "Concentration",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Spellcraft"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "People's Champion": {
+    "classSkills": [
+      "Antagonize",
+      "Appraise",
+      "Concentration",
+      "Discipline",
+      "Disguise",
+      "Heal",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Parry",
+      "Search",
+      "Spellcraft",
+      "Spot"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Shadowdancer": {
+    "classSkills": [
+      "Disguise",
+      "Heal",
+      "Hide",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Move Silently",
+      "Parry",
+      "Perform",
+      "Search",
+      "Sleight of Hand",
+      "Spot",
+      "Tumble"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  },
+  "Dragon Disciple": {
+    "classSkills": [
+      "Concentration",
+      "Discipline",
+      "Heal",
+      "Influence",
+      "Listen",
+      "Lore",
+      "Parry",
+      "Search",
+      "Speak Language",
+      "Spellcraft",
+      "Spot"
+    ],
+    "unavailable": [
+      "Animal Empathy",
+      "Use Magic Device"
+    ]
+  }
+}

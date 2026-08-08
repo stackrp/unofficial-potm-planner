@@ -1,0 +1,1191 @@
+{
+  "Archivist": {
+    "name": "Archivist",
+    "maxLevel": 20,
+    "hitDie": 6,
+    "babRate": "half",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2
+    ]
+  },
+  "Barbarian": {
+    "name": "Barbarian",
+    "maxLevel": 20,
+    "hitDie": 12,
+    "babRate": "full",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Bard": {
+    "name": "Bard",
+    "maxLevel": 20,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 6,
+    "saves": {
+      "fort": false,
+      "ref": true,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Beguiler": {
+    "name": "Beguiler",
+    "maxLevel": 20,
+    "hitDie": 6,
+    "babRate": "half",
+    "skillPoints": 6,
+    "saves": {
+      "fort": false,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1
+    ]
+  },
+  "Cleric": {
+    "name": "Cleric",
+    "maxLevel": 20,
+    "hitDie": 8,
+    "babRate": "threeQuarter",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Druid": {
+    "name": "Druid",
+    "maxLevel": 20,
+    "hitDie": 8,
+    "babRate": "threeQuarter",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Duskblade": {
+    "name": "Duskblade",
+    "maxLevel": 20,
+    "hitDie": 8,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Favored Soul": {
+    "name": "Favored Soul",
+    "maxLevel": 20,
+    "hitDie": 8,
+    "babRate": "threeQuarter",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Fighter": {
+    "name": "Fighter",
+    "maxLevel": 20,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "Healer": {
+    "name": "Healer",
+    "maxLevel": 20,
+    "hitDie": 6,
+    "babRate": "half",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "Hexblade": {
+    "name": "Hexblade",
+    "maxLevel": 20,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      2
+    ]
+  },
+  "Monk": {
+    "name": "Monk",
+    "maxLevel": 20,
+    "hitDie": 8,
+    "babRate": "threeQuarter",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Paladin": {
+    "name": "Paladin",
+    "maxLevel": 20,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Ranger": {
+    "name": "Ranger",
+    "maxLevel": 20,
+    "hitDie": 8,
+    "babRate": "full",
+    "skillPoints": 6,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      1,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      2
+    ]
+  },
+  "Rogue": {
+    "name": "Rogue",
+    "maxLevel": 20,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 8,
+    "saves": {
+      "fort": false,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ]
+  },
+  "Shaman": {
+    "name": "Shaman",
+    "maxLevel": 20,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      2
+    ]
+  },
+  "Sorcerer": {
+    "name": "Sorcerer",
+    "maxLevel": 20,
+    "hitDie": 4,
+    "babRate": "half",
+    "skillPoints": 2,
+    "saves": {
+      "fort": false,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Voodan": {
+    "name": "Voodan",
+    "maxLevel": 20,
+    "hitDie": 8,
+    "babRate": "threeQuarter",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Warlock": {
+    "name": "Warlock",
+    "maxLevel": 20,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 2,
+    "saves": {
+      "fort": false,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      2,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Warmage": {
+    "name": "Warmage",
+    "maxLevel": 20,
+    "hitDie": 6,
+    "babRate": "half",
+    "skillPoints": 2,
+    "saves": {
+      "fort": false,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "Wizard": {
+    "name": "Wizard",
+    "maxLevel": 20,
+    "hitDie": 4,
+    "babRate": "half",
+    "skillPoints": 2,
+    "saves": {
+      "fort": false,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      2,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      2
+    ]
+  },
+  "Arcane Archer": {
+    "name": "Arcane Archer",
+    "maxLevel": 10,
+    "hitDie": 8,
+    "babRate": "full",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Avenger Knight": {
+    "name": "Avenger Knight",
+    "maxLevel": 10,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Crypt Raider": {
+    "name": "Crypt Raider",
+    "maxLevel": 10,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 8,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ]
+  },
+  "Dirgist": {
+    "name": "Dirgist",
+    "maxLevel": 10,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 6,
+    "saves": {
+      "fort": false,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Divine Champion": {
+    "name": "Divine Champion",
+    "maxLevel": 10,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "Duelist": {
+    "name": "Duelist",
+    "maxLevel": 10,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 4,
+    "saves": {
+      "fort": false,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Dwarven Defender": {
+    "name": "Dwarven Defender",
+    "maxLevel": 10,
+    "hitDie": 12,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Grimetrekker": {
+    "name": "Grimetrekker",
+    "maxLevel": 10,
+    "hitDie": 8,
+    "babRate": "full",
+    "skillPoints": 6,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Monster Hunter": {
+    "name": "Monster Hunter",
+    "maxLevel": 10,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 6,
+    "saves": {
+      "fort": false,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ]
+  },
+  "Tattooed Monk": {
+    "name": "Tattooed Monk",
+    "maxLevel": 10,
+    "hitDie": 8,
+    "babRate": "threeQuarter",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  },
+  "Weapon Master": {
+    "name": "Weapon Master",
+    "maxLevel": 10,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": false,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Assassin": {
+    "name": "Assassin",
+    "maxLevel": 10,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 4,
+    "saves": {
+      "fort": false,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Blackguard": {
+    "name": "Blackguard",
+    "maxLevel": 10,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Black Powder Avenger": {
+    "name": "Black Powder Avenger",
+    "maxLevel": 10,
+    "hitDie": 10,
+    "babRate": "full",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      1,
+      2,
+      0,
+      1,
+      1,
+      1,
+      0,
+      2,
+      0,
+      1
+    ]
+  },
+  "Hallowed Witch": {
+    "name": "Hallowed Witch",
+    "maxLevel": 10,
+    "hitDie": 6,
+    "babRate": "half",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      1,
+      1,
+      2,
+      0,
+      2,
+      2,
+      1,
+      2,
+      2,
+      1
+    ]
+  },
+  "Shifter": {
+    "name": "Shifter",
+    "maxLevel": 10,
+    "hitDie": 8,
+    "babRate": "full",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Pale Master": {
+    "name": "Pale Master",
+    "maxLevel": 10,
+    "hitDie": 6,
+    "babRate": "half",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "People's Champion": {
+    "name": "People's Champion",
+    "maxLevel": 5,
+    "hitDie": 8,
+    "babRate": "full",
+    "skillPoints": 4,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      1,
+      0,
+      1
+    ]
+  },
+  "Shadowdancer": {
+    "name": "Shadowdancer",
+    "maxLevel": 10,
+    "hitDie": 8,
+    "babRate": "threeQuarter",
+    "skillPoints": 6,
+    "saves": {
+      "fort": false,
+      "ref": true,
+      "will": false
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "Dragon Disciple": {
+    "name": "Dragon Disciple",
+    "maxLevel": 10,
+    "hitDie": 6,
+    "babRate": "threeQuarter",
+    "skillPoints": 2,
+    "saves": {
+      "fort": true,
+      "ref": false,
+      "will": true
+    },
+    "bonusFeatsByLevel": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  }
+}

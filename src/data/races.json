@@ -1,0 +1,2148 @@
+[
+ {
+  "name": "Humans",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Skilled"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Calibans",
+  "abilityAdjustments": {
+   "STR": 2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Dwarves of Ravenloft",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Defensive training vs. giants",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Skill affinity (lore)",
+   "Stonecunning",
+   "Weapon Proficiency (Dwarven Waraxe)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "High Elves of Ravenloft",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. Enchantments",
+   "Keen Senses",
+   "Low-light Vision",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Weapon Proficiencies (Longsword, Rapier, Shortbow, Longbow)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Gnomes of Ravenloft",
+  "abilityAdjustments": {
+   "CON": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Defensive training vs. giants",
+   "Hardiness vs. illusions",
+   "Low-light vision",
+   "Offensive training vs. reptilians",
+   "Offensive training vs. goblinoids",
+   "Skill affinity (listen)",
+   "Skill affinity (concentration)",
+   "Small stature",
+   "Spell focus (illusion)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Halflings of Ravenloft",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Fearless",
+   "Good aim",
+   "Lucky",
+   "Skill affinity (move silently)",
+   "Skill affinity (listen)",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Half-elf of Ravenloft (Fey-Born)",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. Enchantments",
+   "Low-light Vision",
+   "Partial Skill Affinity (Listen)",
+   "Partial Skill Affinity (Search)",
+   "Partial Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Half-Vistana (Giomorgo)",
+  "abilityAdjustments": {
+   "WIS": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": 2,
+  "traits": [
+   "Alertness",
+   "Quick to Master",
+   "Moon Madness",
+   "Lore +2",
+   "Skilled",
+   "Tribal Heritage Bonus",
+   "Tribal Heritage Bonuses",
+   "Canjar: Spellcraft +2",
+   "Corvara: Influence +2, Open Lock +2",
+   "Darkling: Set Trap +2, Evil Eye (Doom spell once per day)",
+   "Equaar: Animal Empathy +2, Move Silently +2",
+   "Kamii: Appraise +2",
+   "Naiat: Perform +2, Base Outcast Rating 0",
+   "Vatraska: Heal +2, Greater efficiency at using heal kits.",
+   "Zarovan: Improved Initiative"
+  ],
+  "notes": [
+   "The +2 Wis, -2 Cha adjustment will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Half-Vistana (Giamarga)",
+  "abilityAdjustments": {
+   "WIS": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. Enchantments",
+   "Low-light Vision",
+   "Moon Madness",
+   "Partial Skill Affinity (Listen)",
+   "Partial Skill Affinity (Search)",
+   "Partial Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Lore +2"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Sithican Grey Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CON": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Hardiness vs. Enchantments",
+   "Keen Senses",
+   "Lore +1",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Spellcraft +1",
+   "Sleeplessness",
+   "Weapon Proficiencies (Longsword, Rapier, Shortbow, Longbow)"
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves at character creation. An extra +2 Int, -2 Cha will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Sithican Wild Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Keen Senses",
+   "Darkvision",
+   "+1 Lore",
+   "+1 Search"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Con, -2 Int, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Axani",
+  "abilityAdjustments": {
+   "INT": 2,
+   "WIS": 2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Human Bonus Feat",
+   "Darkvision",
+   "Charm Person spell once a day",
+   "Skill Affinity (Spot)",
+   "+2 Influence",
+   "Sonic Damage Resistance 5/-",
+   "Cold Damage Resistance 5/-"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine does not apply ability score adjustment on humans. The +2 Int, +2 Wis adjustment will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Cansin",
+  "abilityAdjustments": {
+   "INT": 2,
+   "CHA": 2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Human Bonus Feat",
+   "Darkvision",
+   "Entropic Shield spell once a day",
+   "Skill Affinity (Search)",
+   "+2 Influence",
+   "Acid Damage Resistance 5/-",
+   "Fire Damage Resistance 5/-"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine does not apply ability score adjustment on humans. The +2 Int, +2 Cha adjustment will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Tiefling",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Human Bonus Feat",
+   "Darkvision",
+   "Darkness spell once a day",
+   "+2 Influence",
+   "+2 Hide",
+   "Cold Damage Resistance 5/-",
+   "Electrical Damage Resistance 5/-",
+   "Fire Damage Resistance 5/-"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine does not apply ability score adjustment on humans. The +2 Dex, +2 Int, -2 Cha adjustment will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Fire Gnome",
+  "abilityAdjustments": {
+   "CON": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Defensive training vs. giants",
+   "Spell focus (illusion)",
+   "Darkvision",
+   "Continual Flame spell once a day",
+   "Flame Weapon spell once a day (self only)",
+   "Stonecunning",
+   "Small stature",
+   "100% Fire Immunity",
+   "50% Cold Vulnerability"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Frost Dwarf",
+  "abilityAdjustments": {
+   "CON": 4,
+   "CHA": -4
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Hardiness vs. spells",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Defensive training vs. giants",
+   "Skill affinity (lore)",
+   "+4 Move Silently",
+   "Frost Breath",
+   "Frost Weapon spell once a day (self only)",
+   "Immunity to Paralysis",
+   "Immunity to Poison",
+   "Immunity to the Phantasmal Killer Spell",
+   "Immunity to the Weird Spell",
+   "Cold Damage Resistance 10"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +2 Con, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Tanarukk",
+  "abilityAdjustments": {
+   "STR": 4,
+   "DEX": 2,
+   "WIS": -2,
+   "CHA": -4
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Martial Weapons Proficiency",
+   "Creature Weapon Proficiency",
+   "Spell Resistance",
+   "Increased AC +4",
+   "Fire Damage Resistance 10"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Str, -2 Int, -2 Cha adjustment for standard half-orcs. An extra +2 Str, +2 Dex, +2 Int, -2 Wis, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Half-Orc",
+  "abilityAdjustments": {
+   "STR": 2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Gold Dwarf",
+  "abilityAdjustments": {
+   "CON": 2,
+   "DEX": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Stonecunning",
+   "Darkvision",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Offensive training vs. aberration",
+   "Defensive training vs. giants",
+   "Skill affinity (lore)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +2 Cha, -2 Dex will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Shield Dwarf",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Stonecunning",
+   "Darkvision",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Bonus Weapon Proficiency (Dwarven Waraxe)",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Defensive training vs. giants",
+   "Skill affinity (lore)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Arctic Dwarf",
+  "abilityAdjustments": {
+   "STR": 4,
+   "CON": 2,
+   "DEX": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Cold Immunity 100%",
+   "Darkvision",
+   "Defensive training vs. giants",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Skill affinity (lore)",
+   "Small stature",
+   "Stonecunning",
+   "Weapon Proficiency (Dwarven Waraxe)"
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves at character creation. An extra +4 Str, -2 Dex will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Moulder Dwarves",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Ability adjustments: Dex +1, Int +1, -2 Cha*",
+   "Skill adjustments: Disable Trap +2, Spellcraft +2, Perform -2, Influence -2",
+   "Darkvision",
+   "Defensive training vs. giants",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Skill affinity (lore)",
+   "Stonecunning"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +1 Int, +1 Dex, -2 Con will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Shadow Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CON": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Keen Senses",
+   "Darkvision",
+   "+2 Listen"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Valenar Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. Enchantments",
+   "Keen Senses",
+   "Low-light Vision",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Weapon Proficiencies (Longsword, Rapier, Shortbow, Longbow)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Vos",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Skilled"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Rjurik",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Skilled"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Khinasi",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Skilled"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Brecht",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Skilled"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Anuirean",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Skilled"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Sidhelien Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CON": -2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapon proficiencies",
+   "Hardiness vs. Enchantment",
+   "Woodland Stride",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, -2 Con will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Half-Sidhelien",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Partial Skill Affinity (Listen)",
+   "Partial Skill Affinity (Search)",
+   "Partial Skill Affinity (Spot)",
+   "Low-light Vision",
+   "Saving throw vs disease +2"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Cerilian Halfling",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "WIS": 2,
+   "STR": -4
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Fearless",
+   "Good aim",
+   "Lucky",
+   "Skill affinity (move silently)",
+   "Skill affinity (listen)",
+   "Sling attack bonus",
+   "Small stature"
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Dex, -2 Str adjustment for standard halflings at character creation. An extra +2 Wis, -2 Str will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Cerilian Dwarf",
+  "abilityAdjustments": {
+   "CON": 4,
+   "DEX": -4
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Stonecunning",
+   "Darkvision",
+   "Hardiness vs. Poisons",
+   "Hardiness vs. spells",
+   "Defensive training vs. Giants",
+   "Skill affinity (lore)",
+   "Bludgeoning Damage Resistance 5/-"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +2 Con, +2 Cha, -4 Dex will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Kagonesti Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Simple weapon proficiencies",
+   "Elven weapon proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Lore +1",
+   "Search +1"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Con, -2 Int, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Whisper Gnome",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Ability adjustments: +2 Dex, +2 Con, -2 Cha, -2 Str*",
+   "Skill adjustments: +4 to Hide, +4 to Move Silently",
+   "Darkvision",
+   "Offensive training vs. reptilians",
+   "Offensive training vs. goblinoids",
+   "Skill Affinity (spot)",
+   "Skill Affinity (listen)",
+   "Spell focus (illusion)",
+   "Spell-like ability: Silence, 1x day",
+   "Small Stature"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Str adjustment for standard gnomes. An extra +2 Dex, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Tinker Gnome",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "STR": -2,
+   "WIS": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Spell focus (illusion)",
+   "Will Save +2",
+   "Small stature"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Str adjustment for standard gnomes. An extra +2 Dex, +2 Int, -2 Con, -2 Wis will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Thinker (Mad) Gnome",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Spell focus (illusion)",
+   "Small stature",
+   "+2 Open Lock",
+   "+2 Disable Trap"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Str adjustment for standard gnomes. An extra +2 Dex, -2 Con will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Silvanesti Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CON": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Lore +1",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Spellcraft +1",
+   "Weapon Proficiencies (Longsword, Rapier, Shortbow, Longbow)"
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves at character creation. An extra +2 Int, -2 Cha will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Xakhun",
+  "abilityAdjustments": {
+   "STR": 2,
+   "DEX": 2,
+   "CON": -2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapon proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Spell Resistance (3 + Character Level)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Str, -2 Int, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Half-Drow",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. Enchantments",
+   "Low-light Vision",
+   "Partial Skill Affinity (Listen)",
+   "Partial Skill Affinity (Search)",
+   "Partial Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Umbragen",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CON": -2,
+   "CHA": 2
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Elven weapons proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Move Silently +2",
+   "Hide +2",
+   "Faerie Fire spell once a day",
+   "Darkness spell once a day",
+   "Spell Resistance (11 + Character Level)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, +2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Drow of Eberron",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CON": -2,
+   "CHA": 2
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Elven weapon proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Faerie Fire x1",
+   "Darkness x1",
+   "Will Save +2",
+   "Spell Resistance (11 + Character Level)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, +2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Drow of Greyhawk",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CON": -2,
+   "CHA": 2
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Elven weapon proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Will +2",
+   "Faerie Fire x1",
+   "Darkness x1",
+   "Will Save +2",
+   "Spell Resistance (11 + Character Level)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, +2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Drow of the Forgotten Realms",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": 2,
+   "CON": -2,
+   "CHA": 2
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Elven weapon proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Will +2",
+   "Faerie Fire x1",
+   "Darkness x1",
+   "Will Save +2",
+   "Spell Resistance (11 + Character Level)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, +2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Snow Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapon proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Con, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Poscadar Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapon proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Con, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Celadrin",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2,
+   "CHA": 2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Flame Arrow spell-like ability once a day",
+   "Fire Resistance 10/-",
+   "Elven weapons proficiencies",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Perform +4",
+   "Influence +1 (+ Hit dice/5)",
+   "Animal Empathy +1 (+ Hit dice/5)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Duergar (Grey Dwarf)",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -4
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Stonecunning",
+   "Darkvision",
+   "Hardiness vs. Poisons",
+   "Hardiness vs. spells",
+   "Weapon Proficiency Bonus (Dwarven Waraxe)",
+   "Offensive training vs. Goblins",
+   "Offensive training vs. Orcs",
+   "Defensive training vs. Giants",
+   "Invisibility spell once a day (Self-only).",
+   "Partial Skill affinity (Listen)",
+   "Partial Skill affinity (Spot)",
+   "Skill affinity (lore)",
+   "Move Silently +4",
+   "Paralysis immunity",
+   "Poison immunity",
+   "Spell immunity (Phantasmal Killer)",
+   "Spell immunity (Weird)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Moon Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Keen Senses",
+   "Low-light Vision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Sun Elf",
+  "abilityAdjustments": {
+   "INT": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapons proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, -2 Dex will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Wood Elf",
+  "abilityAdjustments": {
+   "STR": 2,
+   "DEX": 2,
+   "CON": -2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapons proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Str, -2 Int, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Wild Elf of Faer\u00fbn",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapons proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Con, -2 Int will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Rock Gnome",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. illusions",
+   "Offensive training vs. reptilians",
+   "Offensive training vs. goblinoids",
+   "Defensive training vs. giants",
+   "Skill affinity (listen)",
+   "Skill affinity (concentration)",
+   "Spell focus (illusion)",
+   "Low-light vision",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Svirfneblin (Deep Gnome)",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "WIS": 2,
+   "STR": -2,
+   "CHA": -4
+  },
+  "effectiveCharacterLevel": 3,
+  "baseOutcastRating": null,
+  "traits": [
+   "Offensive training vs. reptilians",
+   "Offensive training vs. goblinoids",
+   "Skill affinity (listen)",
+   "Skill affinity (concentration)",
+   "Spell focus (illusion)",
+   "Stonecunning",
+   "Darkvision",
+   "Small stature",
+   "Fortitude +2",
+   "Will +2",
+   "Reflex +2",
+   "Hide +2",
+   "AC increase +4",
+   "Spell Resistance",
+   "Blindness/Deaness spell once per day",
+   "Disguise Self spell once per day"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Str adjustment for standard gnomes. An extra +2 Dex, +2 Wis, -2 Con, -4 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Lightfoot Halfling",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Skill affinity (move silently)",
+   "Skill affinity (listen)",
+   "Lucky",
+   "Fearless",
+   "Good aim",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Strongheart Halfling",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Skill affinity (move silently)",
+   "Skill affinity (listen)",
+   "Lucky",
+   "Fearless",
+   "Good aim",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Scro",
+  "abilityAdjustments": {
+   "STR": 4,
+   "DEX": 2,
+   "CON": 2
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision"
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Str, -2 Int and -2 Cha adjustment for standard half-orcs at character creation. An extra +2 Str, +2 Int, +2 Dex, +2 Cha, +2 Con will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Korobokuru",
+  "abilityAdjustments": {
+   "CON": 2,
+   "INT": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Animal Empathy +2",
+   "Darkvision",
+   "Defensive training vs. Giants",
+   "Hardiness vs. Poisons",
+   "Hardiness vs. spells",
+   "Offensive training vs. Goblins",
+   "Small Stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Ishikorobokuru",
+  "abilityAdjustments": {
+   "CON": 2,
+   "INT": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Hardiness vs. Poisons",
+   "Hardiness vs. spells",
+   "Offensive training vs. Goblins",
+   "Defensive training vs. Giants",
+   "Animal Empathy +2",
+   "100% Cold Damage Immunity",
+   "100% Fire Damage Vulnerability",
+   "Small Stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Dream Dwarf",
+  "abilityAdjustments": {
+   "CON": 2,
+   "DEX": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Stonecunning",
+   "Spell Focus Divination"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +2 Cha, -2 Dex will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Kogolor Dwarf",
+  "abilityAdjustments": {
+   "CON": -1,
+   "CHA": 1
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Offensive training vs. Goblins",
+   "Offensive training vs. Orcs",
+   "Defensive training vs. Giants",
+   "Skill affinity (listen)",
+   "Listen +2",
+   "Hide +2",
+   "Perform +2"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +3 Cha, -3 Con will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Aghar (Gully Dwarf)",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": 2,
+   "INT": -4,
+   "CHA": -4
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. Poisons",
+   "Bonus Weapon Proficiency (Dwarven Waraxe)",
+   "Small Stature",
+   "+2 Hide",
+   "+2 Influence",
+   "+2 Move Silently",
+   "+2 vs Disease",
+   "-4 vs Fear"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +2 Dex, -4 Int, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Anadian Halfling",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Skill affinity (move silently)",
+   "Skill affinity (listen)",
+   "Lucky",
+   "Fearless",
+   "Good aim",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Qualinesti Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Hardiness vs. Enchantment",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Keen Senses",
+   "Sleeplessness",
+   "Influence +1",
+   "Spot +1"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Imago (Chaos Gnome)",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Ability adjustments: +2 Dex, +2 Con, +2 Cha, -2 Str*",
+   "Defensive training vs. giants",
+   "Skill affinity (Listen)",
+   "Low-light vision",
+   "Small stature",
+   "Spell immunity (Confusion)",
+   "Entropic Shield spell once a day."
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Str adjustment for standard gnomes. An extra +2 Dex, +2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "True Kender",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "WIS": -2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Antagonize +4",
+   "Concentration -4",
+   "Fear Immunity",
+   "Lucky",
+   "Open Lock +2",
+   "Pick Pocket +2",
+   "Sling attack bonus",
+   "Small stature",
+   "Spot +2"
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Dex, -2 Str adjustment for standard halflings at character creation. An extra -2 Wis will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Abber Nomad",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Saving Throw vs Mind-Affecting Spells +4",
+   "Skilled"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Glacier Dwarf",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Bonus Weapon Proficiency (Dwarven Waraxe)",
+   "Cold Endurance",
+   "Darkvision",
+   "Defensive Training vs. Giants",
+   "Hardiness vs. spells",
+   "Offensive Training vs. Orcs",
+   "Offensive Training vs. Goblinoids",
+   "Skill Affinity (Lore)",
+   "Stonecunning"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Dark Dwarf",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -4
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hide +2",
+   "Move Silently +2",
+   "Listen +2",
+   "Stonecunning",
+   "Darkvision",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Defensive training vs. giants",
+   "Skill affinity (lore)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Belcadiz Elf",
+  "abilityAdjustments": {
+   "INT": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Bonus Weapon Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Keen Senses",
+   "+2 Influence"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, -2 Dex will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Lerara Suel (Lerara)",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Skilled",
+   "Low-Light Vision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Ilsundal Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Keen Senses",
+   "Low-light Vision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Chultan Dwarf (Albino Shield Dwarf)",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Stonecunning",
+   "Darkvision",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Bonus Proficiencies (Dwarven Waraxe)",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Defensive training vs. giants",
+   "Skill affinity (lore)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Wild Dwarf (Jungle Dwarf)",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Use Poison",
+   "Fire Damage Resistance 5/-",
+   "+3 saves vs poison",
+   "+4 saves vs disease",
+   "Darkvision",
+   "Hardiness vs. spells",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Defensive training vs. giants",
+   "Small stature"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves."
+  ]
+ },
+ {
+  "name": "Grugach Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "INT": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapons proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Con, -2 Int will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Talenta Halfling",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Skill affinity (move silently)",
+   "Skill affinity (listen)",
+   "Skill bonus: Animal Empathy +2",
+   "Lucky",
+   "Fearless",
+   "Good aim",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Khorvaire Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Keen Senses",
+   "Low-light Vision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Valley Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. Enchantments",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Skill bonus: Disguise +4",
+   "Keen Senses",
+   "Low-light Vision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Deep Dwarf",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -4
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Stonecunning",
+   "Darkvision",
+   "Increased hardiness vs. Poisons (+3 bonus on saving throws vs poison)",
+   "Hardiness vs. spells",
+   "Bonus Weapon Proficiency (Dwarven Waraxe)",
+   "Offensive training vs. Goblins",
+   "Offensive training vs. Orcs",
+   "Defensive training vs. Giants",
+   "Skill affinity (lore)",
+   "Increased saving throw bonus (+1 bonus on fortitude, reflex and will saving throws)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Stout/Deep Halfling",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Stonecunning",
+   "Skill affinity (lore)",
+   "Skill affinity (listen)",
+   "Lucky.",
+   "Fearless",
+   "Good aim",
+   "Racial attack bonus when using slings",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Forest Gnome (Forstneblin)",
+  "abilityAdjustments": {
+   "CON": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. illusions",
+   "Offensive training vs. reptilians",
+   "Offensive training vs. goblinoids",
+   "Offensive training vs. orcs",
+   "Defensive training vs. giants",
+   "Skill affinity (listen)",
+   "Skill affinity (concentration)",
+   "Skill Bonus: +4 Hide",
+   "Spell focus (illusion)",
+   "Low-light vision",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Xeph",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "+1 bonus on Fortitude, Reflex, and Will saving throws",
+   "Darkvision",
+   "Expeditious Retreat 3x/day"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine will not apply the ability score adjustments immediately. The +2 Dex, -2 Str adjustment will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Hill Dwarf of Ansalon",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Stonecunning",
+   "Darkvision",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Bonus Proficiencies (Dwarven Waraxe)",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Defensive training vs. giants",
+   "Skill affinity (lore)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Wood Elf of Mystara",
+  "abilityAdjustments": {
+   "STR": 2,
+   "DEX": 2,
+   "CON": -2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Elven weapons proficiencies",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Str, -2 Int, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Star Elf",
+  "abilityAdjustments": {
+   "CHA": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Hardiness vs. Enchantment",
+   "Keen Senses",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Cha, -2 Dex will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Rockborn Dwarf",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Stonecunning",
+   "Darkvision",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Bonus Proficiencies (Dwarven Waraxe)",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Defensive training vs. giants",
+   "Skill affinity (lore)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Tallfellow Halfling",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Skill affinity (listen)",
+   "Skill affinity (spot)",
+   "Skill affinity (search)",
+   "Keen Senses",
+   "Lucky",
+   "Fearless",
+   "Good aim",
+   "Racial attack bonus when using slings",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Aerenal Elf",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hardiness vs. Enchantments",
+   "Keen Senses",
+   "Low-light Vision",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Sleeplessness",
+   "Weapon Proficiencies (Longsword, Rapier, Shortbow, Longbow)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Oscray",
+  "abilityAdjustments": {
+   "STR": 4,
+   "DEX": 2,
+   "CON": 2
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision"
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Str, -2 Int and -2 Cha adjustment for standard half-orcs at character creation. An extra +2 Str, +2 Int, +2 Dex, +2 Cha, +2 Con will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Scabland Half-Orc",
+  "abilityAdjustments": {
+   "STR": 2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Heat Endurance",
+   "Low-Light Vision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Badland Dwarf (Unath Dwarf)",
+  "abilityAdjustments": {
+   "CON": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Defensive training vs. giants",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Heat Resistance",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Waterwise",
+   "Weapon Proficiency (Dwarven Waraxe)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Feytouched Template",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Racial Type: Fey",
+   "Hit Dice: d6 (if lower)",
+   "Ability Modifiers: +2 Dex, -2 Con, +2 Cha*",
+   "AC Bonus: +1 (Fey luck)",
+   "Feat: Low-Light Vision",
+   "Spell-like abilities (1x/day): Faerie Fire, Daze, Charm Person",
+   "Effective Character Level (ECL): +1",
+   "Outcast Rating increases by +6 (or more if picking more major traits)",
+   "Feytouched humans lose the extra skill point bonus on level ups. This is a hardcoded side effect of having the creature type changed to Fey.",
+   "Otherwise, Feytouched characters keep all the regular features of their non-fey blooded parent race."
+  ],
+  "notes": [
+   "These modifiers are applied in addition to the standard modifiers for your chosen base race or subrace."
+  ]
+ },
+ {
+  "name": "Draconic Ancestry Template",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Ability Modifiers: +2 Str, +2 Con, +2 Cha*",
+   "Saving Throw Bonus: +2 vs Mind-Affecting Spells",
+   "Increased AC +1",
+   "Nails: 1d2 (Small sized characters), 1d3 (Medium sized characters)",
+   "Feats: Low-Light Vision, Darkvision",
+   "Skill bonuses: Antagonize +2, Spot +2",
+   "Effective Character Level (ECL): +1",
+   "Outcast Rating increases by +4 (or more if picking more major traits)"
+  ],
+  "notes": [
+   "These modifiers are applied in addition to the standard modifiers for your chosen base race."
+  ]
+ },
+ {
+  "name": "Athasian Dwarf",
+  "abilityAdjustments": {
+   "CON": 4,
+   "WIS": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Increased Hardiness vs. poisons (an extra +2 saving throw bonus is added)",
+   "Hardiness vs. spells",
+   "Offensive training vs. goblinoids"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +2 Con, +2 Wis will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Athasian Elf",
+  "abilityAdjustments": {
+   "DEX": 4,
+   "CON": -2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Increased Listen, Spot & Search bonus at 5th and 15th level.",
+   "Endurance",
+   "Hardiness vs illusions",
+   "Low-light vision",
+   "Longstrider spell 1x/day"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Dex will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Athasian Half-Elf",
+  "abilityAdjustments": {
+   "DEX": 2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Hardiness vs. Illusions",
+   "Partial Skill Affinity (Listen)",
+   "Partial Skill Affinity (Search)",
+   "Partial Skill Affinity (Spot)",
+   "Low-light Vision"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine does not apply ability score adjustment on humans. The +2 Dex adjustment will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Athasian Halfling",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "WIS": 2
+  },
+  "effectiveCharacterLevel": 1,
+  "baseOutcastRating": null,
+  "traits": [
+   "Skill affinity (move silently)",
+   "Increased move silently bonus by +2 at level 5, and by +6 at level 15.",
+   "Lucky",
+   "Fearless",
+   "Good aim",
+   "Racial attack bonus when using slings",
+   "Small stature"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Str adjustment for standard halflings. An extra +2 Wis, +2 Str will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Athasian Human",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Skilled"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Mul",
+  "abilityAdjustments": {
+   "STR": 2,
+   "CON": 4
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Natural Healer",
+   "Regeneration (1 pt at level 10, 3 pts at level 15)"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Str, -2 Int, -2 Cha adjustment for standard half-orcs. An extra +4 Con, +2 Int, +2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Rhul-Thaun (Athasian halfling variant)",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "WIS": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Fearless",
+   "Good aim",
+   "Lucky",
+   "Skill Affinity (Move Silently)",
+   "Skill Affinity (Listen)",
+   "Sling Attack bonus",
+   "Small Stature"
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Dex, -2 Str adjustment for standard halflings at character creation. An extra +2 Wis will be applied once the subrace is acquired in-game."
+  ]
+ },
+ {
+  "name": "Tarek",
+  "abilityAdjustments": {
+   "STR": 2,
+   "INT": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Racial Type: Monstrous Humanoid",
+   "Darkvision"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Blooded One",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Ability Modifiers: +2 Str, +4 Con, -2 Int*",
+   "AC Bonus: +2",
+   "Feat: Improved Initiative",
+   "Spell-like abilities (1x/day): Blooded One War Cry (all blooded ones within 30 feet (including itself) gain a +1 morale bonus on all attack and damage rolls for 2d4 rounds)",
+   "Effective Character Level (ECL): +1"
+  ],
+  "notes": [
+   "These modifiers are applied in addition to the standard modifiers for your chosen base race or subrace."
+  ]
+ },
+ {
+  "name": "Hagspawn",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Racial Type: Monstrous Humanoid",
+   "Ability Modifiers: +2 Str, +2 Con, -2 Cha*",
+   "AC Bonus: +2",
+   "Darkvision",
+   "Immunities: Enchantment spells affecting humanoids only (Daze, Charm Person, Dominate Person, Hold Person & Mass Hold Person)",
+   "Spell Resistance (11 + Character Level)",
+   "Outcast Rating as Calibans."
+  ],
+  "notes": [
+   "The game engine automatically applies the default +2 Str, -2 Int and -2 Cha adjustment for standard half-orcs at character creation. An extra +2 Con, +2 Int will be applied once the subrace template is acquired in-game."
+  ]
+ },
+ {
+  "name": "Eneko",
+  "abilityAdjustments": {
+   "STR": 2,
+   "CON": 2,
+   "DEX": -2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Hardiness vs. Poisons",
+   "Endure Element spell once a day",
+   "Large Size",
+   "ECL +1"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Str, -2 Int, -2 Cha adjustment for half-orcs."
+  ]
+ },
+ {
+  "name": "Yuan-Ti Tainted One",
+  "abilityAdjustments": {
+   "CON": 2
+  },
+  "effectiveCharacterLevel": 2,
+  "baseOutcastRating": null,
+  "traits": [
+   "Alertness feat",
+   "Poison Bite",
+   "Poison Immunity",
+   "Spell Resistance (12 + (Character Level/2))",
+   "Poison 1x/day",
+   "Polymorph Self (Viper form only) 3x/day",
+   "Quote from: Note from the Dev team",
+   "The spell-like abilities for this template will be enabled as of the next HAK update."
+  ],
+  "notes": [
+   "These modifiers are applied in addition to the standard modifiers for your chosen base race or subrace."
+  ]
+ }
+]
