@@ -87,9 +87,10 @@ export function SkillList({ skills, totalEarned, totalBanked }: Props) {
         </div>
       )}
       <p className="mt-2 text-xs text-neutral-500">
-        Read-only — allocate ranks level-by-level in the "Skill Points by Level" planner above.
-        Class skills cost 1 point/rank (max level+3); cross-class skills cost 2 points/rank (max
-        floor((level+3)/2)), per NWN's engine rules — not tabletop 3.5e's half-rank system.
+        Read-only — allocate ranks level-by-level in the &quot;Skill Points by Level&quot; planner
+        above. Status here is the multiclass max-rank view (class if any of your classes grants
+        it). Purchase cost is still 1 or 2 points per rank based on the class leveled when the
+        ranks were bought, per NWN.
       </p>
     </section>
   );

@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { ALL_SKILLS } from "../data/skills";
 import type { LevelSnapshot } from "../lib/calculator";
-import { classesTakenThroughLevel, nextClassSkillLevel, skillMaxRank, skillPointCost, skillStatusForBuild } from "../lib/skillRules";
+import {
+  classesTakenThroughLevel,
+  nextClassSkillLevel,
+  skillMaxRank,
+  skillPointCost,
+  skillStatusForClass,
+  skillStatusForMaxRank,
+} from "../lib/skillRules";
 import type { SkillStatus } from "../data/skills";
 import type { Build, SkillAllocation } from "../types";
 
@@ -48,6 +55,7 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
   const availableLevels = build.levels.map((l) => l.level);
   const [requestedLevel, setRequestedLevel] = useState<number | null>(null);
   const [collapsed, setCollapsed] = useState(false);
+  const [confirmingReset, setConfirmingReset] = useState(false);
   const [hiddenSkills, setHiddenSkills] = useState<Set<string>>(() => loadHiddenSkills());
   const level =
     requestedLevel != null && availableLevels.includes(requestedLevel)
@@ -72,6 +80,9 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
   const available = bankedBefore + earned;
   const bankedAfter = snap?.skillPointsBanked ?? available - spent;
 
+  // Cost/status at this level follows the class taken HERE (NWN rule). Max ranks use any class
+  // taken through this level — class skill for any of them unlocks the full level+3 cap.
+  const classAtLevel = entry.className;
   const classesSoFar = classesTakenThroughLevel(build.levels, level);
 
   // Cumulative ranks purchased strictly before this level, per skill.
@@ -105,11 +116,17 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
     });
   }
 
+  function handleResetSkills() {
+    onChange([]);
+    setConfirmingReset(false);
+  }
+
   // Skills with ranks from a previous level surface first, so you can quickly keep adding to what
   // you've already invested in; within that, still grouped by class/cross-class/unavailable.
   const rows = ALL_SKILLS.map((def) => ({
     def,
-    status: skillStatusForBuild(def.name, classesSoFar),
+    status: skillStatusForClass(def.name, classAtLevel),
+    maxStatus: skillStatusForMaxRank(def.name, classesSoFar),
     invested: (ranksBefore[def.name] ?? 0) > 0,
   })).sort((a, b) => {
     if (a.invested !== b.invested) return a.invested ? -1 : 1;
@@ -120,17 +137,48 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
 
   return (
     <section className="rounded-lg border border-neutral-700 bg-neutral-900/40 p-4">
-      <div className="flex items-center justify-between mb-3 gap-2 flex-wrap">
-        <button
-          type="button"
-          onClick={() => setCollapsed((c) => !c)}
-          className="flex items-center gap-2 text-lg font-semibold text-neutral-100"
-        >
-          <span className={`inline-block transition-transform ${collapsed ? "-rotate-90" : ""}`}>&#9662;</span>
-          Skill Points by Level
-        </button>
+      <div className="mb-3 space-y-2">
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <button
+            type="button"
+            onClick={() => setCollapsed((c) => !c)}
+            className="flex items-center gap-2 text-lg font-semibold text-neutral-100"
+          >
+            <span className={`inline-block transition-transform ${collapsed ? "-rotate-90" : ""}`}>&#9662;</span>
+            Skill Points by Level
+          </button>
+          {!collapsed &&
+            (!confirmingReset ? (
+              <button
+                type="button"
+                onClick={() => setConfirmingReset(true)}
+                disabled={build.skills.length === 0}
+                className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 disabled:opacity-30 text-sm"
+              >
+                Reset
+              </button>
+            ) : (
+              <div className="flex items-center gap-2 text-sm flex-wrap justify-end">
+                <span className="text-amber-400">Reset all skill points on every level?</span>
+                <button
+                  type="button"
+                  onClick={handleResetSkills}
+                  className="px-2 py-1 rounded bg-red-700 hover:bg-red-600 text-white text-sm"
+                >
+                  OK
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setConfirmingReset(false)}
+                  className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-sm"
+                >
+                  No
+                </button>
+              </div>
+            ))}
+        </div>
         {!collapsed && (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center gap-2">
             <button
               type="button"
               onClick={() => goTo(availableLevels[availableLevels.indexOf(level) - 1])}
@@ -193,29 +241,32 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
 
           {!entry.className && (
             <p className="text-xs text-amber-400 mb-2">
-              No class chosen at this level yet — status shown reflects classes taken through the previous level.
+              No class chosen at this level yet — pick a class to see accurate class / cross-class pricing.
             </p>
           )}
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm text-left border-collapse">
+          <div className="overflow-x-auto rounded-md border border-neutral-800">
+            <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="text-neutral-400 border-b border-neutral-700">
-                  <th className="py-1 pr-2 font-medium">Skill</th>
-                  <th className="py-1 pr-2 font-medium">Status @ Lv{level}</th>
-                  <th className="py-1 pr-2 font-medium text-right">Ranks before</th>
-                  <th className="py-1 pr-2 font-medium text-right">+ this level</th>
-                  <th className="py-1 pr-2 font-medium text-right">Max @ Lv{level}</th>
-                  <th className="py-1 pr-2 font-medium text-right">Cost</th>
-                  <th className="py-1 pr-2 font-medium">Bank-for-later</th>
-                  <th className="py-1 pl-2 font-medium"></th>
+                <tr className="text-neutral-400 border-b border-neutral-700 bg-neutral-950/50">
+                  <th className="py-2.5 px-3 font-medium text-left whitespace-nowrap">Skill</th>
+                  <th className="py-2.5 px-3 font-medium text-center whitespace-nowrap">
+                    Status{classAtLevel ? ` (${classAtLevel})` : ` @ Lv${level}`}
+                  </th>
+                  <th className="py-2.5 px-3 font-medium text-center whitespace-nowrap">Ranks before</th>
+                  <th className="py-2.5 px-3 font-medium text-center whitespace-nowrap">+ this level</th>
+                  <th className="py-2.5 px-3 font-medium text-center whitespace-nowrap">Max @ Lv{level}</th>
+                  <th className="py-2.5 px-3 font-medium text-center whitespace-nowrap">Cost</th>
+                  <th className="py-2.5 px-3 font-medium text-center whitespace-nowrap">Bank-for-later</th>
+                  <th className="py-2.5 px-3 font-medium text-center whitespace-nowrap w-16"></th>
                 </tr>
               </thead>
               <tbody>
-                {visibleRows.map(({ def, status, invested }, i) => {
+                {visibleRows.map(({ def, status, maxStatus, invested }, i) => {
                   const before = ranksBefore[def.name] ?? 0;
                   const added = ranksThisLevel[def.name] ?? 0;
-                  const maxAtLevel = skillMaxRank(level, status);
+                  // Cap follows any-class rule; cost follows this level's class only.
+                  const maxAtLevel = skillMaxRank(level, maxStatus);
                   const cost = skillPointCost(added, status);
                   const overMax = before + added > maxAtLevel;
                   const upgradeLevel =
@@ -223,31 +274,56 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
                   const hasRanks = before + added > 0;
                   const showDivider = i > 0 && !invested && visibleRows[i - 1].invested;
                   const row = (
-                    <tr key={def.name} className={`border-b border-neutral-800 ${STATUS_ROW_BG[status]}`}>
-                      <td className="py-1 pr-2 text-neutral-200">{def.name}</td>
-                      <td className={`py-1 pr-2 font-medium ${STATUS_CLASS[status]}`}>{STATUS_LABEL[status]}</td>
-                      <td className="py-1 pr-2 text-right font-mono text-neutral-500">{before}</td>
-                      <td className="py-1 pr-2 text-right">
-                        <input
-                          type="number"
-                          min={0}
-                          max={status === "unavailable" ? 0 : undefined}
-                          value={added}
-                          disabled={status === "unavailable"}
-                          onChange={(e) => setRanks(def.name, Number(e.target.value))}
-                          className={`w-14 bg-neutral-950 border rounded px-1 py-0.5 text-right font-mono disabled:opacity-30 ${
-                            overMax ? "border-red-600 text-red-400" : "border-neutral-700 text-neutral-100"
-                          }`}
-                        />
+                    <tr
+                      key={def.name}
+                      className={`border-b border-neutral-800/80 hover:bg-neutral-800/30 ${STATUS_ROW_BG[status]}`}
+                    >
+                      <td className="py-2 px-3 text-left text-neutral-200 whitespace-nowrap">{def.name}</td>
+                      <td className={`py-2 px-3 text-center font-medium whitespace-nowrap ${STATUS_CLASS[status]}`}>
+                        {STATUS_LABEL[status]}
                       </td>
-                      <td className="py-1 pr-2 text-right font-mono text-neutral-500">{maxAtLevel}</td>
-                      <td className="py-1 pr-2 text-right font-mono text-neutral-400">
+                      <td className="py-2 px-3 text-center font-mono text-neutral-400 tabular-nums">{before}</td>
+                      <td className="py-2 px-3 text-center">
+                        <div className="inline-flex items-center justify-center gap-1.5">
+                          <button
+                            type="button"
+                            aria-label={`Remove one rank from ${def.name}`}
+                            disabled={status === "unavailable" || added <= 0}
+                            onClick={() => setRanks(def.name, added - 1)}
+                            className="h-8 w-8 shrink-0 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-100 text-lg font-semibold leading-none disabled:opacity-30 disabled:hover:bg-neutral-800"
+                          >
+                            −
+                          </button>
+                          <input
+                            type="number"
+                            min={0}
+                            max={status === "unavailable" ? 0 : undefined}
+                            value={added}
+                            disabled={status === "unavailable"}
+                            onChange={(e) => setRanks(def.name, Number(e.target.value))}
+                            className={`w-12 bg-neutral-950 border rounded px-1 py-1.5 text-center font-mono text-sm tabular-nums disabled:opacity-30 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none ${
+                              overMax ? "border-red-600 text-red-400" : "border-neutral-700 text-neutral-100"
+                            }`}
+                          />
+                          <button
+                            type="button"
+                            aria-label={`Add one rank to ${def.name}`}
+                            disabled={status === "unavailable" || before + added >= maxAtLevel}
+                            onClick={() => setRanks(def.name, added + 1)}
+                            className="h-8 w-8 shrink-0 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-100 text-lg font-semibold leading-none disabled:opacity-30 disabled:hover:bg-neutral-800"
+                          >
+                            +
+                          </button>
+                        </div>
+                      </td>
+                      <td className="py-2 px-3 text-center font-mono text-neutral-400 tabular-nums">{maxAtLevel}</td>
+                      <td className="py-2 px-3 text-center font-mono text-neutral-300 tabular-nums">
                         {Number.isFinite(cost) ? cost : "—"}
                       </td>
-                      <td className="py-1 pr-2 text-xs text-violet-400">
-                        {upgradeLevel ? `Class skill at Lv${upgradeLevel} — consider banking` : ""}
+                      <td className="py-2 px-3 text-center text-xs text-violet-400 whitespace-nowrap">
+                        {upgradeLevel ? `Class skill at Lv${upgradeLevel} — consider banking` : "—"}
                       </td>
-                      <td className="py-1 pl-2 text-right">
+                      <td className="py-2 px-3 text-center">
                         <button
                           type="button"
                           onClick={() => setSkillHidden(def.name, true)}
@@ -263,14 +339,14 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
                   return [
                     invested && i === 0 && (
                       <tr key="invested-header">
-                        <td colSpan={8} className="pb-1 text-xs uppercase tracking-wide text-violet-400">
+                        <td colSpan={8} className="px-3 pt-3 pb-1.5 text-xs uppercase tracking-wide text-violet-400 bg-neutral-950/30">
                           Already invested
                         </td>
                       </tr>
                     ),
                     showDivider && (
                       <tr key="uninvested-header">
-                        <td colSpan={8} className="pt-3 pb-1 text-xs uppercase tracking-wide text-neutral-600">
+                        <td colSpan={8} className="px-3 pt-3 pb-1.5 text-xs uppercase tracking-wide text-neutral-600 bg-neutral-950/30">
                           Other skills
                         </td>
                       </tr>
@@ -298,9 +374,10 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
             </div>
           )}
           <p className="mt-2 text-xs text-neutral-500">
-            Ranks are priced at this level's class/cross-class status. Unspent points carry forward
-            as a bank — dump into a cross-class skill now at 2 points/rank, or bank and wait for
-            "Class skill at Lv&hellip;" to spend at 1 point/rank instead.
+            Status and cost follow the class taken at this level only (1 pt/rank class, 2
+            cross-class). Max ranks use the multiclass rule: if any class you&apos;ve taken grants
+            the skill as a class skill, the cap is level+3. Unspent points bank forward — wait for
+            &quot;Class skill at Lv…&quot; to buy at 1 point/rank on a later class level.
           </p>
         </>
       )}

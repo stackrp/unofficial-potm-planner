@@ -6,7 +6,12 @@ import { autoModForRace, categoryForRace } from "../data/raceCategories";
 import { getBackground, MAX_BACKGROUNDS } from "../data/backgrounds";
 import { getDeity } from "../data/deities";
 import { withinOneStep } from "./alignment";
-import { skillMaxRank, skillPointCost, skillStatusForBuild } from "./skillRules";
+import {
+  skillMaxRank,
+  skillPointCost,
+  skillStatusForClass,
+  skillStatusForMaxRank,
+} from "./skillRules";
 import {
   ABILITY_KEYS,
   FIRST_LEVEL_ONLY_FEATS,
@@ -154,9 +159,10 @@ export function calculateBuild(build: Build): CalculatedBuild {
   let runningIntScore = build.baseAbilityScores.INT;
   const perLevel: LevelSnapshot[] = [];
 
-  // Skill points are priced using the class/cross-class status the build actually had at the
-  // level they were spent, then tracked as a running banked (unspent) balance — this is what
-  // lets a plan show whether banking points for a later, cheaper level pays off.
+  // Skill points are priced using the class taken at the level they were spent (NWN prices
+  // class vs cross-class off that level's class alone), then tracked as a running banked
+  // balance so a plan can show when banking for a cheaper level pays off. Max ranks use the
+  // any-class rule (class skill for any taken class → level+3 cap).
   const skillAllocationsByLevel = new Map<number, SkillAllocation[]>();
   for (const alloc of build.skills) {
     const arr = skillAllocationsByLevel.get(alloc.level) ?? [];
@@ -167,21 +173,28 @@ export function calculateBuild(build: Build): CalculatedBuild {
   const skillCostSoFar: Record<string, number> = {};
   let bankedSkillPoints = 0;
 
-  function spendSkillPointsAtLevel(levelNum: number): number {
+  function spendSkillPointsAtLevel(levelNum: number, classNameAtLevel: string): number {
     const classesSoFar = Object.keys(classLevelCounts);
     let spent = 0;
     for (const alloc of skillAllocationsByLevel.get(levelNum) ?? []) {
       if (alloc.ranks <= 0) continue;
-      const status = skillStatusForBuild(alloc.skillName, classesSoFar);
-      if (status === "unavailable") {
-        errors.push(`Level ${levelNum}: ${alloc.skillName} isn't available to any class taken by this level.`);
+      // Cost/availability: only the class leveled this level.
+      const costStatus = skillStatusForClass(alloc.skillName, classNameAtLevel);
+      if (costStatus === "unavailable") {
+        errors.push(
+          classNameAtLevel
+            ? `Level ${levelNum}: ${alloc.skillName} is unavailable when leveling ${classNameAtLevel}.`
+            : `Level ${levelNum}: ${alloc.skillName} can't be bought with no class chosen at this level.`
+        );
       }
-      const cost = skillPointCost(alloc.ranks, status);
+      const cost = skillPointCost(alloc.ranks, costStatus);
       spent += Number.isFinite(cost) ? cost : alloc.ranks * 2;
       skillRanksSoFar[alloc.skillName] = (skillRanksSoFar[alloc.skillName] ?? 0) + alloc.ranks;
       skillCostSoFar[alloc.skillName] = (skillCostSoFar[alloc.skillName] ?? 0) + cost;
 
-      const maxAtLevel = skillMaxRank(levelNum, status);
+      // Max ranks: class skill for any class taken so far (including this level) → full cap.
+      const maxStatus = skillStatusForMaxRank(alloc.skillName, classesSoFar);
+      const maxAtLevel = skillMaxRank(levelNum, maxStatus);
       if (skillRanksSoFar[alloc.skillName] > maxAtLevel) {
         errors.push(
           `Level ${levelNum}: ${alloc.skillName} reaches ${skillRanksSoFar[alloc.skillName]} ranks, exceeding the max of ${maxAtLevel} at that level.`
@@ -194,7 +207,7 @@ export function calculateBuild(build: Build): CalculatedBuild {
   for (const entry of build.levels) {
     if (!entry.className) {
       const prev = perLevel[perLevel.length - 1];
-      const spentThisLevel = spendSkillPointsAtLevel(entry.level);
+      const spentThisLevel = spendSkillPointsAtLevel(entry.level, "");
       bankedSkillPoints -= spentThisLevel;
       if (bankedSkillPoints < 0) {
         errors.push(`Level ${entry.level}: spent more skill points than banked.`);
@@ -268,7 +281,7 @@ export function calculateBuild(build: Build): CalculatedBuild {
       will += def.saves.will ? goodSave(lvl) : poorSave(lvl);
     }
 
-    const skillPointsSpent = spendSkillPointsAtLevel(entry.level);
+    const skillPointsSpent = spendSkillPointsAtLevel(entry.level, entry.className);
     bankedSkillPoints += skillPointsGained - skillPointsSpent;
     if (bankedSkillPoints < 0) {
       errors.push(`Level ${entry.level}: spent more skill points than earned + banked.`);
@@ -396,10 +409,11 @@ export function calculateBuild(build: Build): CalculatedBuild {
   }
 
   // Ranks and cost come from the per-level ledger above (skillRanksSoFar/skillCostSoFar), which
-  // prices each rank at the status it had when it was actually bought — not the final status —
-  // and already validated overspending and max-rank-at-that-level in spendSkillPointsAtLevel().
+  // prices each rank at the class taken when it was bought — not the final status — and already
+  // validated overspending and max-rank-at-that-level in spendSkillPointsAtLevel(). Final-sheet
+  // status uses the any-class max-rank rule so the cap column matches NWN.
   const skills: SkillSnapshot[] = SKILL_NAMES.map((name) => {
-    const status = skillStatusForBuild(name, classNamesTaken);
+    const status = skillStatusForMaxRank(name, classNamesTaken);
     const ranks = skillRanksSoFar[name] ?? 0;
     const maxRank = skillMaxRank(totalLevel, status);
     const pointCost = skillCostSoFar[name] ?? 0;

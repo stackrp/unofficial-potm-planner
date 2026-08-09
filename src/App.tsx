@@ -11,6 +11,7 @@ import { FeatTracker } from "./components/FeatTracker";
 import { SkillPlanner } from "./components/SkillPlanner";
 import { SkillList } from "./components/SkillList";
 import { SummaryPanel } from "./components/SummaryPanel";
+import { Guidance } from "./components/Guidance";
 import { calculateBuild, finalAbilityScores, abilityModifier } from "./lib/calculator";
 import { loadBuildFromStorage, saveBuildToStorage } from "./lib/buildIO";
 import { autoModForRace, categoryForRace } from "./data/raceCategories";
@@ -161,6 +162,8 @@ function App() {
           totalEarned={calculated.totals.skillPoints}
           totalBanked={calculated.totals.skillPointsBanked}
         />
+
+        <Guidance build={build} perLevel={calculated.perLevel} />
       </main>
     </div>
   );

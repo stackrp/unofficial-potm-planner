@@ -32,14 +32,14 @@ export function BuildImportExport({ build, defaultBuild, onImport }: Props) {
         onClick={() => downloadBuild(build)}
         className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-sm"
       >
-        Download
+        Save
       </button>
       <button
         type="button"
         onClick={() => fileInputRef.current?.click()}
         className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-sm"
       >
-        Upload
+        Import
       </button>
       <input
         ref={fileInputRef}

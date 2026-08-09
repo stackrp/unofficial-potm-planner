@@ -167,6 +167,7 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
   );
 
   const [requestedLevel, setRequestedLevel] = useState<number | null>(null);
+  const [confirmingReset, setConfirmingReset] = useState(false);
   const level =
     requestedLevel != null && availableLevels.includes(requestedLevel)
       ? requestedLevel
@@ -187,13 +188,48 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
     if (availableLevels.includes(target)) setRequestedLevel(target);
   }
 
+  function handleResetFeats() {
+    onChange([]);
+    setConfirmingReset(false);
+  }
+
   return (
     <section className="rounded-lg border border-neutral-700 bg-neutral-900/40 p-4">
-      <div className="flex items-baseline justify-between mb-3">
+      <div className="flex items-baseline justify-between gap-2 flex-wrap mb-3">
         <h2 className="text-lg font-semibold text-neutral-100">Feats</h2>
-        <span className={`text-sm font-mono ${overLimit ? "text-red-400" : "text-neutral-400"}`}>
-          {used} / {featsAvailable} used
-        </span>
+        <div className="flex items-center gap-2 flex-wrap justify-end">
+          {!confirmingReset ? (
+            <button
+              type="button"
+              onClick={() => setConfirmingReset(true)}
+              disabled={feats.length === 0}
+              className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 disabled:opacity-30 text-sm"
+            >
+              Reset
+            </button>
+          ) : (
+            <div className="flex items-center gap-2 text-sm flex-wrap justify-end">
+              <span className="text-amber-400">Reset all feats on every level?</span>
+              <button
+                type="button"
+                onClick={handleResetFeats}
+                className="px-2 py-1 rounded bg-red-700 hover:bg-red-600 text-white text-sm"
+              >
+                OK
+              </button>
+              <button
+                type="button"
+                onClick={() => setConfirmingReset(false)}
+                className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-sm"
+              >
+                No
+              </button>
+            </div>
+          )}
+          <span className={`text-sm font-mono ${overLimit ? "text-red-400" : "text-neutral-400"}`}>
+            {used} / {featsAvailable} used
+          </span>
+        </div>
       </div>
 
       {level == null ? (
