@@ -12,11 +12,7 @@
  },
  {
   "name": "Calibans",
-  "abilityAdjustments": {
-   "STR": 2,
-   "INT": -2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -26,10 +22,7 @@
  },
  {
   "name": "Dwarves of Ravenloft",
-  "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -47,10 +40,7 @@
  },
  {
   "name": "High Elves of Ravenloft",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -67,10 +57,7 @@
  },
  {
   "name": "Gnomes of Ravenloft",
-  "abilityAdjustments": {
-   "CON": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -88,10 +75,7 @@
  },
  {
   "name": "Halflings of Ravenloft",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -171,9 +155,7 @@
  {
   "name": "Sithican Grey Elf",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": 2,
-   "CON": -2,
    "CHA": -2
   },
   "effectiveCharacterLevel": null,
@@ -197,9 +179,9 @@
  {
   "name": "Sithican Wild Elf",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": -2,
-   "CHA": -2
+   "CHA": -2,
+   "CON": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -286,10 +268,7 @@
  },
  {
   "name": "Fire Gnome",
-  "abilityAdjustments": {
-   "CON": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
   "traits": [
@@ -308,8 +287,8 @@
  {
   "name": "Frost Dwarf",
   "abilityAdjustments": {
-   "CON": 4,
-   "CHA": -4
+   "CON": 2,
+   "CHA": -2
   },
   "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
@@ -336,10 +315,11 @@
  {
   "name": "Tanarukk",
   "abilityAdjustments": {
-   "STR": 4,
+   "STR": 2,
    "DEX": 2,
    "WIS": -2,
-   "CHA": -4
+   "CHA": -2,
+   "INT": 2
   },
   "effectiveCharacterLevel": 2,
   "baseOutcastRating": null,
@@ -357,11 +337,7 @@
  },
  {
   "name": "Half-Orc",
-  "abilityAdjustments": {
-   "STR": 2,
-   "INT": -2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -372,8 +348,8 @@
  {
   "name": "Gold Dwarf",
   "abilityAdjustments": {
-   "CON": 2,
-   "DEX": -2
+   "DEX": -2,
+   "CHA": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -412,9 +388,7 @@
   "name": "Arctic Dwarf",
   "abilityAdjustments": {
    "STR": 4,
-   "CON": 2,
-   "DEX": -2,
-   "CHA": -2
+   "DEX": -2
   },
   "effectiveCharacterLevel": 2,
   "baseOutcastRating": null,
@@ -437,7 +411,11 @@
  },
  {
   "name": "Moulder Dwarves",
-  "abilityAdjustments": {},
+  "abilityAdjustments": {
+   "INT": 1,
+   "DEX": 1,
+   "CON": -2
+  },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -457,9 +435,7 @@
  {
   "name": "Shadow Elf",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": 2,
-   "CON": -2,
    "CHA": -2
   },
   "effectiveCharacterLevel": null,
@@ -481,10 +457,7 @@
  },
  {
   "name": "Valenar Elf",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -557,10 +530,8 @@
  {
   "name": "Sidhelien Elf",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": 2,
-   "CON": -2,
-   "STR": -2
+   "CON": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -600,9 +571,8 @@
  {
   "name": "Cerilian Halfling",
   "abilityAdjustments": {
-   "DEX": 2,
    "WIS": 2,
-   "STR": -4
+   "STR": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -622,8 +592,9 @@
  {
   "name": "Cerilian Dwarf",
   "abilityAdjustments": {
-   "CON": 4,
-   "DEX": -4
+   "CON": 2,
+   "DEX": -4,
+   "CHA": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -643,9 +614,9 @@
  {
   "name": "Kagonesti Elf",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": -2,
-   "CHA": -2
+   "CHA": -2,
+   "CON": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -668,7 +639,10 @@
  },
  {
   "name": "Whisper Gnome",
-  "abilityAdjustments": {},
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CHA": -2
+  },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -692,8 +666,8 @@
   "abilityAdjustments": {
    "DEX": 2,
    "INT": 2,
-   "STR": -2,
-   "WIS": -2
+   "WIS": -2,
+   "CON": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -710,7 +684,7 @@
   "name": "Thinker (Mad) Gnome",
   "abilityAdjustments": {
    "DEX": 2,
-   "STR": -2
+   "CON": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -727,9 +701,7 @@
  {
   "name": "Silvanesti Elf",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": 2,
-   "CON": -2,
    "CHA": -2
   },
   "effectiveCharacterLevel": null,
@@ -754,8 +726,6 @@
   "name": "Xakhun",
   "abilityAdjustments": {
    "STR": 2,
-   "DEX": 2,
-   "CON": -2,
    "INT": -2,
    "CHA": -2
   },
@@ -794,9 +764,7 @@
  {
   "name": "Umbragen",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": 2,
-   "CON": -2,
    "CHA": 2
   },
   "effectiveCharacterLevel": 2,
@@ -823,9 +791,7 @@
  {
   "name": "Drow of Eberron",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": 2,
-   "CON": -2,
    "CHA": 2
   },
   "effectiveCharacterLevel": 2,
@@ -851,9 +817,7 @@
  {
   "name": "Drow of Greyhawk",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": 2,
-   "CON": -2,
    "CHA": 2
   },
   "effectiveCharacterLevel": 2,
@@ -880,9 +844,7 @@
  {
   "name": "Drow of the Forgotten Realms",
   "abilityAdjustments": {
-   "DEX": 2,
    "INT": 2,
-   "CON": -2,
    "CHA": 2
   },
   "effectiveCharacterLevel": 2,
@@ -909,8 +871,8 @@
  {
   "name": "Snow Elf",
   "abilityAdjustments": {
-   "DEX": 2,
-   "CHA": -2
+   "CHA": -2,
+   "CON": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -931,8 +893,8 @@
  {
   "name": "Poscadar Elf",
   "abilityAdjustments": {
-   "DEX": 2,
-   "CHA": -2
+   "CHA": -2,
+   "CON": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -953,8 +915,6 @@
  {
   "name": "Celadrin",
   "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2,
    "CHA": 2
   },
   "effectiveCharacterLevel": 1,
@@ -980,8 +940,7 @@
  {
   "name": "Duergar (Grey Dwarf)",
   "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -4
+   "CHA": -2
   },
   "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
@@ -1010,10 +969,7 @@
  },
  {
   "name": "Moon Elf",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1032,7 +988,7 @@
   "name": "Sun Elf",
   "abilityAdjustments": {
    "INT": 2,
-   "CON": -2
+   "DEX": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1054,8 +1010,6 @@
   "name": "Wood Elf",
   "abilityAdjustments": {
    "STR": 2,
-   "DEX": 2,
-   "CON": -2,
    "INT": -2,
    "CHA": -2
   },
@@ -1076,10 +1030,10 @@
   ]
  },
  {
-  "name": "Wild Elf of Faer\u00fbn",
+  "name": "Wild Elf of Faerûn",
   "abilityAdjustments": {
-   "DEX": 2,
-   "INT": -2
+   "INT": -2,
+   "CON": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1120,8 +1074,8 @@
   "abilityAdjustments": {
    "DEX": 2,
    "WIS": 2,
-   "STR": -2,
-   "CHA": -4
+   "CHA": -4,
+   "CON": -2
   },
   "effectiveCharacterLevel": 3,
   "baseOutcastRating": null,
@@ -1149,10 +1103,7 @@
  },
  {
   "name": "Lightfoot Halfling",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1167,10 +1118,7 @@
  },
  {
   "name": "Strongheart Halfling",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1186,9 +1134,11 @@
  {
   "name": "Scro",
   "abilityAdjustments": {
-   "STR": 4,
+   "STR": 2,
    "DEX": 2,
-   "CON": 2
+   "CON": 2,
+   "INT": 2,
+   "CHA": 2
   },
   "effectiveCharacterLevel": 2,
   "baseOutcastRating": null,
@@ -1242,8 +1192,8 @@
  {
   "name": "Dream Dwarf",
   "abilityAdjustments": {
-   "CON": 2,
-   "DEX": -2
+   "DEX": -2,
+   "CHA": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1259,8 +1209,8 @@
  {
   "name": "Kogolor Dwarf",
   "abilityAdjustments": {
-   "CON": -1,
-   "CHA": 1
+   "CON": -3,
+   "CHA": 3
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1281,9 +1231,8 @@
   "name": "Aghar (Gully Dwarf)",
   "abilityAdjustments": {
    "DEX": 2,
-   "CON": 2,
    "INT": -4,
-   "CHA": -4
+   "CHA": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1303,10 +1252,7 @@
  },
  {
   "name": "Anadian Halfling",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1321,10 +1267,7 @@
  },
  {
   "name": "Qualinesti Elf",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1343,7 +1286,10 @@
  },
  {
   "name": "Imago (Chaos Gnome)",
-  "abilityAdjustments": {},
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CHA": 2
+  },
   "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
   "traits": [
@@ -1362,9 +1308,7 @@
  {
   "name": "True Kender",
   "abilityAdjustments": {
-   "DEX": 2,
-   "WIS": -2,
-   "STR": -2
+   "WIS": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1397,10 +1341,7 @@
  },
  {
   "name": "Glacier Dwarf",
-  "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1419,8 +1360,7 @@
  {
   "name": "Dark Dwarf",
   "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -4
+   "CHA": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1445,7 +1385,7 @@
   "name": "Belcadiz Elf",
   "abilityAdjustments": {
    "INT": 2,
-   "CON": -2
+   "DEX": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1475,10 +1415,7 @@
  },
  {
   "name": "Ilsundal Elf",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1495,10 +1432,7 @@
  },
  {
   "name": "Chultan Dwarf (Albino Shield Dwarf)",
-  "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1516,10 +1450,7 @@
  },
  {
   "name": "Wild Dwarf (Jungle Dwarf)",
-  "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1541,8 +1472,8 @@
  {
   "name": "Grugach Elf",
   "abilityAdjustments": {
-   "DEX": 2,
-   "INT": -2
+   "INT": -2,
+   "CON": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1578,10 +1509,7 @@
  },
  {
   "name": "Khorvaire Elf",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1598,10 +1526,7 @@
  },
  {
   "name": "Valley Elf",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1619,8 +1544,7 @@
  {
   "name": "Deep Dwarf",
   "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -4
+   "CHA": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1642,10 +1566,7 @@
  },
  {
   "name": "Stout/Deep Halfling",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1663,10 +1584,7 @@
  },
  {
   "name": "Forest Gnome (Forstneblin)",
-  "abilityAdjustments": {
-   "CON": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1703,10 +1621,7 @@
  },
  {
   "name": "Hill Dwarf of Ansalon",
-  "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1726,8 +1641,6 @@
   "name": "Wood Elf of Mystara",
   "abilityAdjustments": {
    "STR": 2,
-   "DEX": 2,
-   "CON": -2,
    "INT": -2,
    "CHA": -2
   },
@@ -1751,7 +1664,7 @@
   "name": "Star Elf",
   "abilityAdjustments": {
    "CHA": 2,
-   "CON": -2
+   "DEX": -2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -1770,10 +1683,7 @@
  },
  {
   "name": "Rockborn Dwarf",
-  "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1791,10 +1701,7 @@
  },
  {
   "name": "Tallfellow Halfling",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "STR": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1812,10 +1719,7 @@
  },
  {
   "name": "Aerenal Elf",
-  "abilityAdjustments": {
-   "DEX": 2,
-   "CON": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1833,9 +1737,11 @@
  {
   "name": "Oscray",
   "abilityAdjustments": {
-   "STR": 4,
+   "STR": 2,
    "DEX": 2,
-   "CON": 2
+   "CON": 2,
+   "INT": 2,
+   "CHA": 2
   },
   "effectiveCharacterLevel": 2,
   "baseOutcastRating": null,
@@ -1848,11 +1754,7 @@
  },
  {
   "name": "Scabland Half-Orc",
-  "abilityAdjustments": {
-   "STR": 2,
-   "INT": -2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1863,10 +1765,7 @@
  },
  {
   "name": "Badland Dwarf (Unath Dwarf)",
-  "abilityAdjustments": {
-   "CON": 2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -1925,9 +1824,8 @@
  {
   "name": "Athasian Dwarf",
   "abilityAdjustments": {
-   "CON": 4,
-   "WIS": 2,
-   "CHA": -2
+   "CON": 2,
+   "WIS": 2
   },
   "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
@@ -1944,8 +1842,7 @@
  {
   "name": "Athasian Elf",
   "abilityAdjustments": {
-   "DEX": 4,
-   "CON": -2
+   "DEX": 2
   },
   "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
@@ -1987,8 +1884,8 @@
  {
   "name": "Athasian Halfling",
   "abilityAdjustments": {
-   "DEX": 2,
-   "WIS": 2
+   "WIS": 2,
+   "STR": 2
   },
   "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
@@ -2019,8 +1916,9 @@
  {
   "name": "Mul",
   "abilityAdjustments": {
-   "STR": 2,
-   "CON": 4
+   "CON": 4,
+   "INT": 2,
+   "CHA": 2
   },
   "effectiveCharacterLevel": 2,
   "baseOutcastRating": null,
@@ -2035,9 +1933,7 @@
  {
   "name": "Rhul-Thaun (Athasian halfling variant)",
   "abilityAdjustments": {
-   "DEX": 2,
-   "WIS": 2,
-   "STR": -2
+   "WIS": 2
   },
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
@@ -2056,11 +1952,7 @@
  },
  {
   "name": "Tarek",
-  "abilityAdjustments": {
-   "STR": 2,
-   "INT": -2,
-   "CHA": -2
-  },
+  "abilityAdjustments": {},
   "effectiveCharacterLevel": null,
   "baseOutcastRating": null,
   "traits": [
@@ -2087,7 +1979,10 @@
  },
  {
   "name": "Hagspawn",
-  "abilityAdjustments": {},
+  "abilityAdjustments": {
+   "CON": 2,
+   "INT": 2
+  },
   "effectiveCharacterLevel": 2,
   "baseOutcastRating": null,
   "traits": [

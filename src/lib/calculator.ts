@@ -2,7 +2,7 @@ import { CLASSES, type BabRate } from "../data/classes";
 import { ALL_SKILLS, SKILL_NAMES } from "../data/skills";
 import type { SkillStatus } from "../data/skills";
 import { getRace } from "../data/races";
-import { categoryForRace } from "../data/raceCategories";
+import { autoModForRace, categoryForRace } from "../data/raceCategories";
 import { getBackground, MAX_BACKGROUNDS } from "../data/backgrounds";
 import { getDeity } from "../data/deities";
 import { withinOneStep } from "./alignment";
@@ -37,6 +37,21 @@ export function pointBuyCost(scores: AbilityScores): number {
   return total;
 }
 
+/**
+ * Point-buy cost of `scores` against the 30-point budget, for a given race. `scores` is what the
+ * player entered — their post-chargen stats, already including their base race's automatic
+ * bonus — so that free bonus is backed out first to reach the actual pre-racial value the budget
+ * was spent on, matching what NWN's point-buy screen would have charged.
+ */
+export function pointBuyCostForRace(scores: AbilityScores, race: string): number {
+  const autoMod = autoModForRace(race);
+  const preRacial = { ...scores };
+  for (const [key, delta] of Object.entries(autoMod)) {
+    preRacial[key as AbilityKey] -= delta ?? 0;
+  }
+  return pointBuyCost(preRacial);
+}
+
 function goodSave(level: number): number {
   return level <= 0 ? 0 : Math.floor(level / 2) + 2;
 }
@@ -45,7 +60,7 @@ function poorSave(level: number): number {
   return level <= 0 ? 0 : Math.floor(level / 3);
 }
 
-function babAtLevel(rate: BabRate, level: number): number {
+export function babAtLevel(rate: BabRate, level: number): number {
   if (level <= 0) return 0;
   switch (rate) {
     case "full":
@@ -336,7 +351,7 @@ export function calculateBuild(build: Build): CalculatedBuild {
     abilityModifiers: finalMods,
   };
 
-  const abilityPointsSpent = pointBuyCost(build.baseAbilityScores);
+  const abilityPointsSpent = pointBuyCostForRace(build.baseAbilityScores, build.race);
   if (abilityPointsSpent > POINT_BUY_BUDGET) {
     errors.push(`Ability scores cost ${abilityPointsSpent} points, exceeding the ${POINT_BUY_BUDGET}-point budget.`);
   }

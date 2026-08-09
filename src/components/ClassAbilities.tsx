@@ -7,6 +7,7 @@ interface Props {
 
 export function ClassAbilities({ levels }: Props) {
   const gained = abilitiesGainedThroughBuild(levels);
+  const hasClasses = levels.some((l) => l.className);
 
   return (
     <section className="rounded-lg border border-neutral-700 bg-neutral-900/40 p-4">
@@ -19,7 +20,9 @@ export function ClassAbilities({ levels }: Props) {
 
       {gained.length === 0 ? (
         <p className="text-sm text-neutral-500">
-          No class levels chosen yet — abilities will appear here as you plan levels.
+          {hasClasses
+            ? "None of the classes in this plan have any listed abilities."
+            : "No class levels chosen yet — abilities will appear here as you plan levels."}
         </p>
       ) : (
         <ul className="space-y-2">

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AbilityScorePanel } from "./components/AbilityScorePanel";
 import { RacePicker } from "./components/RacePicker";
 import { BackgroundPicker } from "./components/BackgroundPicker";
@@ -6,12 +6,14 @@ import { LevelPlanner } from "./components/LevelPlanner";
 import { ClassAbilities } from "./components/ClassAbilities";
 import { PrestigeRequirements } from "./components/PrestigeRequirements";
 import { DeityPicker } from "./components/DeityPicker";
+import { BuildImportExport } from "./components/BuildImportExport";
 import { FeatTracker } from "./components/FeatTracker";
 import { SkillPlanner } from "./components/SkillPlanner";
 import { SkillList } from "./components/SkillList";
 import { SummaryPanel } from "./components/SummaryPanel";
 import { calculateBuild, finalAbilityScores, abilityModifier } from "./lib/calculator";
-import { categoryForRace } from "./data/raceCategories";
+import { loadBuildFromStorage, saveBuildToStorage } from "./lib/buildIO";
+import { autoModForRace, categoryForRace } from "./data/raceCategories";
 import type { Build } from "./types";
 import { ABILITY_KEYS } from "./types";
 
@@ -19,7 +21,7 @@ const DEFAULT_BUILD: Build = {
   name: "New Build",
   race: "",
   alignment: "",
-  baseAbilityScores: { STR: 10, DEX: 10, CON: 10, INT: 10, WIS: 10, CHA: 10 },
+  baseAbilityScores: { STR: 8, DEX: 8, CON: 8, INT: 11, WIS: 8, CHA: 8 },
   levels: [],
   feats: [],
   skills: [],
@@ -28,7 +30,40 @@ const DEFAULT_BUILD: Build = {
 };
 
 function App() {
-  const [build, setBuild] = useState<Build>(DEFAULT_BUILD);
+  const [build, setBuild] = useState<Build>(() => loadBuildFromStorage(DEFAULT_BUILD));
+  const [confirmingReset, setConfirmingReset] = useState(false);
+
+  useEffect(() => {
+    saveBuildToStorage(build);
+  }, [build]);
+
+  useEffect(() => {
+    if (!confirmingReset) return;
+    const timer = setTimeout(() => setConfirmingReset(false), 4000);
+    return () => clearTimeout(timer);
+  }, [confirmingReset]);
+
+  function handleRaceChange(race: string) {
+    setBuild((prev) => {
+      const oldMod = autoModForRace(prev.race);
+      const newMod = autoModForRace(race);
+      const nextScores = { ...prev.baseAbilityScores };
+      for (const key of ABILITY_KEYS) {
+        const delta = (newMod[key] ?? 0) - (oldMod[key] ?? 0);
+        if (delta !== 0) nextScores[key] += delta;
+      }
+      return { ...prev, race, baseAbilityScores: nextScores };
+    });
+  }
+
+  function handleResetClick() {
+    if (confirmingReset) {
+      setBuild(DEFAULT_BUILD);
+      setConfirmingReset(false);
+    } else {
+      setConfirmingReset(true);
+    }
+  }
 
   const calculated = useMemo(() => calculateBuild(build), [build]);
   const finalScores = useMemo(() => finalAbilityScores(build), [build]);
@@ -52,25 +87,39 @@ function App() {
             onChange={(e) => setBuild((prev) => ({ ...prev, name: e.target.value }))}
             className="bg-neutral-900 border border-neutral-700 rounded px-2 py-1 text-sm"
           />
+          <BuildImportExport build={build} defaultBuild={DEFAULT_BUILD} onImport={setBuild} />
         </div>
-        {categoryForRace(build.race) === "Humans" && (
-          <span className="text-sm text-violet-400">Human bonus feat + skill point applied</span>
-        )}
+        <div className="flex items-center gap-3">
+          {categoryForRace(build.race) === "Humans" && (
+            <span className="text-sm text-violet-400">Human bonus feat + skill point applied</span>
+          )}
+          <button
+            type="button"
+            onClick={handleResetClick}
+            className={`px-2 py-1 rounded text-sm ${
+              confirmingReset
+                ? "bg-red-700 hover:bg-red-600 text-white"
+                : "bg-neutral-800 hover:bg-neutral-700 text-neutral-200"
+            }`}
+          >
+            {confirmingReset ? "Confirm reset?" : "Reset"}
+          </button>
+        </div>
       </header>
 
       <main className="max-w-6xl mx-auto p-4 space-y-4">
-        <RacePicker race={build.race} onChange={(race) => setBuild((prev) => ({ ...prev, race }))} />
-
-        <BackgroundPicker
-          backgrounds={build.backgrounds}
-          onChange={(backgrounds) => setBuild((prev) => ({ ...prev, backgrounds }))}
-        />
+        <RacePicker race={build.race} onChange={handleRaceChange} />
 
         <DeityPicker
           deity={build.deity}
           onChange={(deity) => setBuild((prev) => ({ ...prev, deity }))}
           alignment={build.alignment}
           onAlignmentChange={(alignment) => setBuild((prev) => ({ ...prev, alignment }))}
+        />
+
+        <BackgroundPicker
+          backgrounds={build.backgrounds}
+          onChange={(backgrounds) => setBuild((prev) => ({ ...prev, backgrounds }))}
         />
 
         <AbilityScorePanel
@@ -94,10 +143,11 @@ function App() {
         <PrestigeRequirements build={build} perLevel={calculated.perLevel} />
 
         <FeatTracker
+          build={build}
           feats={build.feats}
           onChange={(feats) => setBuild((prev) => ({ ...prev, feats }))}
           featsAvailable={calculated.totals.feats}
-          maxLevel={build.levels.length}
+          perLevel={calculated.perLevel}
         />
 
         <SkillPlanner

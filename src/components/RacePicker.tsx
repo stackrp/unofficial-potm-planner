@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { getRace } from "../data/races";
 import {
   BASE_RACE_CATEGORIES,
@@ -21,14 +21,15 @@ function formatAdjustments(adjustments: Partial<Record<string, number>>): string
 }
 
 export function RacePicker({ race, onChange }: Props) {
-  const [category, setCategory] = useState<string>(() => categoryForRace(race) ?? "");
+  // Derived from `race` rather than tracked as its own state — `race` can change externally
+  // (e.g. importing a build), and a separately-tracked category would go stale in that case.
+  const category = categoryForRace(race) ?? "";
 
   const subraces = useMemo(() => subracesForCategory(category), [category]);
   const defaultRace = useMemo(() => defaultRaceForCategory(category), [category]);
   const selected = race ? getRace(race) : undefined;
 
   function handleCategoryChange(nextCategory: string) {
-    setCategory(nextCategory);
     onChange(nextCategory ? defaultRaceForCategory(nextCategory) ?? "" : "");
   }
 
