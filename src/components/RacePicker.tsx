@@ -7,11 +7,14 @@ import {
   defaultRaceForCategory,
   subracesForCategory,
 } from "../data/raceCategories";
+import { TEMPLATES, getTemplate } from "../data/templates";
 import { ABILITY_KEYS, type AbilityKey } from "../types";
 
 interface Props {
   race: string;
   onChange: (race: string) => void;
+  template: string;
+  onTemplateChange: (template: string) => void;
 }
 
 interface SubraceOption {
@@ -195,9 +198,12 @@ function SubraceSelect({
   );
 }
 
-export function RacePicker({ race, onChange }: Props) {
+export function RacePicker({ race, onChange, template, onTemplateChange }: Props) {
   // Derived from `race` rather than tracked as its own state — `race` can change externally
-  // (e.g. importing a build), and a separately-tracked category would go stale in that case.
+  // (e.g. importing a build), and a separately-tracked category would go stale in that case. This
+  // requires every race name to be unique to a single category (see raceCategories.ts) — a name
+  // reused across categories would always resolve to whichever comes first in
+  // BASE_RACE_CATEGORIES, no matter which category the player actually picked it under.
   const category = categoryForRace(race) ?? "";
 
   const subraces = useMemo(() => subracesForCategory(category), [category]);
@@ -222,10 +228,40 @@ export function RacePicker({ race, onChange }: Props) {
     onChange(nextCategory ? defaultRaceForCategory(nextCategory) ?? "" : "");
   }
 
+  const templateOptions: SubraceOption[] = useMemo(
+    () => [
+      { name: "", label: "— No template —", adjustments: {}, ecl: null },
+      ...TEMPLATES.map((t) => ({
+        name: t.name,
+        label: t.name,
+        adjustments: t.abilityAdjustments,
+        ecl: t.effectiveCharacterLevel,
+      })),
+    ],
+    []
+  );
+  const templateDef = getTemplate(template);
+
+  // Combined so the summary card below reads like a single character sheet — race/subrace and
+  // the selected template's bonuses stack together.
+  const combinedAdjustments: Partial<Record<AbilityKey, number>> = {
+    ...(selected ? totalAdjustments(race, selected.abilityAdjustments) : {}),
+  };
+  if (templateDef) {
+    for (const [key, delta] of Object.entries(templateDef.abilityAdjustments)) {
+      combinedAdjustments[key as AbilityKey] = (combinedAdjustments[key as AbilityKey] ?? 0) + (delta ?? 0);
+    }
+  }
+  const combinedEcl = (selected?.effectiveCharacterLevel ?? 0) + (templateDef?.effectiveCharacterLevel ?? 0);
+  // A subrace-less Human keeps earning +1 skill point every level; a Human subrace (Axani,
+  // Tiefling, etc.) only ever gets that bonus once — see calculator.ts's identical split.
+  const isHumanNoSubrace = race === "Humans";
+  const isHumanWithSubrace = category === "Humans" && !isHumanNoSubrace;
+
   return (
     <section className="rounded-lg border border-neutral-700 bg-neutral-900/40 p-4">
       <h2 className="text-lg font-semibold text-neutral-100 mb-3">Race / Subrace</h2>
-      <div className="flex gap-2 mb-3">
+      <div className="flex gap-2 mb-2">
         <select
           value={category}
           onChange={(e) => handleCategoryChange(e.target.value)}
@@ -241,29 +277,56 @@ export function RacePicker({ race, onChange }: Props) {
         <SubraceSelect options={subraceOptions} value={race} onChange={onChange} disabled={!category} />
       </div>
 
-      {selected && (
-        <div className="rounded-md border border-neutral-700 bg-neutral-950/40 p-3 text-sm space-y-2">
+      <div className="mb-3">
+        <SubraceSelect options={templateOptions} value={template} onChange={onTemplateChange} disabled={false} />
+      </div>
+
+      {(selected || templateDef) && (
+        <div className="rounded-md border border-neutral-700 bg-neutral-950/40 p-3 text-sm space-y-3">
           <div>
             <span className="text-neutral-500">Ability adjustments: </span>
             <span className="font-mono">
-              <ColoredAdjustments adjustments={totalAdjustments(race, selected.abilityAdjustments)} />
+              <ColoredAdjustments adjustments={combinedAdjustments} />
             </span>
           </div>
-          {selected.effectiveCharacterLevel != null && (
+          {(isHumanNoSubrace || isHumanWithSubrace) && (
+            <div>
+              <span className="text-neutral-500">Human bonus: </span>
+              {templateDef?.removesHumanSkillPointBonus ? (
+                <span className="text-violet-400">
+                  Bonus feat only (bonus skill point lost — {templateDef.name})
+                </span>
+              ) : isHumanNoSubrace ? (
+                <span className="text-violet-400">Bonus feat + skill point every level</span>
+              ) : (
+                <span className="text-violet-400">Bonus feat + one-time skill point (no further points per level)</span>
+              )}
+            </div>
+          )}
+          {combinedEcl > 0 && (
             <div>
               <span className="text-neutral-500">Effective Character Level: </span>
-              <span className="text-purple-400 font-mono">+{selected.effectiveCharacterLevel}</span>
+              <span className="text-purple-400 font-mono">+{combinedEcl}</span>
             </div>
           )}
-          {selected.baseOutcastRating != null && (
+          {(selected?.baseOutcastRating != null || templateDef?.outcastRatingIncrease != null) && (
             <div>
-              <span className="text-neutral-500">Base Outcast Rating: </span>
-              <span className="text-neutral-100 font-mono">{selected.baseOutcastRating}</span>
+              <span className="text-neutral-500 block mb-1">Outcast Rating: </span>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs">
+                {selected?.baseOutcastRating != null && (
+                  <span className="text-neutral-100">Base {selected.baseOutcastRating}</span>
+                )}
+                {templateDef?.outcastRatingIncrease != null && (
+                  <span className="text-neutral-300">
+                    +{templateDef.outcastRatingIncrease} or more ({templateDef.name})
+                  </span>
+                )}
+              </div>
             </div>
           )}
-          {selected.traits.length > 0 && (
+          {selected && selected.traits.length > 0 && (
             <div>
-              <span className="text-neutral-500 block mb-1">Traits:</span>
+              <span className="text-neutral-500 block mb-1">Race Traits:</span>
               <div className="flex flex-wrap gap-1">
                 {selected.traits.map((trait) => (
                   <span
@@ -276,11 +339,44 @@ export function RacePicker({ race, onChange }: Props) {
               </div>
             </div>
           )}
-          {selected.notes.length > 0 && (
+          {selected && selected.notes.length > 0 && (
             <div className="text-xs text-neutral-500 italic">
               {selected.notes.map((n, i) => (
                 <p key={i}>{n}</p>
               ))}
+            </div>
+          )}
+
+          {templateDef && (
+            <div className="rounded border border-purple-800/40 bg-purple-950/10 p-2">
+              <div className="flex flex-wrap items-center gap-x-2 mb-1">
+                <span className="font-semibold text-neutral-100">{templateDef.name}</span>
+                {templateDef.requiresApplication && (
+                  <span className="rounded-full border border-amber-700 bg-amber-950/40 px-2 py-0.5 text-xs text-amber-400">
+                    Requires application
+                  </span>
+                )}
+              </div>
+              <div className="text-xs text-neutral-500 italic mb-1">{templateDef.restriction}</div>
+              {templateDef.traits.length > 0 && (
+                <div className="flex flex-wrap gap-1 mb-1">
+                  {templateDef.traits.map((trait) => (
+                    <span
+                      key={trait}
+                      className="rounded-full border border-neutral-700 bg-neutral-900 px-2 py-1 text-sm text-neutral-300"
+                    >
+                      {trait}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {templateDef.notes.length > 0 && (
+                <div className="text-xs text-neutral-500 italic space-y-0.5">
+                  {templateDef.notes.map((n, i) => (
+                    <p key={i}>{n}</p>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>

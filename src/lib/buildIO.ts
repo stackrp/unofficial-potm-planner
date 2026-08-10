@@ -78,6 +78,7 @@ export function parseBuildFile(text: string, fallback: Build): Build {
   return {
     name: typeof raw.name === "string" ? raw.name : fallback.name,
     race: typeof raw.race === "string" ? raw.race : fallback.race,
+    template: typeof raw.template === "string" ? raw.template : fallback.template,
     alignment: typeof raw.alignment === "string" ? raw.alignment : fallback.alignment,
     baseAbilityScores: {
       ...fallback.baseAbilityScores,

@@ -1782,46 +1782,6 @@
   "notes": []
  },
  {
-  "name": "Feytouched Template",
-  "abilityAdjustments": {},
-  "effectiveCharacterLevel": null,
-  "baseOutcastRating": null,
-  "traits": [
-   "Racial Type: Fey",
-   "Hit Dice: d6 (if lower)",
-   "Ability Modifiers: +2 Dex, -2 Con, +2 Cha*",
-   "AC Bonus: +1 (Fey luck)",
-   "Feat: Low-Light Vision",
-   "Spell-like abilities (1x/day): Faerie Fire, Daze, Charm Person",
-   "Effective Character Level (ECL): +1",
-   "Outcast Rating increases by +6 (or more if picking more major traits)",
-   "Feytouched humans lose the extra skill point bonus on level ups. This is a hardcoded side effect of having the creature type changed to Fey.",
-   "Otherwise, Feytouched characters keep all the regular features of their non-fey blooded parent race."
-  ],
-  "notes": [
-   "These modifiers are applied in addition to the standard modifiers for your chosen base race or subrace."
-  ]
- },
- {
-  "name": "Draconic Ancestry Template",
-  "abilityAdjustments": {},
-  "effectiveCharacterLevel": null,
-  "baseOutcastRating": null,
-  "traits": [
-   "Ability Modifiers: +2 Str, +2 Con, +2 Cha*",
-   "Saving Throw Bonus: +2 vs Mind-Affecting Spells",
-   "Increased AC +1",
-   "Nails: 1d2 (Small sized characters), 1d3 (Medium sized characters)",
-   "Feats: Low-Light Vision, Darkvision",
-   "Skill bonuses: Antagonize +2, Spot +2",
-   "Effective Character Level (ECL): +1",
-   "Outcast Rating increases by +4 (or more if picking more major traits)"
-  ],
-  "notes": [
-   "These modifiers are applied in addition to the standard modifiers for your chosen base race."
-  ]
- },
- {
   "name": "Athasian Dwarf",
   "abilityAdjustments": {
    "CON": 2,
@@ -1962,22 +1922,6 @@
   "notes": []
  },
  {
-  "name": "Blooded One",
-  "abilityAdjustments": {},
-  "effectiveCharacterLevel": null,
-  "baseOutcastRating": null,
-  "traits": [
-   "Ability Modifiers: +2 Str, +4 Con, -2 Int*",
-   "AC Bonus: +2",
-   "Feat: Improved Initiative",
-   "Spell-like abilities (1x/day): Blooded One War Cry (all blooded ones within 30 feet (including itself) gain a +1 morale bonus on all attack and damage rolls for 2d4 rounds)",
-   "Effective Character Level (ECL): +1"
-  ],
-  "notes": [
-   "These modifiers are applied in addition to the standard modifiers for your chosen base race or subrace."
-  ]
- },
- {
   "name": "Hagspawn",
   "abilityAdjustments": {
    "CON": 2,
@@ -2020,24 +1964,209 @@
   ]
  },
  {
-  "name": "Yuan-Ti Tainted One",
+  "name": "Aasimar",
   "abilityAdjustments": {
-   "CON": 2
+   "WIS": 2,
+   "CHA": 2
   },
-  "effectiveCharacterLevel": 2,
+  "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
   "traits": [
-   "Alertness feat",
-   "Poison Bite",
-   "Poison Immunity",
-   "Spell Resistance (12 + (Character Level/2))",
-   "Poison 1x/day",
-   "Polymorph Self (Viper form only) 3x/day",
-   "Quote from: Note from the Dev team",
-   "The spell-like abilities for this template will be enabled as of the next HAK update."
+   "Human Bonus Feat",
+   "+4 Extra skill points at character creation",
+   "Darkvision",
+   "Light spell once a day",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Spot)",
+   "Acid Damage Resistance 5/-",
+   "Cold Damage Resistance 5/-",
+   "Electrical Damage Resistance 5/-"
   ],
   "notes": [
-   "These modifiers are applied in addition to the standard modifiers for your chosen base race or subrace."
+   "At character creation, remember that the game engine does not apply ability score adjustment on humans. The +2 Wis, +2 Cha adjustment will be applied once the subrace is selected in-game."
   ]
+ },
+ {
+  "name": "Wild Gnome",
+  "abilityAdjustments": {
+   "INT": 2,
+   "CHA": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Spell focus (illusion)",
+   "Will Save +2",
+   "Animal Empathy +2",
+   "Lore +2",
+   "Small stature"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Str adjustment for standard gnomes. An extra +2 Int, -2 Cha will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Furchin (Polar Halfling)",
+  "abilityAdjustments": {
+   "CON": 2,
+   "WIS": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Saving throw bonus +4 vs. cold",
+   "Skill affinity (listen)",
+   "Skill affinity (move silently)",
+   "Lucky",
+   "Fearless",
+   "Good aim",
+   "Racial attack bonus when using slings",
+   "Small stature"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Str adjustment for standard halflings. An extra +2 Con, -2 Wis will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Maztican/Wild Halflings",
+  "abilityAdjustments": {
+   "CON": 2,
+   "INT": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Skill affinity (listen)",
+   "Skill affinity (move silently)",
+   "Lucky",
+   "Fearless",
+   "Good aim",
+   "Racial attack bonus when using slings",
+   "Small stature"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Str adjustment for standard halflings. An extra +2 Con, -2 Int will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Shiye Elf",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Bonus Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Hide +2",
+   "Skill Affinity (Move Silently)",
+   "Keen Senses"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Afflicted Kender",
+  "abilityAdjustments": {
+   "WIS": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Hide +2",
+   "Spot +2",
+   "Open Lock +2",
+   "Pick Pocket +2",
+   "Skill Affinity (Move Silently)",
+   "Lucky",
+   "Racial attack bonus when using slings",
+   "Small stature"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Str adjustment for standard halflings. An extra -2 Wis will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Mountain Dwarf of Ansalon",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Defensive training vs. giants",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Skill affinity (lore)",
+   "Stonecunning",
+   "Weapon Proficiency (Dwarven Waraxe)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Desert Dwarf (Maztican Dwarf)",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Darkvision",
+   "Defensive training vs. giants",
+   "Hardiness vs. poisons",
+   "Hardiness vs. spells",
+   "Offensive training vs. orcs",
+   "Offensive training vs. goblinoids",
+   "Skill affinity (lore)",
+   "Stonecunning",
+   "Weapon Proficiency (Dwarven Waraxe)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Tundra Halfling",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Fearless",
+   "Good aim",
+   "Lucky",
+   "Skill affinity (move silently)",
+   "Skill affinity (listen)",
+   "Small stature"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Grey Elf of Greyhawk",
+  "abilityAdjustments": {
+   "INT": 2,
+   "STR": -2
+  },
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Low-light vision",
+   "Sleeplessness",
+   "Hardiness vs. Enchantments",
+   "Elven Weapon Proficiencies (Longsword, Rapier, Shortbow, Longbow)",
+   "Skill Affinity (Listen)",
+   "Skill Affinity (Search)",
+   "Skill Affinity (Spot)",
+   "Keen Senses"
+  ],
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Dex, -2 Con adjustment for standard elves. An extra +2 Int, -2 Str will be applied once the subrace is selected in-game."
+  ]
+ },
+ {
+  "name": "Abber Nomad (Half-Elf)",
+  "abilityAdjustments": {},
+  "effectiveCharacterLevel": null,
+  "baseOutcastRating": null,
+  "traits": [
+   "Quick to Master",
+   "Saving Throw vs Mind-Affecting Spells +4",
+   "Skilled"
+  ],
+  "notes": []
  }
 ]

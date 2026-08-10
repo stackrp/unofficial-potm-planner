@@ -1,0 +1,98 @@
+[
+ {
+  "name": "Draconic Ancestry",
+  "abilityAdjustments": {
+   "STR": 2,
+   "CON": 2,
+   "CHA": 2
+  },
+  "effectiveCharacterLevel": 1,
+  "outcastRatingIncrease": 4,
+  "requiresApplication": true,
+  "removesHumanSkillPointBonus": false,
+  "restriction": "Restricted to characters native to Eberron, Forgotten Realms, Greyhawk, Mystara, or Planescape.",
+  "traits": [
+   "Saving Throw Bonus +2 vs. Mind-Affecting Spells",
+   "Increased AC +1",
+   "Nails: 1d2 (Small characters), 1d3 (Medium characters)",
+   "Low-Light Vision",
+   "Darkvision",
+   "Antagonize +2",
+   "Spot +2"
+  ],
+  "notes": [
+   "Does not change your race or subrace — you can still pass as a normal member of your race/subrace.",
+   "Major draconic features (full horns, tails, wings) are not allowed.",
+   "Outcast Rating increases by +4 or more, depending on how visible your chosen minor traits are."
+  ]
+ },
+ {
+  "name": "Feytouched",
+  "abilityAdjustments": {
+   "DEX": 2,
+   "CON": -2,
+   "CHA": 2
+  },
+  "effectiveCharacterLevel": 1,
+  "outcastRatingIncrease": 6,
+  "requiresApplication": true,
+  "removesHumanSkillPointBonus": true,
+  "restriction": "Restricted to Ravenloft-native characters.",
+  "traits": [
+   "Creature type changes to Fey",
+   "Hit Die becomes d6 (if lower than your current Hit Die)",
+   "Increased AC +1 (fey luck)",
+   "Low-Light Vision",
+   "Faerie Fire spell once a day",
+   "Daze spell once a day",
+   "Charm Person spell once a day"
+  ],
+  "notes": [
+   "May be combined with another racial template.",
+   "Applies over any race or subrace.",
+   "Humans lose their extra skill point per level — a hardcoded side effect of the creature type changing to Fey.",
+   "Outcast Rating increases by +6 or more, depending on how visible your chosen minor traits are."
+  ]
+ },
+ {
+  "name": "Blooded One",
+  "abilityAdjustments": {
+   "STR": 2,
+   "CON": 4,
+   "INT": -2
+  },
+  "effectiveCharacterLevel": 1,
+  "outcastRatingIncrease": null,
+  "requiresApplication": true,
+  "removesHumanSkillPointBonus": false,
+  "restriction": "Restricted on this server to half-orcs from Thay and Calibans native to Hazlan.",
+  "traits": [
+   "Increased AC +2",
+   "Improved Initiative",
+   "Blooded One War Cry spell-like ability once a day (all blooded ones within 30 feet, including self, gain +1 morale bonus on attack and damage rolls for 2d4 rounds)"
+  ],
+  "notes": []
+ },
+ {
+  "name": "Yuan-Ti Tainted One",
+  "abilityAdjustments": {
+   "CON": 2
+  },
+  "effectiveCharacterLevel": 2,
+  "outcastRatingIncrease": null,
+  "requiresApplication": true,
+  "removesHumanSkillPointBonus": false,
+  "restriction": "Restricted to characters native to Forgotten Realms or Greyhawk.",
+  "traits": [
+   "Alertness",
+   "Poison Bite",
+   "Poison Immunity",
+   "Spell Resistance (12 + Character Level / 2)",
+   "Poison spell-like ability once a day",
+   "Polymorph Self (Viper form only) three times a day"
+  ],
+  "notes": [
+   "Per a server dev note on the source thread, the spell-like abilities were pending a HAK update as of that post — verify current status in-game before relying on them."
+  ]
+ }
+]

@@ -14,13 +14,14 @@ import { SummaryPanel } from "./components/SummaryPanel";
 import { Guidance } from "./components/Guidance";
 import { calculateBuild, finalAbilityScores, abilityModifier } from "./lib/calculator";
 import { loadBuildFromStorage, saveBuildToStorage } from "./lib/buildIO";
-import { autoModForRace, categoryForRace } from "./data/raceCategories";
+import { autoModForRace } from "./data/raceCategories";
 import type { Build } from "./types";
 import { ABILITY_KEYS } from "./types";
 
 const DEFAULT_BUILD: Build = {
   name: "New Build",
   race: "",
+  template: "",
   alignment: "",
   baseAbilityScores: { STR: 8, DEX: 8, CON: 8, INT: 11, WIS: 8, CHA: 8 },
   levels: [],
@@ -104,9 +105,6 @@ function App() {
           <BuildImportExport build={build} defaultBuild={DEFAULT_BUILD} onImport={setBuild} />
         </div>
         <div className="flex items-center gap-3">
-          {categoryForRace(build.race) === "Humans" && (
-            <span className="text-sm text-violet-400">Human bonus feat + skill point applied</span>
-          )}
           <button
             type="button"
             onClick={handleResetClick}
@@ -122,7 +120,12 @@ function App() {
       </header>
 
       <main className="max-w-6xl mx-auto p-4 space-y-4">
-        <RacePicker race={build.race} onChange={handleRaceChange} />
+        <RacePicker
+          race={build.race}
+          onChange={handleRaceChange}
+          template={build.template}
+          onTemplateChange={(template) => setBuild((prev) => ({ ...prev, template }))}
+        />
 
         <DeityPicker
           deity={build.deity}
@@ -142,6 +145,7 @@ function App() {
           finalScores={finalScores}
           finalMods={finalMods}
           race={build.race}
+          template={build.template}
         />
 
         <SummaryPanel totals={calculated.totals} errors={calculated.errors} />

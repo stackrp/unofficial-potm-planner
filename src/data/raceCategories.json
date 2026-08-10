@@ -21,7 +21,9 @@
   "Shield Dwarf",
   "Chultan Dwarf (Albino Shield Dwarf)",
   "Hill Dwarf of Ansalon",
-  "Rockborn Dwarf"
+  "Rockborn Dwarf",
+  "Mountain Dwarf of Ansalon",
+  "Desert Dwarf (Maztican Dwarf)"
  ],
  "Elves": [
   "High Elves of Ravenloft",
@@ -50,10 +52,12 @@
   "Valenar Elf",
   "Moon Elf",
   "Wood Elf",
-  "Wild Elf of Faer\u00fbn",
+  "Wild Elf of Faerûn",
   "Ilsundal Elf",
   "Khorvaire Elf",
-  "Aerenal Elf"
+  "Aerenal Elf",
+  "Shiye Elf",
+  "Grey Elf of Greyhawk"
  ],
  "Gnomes": [
   "Gnomes of Ravenloft",
@@ -64,11 +68,12 @@
   "Thinker (Mad) Gnome",
   "Tinker Gnome",
   "Whisper Gnome",
-  "Rock Gnome"
+  "Rock Gnome",
+  "Wild Gnome"
  ],
  "Half-Elves": [
   "Half-elf of Ravenloft (Fey-Born)",
-  "Abber Nomad",
+  "Abber Nomad (Half-Elf)",
   "Athasian Half-Elf",
   "Half-Vistana (Giamarga)",
   "Half-Drow",
@@ -85,7 +90,11 @@
   "True Kender",
   "Lightfoot Halfling",
   "Strongheart Halfling",
-  "Anadian Halfling"
+  "Anadian Halfling",
+  "Furchin (Polar Halfling)",
+  "Maztican/Wild Halflings",
+  "Tundra Halfling",
+  "Afflicted Kender"
  ],
  "Half-Orcs": [
   "Half-Orc",
@@ -113,12 +122,7 @@
   "Rjurik",
   "Khinasi",
   "Brecht",
-  "Anuirean"
- ],
- "Templates": [
-  "Blooded One",
-  "Draconic Ancestry Template",
-  "Feytouched Template",
-  "Yuan-Ti Tainted One"
+  "Anuirean",
+  "Aasimar"
  ]
 }

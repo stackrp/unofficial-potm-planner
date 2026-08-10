@@ -49,6 +49,8 @@ export type Alignment = (typeof ALIGNMENTS)[number];
 export interface Build {
   name: string;
   race: string;
+  /** Name of a TemplateDef applied on top of race/subrace, or "" for none — see data/templates.ts. */
+  template: string;
   alignment: string;
   baseAbilityScores: AbilityScores;
   levels: LevelEntry[];

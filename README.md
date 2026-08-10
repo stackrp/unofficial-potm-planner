@@ -6,7 +6,7 @@ Live build tool, no server-side account needed — everything is saved to your b
 
 ## Features
 
-- **Race, deity, and background selection** — picking a race auto-applies its ability score modifiers; deity choice is scoped to alignment and offers matching domains/favored weapons for divine casters.
+- **Race, subrace, template, deity, and background selection** — picking a race/subrace or an optional racial template (Draconic Ancestry, Feytouched, etc.) auto-applies its ability score modifiers; deity choice is scoped to alignment and offers matching domains/favored weapons for divine casters.
 - **Ability score allocation** with point-buy-style base scores plus a live view of final scores and modifiers after racial bonuses.
 - **Level-by-level planning** — add classes level by level and see a running snapshot (BAB, saves, skill points, feats available) at each level.
 - **Feat tracker** that enforces prerequisites (ability scores, BAB, prior feats, class/subtype requirements) and only offers feats when a level actually has a slot for them.
@@ -46,7 +46,7 @@ npm run dev
 ```
 src/
   components/   UI panels (race/deity/background pickers, level planner, feat/skill trackers, guidance, ...)
-  data/         Static ruleset data (classes, races, feats, skills, deities, prestige/feat prerequisites)
+  data/         Static ruleset data (classes, races, templates, feats, skills, deities, prestige/feat prerequisites)
   lib/          Build calculation and rules engine (totals per level, prereq checks, import/export)
   types.ts      Shared Build/character types
 ```

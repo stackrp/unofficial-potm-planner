@@ -3,9 +3,9 @@ import type { AbilityKey } from "../types";
 
 // NWN's character creation only offers 7 base races; every subrace is a PW-applied
 // template layered on top of one of them. The first entry in each category is that
-// base race's own default Ravenloft subrace (no template applied). "Templates" are a
-// separate, orthogonal overlay (a character can have a template AND a subrace) and are
-// intentionally not included here.
+// base race's own default Ravenloft subrace (no template applied). "Templates" (e.g.
+// Draconic Ancestry, Feytouched) are a separate, orthogonal overlay — a character can
+// have a template AND a subrace — and live in data/templates.ts instead.
 export const BASE_RACE_CATEGORIES = [
   "Dwarves",
   "Elves",

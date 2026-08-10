@@ -3,6 +3,7 @@ import { ALL_SKILLS, SKILL_NAMES } from "../data/skills";
 import type { SkillStatus } from "../data/skills";
 import { getRace } from "../data/races";
 import { autoModForRace, categoryForRace } from "../data/raceCategories";
+import { getTemplate } from "../data/templates";
 import { getBackground, MAX_BACKGROUNDS } from "../data/backgrounds";
 import { getDeity } from "../data/deities";
 import { withinOneStep } from "./alignment";
@@ -132,6 +133,12 @@ export function finalAbilityScores(build: Build): AbilityScores {
       scores[key as AbilityKey] += delta ?? 0;
     }
   }
+  const template = getTemplate(build.template);
+  if (template) {
+    for (const [key, delta] of Object.entries(template.abilityAdjustments)) {
+      scores[key as AbilityKey] += delta ?? 0;
+    }
+  }
   for (const entry of build.levels) {
     if (entry.abilityIncrease) {
       scores[entry.abilityIncrease] += 1;
@@ -152,7 +159,15 @@ export function calculateBuild(build: Build): CalculatedBuild {
     featCounts[f.name] = (featCounts[f.name] ?? 0) + 1;
   }
 
+  // Humans are handled specially: a Human with no subrace gets the level-1 bonus feat AND +1
+  // skill point every level. A Human subrace (Axani, Tiefling, etc.) still gets the level-1
+  // bonus feat, and one extra skill point, but only that one — no ongoing +1/level after that.
   const isHumanRace = categoryForRace(build.race) === "Humans";
+  const isHumanNoSubrace = build.race === "Humans";
+  const isHumanWithSubrace = isHumanRace && !isHumanNoSubrace;
+  // A template that changes creature type away from Humanoid (currently only Feytouched) strips
+  // the Human bonus skill point but leaves the level-1 bonus feat untouched — see templates.ts.
+  const humanSkillPointBonusRemoved = getTemplate(build.template)?.removesHumanSkillPointBonus ?? false;
   const conMod = finalMods.CON;
 
   const classLevelCounts: Record<string, number> = {};
@@ -161,7 +176,11 @@ export function calculateBuild(build: Build): CalculatedBuild {
   // picked in-game, which happens after character creation (level 1) but before level 2 — so
   // level 1's skill points are earned and locked in at the pre-subrace INT, and only level 2
   // onward should see the bump. Skill points aren't retroactively recalculated in NWN when an
-  // ability score changes later, unlike e.g. HP off current CON.
+  // ability score changes later, unlike e.g. HP off current CON. Racial templates (templates.ts)
+  // deliberately aren't folded into this running score — unlike a subrace's fixed "before level 2"
+  // grant, a template is only granted whenever its Community Council application is approved,
+  // which this planner has no way to place on the level timeline. Their ability adjustments still
+  // show up in finalAbilityScores (the end-state sheet) — just not in this level-by-level model.
   const raceDef = getRace(build.race);
   let runningIntScore = build.baseAbilityScores.INT;
   let subraceIntApplied = false;
@@ -269,16 +288,22 @@ export function calculateBuild(build: Build): CalculatedBuild {
       return def ? sum + babAtLevel(def.babRate, lvl) : sum;
     }, 0);
 
-    // Skill points: class base + INT mod + human bonus, x4 at character level 1, floor of 1.
-    const humanBonus = isHumanRace ? 1 : 0;
-    let skillPointsGained = classDef.skillPoints + intModAtLevel + humanBonus;
-    if (entry.level === 1) skillPointsGained *= 4;
+    // Skill points: class base + INT mod + human bonus, x4 at character level 1, floor of 1. Only
+    // a subrace-less Human keeps earning the +1/level bonus; a Human subrace only ever gets it
+    // once, added as a flat point after the level-1 x4 multiplier (see isHumanWithSubrace above).
+    const humanPerLevelSkillBonus = isHumanNoSubrace && !humanSkillPointBonusRemoved ? 1 : 0;
+    let skillPointsGained = classDef.skillPoints + intModAtLevel + humanPerLevelSkillBonus;
+    if (entry.level === 1) {
+      skillPointsGained *= 4;
+      if (isHumanWithSubrace && !humanSkillPointBonusRemoved) skillPointsGained += 1;
+    }
     skillPointsGained = Math.max(1, skillPointsGained);
 
     // Feats: universal level-1 feat, human bonus feat (level 1), every-3rd-character-level
     // bonus feat, plus this class's own bonus feat schedule at its relative level.
+    const humanFeatBonus = isHumanRace ? 1 : 0;
     let featsGained = 0;
-    if (entry.level === 1) featsGained += 1 + humanBonus;
+    if (entry.level === 1) featsGained += 1 + humanFeatBonus;
     if (entry.level % 3 === 0) featsGained += 1;
     featsGained += classDef.bonusFeatsByLevel[relLevel - 1] ?? 0;
 

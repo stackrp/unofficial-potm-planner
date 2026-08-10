@@ -2,6 +2,7 @@ import { ABILITY_KEYS, type AbilityKey, type AbilityScores } from "../types";
 import { POINT_BUY_BUDGET, pointBuyCostForRace } from "../lib/calculator";
 import { getRace } from "../data/races";
 import { autoModForRace } from "../data/raceCategories";
+import { getTemplate } from "../data/templates";
 
 const LABELS: Record<AbilityKey, string> = {
   STR: "Strength",
@@ -18,13 +19,15 @@ interface Props {
   finalScores: AbilityScores;
   finalMods: Record<AbilityKey, number>;
   race: string;
+  template: string;
 }
 
-export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, race }: Props) {
+export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, race, template }: Props) {
   const spent = pointBuyCostForRace(scores, race);
   const remaining = POINT_BUY_BUDGET - spent;
   const raceDef = race ? getRace(race) : undefined;
   const autoMod = autoModForRace(race);
+  const templateAdj = getTemplate(template)?.abilityAdjustments ?? {};
 
   // The 8-18 point-buy range shifts by the base race's auto-mod, since `scores` is the
   // post-chargen value (see the note below) — an Elf's Con (-2) can only ever reach 6-16 here,
@@ -73,12 +76,12 @@ export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, ra
       <p className="text-xs text-neutral-500 mb-3">
         Enter the scores your character sheet shows right after character creation — this already
         includes your base race's automatic bonus (e.g. an Elf's +2 Dex/-2 Con). Only your
-        subrace's own extra bonus, if any, is added below. The budget above backs that base bonus
-        back out first, so it still reflects what you actually spent.
+        subrace's own extra bonus and any template bonuses, if any, are added below. The budget
+        above backs that base bonus back out first, so it still reflects what you actually spent.
       </p>
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
         {ABILITY_KEYS.map((key) => {
-          const raceAdj = raceDef?.abilityAdjustments[key] ?? 0;
+          const raceAdj = (raceDef?.abilityAdjustments[key] ?? 0) + (templateAdj[key] ?? 0);
           const [min, max] = rangeFor(key);
           return (
             <div

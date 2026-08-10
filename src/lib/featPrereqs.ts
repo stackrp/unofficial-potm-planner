@@ -1,6 +1,7 @@
 import { FEAT_PREREQS } from "../data/featPrereqs";
 import { getRace } from "../data/races";
 import { categoryForRace } from "../data/raceCategories";
+import { getTemplate } from "../data/templates";
 import { CLASSES } from "../data/classes";
 import { babAtLevel } from "./calculator";
 import type { AbilityKey, AbilityScores, Build } from "../types";
@@ -10,6 +11,12 @@ function abilityScoresThroughLevel(build: Build, atLevel: number): AbilityScores
   const race = getRace(build.race);
   if (race) {
     for (const [key, delta] of Object.entries(race.abilityAdjustments)) {
+      scores[key as AbilityKey] += delta ?? 0;
+    }
+  }
+  const template = getTemplate(build.template);
+  if (template) {
+    for (const [key, delta] of Object.entries(template.abilityAdjustments)) {
       scores[key as AbilityKey] += delta ?? 0;
     }
   }
