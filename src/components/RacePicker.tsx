@@ -1,11 +1,11 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { getRace } from "../data/races";
 import {
   autoModForRace,
   BASE_RACE_CATEGORIES,
   categoryForRace,
   defaultRaceForCategory,
-  subracesForCategory,
+  subracesForCategoryGroupedBySetting,
 } from "../data/raceCategories";
 import { TEMPLATES, getTemplate } from "../data/templates";
 import { ABILITY_KEYS, type AbilityKey } from "../types";
@@ -22,6 +22,8 @@ interface SubraceOption {
   label: string;
   adjustments: Partial<Record<AbilityKey, number>>;
   ecl: number | null;
+  /** Setting header to render immediately before this option, when it starts a new group. */
+  group?: string;
 }
 
 // races.json only ever stores a subrace's own extra bonus on top of its base race (see
@@ -175,22 +177,31 @@ function SubraceSelect({
           className="absolute z-20 mt-1 w-full max-h-72 overflow-auto rounded border border-neutral-700 bg-neutral-950 shadow-lg text-sm"
         >
           {options.map((opt, i) => (
-            <li
-              key={opt.name}
-              role="option"
-              aria-selected={opt.name === value}
-              onMouseEnter={() => setHighlighted(i)}
-              onClick={() => {
-                onChange(opt.name);
-                setOpen(false);
-              }}
-              className={`px-2 py-1 cursor-pointer ${i === highlighted ? "bg-neutral-800" : ""} ${
-                opt.name === value ? "text-neutral-100" : "text-neutral-300"
-              }`}
-            >
-              {opt.label}
-              <SubraceTagline option={opt} />
-            </li>
+            <Fragment key={opt.name || `option-${i}`}>
+              {opt.group && opt.group !== options[i - 1]?.group && (
+                <li
+                  aria-hidden="true"
+                  className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-500 bg-neutral-900 select-none"
+                >
+                  {opt.group}
+                </li>
+              )}
+              <li
+                role="option"
+                aria-selected={opt.name === value}
+                onMouseEnter={() => setHighlighted(i)}
+                onClick={() => {
+                  onChange(opt.name);
+                  setOpen(false);
+                }}
+                className={`px-2 py-1 cursor-pointer ${i === highlighted ? "bg-neutral-800" : ""} ${
+                  opt.name === value ? "text-neutral-100" : "text-neutral-300"
+                }`}
+              >
+                {opt.label}
+                <SubraceTagline option={opt} />
+              </li>
+            </Fragment>
           ))}
         </ul>
       )}
@@ -206,23 +217,31 @@ export function RacePicker({ race, onChange, template, onTemplateChange }: Props
   // BASE_RACE_CATEGORIES, no matter which category the player actually picked it under.
   const category = categoryForRace(race) ?? "";
 
-  const subraces = useMemo(() => subracesForCategory(category), [category]);
   const defaultRace = useMemo(() => defaultRaceForCategory(category), [category]);
   const selected = race ? getRace(race) : undefined;
 
-  const subraceOptions: SubraceOption[] = useMemo(
-    () =>
-      subraces.map((name) => {
-        const def = getRace(name);
-        return {
-          name,
-          label: name === defaultRace ? `${name} (no subrace)` : name,
-          adjustments: totalAdjustments(name, def?.abilityAdjustments ?? {}),
-          ecl: def?.effectiveCharacterLevel ?? null,
-        };
-      }),
-    [subraces, defaultRace]
-  );
+  // The category's own base race (no subrace template) stays pinned above the setting
+  // groups — it's available regardless of the character's setting of origin, so it
+  // shouldn't be filed under any one of them. Everything else is grouped by setting
+  // and alphabetized within each group (see subracesForCategoryGroupedBySetting).
+  const subraceOptions: SubraceOption[] = useMemo(() => {
+    function toOption(name: string, group?: string): SubraceOption {
+      const def = getRace(name);
+      return {
+        name,
+        label: name === defaultRace ? `${name} (no subrace)` : name,
+        adjustments: totalAdjustments(name, def?.abilityAdjustments ?? {}),
+        ecl: def?.effectiveCharacterLevel ?? null,
+        group,
+      };
+    }
+    const options: SubraceOption[] = [];
+    if (defaultRace) options.push(toOption(defaultRace));
+    for (const { setting, races } of subracesForCategoryGroupedBySetting(category)) {
+      for (const name of races) options.push(toOption(name, setting));
+    }
+    return options;
+  }, [category, defaultRace]);
 
   function handleCategoryChange(nextCategory: string) {
     onChange(nextCategory ? defaultRaceForCategory(nextCategory) ?? "" : "");

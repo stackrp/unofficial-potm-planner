@@ -1,4 +1,5 @@
 import raw from "./raceCategories.json";
+import { SETTING_ORDER, settingForRace, type Setting } from "./raceSettings";
 import type { AbilityKey } from "../types";
 
 // NWN's character creation only offers 7 base races; every subrace is a PW-applied
@@ -43,6 +44,33 @@ export function autoModForRace(raceName: string): Partial<Record<AbilityKey, num
 
 export function subracesForCategory(category: string): string[] {
   return CATEGORIES[category] ?? [];
+}
+
+export interface SettingGroup {
+  setting: Setting;
+  races: string[];
+}
+
+/**
+ * The category's subraces (excluding its own default/no-subrace entry), grouped by
+ * campaign setting and alphabetized within each group. Groups are ordered per
+ * SETTING_ORDER. A race missing from raceSettings.json falls back into "Multiple
+ * Settings" rather than being silently dropped.
+ */
+export function subracesForCategoryGroupedBySetting(category: string): SettingGroup[] {
+  const defaultRace = defaultRaceForCategory(category);
+  const groups = new Map<Setting, string[]>();
+  for (const name of subracesForCategory(category)) {
+    if (name === defaultRace) continue;
+    const setting = settingForRace(name) ?? "Multiple Settings";
+    if (!groups.has(setting)) groups.set(setting, []);
+    groups.get(setting)!.push(name);
+  }
+  for (const races of groups.values()) races.sort((a, b) => a.localeCompare(b));
+  return SETTING_ORDER.filter((setting) => groups.has(setting)).map((setting) => ({
+    setting,
+    races: groups.get(setting)!,
+  }));
 }
 
 /** The category's own base race (no subrace template applied) — always the first entry. */
