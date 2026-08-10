@@ -1,8 +1,5 @@
 import { ABILITY_KEYS, type AbilityKey, type AbilityScores } from "../types";
-import { POINT_BUY_BUDGET, pointBuyCostForRace } from "../lib/calculator";
-import { getRace } from "../data/races";
-import { autoModForRace } from "../data/raceCategories";
-import { getTemplate } from "../data/templates";
+import { POINT_BUY_BUDGET, pointBuyCost, racialAbilityAdjustments } from "../lib/calculator";
 
 const LABELS: Record<AbilityKey, string> = {
   STR: "Strength",
@@ -12,6 +9,9 @@ const LABELS: Record<AbilityKey, string> = {
   WIS: "Wisdom",
   CHA: "Charisma",
 };
+
+const MIN_SCORE = 8;
+const MAX_SCORE = 18;
 
 interface Props {
   scores: AbilityScores;
@@ -23,30 +23,21 @@ interface Props {
 }
 
 export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, race, template }: Props) {
-  const spent = pointBuyCostForRace(scores, race);
+  const spent = pointBuyCost(scores);
   const remaining = POINT_BUY_BUDGET - spent;
-  const raceDef = race ? getRace(race) : undefined;
-  const autoMod = autoModForRace(race);
-  const templateAdj = getTemplate(template)?.abilityAdjustments ?? {};
-
-  // The 8-18 point-buy range shifts by the base race's auto-mod, since `scores` is the
-  // post-chargen value (see the note below) — an Elf's Con (-2) can only ever reach 6-16 here,
-  // matching what raw pre-racial 8-18 would actually produce.
-  function rangeFor(key: AbilityKey): [number, number] {
-    const shift = autoMod[key] ?? 0;
-    return [8 + shift, 18 + shift];
-  }
+  // Full free racial package shown under each score: base auto + subrace extra + template.
+  // Entered scores are pure point-buy; finals add these on top (plus level-up increases).
+  const racialAdj = racialAbilityAdjustments(race, template);
 
   function bump(key: AbilityKey, delta: number) {
     const next = scores[key] + delta;
-    const [min, max] = rangeFor(key);
-    if (next < min || next > max) return;
+    if (next < MIN_SCORE || next > MAX_SCORE) return;
     onChange({ ...scores, [key]: next });
   }
 
   function resetAll() {
     const next = { ...scores };
-    for (const key of ABILITY_KEYS) next[key] = rangeFor(key)[0];
+    for (const key of ABILITY_KEYS) next[key] = MIN_SCORE;
     onChange(next);
   }
 
@@ -74,15 +65,13 @@ export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, ra
         </div>
       </div>
       <p className="text-xs text-neutral-500 mb-3">
-        Enter the scores your character sheet shows right after character creation — this already
-        includes your base race's automatic bonus (e.g. an Elf's +2 Dex/-2 Con). Only your
-        subrace's own extra bonus and any template bonuses, if any, are added below. The budget
-        above backs that base bonus back out first, so it still reflects what you actually spent.
+        Enter pure point-buy scores (8–18). Base race auto-mods (e.g. an Elf&apos;s +2 Dex/−2 Con),
+        any subrace extras, and template bonuses are listed in violet and applied in the final
+        totals below — they are not spent from the 30-point budget.
       </p>
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
         {ABILITY_KEYS.map((key) => {
-          const raceAdj = (raceDef?.abilityAdjustments[key] ?? 0) + (templateAdj[key] ?? 0);
-          const [min, max] = rangeFor(key);
+          const raceAdj = racialAdj[key] ?? 0;
           return (
             <div
               key={key}
@@ -96,7 +85,7 @@ export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, ra
                   type="button"
                   onClick={() => bump(key, -1)}
                   className="w-6 h-6 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 disabled:opacity-30 text-sm"
-                  disabled={scores[key] <= min}
+                  disabled={scores[key] <= MIN_SCORE}
                 >
                   −
                 </button>
@@ -105,7 +94,7 @@ export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, ra
                   type="button"
                   onClick={() => bump(key, 1)}
                   className="w-6 h-6 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 disabled:opacity-30 text-sm"
-                  disabled={scores[key] >= max}
+                  disabled={scores[key] >= MAX_SCORE}
                 >
                   +
                 </button>

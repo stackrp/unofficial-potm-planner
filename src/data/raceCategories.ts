@@ -20,12 +20,10 @@ export const BASE_RACE_CATEGORIES = [
 type RaceCategoryMap = Record<string, string[]>;
 const CATEGORIES = raw as RaceCategoryMap;
 
-// The NWN engine bakes each base race's ability modifier into the score you spend point-buy
-// points on — you never see or pay for the pre-racial value. `abilityAdjustments` on each race
-// entry only ever holds a subrace's own extra bonus (see races.json), so this is the one place
-// that still records the base race's own auto-mod. Used both to back out the free bonus before
-// checking the point-buy budget, and to auto-shift the ability score panel when the player picks
-// a race, so they see the same numbers the real character creation screen would show them.
+// Base race automatic ability modifiers (what NWN applies at character creation).
+// `abilityAdjustments` on each races.json entry only holds a subrace's own extra bonus on top
+// of these — never repeats the base mod. Stacked with subrace extras (and templates) in
+// finalAbilityScores; baseAbilityScores stay pure 8–18 point-buy.
 export const BASE_RACE_AUTO_MOD: Record<string, Partial<Record<AbilityKey, number>>> = {
   Dwarves: { CON: 2, CHA: -2 },
   Elves: { DEX: 2, CON: -2 },

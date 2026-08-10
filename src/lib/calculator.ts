@@ -44,18 +44,40 @@ export function pointBuyCost(scores: AbilityScores): number {
 }
 
 /**
- * Point-buy cost of `scores` against the 30-point budget, for a given race. `scores` is what the
- * player entered — their post-chargen stats, already including their base race's automatic
- * bonus — so that free bonus is backed out first to reach the actual pre-racial value the budget
- * was spent on, matching what NWN's point-buy screen would have charged.
+ * Combined free ability adjustments for a race/subrace + optional template:
+ * base race auto-mod (e.g. Elf +2 Dex/-2 Con) + subrace extra (races.json) + template.
+ * `baseAbilityScores` are pure point-buy and must not include these.
  */
-export function pointBuyCostForRace(scores: AbilityScores, race: string): number {
-  const autoMod = autoModForRace(race);
-  const preRacial = { ...scores };
-  for (const [key, delta] of Object.entries(autoMod)) {
-    preRacial[key as AbilityKey] -= delta ?? 0;
+export function racialAbilityAdjustments(
+  race: string,
+  template = ""
+): Partial<Record<AbilityKey, number>> {
+  const total: Partial<Record<AbilityKey, number>> = { ...autoModForRace(race) };
+  const raceDef = getRace(race);
+  if (raceDef) {
+    for (const [key, delta] of Object.entries(raceDef.abilityAdjustments)) {
+      total[key as AbilityKey] = (total[key as AbilityKey] ?? 0) + (delta ?? 0);
+    }
   }
-  return pointBuyCost(preRacial);
+  const templateDef = getTemplate(template);
+  if (templateDef) {
+    for (const [key, delta] of Object.entries(templateDef.abilityAdjustments)) {
+      total[key as AbilityKey] = (total[key as AbilityKey] ?? 0) + (delta ?? 0);
+    }
+  }
+  return total;
+}
+
+/** Apply `deltas` onto a copy of `scores` (missing keys treated as 0). */
+export function applyAbilityDeltas(
+  scores: AbilityScores,
+  deltas: Partial<Record<AbilityKey, number>>
+): AbilityScores {
+  const next = { ...scores };
+  for (const [key, delta] of Object.entries(deltas)) {
+    next[key as AbilityKey] += delta ?? 0;
+  }
+  return next;
 }
 
 function goodSave(level: number): number {
@@ -124,21 +146,15 @@ export interface CalculatedBuild {
   errors: string[];
 }
 
-/** Final ability scores after all level-up increases (every 4 char levels, one point each). */
+/**
+ * Final ability scores: pure point-buy base + base-race auto-mod + subrace extra + template
+ * + level-up increases (every 4 char levels, one point each).
+ */
 export function finalAbilityScores(build: Build): AbilityScores {
-  const scores = { ...build.baseAbilityScores };
-  const race = getRace(build.race);
-  if (race) {
-    for (const [key, delta] of Object.entries(race.abilityAdjustments)) {
-      scores[key as AbilityKey] += delta ?? 0;
-    }
-  }
-  const template = getTemplate(build.template);
-  if (template) {
-    for (const [key, delta] of Object.entries(template.abilityAdjustments)) {
-      scores[key as AbilityKey] += delta ?? 0;
-    }
-  }
+  const scores = applyAbilityDeltas(
+    build.baseAbilityScores,
+    racialAbilityAdjustments(build.race, build.template)
+  );
   for (const entry of build.levels) {
     if (entry.abilityIncrease) {
       scores[entry.abilityIncrease] += 1;
@@ -171,18 +187,19 @@ export function calculateBuild(build: Build): CalculatedBuild {
   const conMod = finalMods.CON;
 
   const classLevelCounts: Record<string, number> = {};
-  // baseAbilityScores only carries the base race's auto mod (applied at chargen). A subrace's own
-  // extra adjustment (races.json abilityAdjustments) isn't applied until the subrace template is
-  // picked in-game, which happens after character creation (level 1) but before level 2 — so
-  // level 1's skill points are earned and locked in at the pre-subrace INT, and only level 2
-  // onward should see the bump. Skill points aren't retroactively recalculated in NWN when an
-  // ability score changes later, unlike e.g. HP off current CON. Racial templates (templates.ts)
-  // deliberately aren't folded into this running score — unlike a subrace's fixed "before level 2"
-  // grant, a template is only granted whenever its Community Council application is approved,
-  // which this planner has no way to place on the level timeline. Their ability adjustments still
-  // show up in finalAbilityScores (the end-state sheet) — just not in this level-by-level model.
+  // baseAbilityScores are pure point-buy. Base-race auto-mod (e.g. Half-Orc -2 Int) is known at
+  // chargen and counts from level 1. A subrace's own extra INT (races.json abilityAdjustments)
+  // isn't applied until the subrace template is picked in-game — after character creation (level
+  // 1) but before level 2 — so level 1's skill points are locked in at pre-subrace INT, and only
+  // level 2 onward should see that bump. Skill points aren't retroactively recalculated in NWN
+  // when an ability score changes later, unlike e.g. HP off current CON. Racial templates
+  // (templates.ts) deliberately aren't folded into this running score — unlike a subrace's fixed
+  // "before level 2" grant, a template is only granted whenever its Community Council application
+  // is approved, which this planner has no way to place on the level timeline. Their ability
+  // adjustments still show up in finalAbilityScores (the end-state sheet) — just not here.
   const raceDef = getRace(build.race);
-  let runningIntScore = build.baseAbilityScores.INT;
+  const baseAutoInt = autoModForRace(build.race).INT ?? 0;
+  let runningIntScore = build.baseAbilityScores.INT + baseAutoInt;
   let subraceIntApplied = false;
   const perLevel: LevelSnapshot[] = [];
 
@@ -402,7 +419,7 @@ export function calculateBuild(build: Build): CalculatedBuild {
     abilityModifiers: finalMods,
   };
 
-  const abilityPointsSpent = pointBuyCostForRace(build.baseAbilityScores, build.race);
+  const abilityPointsSpent = pointBuyCost(build.baseAbilityScores);
   if (abilityPointsSpent > POINT_BUY_BUDGET) {
     errors.push(`Ability scores cost ${abilityPointsSpent} points, exceeding the ${POINT_BUY_BUDGET}-point budget.`);
   }

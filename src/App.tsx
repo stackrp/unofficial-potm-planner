@@ -14,7 +14,6 @@ import { SummaryPanel } from "./components/SummaryPanel";
 import { Guidance } from "./components/Guidance";
 import { calculateBuild, finalAbilityScores, abilityModifier } from "./lib/calculator";
 import { loadBuildFromStorage, saveBuildToStorage } from "./lib/buildIO";
-import { autoModForRace } from "./data/raceCategories";
 import type { Build } from "./types";
 import { ABILITY_KEYS } from "./types";
 
@@ -46,16 +45,9 @@ function App() {
   }, [confirmingReset]);
 
   function handleRaceChange(race: string) {
-    setBuild((prev) => {
-      const oldMod = autoModForRace(prev.race);
-      const newMod = autoModForRace(race);
-      const nextScores = { ...prev.baseAbilityScores };
-      for (const key of ABILITY_KEYS) {
-        const delta = (newMod[key] ?? 0) - (oldMod[key] ?? 0);
-        if (delta !== 0) nextScores[key] += delta;
-      }
-      return { ...prev, race, baseAbilityScores: nextScores };
-    });
+    // Racial ability adjustments (base auto-mod + subrace extra) are applied in
+    // finalAbilityScores — baseAbilityScores stay pure point-buy and are never mutated here.
+    setBuild((prev) => ({ ...prev, race }));
   }
 
   function handleLevelsChange(levels: Build["levels"]) {

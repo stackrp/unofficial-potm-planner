@@ -1,6 +1,8 @@
-import type { Build } from "../types";
+import { autoModForRace } from "../data/raceCategories";
+import { ABILITY_KEYS, type AbilityScores, type Build } from "../types";
 
-const SCHEMA_VERSION = 1;
+/** v1 baked base-race auto-mods into baseAbilityScores; v2 keeps those pure point-buy. */
+const SCHEMA_VERSION = 2;
 
 interface BuildFile {
   schemaVersion: number;
@@ -56,6 +58,20 @@ function isRecord(v: unknown): v is Record<string, unknown> {
 }
 
 /**
+ * Schema v1 (and unversioned exports from the hybrid era) stored post-chargen scores that
+ * already included the base race's auto-mod. v2 stores pure point-buy and applies auto-mods in
+ * finalAbilityScores — so loading an older file must peel the free bonus back off first.
+ */
+function migrateScoresFromV1(scores: AbilityScores, race: string): AbilityScores {
+  const auto = autoModForRace(race);
+  const next = { ...scores };
+  for (const key of ABILITY_KEYS) {
+    next[key] -= auto[key] ?? 0;
+  }
+  return next;
+}
+
+/**
  * Parses an exported build file. Missing or malformed fields fall back to `fallback` (the app's
  * default build) field-by-field, so a file from an older/newer schema version degrades
  * gracefully instead of crashing the app.
@@ -70,20 +86,27 @@ export function parseBuildFile(text: string, fallback: Build): Build {
   if (!isRecord(parsed)) {
     throw new BuildParseError("That file doesn't look like a build export.");
   }
+  const schemaVersion = typeof parsed.schemaVersion === "number" ? parsed.schemaVersion : 1;
   const raw = isRecord(parsed.build) ? parsed.build : parsed;
   if (typeof raw.name !== "string" && typeof raw.race !== "string" && !Array.isArray(raw.levels)) {
     throw new BuildParseError("That file doesn't look like a build export.");
   }
 
+  const race = typeof raw.race === "string" ? raw.race : fallback.race;
+  let baseAbilityScores: AbilityScores = {
+    ...fallback.baseAbilityScores,
+    ...(isRecord(raw.baseAbilityScores) ? (raw.baseAbilityScores as Partial<AbilityScores>) : {}),
+  };
+  if (schemaVersion < 2) {
+    baseAbilityScores = migrateScoresFromV1(baseAbilityScores, race);
+  }
+
   return {
     name: typeof raw.name === "string" ? raw.name : fallback.name,
-    race: typeof raw.race === "string" ? raw.race : fallback.race,
+    race,
     template: typeof raw.template === "string" ? raw.template : fallback.template,
     alignment: typeof raw.alignment === "string" ? raw.alignment : fallback.alignment,
-    baseAbilityScores: {
-      ...fallback.baseAbilityScores,
-      ...(isRecord(raw.baseAbilityScores) ? raw.baseAbilityScores : {}),
-    },
+    baseAbilityScores,
     levels: Array.isArray(raw.levels) ? (raw.levels as Build["levels"]) : fallback.levels,
     feats: Array.isArray(raw.feats) ? (raw.feats as Build["feats"]) : fallback.feats,
     skills: Array.isArray(raw.skills) ? (raw.skills as Build["skills"]) : fallback.skills,

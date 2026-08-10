@@ -10,10 +10,11 @@ export interface RaceDef {
   notes: string[];
 }
 
-// Ability adjustments here are the TOTAL once the subrace is acquired in-game; many
-// subraces note the game engine auto-applies the base race's adjustment at character
-// creation and the remainder is added when the subrace template is granted in-game —
-// see each race's `notes` for the exact breakdown.
+// Ability adjustments here are the SUBRACE'S OWN extra bonus only — never the base race's
+// automatic chargen mod (Elf +2 Dex/−2 Con, etc.). Base auto-mods live in BASE_RACE_AUTO_MOD
+// (raceCategories.ts) and are stacked with these extras in finalAbilityScores. Many subrace
+// notes document the split: engine applies the base mod at character creation, then the
+// remainder when the subrace template is granted in-game.
 export const RACES: RaceDef[] = raw as RaceDef[];
 
 const RACES_BY_NAME = new Map(RACES.map((r) => [r.name, r]));

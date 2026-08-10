@@ -1,13 +1,13 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { getRace } from "../data/races";
 import {
-  autoModForRace,
   BASE_RACE_CATEGORIES,
   categoryForRace,
   defaultRaceForCategory,
   subracesForCategoryGroupedBySetting,
 } from "../data/raceCategories";
 import { TEMPLATES, getTemplate } from "../data/templates";
+import { racialAbilityAdjustments } from "../lib/calculator";
 import { ABILITY_KEYS, type AbilityKey } from "../types";
 
 interface Props {
@@ -24,22 +24,6 @@ interface SubraceOption {
   ecl: number | null;
   /** Setting header to render immediately before this option, when it starts a new group. */
   group?: string;
-}
-
-// races.json only ever stores a subrace's own extra bonus on top of its base race (see
-// raceCategories.ts) — the base race's own auto-mod (e.g. an Elf's +2 Dex/-2 Con) isn't repeated
-// per-entry there, so it has to be merged in here to show the total adjustment a player actually
-// ends up with, matching what real character creation would show.
-function totalAdjustments(
-  race: string,
-  raceAdjustments: Partial<Record<string, number>>
-): Partial<Record<AbilityKey, number>> {
-  const total: Partial<Record<AbilityKey, number>> = { ...autoModForRace(race) };
-  for (const key of ABILITY_KEYS) {
-    const extra = raceAdjustments[key];
-    if (extra) total[key] = (total[key] ?? 0) + extra;
-  }
-  return total;
 }
 
 /** Ability adjustments colored per-stat (green for positive, red for negative). */
@@ -230,7 +214,8 @@ export function RacePicker({ race, onChange, template, onTemplateChange }: Props
       return {
         name,
         label: name === defaultRace ? `${name} (no subrace)` : name,
-        adjustments: totalAdjustments(name, def?.abilityAdjustments ?? {}),
+        // Base auto-mod + subrace extra (no template — that's a separate picker).
+        adjustments: racialAbilityAdjustments(name),
         ecl: def?.effectiveCharacterLevel ?? null,
         group,
       };
@@ -262,15 +247,12 @@ export function RacePicker({ race, onChange, template, onTemplateChange }: Props
   const templateDef = getTemplate(template);
 
   // Combined so the summary card below reads like a single character sheet — race/subrace and
-  // the selected template's bonuses stack together.
-  const combinedAdjustments: Partial<Record<AbilityKey, number>> = {
-    ...(selected ? totalAdjustments(race, selected.abilityAdjustments) : {}),
-  };
-  if (templateDef) {
-    for (const [key, delta] of Object.entries(templateDef.abilityAdjustments)) {
-      combinedAdjustments[key as AbilityKey] = (combinedAdjustments[key as AbilityKey] ?? 0) + (delta ?? 0);
-    }
-  }
+  // the selected template's bonuses stack together (same stack finalAbilityScores uses).
+  const combinedAdjustments: Partial<Record<AbilityKey, number>> = selected
+    ? racialAbilityAdjustments(race, template)
+    : templateDef
+      ? { ...templateDef.abilityAdjustments }
+      : {};
   const combinedEcl = (selected?.effectiveCharacterLevel ?? 0) + (templateDef?.effectiveCharacterLevel ?? 0);
   // A subrace-less Human keeps earning +1 skill point every level; a Human subrace (Axani,
   // Tiefling, etc.) only ever gets that bonus once — see calculator.ts's identical split.

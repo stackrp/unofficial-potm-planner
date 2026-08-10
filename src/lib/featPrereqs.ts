@@ -1,25 +1,16 @@
 import { FEAT_PREREQS } from "../data/featPrereqs";
-import { getRace } from "../data/races";
 import { categoryForRace } from "../data/raceCategories";
-import { getTemplate } from "../data/templates";
 import { CLASSES } from "../data/classes";
-import { babAtLevel } from "./calculator";
+import { applyAbilityDeltas, babAtLevel, racialAbilityAdjustments } from "./calculator";
 import type { AbilityKey, AbilityScores, Build } from "../types";
 
 function abilityScoresThroughLevel(build: Build, atLevel: number): AbilityScores {
-  const scores = { ...build.baseAbilityScores };
-  const race = getRace(build.race);
-  if (race) {
-    for (const [key, delta] of Object.entries(race.abilityAdjustments)) {
-      scores[key as AbilityKey] += delta ?? 0;
-    }
-  }
-  const template = getTemplate(build.template);
-  if (template) {
-    for (const [key, delta] of Object.entries(template.abilityAdjustments)) {
-      scores[key as AbilityKey] += delta ?? 0;
-    }
-  }
+  // Same stack as finalAbilityScores: pure point-buy + base auto + subrace extra + template,
+  // then only ability increases taken on or before atLevel.
+  const scores = applyAbilityDeltas(
+    build.baseAbilityScores,
+    racialAbilityAdjustments(build.race, build.template)
+  );
   for (const entry of build.levels) {
     if (entry.level <= atLevel && entry.abilityIncrease) {
       scores[entry.abilityIncrease] += 1;
