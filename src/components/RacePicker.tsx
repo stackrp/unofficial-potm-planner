@@ -158,14 +158,14 @@ function SubraceSelect({
       {open && !disabled && (
         <ul
           role="listbox"
-          className="absolute z-20 mt-1 w-full max-h-72 overflow-auto rounded border border-neutral-700 bg-neutral-950 shadow-lg text-sm"
+          className="menu-panel absolute z-20 mt-1 w-full max-h-72 overflow-auto rounded border border-neutral-700 shadow-lg text-sm"
         >
           {options.map((opt, i) => (
             <Fragment key={opt.name || `option-${i}`}>
               {opt.group && opt.group !== options[i - 1]?.group && (
                 <li
                   aria-hidden="true"
-                  className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-500 bg-neutral-900 select-none"
+                  className="menu-panel-header px-2 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-500 select-none"
                 >
                   {opt.group}
                 </li>
@@ -178,7 +178,7 @@ function SubraceSelect({
                   onChange(opt.name);
                   setOpen(false);
                 }}
-                className={`px-2 py-1 cursor-pointer ${i === highlighted ? "bg-neutral-800" : ""} ${
+                className={`px-2 py-1 cursor-pointer ${i === highlighted ? "menu-panel-active" : ""} ${
                   opt.name === value ? "text-neutral-100" : "text-neutral-300"
                 }`}
               >

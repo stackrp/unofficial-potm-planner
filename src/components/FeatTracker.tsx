@@ -86,7 +86,7 @@ function InlineFeatFinder({ onSelect }: { onSelect: (name: string) => void }) {
         className="w-full bg-neutral-950 border border-neutral-700 rounded px-2 py-1 text-neutral-100 text-sm"
       />
       {open && (
-        <div className="absolute z-10 mt-1 w-full max-h-64 overflow-y-auto rounded border border-neutral-700 bg-neutral-900 shadow-lg">
+        <div className="menu-panel absolute z-10 mt-1 w-full max-h-64 overflow-y-auto rounded border border-neutral-700 shadow-lg">
           {totalCount === 0 && (
             <div className="px-2 py-1.5 text-sm text-neutral-500">
               {query.trim()
@@ -96,7 +96,7 @@ function InlineFeatFinder({ onSelect }: { onSelect: (name: string) => void }) {
           )}
           {grouped.map(([key, fs]) => (
             <div key={key}>
-              <div className="sticky top-0 px-2 py-1 text-xs uppercase tracking-wide text-neutral-500 bg-neutral-900 border-b border-neutral-800">
+              <div className="menu-panel-header sticky top-0 px-2 py-1 text-xs uppercase tracking-wide text-neutral-500 border-b border-neutral-800">
                 {key}
               </div>
               {fs.map((f) => (

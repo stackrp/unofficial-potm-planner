@@ -8,3 +8,24 @@ body {
   margin: 0;
   font-family: system-ui, "Segoe UI", Roboto, sans-serif;
 }
+
+/*
+ * Floating menus (custom listboxes / typeaheads). Tailwind v4 ships neutral colors as OKLCH,
+ * which very old Chromium (e.g. legacy Brave on Windows 7) drops as invalid — leaving the
+ * panel transparent. Solid hex first is a universal fallback; the OKLCH line wins on modern
+ * engines and matches the rest of the UI (neutral-950 / 900 / 800).
+ */
+.menu-panel {
+  background-color: #0a0a0a; /* neutral-950 hex */
+  background-color: oklch(14.5% 0 none);
+}
+
+.menu-panel-header {
+  background-color: #171717; /* neutral-900 hex */
+  background-color: oklch(20.5% 0 none);
+}
+
+.menu-panel-active {
+  background-color: #262626; /* neutral-800 hex */
+  background-color: oklch(26.9% 0 none);
+}
