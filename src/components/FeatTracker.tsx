@@ -208,7 +208,7 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
               disabled={feats.length === 0}
               className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 disabled:opacity-30 text-sm"
             >
-              Reset
+              ↻ Reset
             </button>
           ) : (
             <div className="flex items-center gap-2 text-sm flex-wrap justify-end">

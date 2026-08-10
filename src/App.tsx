@@ -116,7 +116,7 @@ function App() {
                 : "bg-neutral-800 hover:bg-neutral-700 text-neutral-200"
             }`}
           >
-            {confirmingReset ? "Confirm reset?" : "Reset"}
+            {confirmingReset ? "Confirm reset?" : "↻ Reset"}
           </button>
         </div>
       </header>

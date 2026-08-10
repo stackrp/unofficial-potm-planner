@@ -1,12 +1,13 @@
 import { useMemo } from "react";
 import { getRace } from "../data/races";
 import {
+  autoModForRace,
   BASE_RACE_CATEGORIES,
   categoryForRace,
   defaultRaceForCategory,
   subracesForCategory,
 } from "../data/raceCategories";
-import { ABILITY_KEYS } from "../types";
+import { ABILITY_KEYS, type AbilityKey } from "../types";
 
 interface Props {
   race: string;
@@ -18,6 +19,22 @@ function formatAdjustments(adjustments: Partial<Record<string, number>>): string
     (k) => `${adjustments[k]! > 0 ? "+" : ""}${adjustments[k]} ${k}`
   );
   return parts.length > 0 ? parts.join(", ") : "None";
+}
+
+// races.json only ever stores a subrace's own extra bonus on top of its base race (see
+// raceCategories.ts) — the base race's own auto-mod (e.g. an Elf's +2 Dex/-2 Con) isn't repeated
+// per-entry there, so it has to be merged in here to show the total adjustment a player actually
+// ends up with, matching what real character creation would show.
+function totalAdjustments(
+  race: string,
+  raceAdjustments: Partial<Record<string, number>>
+): Partial<Record<AbilityKey, number>> {
+  const total: Partial<Record<AbilityKey, number>> = { ...autoModForRace(race) };
+  for (const key of ABILITY_KEYS) {
+    const extra = raceAdjustments[key];
+    if (extra) total[key] = (total[key] ?? 0) + extra;
+  }
+  return total;
 }
 
 export function RacePicker({ race, onChange }: Props) {
@@ -68,7 +85,7 @@ export function RacePicker({ race, onChange }: Props) {
           <div>
             <span className="text-neutral-500">Ability adjustments: </span>
             <span className="text-neutral-100 font-mono">
-              {formatAdjustments(selected.abilityAdjustments)}
+              {formatAdjustments(totalAdjustments(race, selected.abilityAdjustments))}
             </span>
           </div>
           {selected.effectiveCharacterLevel != null && (
