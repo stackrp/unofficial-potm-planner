@@ -29,7 +29,7 @@ const DEFAULT_BUILD: Build = {
   race: "",
   template: "",
   alignment: "",
-  baseAbilityScores: { STR: 8, DEX: 8, CON: 8, INT: 11, WIS: 8, CHA: 8 },
+  baseAbilityScores: { STR: 8, DEX: 8, CON: 8, INT: 8, WIS: 8, CHA: 8 },
   levels: [],
   feats: [],
   skills: [],
