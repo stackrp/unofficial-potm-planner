@@ -14,12 +14,27 @@ export interface DeityDef {
   portfolio: string[];
   subgroup: string | null;
   pantheon: string;
+  /** "god" for a conventional deity, "loa" for a Voodan spirit patron (see LoaPicker). */
+  type: "god" | "loa";
+  /** The three arcane schools a Voodan may specialize in when this loa is their patron. Gods don't have this. */
+  specializations: string[] | null;
+  /** Freeform guidance shown in the info panel — used mainly for the Loa of the Multiverse templates. */
+  notes: string | null;
+}
+
+interface RawDeity extends Omit<DeityDef, "pantheon" | "weaponAlternatives" | "type" | "specializations" | "notes"> {
+  type?: "god" | "loa";
+  specializations?: string[] | null;
+  notes?: string | null;
 }
 
 interface RawPantheon {
   pantheon: string;
   section: string;
-  deities: Omit<DeityDef, "pantheon" | "weaponAlternatives">[];
+  /** Default type for every deity in this pantheon; a deity's own `type` overrides it
+   * (used by "Minor Religions"/"Dark Sun Religions", which mix gods and Athasian spirits). */
+  type?: "god" | "loa";
+  deities: RawDeity[];
 }
 
 const RAW_PANTHEONS = raw as RawPantheon[];
@@ -33,6 +48,9 @@ export const DEITIES: DeityDef[] = RAW_PANTHEONS.flatMap((p) =>
     ...d,
     pantheon: p.pantheon,
     weaponAlternatives: splitWeaponAlternatives(d.favoredWeapon ?? ""),
+    type: d.type ?? p.type ?? "god",
+    specializations: d.specializations ?? null,
+    notes: d.notes ?? null,
   }))
 );
 
@@ -42,11 +60,12 @@ export function getDeity(pantheon: string, name: string): DeityDef | undefined {
   return DEITIES_BY_KEY.get(`${pantheon}::${name}`);
 }
 
-/** Deities whose domain list contains every domain in `domains`, and whose weapon
+/** Deities of `type` whose domain list contains every domain in `domains`, and whose weapon
  * alternatives include `weapon` (when given). Empty/falsy filters are ignored. */
-export function deitiesMatching(domains: string[], weapon?: string): DeityDef[] {
+export function deitiesMatching(domains: string[], weapon?: string, type: "god" | "loa" = "god"): DeityDef[] {
   return DEITIES.filter(
     (d) =>
+      d.type === type &&
       domains.every((dom) => d.domains.includes(dom)) &&
       (!weapon || d.weaponAlternatives.includes(weapon))
   );

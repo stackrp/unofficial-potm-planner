@@ -1285,6 +1285,7 @@
  {
   "pantheon": "Voodan, the Loa of Souragne",
   "section": "page1",
+  "type": "loa",
   "deities": [
    {
     "name": "The Maiden of the Swamp",
@@ -1303,7 +1304,8 @@
      "those Lost in the Wild",
      "Growing Things"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Abjuration", "Conjuration", "Enchantment"]
    },
    {
     "name": "The Lord of the Dead",
@@ -1321,7 +1323,8 @@
      "Death",
      "the Dead"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Divination", "Enchantment", "Necromancy"]
    },
    {
     "name": "Brahmbei, the Oracle",
@@ -1339,7 +1342,8 @@
      "Fate",
      "Divination"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Abjuration", "Divination", "Illusion"]
    },
    {
     "name": "Kurkva, the Wailing One",
@@ -1358,7 +1362,8 @@
      "Clouds",
      "Open Sky"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Conjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Lethede, the Lady of the Roads",
@@ -1377,7 +1382,8 @@
      "those Lost",
      "Spiritual Seekers"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Abjuration", "Conjuration", "Transmutation"]
    },
    {
     "name": "Madris Orundi, the Dancer",
@@ -1395,7 +1401,8 @@
      "Artists",
      "Lovers"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Divination", "Enchantment", "Illusion"]
    },
    {
     "name": "Ohuwaghnn the Serpent King",
@@ -1413,7 +1420,8 @@
      "Dangerous Beasts of the Swamps",
      "Hazards of the Wild"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Divination", "Necromancy", "Transmutation"]
    },
    {
     "name": "Ovun Borundir, the Warrior",
@@ -1431,7 +1439,8 @@
      "Battles",
      "Warriors"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Abjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Sehkelo, the Queen in Gold",
@@ -1450,7 +1459,8 @@
      "the Sky",
      "Opposing Evil"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Abjuration", "Divination", "Evocation"]
    },
    {
     "name": "Tonthomba, the Burning Man",
@@ -1467,7 +1477,8 @@
     "portfolio": [
      "Fire"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Conjuration", "Enchantment", "Evocation"]
    },
    {
     "name": "Ulwaddithri, the Consuming One",
@@ -1486,7 +1497,8 @@
      "Sickness",
      "Famine"
     ],
-    "subgroup": "Greater Loa"
+    "subgroup": "Greater Loa",
+    "specializations": ["Conjuration", "Necromancy", "Transmutation"]
    },
    {
     "name": "Bouki",
@@ -1500,10 +1512,9 @@
     "alignment": "CG",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [
-     "?"
-    ],
-    "subgroup": "Minor Loa"
+    "portfolio": [],
+    "subgroup": "Minor Loa",
+    "specializations": ["Abjuration", "Divination", "Illusion"]
    },
    {
     "name": "Bushtail",
@@ -1517,10 +1528,9 @@
     "alignment": "CN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [
-     "?"
-    ],
-    "subgroup": "Minor Loa"
+    "portfolio": [],
+    "subgroup": "Minor Loa",
+    "specializations": ["Divination", "Enchantment", "Illusion"]
    },
    {
     "name": "Koblamin, Loa of the Moon",
@@ -1537,7 +1547,8 @@
     "portfolio": [
      "Moon"
     ],
-    "subgroup": "Minor Loa"
+    "subgroup": "Minor Loa",
+    "specializations": ["Abjuration", "Conjuration", "Divination"]
    },
    {
     "name": "Longears",
@@ -1551,10 +1562,9 @@
     "alignment": "CG",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [
-     "?"
-    ],
-    "subgroup": "Minor Loa"
+    "portfolio": [],
+    "subgroup": "Minor Loa",
+    "specializations": ["Abjuration", "Divination", "Illusion"]
    }
   ]
  },
@@ -1575,7 +1585,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Divination", "Evocation"]
    },
    {
     "name": "Elementalism Earth",
@@ -1590,7 +1602,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Elementalism Fire",
@@ -1605,7 +1619,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Evocation", "Illusion"]
    },
    {
     "name": "Elementalism Magma",
@@ -1620,7 +1636,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Elementalism Rain",
@@ -1635,7 +1653,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Enchantment", "Evocation"]
    },
    {
     "name": "Elementalism Silt",
@@ -1650,7 +1670,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Evocation", "Necromancy"]
    },
    {
     "name": "Elementalism Sun",
@@ -1665,7 +1687,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Enchantment", "Evocation"]
    },
    {
     "name": "Elementalism Water",
@@ -1680,7 +1704,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Abjuration", "Conjuration", "Evocation"]
    },
    {
     "name": "Sorcerer-King Kalid-Ma",
@@ -9080,7 +9106,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Divination", "Evocation"]
    },
    {
     "name": "Elementalism Earth",
@@ -9095,7 +9123,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Elementalism Fire",
@@ -9110,7 +9140,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Evocation", "Illusion"]
    },
    {
     "name": "Elementalism Magma",
@@ -9125,7 +9157,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Elementalism Rain",
@@ -9140,7 +9174,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Enchantment", "Evocation"]
    },
    {
     "name": "Elementalism Silt",
@@ -9155,7 +9191,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Evocation", "Necromancy"]
    },
    {
     "name": "Elementalism Sun",
@@ -9170,7 +9208,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Conjuration", "Enchantment", "Evocation"]
    },
    {
     "name": "Elementalism Water",
@@ -9185,7 +9225,9 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": "Athasian Elementalism"
+    "subgroup": "Athasian Elementalism",
+    "type": "loa",
+    "specializations": ["Abjuration", "Conjuration", "Evocation"]
    },
    {
     "name": "Sorcerer-King Andropinis",
@@ -19035,6 +19077,7 @@
  {
   "pantheon": "Voodan, the Loa of Gothic Earth",
   "section": "page2",
+  "type": "loa",
   "deities": [
    {
     "name": "Agwe",
@@ -19048,7 +19091,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Old World Loa",
+    "specializations": ["Conjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Ashadeh Boco",
@@ -19062,7 +19106,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "New World Loa",
+    "specializations": ["Conjuration", "Evocation", "Illusion"]
    },
    {
     "name": "Ayida Wèdo",
@@ -19076,7 +19121,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Old World Loa",
+    "specializations": ["Evocation", "Illusion", "Transmutation"]
    },
    {
     "name": "Baron Samedhi",
@@ -19092,7 +19138,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "New World Loa",
+    "specializations": ["Illusion", "Necromancy", "Transmutation"]
    },
    {
     "name": "Carrefour",
@@ -19107,7 +19154,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "New World Loa",
+    "specializations": ["Conjuration", "Divination", "Necromancy"]
    },
    {
     "name": "Congo Zandor",
@@ -19122,7 +19170,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "New World Loa",
+    "specializations": ["Abjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Damballah Wèdo",
@@ -19137,7 +19186,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Old World Loa",
+    "specializations": ["Abjuration", "Divination", "Enchantment"]
    },
    {
     "name": "Dan Petro",
@@ -19151,7 +19201,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "New World Loa",
+    "specializations": ["Divination", "Illusion", "Transmutation"]
    },
    {
     "name": "Erzulie",
@@ -19166,7 +19217,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Old World Loa",
+    "specializations": ["Enchantment", "Illusion", "Transmutation"]
    },
    {
     "name": "Ghede",
@@ -19182,7 +19234,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "The Exceptions",
+    "specializations": ["Conjuration", "Divination", "Necromancy"]
    },
    {
     "name": "Legba",
@@ -19197,7 +19250,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Old World Loa",
+    "specializations": ["Divination", "Enchantment", "Necromancy"]
    },
    {
     "name": "Loco and Ayizan",
@@ -19212,7 +19266,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "The Exceptions",
+    "specializations": ["Abjuration", "Conjuration", "Divination"]
    },
    {
     "name": "Ogun",
@@ -19228,7 +19283,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Old World Loa",
+    "specializations": ["Abjuration", "Evocation", "Transmutation"]
    },
    {
     "name": "Simbi",
@@ -19243,7 +19299,8 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "The Exceptions",
+    "specializations": ["Divination", "Evocation", "Illusion"]
    },
    {
     "name": "The Marassa",
@@ -19258,7 +19315,108 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "The Exceptions",
+    "specializations": ["Evocation", "Necromancy", "Transmutation"]
+   }
+  ]
+ },
+ {
+  "pantheon": "The Loa of the Multiverse",
+  "section": "page2",
+  "type": "loa",
+  "deities": [
+   {
+    "name": "Ethical & Moral Spirits",
+    "altName": null,
+    "gender": null,
+    "domains": [
+     "Chaos",
+     "Evil",
+     "Good",
+     "Law"
+    ],
+    "alignment": null,
+    "favoredWeapon": null,
+    "symbol": null,
+    "portfolio": [],
+    "subgroup": null,
+    "specializations": ["Abjuration", "Conjuration", "Evocation"],
+    "notes": "Custom loa template for voodan from beyond Souragne/Gothic Earth (or minor Souragne/Gothic Earth loa). Alignment must be lawful, chaotic, good, or evil to match the chosen domain — no true neutral patrons of this type."
+   },
+   {
+    "name": "Spirits of Conflict & Battle",
+    "altName": null,
+    "gender": null,
+    "domains": [
+     "Destruction",
+     "Protection",
+     "Strength",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": null,
+    "symbol": null,
+    "portfolio": [],
+    "subgroup": null,
+    "specializations": ["Abjuration", "Evocation", "Transmutation"],
+    "notes": "Custom loa template for voodan from beyond Souragne/Gothic Earth (or minor Souragne/Gothic Earth loa). Any alignment."
+   },
+   {
+    "name": "Spirits of Freedom",
+    "altName": null,
+    "gender": null,
+    "domains": [
+     "Knowledge",
+     "Luck",
+     "Travel",
+     "Trickery"
+    ],
+    "alignment": null,
+    "favoredWeapon": null,
+    "symbol": null,
+    "portfolio": [],
+    "subgroup": null,
+    "specializations": ["Divination", "Illusion", "Transmutation"],
+    "notes": "Custom loa template for voodan from beyond Souragne/Gothic Earth (or minor Souragne/Gothic Earth loa). Any chaotic or neutral alignment."
+   },
+   {
+    "name": "Spirits of Life & Death",
+    "altName": null,
+    "gender": null,
+    "domains": [
+     "Death",
+     "Healing",
+     "Repose",
+     "Undeath"
+    ],
+    "alignment": null,
+    "favoredWeapon": null,
+    "symbol": null,
+    "portfolio": [],
+    "subgroup": null,
+    "specializations": ["Conjuration", "Divination", "Necromancy"],
+    "notes": "Custom loa template for voodan from beyond Souragne/Gothic Earth (or minor Souragne/Gothic Earth loa). Any alignment."
+   },
+   {
+    "name": "Spirits of Nature",
+    "altName": null,
+    "gender": null,
+    "domains": [
+     "Air",
+     "Animal",
+     "Earth",
+     "Fire",
+     "Plant",
+     "Sun",
+     "Water"
+    ],
+    "alignment": null,
+    "favoredWeapon": null,
+    "symbol": null,
+    "portfolio": [],
+    "subgroup": null,
+    "specializations": ["Conjuration", "Evocation", "Transmutation"],
+    "notes": "Custom loa template for voodan from beyond Souragne/Gothic Earth (or minor Souragne/Gothic Earth loa). Any alignment."
    }
   ]
  },

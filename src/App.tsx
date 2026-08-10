@@ -28,7 +28,7 @@ const DEFAULT_BUILD: Build = {
   feats: [],
   skills: [],
   backgrounds: [],
-  deity: { hasDeity: false, pantheon: "", deityName: "", domains: [], favoredWeapon: "" },
+  deity: { hasDeity: false, patronType: "god", pantheon: "", deityName: "", domains: [], favoredWeapon: "" },
 };
 
 function App() {

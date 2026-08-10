@@ -35,11 +35,13 @@ export interface SkillAllocation {
 
 export interface DeitySelection {
   hasDeity: boolean;
+  /** Whether the picker shows conventional deities or Voodan loa patrons. */
+  patronType: "god" | "loa";
   pantheon: string;
   deityName: string;
   /** Fixed-length slots (empty string = unfilled) — see BackgroundPicker for why. */
   domains: string[];
-  /** Prefilled from the deity on selection, but editable (some deities list alternates). */
+  /** Prefilled from the deity on selection, but editable (some deities list alternates). Gods only — loa have no favored weapon. */
   favoredWeapon: string;
 }
 
