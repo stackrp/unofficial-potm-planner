@@ -95,6 +95,7 @@ export const FEATS: FeatDef[] = [
     "Savage Spirit Calling", "Nature Spirit Calling", "Calamitous Spirit Calling",
   ]),
   ...group("Class", "Blackguard", ["Aura of Despair", "Detect Good"]),
+  ...group("Class", "Shadowdancer", ["Shadow Jump"]),
   ...group("Class", "Warlock", ["Eldritch Claws", "Invocation Focus", "Greater Invocation Focus"]),
   ...group("Class", "Warmage", ["Armored Mage", "Warmage Edge", "Extra Edge"]),
   ...group("Class", "Beguiler", ["Armored Mage (Beguiler)", "Cloaked Casting"]),

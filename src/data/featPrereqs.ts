@@ -401,6 +401,9 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   "Aura of Despair": { requiredClass: { className: "Blackguard", level: 3 } },
   "Detect Good": { requiredClass: { className: "Blackguard", level: 1 } },
 
+  // --- Shadowdancer ---
+  "Shadow Jump": { requiredClass: { className: "Shadowdancer", level: 4 } },
+
   // --- Warmage ---
   "Armored Mage": { requiredClass: { className: "Warmage", level: 1 } },
   "Warmage Edge": { requiredClass: { className: "Warmage", level: 1 } },

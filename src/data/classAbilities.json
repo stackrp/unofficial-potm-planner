@@ -2464,6 +2464,11 @@
       "description": "Temporary AC, concealment and damage reduction bonuses."
     },
     {
+      "level": 4,
+      "title": "Shadow Jump",
+      "description": "Travel instantly between shadows (selected). Up to 20 meters total per day (one 20m jump or multiple 10m increments). Distance increases to 40m at Shadowdancer 6, 80m at 8, and 160m at 10. Must see the destination; cannot jump through locked doors or blocked line of sight, or onto inaccessible tiles."
+    },
+    {
       "level": 5,
       "title": "Defensive Roll",
       "description": "Avoid killing blows with a Reflex save."
