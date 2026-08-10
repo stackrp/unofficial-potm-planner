@@ -41,17 +41,34 @@ export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, ra
     onChange({ ...scores, [key]: next });
   }
 
+  function resetAll() {
+    const next = { ...scores };
+    for (const key of ABILITY_KEYS) next[key] = rangeFor(key)[0];
+    onChange(next);
+  }
+
   return (
     <section className="rounded-lg border border-neutral-700 bg-neutral-900/40 p-4">
       <div className="flex items-baseline justify-between mb-3">
         <h2 className="text-lg font-semibold text-neutral-100">Ability Scores</h2>
-        <span
-          className={`text-sm font-mono ${
-            remaining < 0 ? "text-red-400" : remaining === 0 ? "text-emerald-400" : "text-amber-400"
-          }`}
-        >
-          {remaining} / {POINT_BUY_BUDGET} points remaining
-        </span>
+        <div className="flex items-center gap-3">
+          <span
+            className={`text-sm font-mono ${
+              remaining < 0 ? "text-red-400" : remaining === 0 ? "text-emerald-400" : "text-amber-400"
+            }`}
+          >
+            {remaining} / {POINT_BUY_BUDGET} points remaining
+          </span>
+          <button
+            type="button"
+            onClick={resetAll}
+            disabled={spent === 0}
+            title="Reset ability scores"
+            className="px-3 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 disabled:opacity-30 text-sm"
+          >
+            &#8635; Reset
+          </button>
+        </div>
       </div>
       <p className="text-xs text-neutral-500 mb-3">
         Enter the scores your character sheet shows right after character creation — this already

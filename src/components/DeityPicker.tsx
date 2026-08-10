@@ -68,26 +68,35 @@ export function DeityPicker({ deity, onChange, alignment, onAlignmentChange }: P
     // Picked from candidateDeities, so it's already guaranteed compatible with whatever
     // domains/weapon are currently set — no reconciliation needed, just fill gaps.
     const newDeity = deityName ? getDeity(pantheon, deityName) : undefined;
-    onChange({
-      ...deity,
-      pantheon,
-      deityName,
-      favoredWeapon: deity.favoredWeapon || newDeity?.weaponAlternatives[0] || "",
-    });
+    onChange({ ...deity, pantheon, deityName });
     if (newDeity?.alignment && (!alignment || !withinOneStep(alignment, newDeity.alignment))) {
       onAlignmentChange(newDeity.alignment);
     }
+  }
+
+  // Clears the deity selection (but leaves domains/weapon alone) if it's no longer
+  // compatible with the domains/weapon the change is about to apply. Without this, the
+  // <select> can visually show "— None selected —" (because its stale value matches no
+  // rendered <option>) while deity.deityName/pantheon — and the description panel derived
+  // from them — silently stick around in state.
+  function reconcileDeity(next: DeitySelection): DeitySelection {
+    if (!next.deityName) return next;
+    const domains = next.domains.filter((d) => d !== "");
+    const stillCompatible = deitiesMatching(domains, next.favoredWeapon || undefined).some(
+      (d) => d.pantheon === next.pantheon && d.name === next.deityName
+    );
+    return stillCompatible ? next : { ...next, pantheon: "", deityName: "" };
   }
 
   function setDomainSlot(index: number, value: string) {
     const next = [...deity.domains];
     while (next.length < MAX_DOMAINS) next.push("");
     next[index] = value;
-    onChange({ ...deity, domains: next });
+    onChange(reconcileDeity({ ...deity, domains: next }));
   }
 
   function setWeapon(value: string) {
-    onChange({ ...deity, favoredWeapon: value });
+    onChange(reconcileDeity({ ...deity, favoredWeapon: value }));
   }
 
   function clearAll() {

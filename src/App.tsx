@@ -57,6 +57,19 @@ function App() {
     });
   }
 
+  function handleLevelsChange(levels: Build["levels"]) {
+    // Levels are always contiguous 1..levels.length (LevelPlanner only appends/truncates), so
+    // shrinking the array orphans any skill/feat allocation still pointing at a removed level
+    // number — drop those too, or they'd silently keep affecting totals with no level to show for it.
+    const maxLevel = levels.length;
+    setBuild((prev) => ({
+      ...prev,
+      levels,
+      skills: prev.skills.filter((s) => s.level <= maxLevel),
+      feats: prev.feats.filter((f) => f.level <= maxLevel),
+    }));
+  }
+
   function handleResetClick() {
     if (confirmingReset) {
       setBuild(DEFAULT_BUILD);
@@ -133,11 +146,7 @@ function App() {
 
         <SummaryPanel totals={calculated.totals} errors={calculated.errors} />
 
-        <LevelPlanner
-          levels={build.levels}
-          onChange={(levels) => setBuild((prev) => ({ ...prev, levels }))}
-          snapshots={calculated.perLevel}
-        />
+        <LevelPlanner levels={build.levels} onChange={handleLevelsChange} snapshots={calculated.perLevel} />
 
         <ClassAbilities levels={build.levels} />
 

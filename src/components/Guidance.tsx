@@ -1,4 +1,5 @@
 import { useMemo, useState, type ReactNode } from "react";
+import { getBackground, MAX_BACKGROUNDS } from "../data/backgrounds";
 import { abilitiesGainedThroughBuild } from "../lib/classAbilities";
 import type { LevelSnapshot } from "../lib/calculator";
 import type { Build } from "../types";
@@ -93,6 +94,13 @@ export function Guidance({ build, perLevel }: Props) {
 
   const abilitiesHere = allAbilities.filter((a) => a.characterLevel === level);
 
+  // Backgrounds are chargen-only (level 1): every character picks exactly MAX_BACKGROUNDS.
+  const selectedBackgrounds = build.backgrounds.filter((b) => b !== "");
+  const backgroundsMissing =
+    level === 1 ? Math.max(0, MAX_BACKGROUNDS - selectedBackgrounds.length) : 0;
+  const backgroundsExtra =
+    level === 1 ? Math.max(0, selectedBackgrounds.length - MAX_BACKGROUNDS) : 0;
+
   function goTo(target: number) {
     if (availableLevels.includes(target)) setRequestedLevel(target);
   }
@@ -100,6 +108,13 @@ export function Guidance({ build, perLevel }: Props) {
   const idx = availableLevels.indexOf(level);
   const todos: string[] = [];
   if (!className) todos.push("class");
+  if (level === 1 && backgroundsMissing > 0) {
+    todos.push(
+      backgroundsMissing === MAX_BACKGROUNDS
+        ? "backgrounds"
+        : `${backgroundsMissing} more background${backgroundsMissing === 1 ? "" : "s"}`
+    );
+  }
   if (abilityDue && !abilityPick) todos.push("ability increase");
   if (featsMissing > 0) todos.push(`${featsMissing} feat${featsMissing === 1 ? "" : "s"}`);
   if (className && earned > 0 && spent === 0) todos.push("skill points");
@@ -117,8 +132,9 @@ export function Guidance({ build, perLevel }: Props) {
         )}
       </div>
       <p className="text-xs text-neutral-500 mb-3">
-        One place for what happens at a given level — class, ability bump, feat slots, skill
-        points, and class features — so you do not have to scan the whole page.
+        One place for what happens at a given level — class, backgrounds (level 1), ability
+        bump, feat slots, skill points, and class features — so you do not have to scan the
+        whole page.
       </p>
 
       <div className="flex items-center justify-center gap-2 mb-4">
@@ -190,6 +206,54 @@ export function Guidance({ build, perLevel }: Props) {
             <span className="text-amber-300">Pick a class for this level in the Levels table.</span>
           )}
         </Row>
+
+        {level === 1 && (
+          <Row
+            label="Backgrounds"
+            todo={backgroundsMissing > 0}
+            warn={backgroundsExtra > 0}
+          >
+            <div className="space-y-1">
+              <div className="text-neutral-400 text-xs">
+                Pick {MAX_BACKGROUNDS} at character creation
+                {backgroundsMissing > 0 && (
+                  <span className="text-amber-300">
+                    {" "}
+                    · {backgroundsMissing} still open
+                  </span>
+                )}
+                {backgroundsExtra > 0 && (
+                  <span className="text-red-400">
+                    {" "}
+                    · {backgroundsExtra} over limit
+                  </span>
+                )}
+              </div>
+              {selectedBackgrounds.length > 0 ? (
+                <ul className="list-disc list-inside space-y-0.5">
+                  {selectedBackgrounds.map((name) => {
+                    const def = getBackground(name);
+                    return (
+                      <li key={name}>
+                        <span className="text-neutral-100">{name}</span>
+                        {def && (
+                          <span className="text-neutral-500">
+                            {" "}
+                            (+1 {def.skillBonuses[0]}, +1 {def.skillBonuses[1]})
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              ) : (
+                <span className="text-amber-300">
+                  Choose {MAX_BACKGROUNDS} backgrounds in the Backgrounds panel.
+                </span>
+              )}
+            </div>
+          </Row>
+        )}
 
         <Row label="Ability increase" todo={abilityDue && !abilityPick}>
           {abilityDue ? (

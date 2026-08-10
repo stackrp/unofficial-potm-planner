@@ -425,7 +425,7 @@
   "section": "page1",
   "deities": [
    {
-    "name": "Arawn [m or f]",
+    "name": "Arawn",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1213,7 +1213,7 @@
     ],
     "alignment": "CE",
     "favoredWeapon": "Teeth & Claws (Creature)",
-    "symbol": "A snarling wolf\u2019s head or a single, bloody paw print",
+    "symbol": "A snarling wolf’s head or a single, bloody paw print",
     "portfolio": [
      "Hunting",
      "Savagery",
@@ -1563,7 +1563,7 @@
   "section": "page1",
   "deities": [
    {
-    "name": "Minor Religions",
+    "name": "Elementalism Air",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1575,10 +1575,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Minor Religions",
+    "name": "Elementalism Earth",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1590,10 +1590,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Minor Religions",
+    "name": "Elementalism Fire",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1605,10 +1605,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Minor Religions",
+    "name": "Elementalism Magma",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1620,10 +1620,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Minor Religions",
+    "name": "Elementalism Rain",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1635,10 +1635,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Minor Religions",
+    "name": "Elementalism Silt",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1650,10 +1650,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Minor Religions",
+    "name": "Elementalism Sun",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1665,10 +1665,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Minor Religions",
+    "name": "Elementalism Water",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1680,12 +1680,12 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Minor Religions",
+    "name": "Sorcerer-King Kalid-Ma",
     "altName": null,
-    "gender": null,
+    "gender": "m",
     "domains": [
      "Destruction",
      "Evil",
@@ -1698,10 +1698,10 @@
     "portfolio": [
      "Ruler of Kalidnay"
     ],
-    "subgroup": null
+    "subgroup": "Faiths of Kalidnay"
    },
    {
-    "name": "Minor Religions",
+    "name": "Milil",
     "altName": null,
     "gender": null,
     "domains": [
@@ -1719,7 +1719,7 @@
     "subgroup": null
    },
    {
-    "name": "Minor Religions",
+    "name": "Order of Eleazar",
     "altName": null,
     "gender": null,
     "domains": [
@@ -3492,7 +3492,7 @@
     "subgroup": null
    },
    {
-    "name": "Earth Dragon [?]",
+    "name": "Earth Dragon",
     "altName": null,
     "gender": null,
     "domains": [
@@ -4105,7 +4105,7 @@
     "subgroup": null
    },
    {
-    "name": "Tharmekh\u00fbl",
+    "name": "Tharmekhûl",
     "altName": null,
     "gender": "m",
     "domains": [
@@ -5140,7 +5140,7 @@
     "portfolio": [
      "Rain"
     ],
-    "subgroup": null
+    "subgroup": "Yuan-ti Deities & Demons"
    }
   ]
  },
@@ -5509,9 +5509,9 @@
   "section": "page1",
   "deities": [
    {
-    "name": "Mystara Immortals",
+    "name": "Alphatia",
     "altName": null,
-    "gender": "Alphatia [f]",
+    "gender": "f",
     "domains": [
      "Law",
      "Good",
@@ -5526,12 +5526,12 @@
      "Artistry",
      "Alphatia"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Benekander",
     "altName": null,
-    "gender": "Benekander [m]",
+    "gender": "m",
     "domains": [
      "Good",
      "Sun",
@@ -5544,12 +5544,12 @@
     "portfolio": [
      "Restraint of Immortal excesses"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Eiryndul",
     "altName": null,
-    "gender": "Eiryndul [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Good",
@@ -5564,12 +5564,12 @@
      "Shiye Elves",
      "Mischief"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Ilsundal the Wise",
     "altName": null,
-    "gender": "Ilsundal the Wise [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Good",
@@ -5583,12 +5583,12 @@
      "Elves",
      "Trees of Life"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Ixion",
     "altName": null,
-    "gender": "Ixion [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Good",
@@ -5602,12 +5602,12 @@
      "The Sun",
      "Banishing darkness"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Madarua",
     "altName": null,
-    "gender": "Madarua [f]",
+    "gender": "f",
     "domains": [
      "Death",
      "Healing",
@@ -5622,12 +5622,12 @@
      "Changing Seasons",
      "Warrior Maidens"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Mahmatti Running Elk",
     "altName": null,
-    "gender": "Mahmatti Running Elk [m]",
+    "gender": "m",
     "domains": [
      "Fire",
      "Good",
@@ -5640,12 +5640,12 @@
     "portfolio": [
      "Patron of the Ahtruaghin Elk Clan"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Mealiden Starwatcher",
     "altName": null,
-    "gender": "Mealiden Starwatcher [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Good",
@@ -5658,12 +5658,12 @@
     "portfolio": [
      "Elves"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Minroth",
     "altName": null,
-    "gender": "Minroth [m]",
+    "gender": "m",
     "domains": [
      "Luck",
      "Protection",
@@ -5676,12 +5676,12 @@
     "portfolio": [
      "Minrothad"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Palartarkan",
     "altName": null,
-    "gender": "Palartarkan [m]",
+    "gender": "m",
     "domains": [
      "Air",
      "Good",
@@ -5694,12 +5694,12 @@
     "portfolio": [
      "Air-related magics"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Pflarr",
     "altName": null,
-    "gender": "Pflarr [m]",
+    "gender": "m",
     "domains": [
      "Fire",
      "Magic",
@@ -5713,12 +5713,12 @@
      "Study of magic",
      "Creation of races"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Rafiel",
     "altName": null,
-    "gender": "Rafiel [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Magic",
@@ -5732,12 +5732,12 @@
      "Shadow elves",
      "Study of radiation"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Rathanos",
     "altName": null,
-    "gender": "Rathanos [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Good",
@@ -5751,12 +5751,12 @@
      "Fire",
      "Energy life form"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Razud",
     "altName": null,
-    "gender": "Razud [m]",
+    "gender": "m",
     "domains": [
      "Fire",
      "Knowledge",
@@ -5770,12 +5770,12 @@
      "Alphatia",
      "Self-Sufficiency"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Tahkati Stormtamer",
     "altName": null,
-    "gender": "Tahkati Stormtamer [m]",
+    "gender": "m",
     "domains": [
      "Animal",
      "Good",
@@ -5788,12 +5788,12 @@
     "portfolio": [
      "Patron of the Ahtruaghin Horse Clan"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Tarastia",
     "altName": null,
-    "gender": "Tarastia [f]",
+    "gender": "f",
     "domains": [
      "Law",
      "Good",
@@ -5807,12 +5807,12 @@
      "Justice",
      "Revenge"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Thor",
     "altName": null,
-    "gender": "Thor [m]",
+    "gender": "m",
     "domains": [
      "Air",
      "Fire",
@@ -5826,12 +5826,12 @@
      "Battles",
      "Warrior's codes of honor"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Usamigaras",
     "altName": null,
-    "gender": "Usamigaras [m]",
+    "gender": "m",
     "domains": [
      "Healing",
      "Magic",
@@ -5845,12 +5845,12 @@
      "Messengers",
      "Thieves"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Zirchev",
     "altName": null,
-    "gender": "Zirchev [m]",
+    "gender": "m",
     "domains": [
      "Plant",
      "Animal",
@@ -5864,12 +5864,12 @@
      "Forests",
      "Wilderness"
     ],
-    "subgroup": "Immortals from the Sphere of Energy"
+    "subgroup": "Sphere of Energy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Atruaghin",
     "altName": null,
-    "gender": "Atruaghin [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Earth",
@@ -5882,12 +5882,12 @@
     "portfolio": [
      "The Atruaghin Clans"
     ],
-    "subgroup": "Immortals from the Sphere of Matter"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Djaea",
     "altName": null,
-    "gender": "Djaea [f]",
+    "gender": "f",
     "domains": [
      "Good",
      "Earth",
@@ -5903,12 +5903,12 @@
      "Knowledge",
      "Life"
     ],
-    "subgroup": "Immortals from the Sphere of Matter"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Faunus",
     "altName": null,
-    "gender": "Faunus [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Earth",
@@ -5924,12 +5924,12 @@
      "Shepherds",
      "Mountains"
     ],
-    "subgroup": "Immortals from the Sphere of Matter"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Garal Glitterlode",
     "altName": null,
-    "gender": "Garal Glitterlode [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Good",
@@ -5944,12 +5944,12 @@
      "Gadgets",
      "Craftsmanship"
     ],
-    "subgroup": "Immortals from the Sphere of Matter"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Hattani Stoneclaw",
     "altName": null,
-    "gender": "Hattani Stoneclaw [m]",
+    "gender": "m",
     "domains": [
      "Earth",
      "Good",
@@ -5962,12 +5962,12 @@
     "portfolio": [
      "Patron of the Ahtruaghin Bear Clan"
     ],
-    "subgroup": "Immortals from the Sphere of Matter"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Ka the Preserver",
     "altName": null,
-    "gender": "Ka the Preserver [m]",
+    "gender": "m",
     "domains": [
      "Good",
      "Knowledge",
@@ -5979,12 +5979,12 @@
     "portfolio": [
      "Preserving Dying Races & Cultures"
     ],
-    "subgroup": "Immortals from the Sphere of Matter"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Kagyar the Artisan",
     "altName": null,
-    "gender": "Kagyar the Artisan [m]",
+    "gender": "m",
     "domains": [
      "Good",
      "Earth",
@@ -5998,12 +5998,12 @@
      "Dwarves",
      "Arts"
     ],
-    "subgroup": "Lizardfolk, Dinosaurs"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Terra",
     "altName": null,
-    "gender": "Terra [f]",
+    "gender": "f",
     "domains": [
      "Law",
      "Earth",
@@ -6015,12 +6015,12 @@
     "portfolio": [
      "Earth-based creatures and races"
     ],
-    "subgroup": "Lizardfolk, Dinosaurs"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Valerias",
     "altName": null,
-    "gender": "Valerias [f]",
+    "gender": "f",
     "domains": [
      "Chaos",
      "Good",
@@ -6034,12 +6034,12 @@
      "Romance",
      "Passion"
     ],
-    "subgroup": "Lizardfolk, Dinosaurs"
+    "subgroup": "Sphere of Matter"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Ahmani Turtlerider",
     "altName": null,
-    "gender": "Ahmani Turtlerider [f]",
+    "gender": "f",
     "domains": [
      "Animal",
      "Protection",
@@ -6052,12 +6052,12 @@
     "portfolio": [
      "Patron of the Atruahagin Turtle Clan"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Asterius",
     "altName": null,
-    "gender": "Asterius [m]",
+    "gender": "m",
     "domains": [
      "Good",
      "Trickery",
@@ -6073,12 +6073,12 @@
      "Merchants",
      "Thieves"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Cretia",
     "altName": null,
-    "gender": "Cretia [f]",
+    "gender": "f",
     "domains": [
      "Air",
      "Chaos",
@@ -6093,12 +6093,12 @@
      "Jokes",
      "Destruction"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Diulanna",
     "altName": null,
-    "gender": "Diulanna [f]",
+    "gender": "f",
     "domains": [
      "Good",
      "Plant",
@@ -6112,12 +6112,12 @@
      "Willpower",
      "Strong-willed heroes"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Frey",
     "altName": null,
-    "gender": "Frey [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Good",
@@ -6130,12 +6130,12 @@
     "portfolio": [
      "Intelligent Warfare"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Freyja",
     "altName": null,
-    "gender": "Freyja [f]",
+    "gender": "f",
     "domains": [
      "Law",
      "Good",
@@ -6148,12 +6148,12 @@
     "portfolio": [
      "Intelligent Warfare"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Halav",
     "altName": null,
-    "gender": "Halav [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Good",
@@ -6166,12 +6166,12 @@
     "portfolio": [
      "Warfare"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Karaash",
     "altName": null,
-    "gender": "Karaash [m]",
+    "gender": "m",
     "domains": [
      "Evil",
      "Air",
@@ -6184,12 +6184,12 @@
     "portfolio": [
      "Orcs"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Korotiku",
     "altName": null,
-    "gender": "Korotiku [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Trickery",
@@ -6203,12 +6203,12 @@
      "Mischief",
      "Thinking"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Koryis",
     "altName": null,
-    "gender": "Koryis [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Air",
@@ -6222,12 +6222,12 @@
      "Peace",
      "Prosperity"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Noumena",
     "altName": null,
-    "gender": "Noumena [m]",
+    "gender": "m",
     "domains": [
      "Air",
      "Trickery",
@@ -6242,12 +6242,12 @@
      "Puzzles",
      "Mysteries"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Odin",
     "altName": null,
-    "gender": "Odin [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Strength",
@@ -6261,12 +6261,12 @@
      "Wisdom",
      "Living life to the fullest"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Tiresias",
     "altName": null,
-    "gender": "Tiresias [m]",
+    "gender": "m",
     "domains": [
      "Air",
      "Knowledge",
@@ -6281,12 +6281,12 @@
      "Poetry",
      "Bards"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Tyche",
     "altName": null,
-    "gender": "Tyche [f]",
+    "gender": "f",
     "domains": [
      "Air",
      "Chaos",
@@ -6299,12 +6299,12 @@
     "portfolio": [
      "Fortune"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Gorm",
     "altName": null,
-    "gender": "Gorm [m]",
+    "gender": "m",
     "domains": [
      "Air",
      "Law",
@@ -6318,12 +6318,12 @@
      "Storms",
      "War"
     ],
-    "subgroup": "Immortals from the Sphere of Thought"
+    "subgroup": "Sphere of Thought"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "al-Kalim",
     "altName": null,
-    "gender": "al-Kalim [m]",
+    "gender": "m",
     "domains": [
      "Water",
      "Animal",
@@ -6336,12 +6336,12 @@
     "portfolio": [
      "Ylaruam Desert"
     ],
-    "subgroup": "Immortals from the Sphere of Time"
+    "subgroup": "Sphere of Time"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Calitha Starbrow",
     "altName": null,
-    "gender": "Calitha Starbrow [f]",
+    "gender": "f",
     "domains": [
      "Water",
      "Plant",
@@ -6352,14 +6352,14 @@
     "symbol": null,
     "portfolio": [
      "Oceans",
-     "Seafarring Elves/td]"
+     "Seafarring Elves"
     ],
-    "subgroup": "Immortals from the Sphere of Time"
+    "subgroup": "Sphere of Time"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Chardastes",
     "altName": null,
-    "gender": "Chardastes [m]",
+    "gender": "m",
     "domains": [
      "Good",
      "Healing",
@@ -6372,12 +6372,12 @@
      "Healing",
      "medicine"
     ],
-    "subgroup": "Immortals from the Sphere of Time"
+    "subgroup": "Sphere of Time"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Khoronus",
     "altName": null,
-    "gender": "Khoronus [m]",
+    "gender": "m",
     "domains": [
      "Water",
      "Magic",
@@ -6391,12 +6391,12 @@
      "Time",
      "Learning the lessons of the past"
     ],
-    "subgroup": "Immortals from the Sphere of Time"
+    "subgroup": "Sphere of Time"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Ordana",
     "altName": null,
-    "gender": "Ordana [f]",
+    "gender": "f",
     "domains": [
      "Water",
      "Good",
@@ -6410,12 +6410,12 @@
      "Protection of forests",
      "Forest races"
     ],
-    "subgroup": "Immortals from the Sphere of Time"
+    "subgroup": "Sphere of Time"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Petra",
     "altName": null,
-    "gender": "Petra [f]",
+    "gender": "f",
     "domains": [
      "Air",
      "Law",
@@ -6429,12 +6429,12 @@
      "Fighting clerics",
      "Protector of besieged cities"
     ],
-    "subgroup": "Immortals from the Sphere of Time"
+    "subgroup": "Sphere of Time"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Protius",
     "altName": null,
-    "gender": "Protius [m]",
+    "gender": "m",
     "domains": [
      "Water",
      "Knowledge",
@@ -6447,12 +6447,12 @@
     "portfolio": [
      "Seas and Oceans"
     ],
-    "subgroup": "Immortals from the Sphere of Time"
+    "subgroup": "Sphere of Time"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Vanya",
     "altName": null,
-    "gender": "Vanya [f]",
+    "gender": "f",
     "domains": [
      "War",
      "Water",
@@ -6466,12 +6466,12 @@
      "War",
      "Conquest"
     ],
-    "subgroup": "Immortals from the Sphere of Time"
+    "subgroup": "Sphere of Time"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Alphaks",
     "altName": null,
-    "gender": "Alphaks [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Evil",
@@ -6484,12 +6484,12 @@
     "portfolio": [
      "Destroying Alphatia"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Atzanteotl",
     "altName": null,
-    "gender": "Atzanteotl [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Evil",
@@ -6504,12 +6504,12 @@
      "Azcan",
      "Shattenalfen"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Danel Tigerstripes",
     "altName": null,
-    "gender": "Danel Tigerstripes [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Evil",
@@ -6522,12 +6522,12 @@
     "portfolio": [
      "Patron of the Ahtruaghin Tiger Clan"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Hel",
     "altName": null,
-    "gender": "Hel [f]",
+    "gender": "f",
     "domains": [
      "Evil",
      "Death",
@@ -6541,12 +6541,12 @@
      "Death",
      "Reincarnation"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Loki",
     "altName": null,
-    "gender": "Loki [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Evil",
@@ -6561,12 +6561,12 @@
      "Betrayal",
      "Deceit"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Masauwu",
     "altName": null,
-    "gender": "Masauwu [m]",
+    "gender": "m",
     "domains": [
      "Law",
      "Evil",
@@ -6580,12 +6580,12 @@
      "Charisma",
      "Corrupting good to evil"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Nyx",
     "altName": null,
-    "gender": "Nyx [f]",
+    "gender": "f",
     "domains": [
      "Chaos",
      "Evil",
@@ -6600,12 +6600,12 @@
      "Darkness",
      "Undead"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Orcus",
     "altName": null,
-    "gender": "Orcus [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Destruction",
@@ -6618,12 +6618,12 @@
     "portfolio": [
      "Mass Destruction"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Talitha",
     "altName": null,
-    "gender": "Talitha [f]",
+    "gender": "f",
     "domains": [
      "Chaos",
      "Destruction",
@@ -6635,12 +6635,12 @@
     "portfolio": [
      "Self-gratification at the expense of others"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Thanatos",
     "altName": null,
-    "gender": "Thanatos [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Evil",
@@ -6653,12 +6653,12 @@
     "portfolio": [
      "The end of all life"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    },
    {
-    "name": "Mystara Immortals",
+    "name": "Zargon",
     "altName": null,
-    "gender": "Zargon [m]",
+    "gender": "m",
     "domains": [
      "Destruction",
      "Evil",
@@ -6672,7 +6672,7 @@
      "Elder Evil",
      "Slime"
     ],
-    "subgroup": "Immortals from the Sphere of Entropy"
+    "subgroup": "Sphere of Entropy"
    }
   ]
  },
@@ -7691,7 +7691,7 @@
     "subgroup": null
    },
    {
-    "name": "Tharmekh\u00fbl",
+    "name": "Tharmekhûl",
     "altName": null,
     "gender": "m",
     "domains": [
@@ -8236,7 +8236,7 @@
      "Tyranny",
      "Dusk"
     ],
-    "subgroup": null
+    "subgroup": "Netherese Pantheon"
    },
    {
     "name": "Kozah",
@@ -8307,7 +8307,7 @@
     "subgroup": null
    },
    {
-    "name": "Sel\u00fbne",
+    "name": "Selûne",
     "altName": null,
     "gender": "f",
     "domains": [
@@ -8420,7 +8420,7 @@
      "the Sun",
      "Rulership"
     ],
-    "subgroup": null
+    "subgroup": "Netherese Pantheon"
    },
    {
     "name": "Auppenser",
@@ -8531,7 +8531,7 @@
      "Corruption",
      "Parasites"
     ],
-    "subgroup": null
+    "subgroup": "Netherese Pantheon"
    },
    {
     "name": "Myrkul",
@@ -8596,7 +8596,7 @@
      "Time",
      "Spring"
     ],
-    "subgroup": null
+    "subgroup": "Netherese Pantheon"
    },
    {
     "name": "Ramman",
@@ -8659,7 +8659,7 @@
      "Adventurers",
      "Trade"
     ],
-    "subgroup": null
+    "subgroup": "Netherese Pantheon"
    },
    {
     "name": "Zinzerena",
@@ -8682,7 +8682,7 @@
     "subgroup": null
    },
    {
-    "name": "Forgotten Realms Deities",
+    "name": "Three-Faced Sun",
     "altName": null,
     "gender": null,
     "domains": [
@@ -8695,10 +8695,10 @@
     "favoredWeapon": "Scythe",
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Heresies of the Realm"
    },
    {
-    "name": "Forgotten Realms Deities",
+    "name": "Risen Sun",
     "altName": null,
     "gender": null,
     "domains": [
@@ -8711,10 +8711,10 @@
     "favoredWeapon": "Light Mace",
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Heresies of the Realm"
    },
    {
-    "name": "Forgotten Realms Deities",
+    "name": "Dark Moon",
     "altName": null,
     "gender": null,
     "domains": [
@@ -8727,10 +8727,10 @@
     "favoredWeapon": "Chakram (Cutting Wheel) or Heavy Mace",
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Heresies of the Realm"
    },
    {
-    "name": "Forgotten Realms Deities",
+    "name": "Cult of Shared Suffering",
     "altName": null,
     "gender": null,
     "domains": [
@@ -8741,7 +8741,7 @@
     "favoredWeapon": "Unarmed Strike",
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Heresies of the Realm"
    },
    {
     "name": "Azul",
@@ -8830,7 +8830,7 @@
     "subgroup": null
    },
    {
-    "name": "Cuira\u00e9cen",
+    "name": "Cuiraécen",
     "altName": null,
     "gender": "m",
     "domains": [
@@ -8851,7 +8851,7 @@
     "subgroup": null
    },
    {
-    "name": "Elo\u00e9le",
+    "name": "Eloéle",
     "altName": null,
     "gender": "f",
     "domains": [
@@ -9068,7 +9068,7 @@
   "section": "page1",
   "deities": [
    {
-    "name": "Dark Sun Religions",
+    "name": "Elementalism Air",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9080,10 +9080,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Elementalism Earth",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9095,10 +9095,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Elementalism Fire",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9110,10 +9110,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Elementalism Magma",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9125,10 +9125,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Elementalism Rain",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9140,10 +9140,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Elementalism Silt",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9155,10 +9155,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Elementalism Sun",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9170,10 +9170,10 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Elementalism Water",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9185,12 +9185,12 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [],
-    "subgroup": null
+    "subgroup": "Athasian Elementalism"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Sorcerer-King Andropinis",
     "altName": null,
-    "gender": null,
+    "gender": "m",
     "domains": [
      "Evil",
      "Law",
@@ -9203,12 +9203,12 @@
     "portfolio": [
      "Ruler of Balic"
     ],
-    "subgroup": null
+    "subgroup": "Athasian Sorcerer-Kings"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Sorcerer-King Atzetuk",
     "altName": null,
-    "gender": null,
+    "gender": "m",
     "domains": [
      "Destruction",
      "Evil",
@@ -9221,12 +9221,12 @@
     "portfolio": [
      "Ruler of Draj"
     ],
-    "subgroup": null
+    "subgroup": "Athasian Sorcerer-Kings"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Sorcerer-King Dregoth",
     "altName": null,
-    "gender": null,
+    "gender": "m",
     "domains": [
      "Chaos",
      "Death",
@@ -9239,12 +9239,12 @@
     "portfolio": [
      "Ruler of Raam"
     ],
-    "subgroup": null
+    "subgroup": "Athasian Sorcerer-Kings"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Sorcerer-King Hamanu",
     "altName": null,
-    "gender": null,
+    "gender": "m",
     "domains": [
      "Evil",
      "Law",
@@ -9257,12 +9257,12 @@
     "portfolio": [
      "Ruler of Urik"
     ],
-    "subgroup": null
+    "subgroup": "Athasian Sorcerer-Kings"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Sorcerer-Queen Lalali-Puy",
     "altName": null,
-    "gender": null,
+    "gender": "f",
     "domains": [
      "Evil",
      "Healing",
@@ -9275,12 +9275,12 @@
     "portfolio": [
      "Ruler of Gulg"
     ],
-    "subgroup": null
+    "subgroup": "Athasian Sorcerer-Kings"
    },
    {
-    "name": "Dark Sun Religions",
+    "name": "Shadow King",
     "altName": null,
-    "gender": null,
+    "gender": "m",
     "domains": [
      "Chaos",
      "Evil",
@@ -9293,7 +9293,7 @@
     "portfolio": [
      "Ruler of Nibenay"
     ],
-    "subgroup": null
+    "subgroup": "Athasian Sorcerer-Kings"
    }
   ]
  },
@@ -9567,7 +9567,7 @@
     "subgroup": "The Dark Six"
    },
    {
-    "name": "The Shadow [?]",
+    "name": "The Shadow",
     "altName": null,
     "gender": null,
     "domains": [
@@ -9589,7 +9589,7 @@
     "subgroup": "The Dark Six"
    },
    {
-    "name": "The Traveler [?]",
+    "name": "The Traveler",
     "altName": null,
     "gender": null,
     "domains": [
@@ -10198,9 +10198,9 @@
     "subgroup": null
    },
    {
-    "name": "The Academy [philosophy]",
+    "name": "The Academy",
     "altName": "N/A",
-    "gender": "N/A",
+    "gender": null,
     "domains": [
      "Good",
      "Knowledge"
@@ -10640,7 +10640,7 @@
   "section": "page2",
   "deities": [
    {
-    "name": "Azathoth [n]",
+    "name": "Azathoth",
     "altName": null,
     "gender": null,
     "domains": [
@@ -10719,7 +10719,7 @@
     "subgroup": null
    },
    {
-    "name": "Yog-Sothoth [n]",
+    "name": "Yog-Sothoth",
     "altName": null,
     "gender": null,
     "domains": [
@@ -10750,7 +10750,7 @@
     "subgroup": null
    },
    {
-    "name": "Cthugha [n]",
+    "name": "Cthugha",
     "altName": null,
     "gender": null,
     "domains": [
@@ -10792,7 +10792,7 @@
     "subgroup": null
    },
    {
-    "name": "Eihort [n]",
+    "name": "Eihort",
     "altName": null,
     "gender": null,
     "domains": [
@@ -10806,7 +10806,7 @@
     "subgroup": null
    },
    {
-    "name": "Glaaki [n]",
+    "name": "Glaaki",
     "altName": null,
     "gender": null,
     "domains": [
@@ -11436,7 +11436,7 @@
     "subgroup": null
    },
    {
-    "name": "Fei Lien [m] & Feng Po",
+    "name": "Fei Lien & Feng Po",
     "altName": null,
     "gender": "m",
     "domains": [
@@ -12458,7 +12458,7 @@
   ]
  },
  {
-  "pantheon": "Melnibon\u00e9an Deities",
+  "pantheon": "Melnibonéan Deities",
   "section": "page2",
   "deities": [
    {
@@ -12474,7 +12474,7 @@
     "favoredWeapon": null,
     "symbol": null,
     "portfolio": [
-     "Patron of Melnibon\u00e9"
+     "Patron of Melniboné"
     ],
     "subgroup": "Lords of Chaos"
    },
@@ -12646,7 +12646,7 @@
    {
     "name": "Xiombarg",
     "altName": null,
-    "gender": "n/a",
+    "gender": null,
     "domains": [
      "Chaos",
      "War",
@@ -13323,7 +13323,7 @@
      "Minotaurs",
      "Vengeance"
     ],
-    "subgroup": null
+    "subgroup": "Forgotten Realms variations"
    },
    {
     "name": "Orcus",
@@ -13341,7 +13341,7 @@
     "portfolio": [
      "Undead"
     ],
-    "subgroup": null
+    "subgroup": "Forgotten Realms variations"
    },
    {
     "name": "Pazrael",
@@ -13571,9 +13571,9 @@
   "section": "page2",
   "deities": [
    {
-    "name": "Nyambe Orishas",
+    "name": "Ancestor Orisha",
     "altName": null,
-    "gender": "Ancestor Orisha [any]",
+    "gender": null,
     "domains": [
      "Luck",
      "Protection",
@@ -13588,9 +13588,9 @@
     "subgroup": "Ancestral Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Araku the Warrior",
     "altName": null,
-    "gender": "Araku the Warrior [m]",
+    "gender": "m",
     "domains": [
      "War",
      "Strength"
@@ -13606,9 +13606,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Bodaga the Trickster",
     "altName": null,
-    "gender": "Bodaga the Trickster [m]",
+    "gender": "m",
     "domains": [
      "Good",
      "Travel",
@@ -13626,9 +13626,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Easafa the River",
     "altName": null,
-    "gender": "Easafa the River [f]",
+    "gender": "f",
     "domains": [
      "Water",
      "Animal"
@@ -13644,9 +13644,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Nimbala the Judge",
     "altName": null,
-    "gender": "Nimbala the Judge [m]",
+    "gender": "m",
     "domains": [
      "Good",
      "Healing",
@@ -13663,9 +13663,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Ramaranda the Diviner",
     "altName": null,
-    "gender": "Ramaranda the Diviner [m]",
+    "gender": "m",
     "domains": [
      "Knowledge",
      "Luck"
@@ -13682,9 +13682,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Shonamu the Hunter",
     "altName": null,
-    "gender": "Shonamu the Hunter [m]",
+    "gender": "m",
     "domains": [
      "Earth",
      "Protection"
@@ -13700,9 +13700,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Siama the Dead",
     "altName": null,
-    "gender": "Siama the Dead [f]",
+    "gender": "f",
     "domains": [
      "Air",
      "Death"
@@ -13717,9 +13717,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Tarango the Drummer",
     "altName": null,
-    "gender": "Tarango the Drummer [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Fire"
@@ -13736,9 +13736,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Tisanda the Ocean",
     "altName": null,
-    "gender": "Tisanda the Ocean [f]",
+    "gender": "f",
     "domains": [
      "Water",
      "Animal"
@@ -13753,9 +13753,9 @@
     "subgroup": "Celestial Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Air Orisha",
     "altName": null,
-    "gender": "Air Orisha [any]",
+    "gender": null,
     "domains": [
      "Air",
      "Earth",
@@ -13773,9 +13773,9 @@
     "subgroup": "Elemental Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Earth Orisha",
     "altName": null,
-    "gender": "Earth Orisha [any]",
+    "gender": null,
     "domains": [
      "Air",
      "Earth",
@@ -13792,9 +13792,9 @@
     "subgroup": "Elemental Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Fire Orisha",
     "altName": null,
-    "gender": "Fire Orisha [any]",
+    "gender": null,
     "domains": [
      "Air",
      "Earth",
@@ -13811,9 +13811,9 @@
     "subgroup": "Elemental Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Water Orisha",
     "altName": null,
-    "gender": "Water Orisha [any]",
+    "gender": null,
     "domains": [
      "Air",
      "Earth",
@@ -13830,9 +13830,9 @@
     "subgroup": "Elemental Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Bokor the Arcane",
     "altName": null,
-    "gender": "Bokor the Arcane [m]",
+    "gender": "m",
     "domains": [
      "Evil",
      "Knowledge",
@@ -13847,9 +13847,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Dar!ack the Bloody",
     "altName": null,
-    "gender": "Dar!ack the Bloody [m]",
+    "gender": "m",
     "domains": [
      "Death",
      "Trickery"
@@ -13864,9 +13864,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Dogar the Haggler",
     "altName": null,
-    "gender": "Dogar the Haggler [m]",
+    "gender": "m",
     "domains": [
      "Luck",
      "Travel",
@@ -13883,9 +13883,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Gamal the Dark One",
     "altName": null,
-    "gender": "Gamal the Dark One [m]",
+    "gender": "m",
     "domains": [
      "Darkness",
      "Death",
@@ -13902,9 +13902,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "GuDuGu the Obscene One",
     "altName": null,
-    "gender": "GuDuGu the Obscene One [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Evil",
@@ -13920,9 +13920,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Molamu the Seducer",
     "altName": null,
-    "gender": "Molamu the Seducer [f]",
+    "gender": "f",
     "domains": [
      "Luck",
      "Trickery"
@@ -13937,9 +13937,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Na/inga the Warrior Queen",
     "altName": null,
-    "gender": "Na/inga the Warrior Queen [f]",
+    "gender": "f",
     "domains": [
      "Destruction",
      "War"
@@ -13954,9 +13954,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "N!ok the All-Seeing Eye",
     "altName": null,
-    "gender": "N!ok the All-Seeing Eye [m]",
+    "gender": "m",
     "domains": [
      "Destruction",
      "Evil",
@@ -13974,9 +13974,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Sama/ the Poison One",
     "altName": null,
-    "gender": "Sama/ the Poison One [f]",
+    "gender": "f",
     "domains": [
      "Chaos",
      "Death",
@@ -13993,9 +13993,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Shakare the Torturer",
     "altName": null,
-    "gender": "Shakare the Torturer [f]",
+    "gender": "f",
     "domains": [
      "Chaos",
      "Evil"
@@ -14010,9 +14010,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Tu the Outcast",
     "altName": null,
-    "gender": "Tu the Outcast [m]",
+    "gender": "m",
     "domains": [
      "Death",
      "Law"
@@ -14026,9 +14026,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Zombi the Serpent Lord",
     "altName": null,
-    "gender": "Zombi the Serpent Lord",
+    "gender": null,
     "domains": [
      "Animal",
      "Death",
@@ -14045,9 +14045,9 @@
     "subgroup": "Fiendish Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Animal Orisha",
     "altName": null,
-    "gender": "Animal Orisha [any]",
+    "gender": null,
     "domains": [
      "Animal",
      "Earth"
@@ -14063,9 +14063,9 @@
     "subgroup": "Natural Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Geographic Orisha",
     "altName": null,
-    "gender": "Geographic Orisha [any]",
+    "gender": null,
     "domains": [
      "Earth",
      "Water"
@@ -14079,9 +14079,9 @@
     "subgroup": "Natural Orisha"
    },
    {
-    "name": "Nyambe Orishas",
+    "name": "Plant Orisha",
     "altName": null,
-    "gender": "Plant Orisha [any]",
+    "gender": null,
     "domains": [
      "Plant",
      "Sun",
@@ -14337,7 +14337,7 @@
     "subgroup": null
    },
    {
-    "name": "The Shimmering One [no gender]",
+    "name": "The Shimmering One",
     "altName": null,
     "gender": null,
     "domains": [
@@ -14712,7 +14712,7 @@
     "subgroup": null
    },
    {
-    "name": "The Dark One [no gender]",
+    "name": "The Dark One",
     "altName": null,
     "gender": null,
     "domains": [
@@ -15062,7 +15062,7 @@
    {
     "name": "Elishar",
     "altName": null,
-    "gender": "n/a",
+    "gender": null,
     "domains": [
      "Good",
      "Healing",
@@ -15549,7 +15549,7 @@
    {
     "name": "The Oversoul",
     "altName": null,
-    "gender": "n/a",
+    "gender": null,
     "domains": [
      "Knowledge",
      "Luck",
@@ -15566,7 +15566,7 @@
     "subgroup": null
    },
    {
-    "name": "The Xammux [varies]",
+    "name": "The Xammux",
     "altName": null,
     "gender": null,
     "domains": [
@@ -15583,7 +15583,7 @@
     "subgroup": null
    },
    {
-    "name": "Toldoth [no gender]",
+    "name": "Toldoth",
     "altName": null,
     "gender": null,
     "domains": [
@@ -18676,9 +18676,9 @@
   "section": "page2",
   "deities": [
    {
-    "name": "Naranjan Principles",
+    "name": "Anjeeti",
     "altName": null,
-    "gender": "Anjeeti [m]",
+    "gender": "m",
     "domains": [
      "Protection",
      "Law",
@@ -18694,9 +18694,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Chatari",
     "altName": null,
-    "gender": "Chatari [f]",
+    "gender": "f",
     "domains": [
      "Chaos",
      "Good",
@@ -18712,9 +18712,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Chryaya",
     "altName": null,
-    "gender": "Chryaya [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Luck",
@@ -18730,9 +18730,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Dinath",
     "altName": null,
-    "gender": "Dinath [m]",
+    "gender": "m",
     "domains": [
      "Death",
      "Destruction",
@@ -18747,9 +18747,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Hiratta",
     "altName": null,
-    "gender": "Hiratta [m]",
+    "gender": "m",
     "domains": [
      "Death",
      "Destruction",
@@ -18764,9 +18764,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Jatapan",
     "altName": null,
-    "gender": "Jatapan [m]",
+    "gender": "m",
     "domains": [
      "Evil",
      "Law",
@@ -18782,9 +18782,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Lakraya",
     "altName": null,
-    "gender": "Lakraya [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Evil",
@@ -18800,9 +18800,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Marujit",
     "altName": null,
-    "gender": "Marujit [m]",
+    "gender": "m",
     "domains": [],
     "alignment": "LG",
     "favoredWeapon": "Axe",
@@ -18813,9 +18813,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Meeta",
     "altName": null,
-    "gender": "Meeta [f]",
+    "gender": "f",
     "domains": [
      "Good",
      "Healing",
@@ -18832,9 +18832,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Raivash",
     "altName": null,
-    "gender": "Raivash [m]",
+    "gender": "m",
     "domains": [
      "Air",
      "Evil",
@@ -18852,9 +18852,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Sandat",
     "altName": null,
-    "gender": "Sandat [m]",
+    "gender": "m",
     "domains": [],
     "alignment": "LE",
     "favoredWeapon": "Longsword",
@@ -18865,9 +18865,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Sudinay",
     "altName": null,
-    "gender": "Sudinay [m]",
+    "gender": "m",
     "domains": [
      "Air",
      "Good",
@@ -18883,9 +18883,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Unayanti",
     "altName": null,
-    "gender": "Unayanti [f]",
+    "gender": "f",
     "domains": [
      "Earth",
      "Healing",
@@ -18902,9 +18902,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Umisavi",
     "altName": null,
-    "gender": "Umisavi [f]",
+    "gender": "f",
     "domains": [
      "Chaos",
      "Luck",
@@ -18920,9 +18920,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Uraj",
     "altName": null,
-    "gender": "Uraj [m]",
+    "gender": "m",
     "domains": [
      "Air",
      "Chaos",
@@ -18938,9 +18938,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Vashana",
     "altName": null,
-    "gender": "Vashana [m]",
+    "gender": "m",
     "domains": [
      "Earth",
      "Evil",
@@ -18959,9 +18959,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Zaha",
     "altName": null,
-    "gender": "Zaha [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Destruction",
@@ -18977,9 +18977,9 @@
     "subgroup": "Matyanist Principles"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Dhavan",
     "altName": null,
-    "gender": "Dhavan [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Destruction",
@@ -18998,9 +18998,9 @@
     "subgroup": "Asura Lords (Demons & Devils)"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Manachi",
     "altName": null,
-    "gender": "Manachi [m]",
+    "gender": "m",
     "domains": [
      "Chaos",
      "Evil",
@@ -19018,9 +19018,9 @@
     "subgroup": "Asura Lords (Demons & Devils)"
    },
    {
-    "name": "Naranjan Principles",
+    "name": "Nigdaya",
     "altName": null,
-    "gender": "Nigdaya [f]",
+    "gender": "f",
     "domains": [],
     "alignment": "CE",
     "favoredWeapon": "Kukri",
@@ -19065,7 +19065,7 @@
     "subgroup": null
    },
    {
-    "name": "Ayida W\u00e8do",
+    "name": "Ayida Wèdo",
     "altName": null,
     "gender": "f",
     "domains": [
@@ -19125,7 +19125,7 @@
     "subgroup": null
    },
    {
-    "name": "Damballah W\u00e8do",
+    "name": "Damballah Wèdo",
     "altName": null,
     "gender": "m",
     "domains": [
@@ -19200,9 +19200,9 @@
     "subgroup": null
    },
    {
-    "name": "Loco [m] and Ayizan",
+    "name": "Loco and Ayizan",
     "altName": null,
-    "gender": "f",
+    "gender": null,
     "domains": [
      "Good",
      "Healing",
@@ -19423,9 +19423,9 @@
   "section": "page2",
   "deities": [
    {
-    "name": "Abex [m]/Sritanna",
+    "name": "Abex/Sritanna",
     "altName": null,
-    "gender": "f",
+    "gender": null,
     "domains": [
      "Evil",
      "Law",
@@ -19565,7 +19565,7 @@
     "subgroup": null
    },
    {
-    "name": "Mielsin [m & f]",
+    "name": "Mielsin",
     "altName": null,
     "gender": null,
     "domains": [

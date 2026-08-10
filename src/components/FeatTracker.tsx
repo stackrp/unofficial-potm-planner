@@ -198,6 +198,9 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
       <div className="flex items-baseline justify-between gap-2 flex-wrap mb-3">
         <h2 className="text-lg font-semibold text-neutral-100">Feats</h2>
         <div className="flex items-center gap-2 flex-wrap justify-end">
+          <span className={`text-sm font-mono ${overLimit ? "text-red-400" : "text-neutral-400"}`}>
+            {used} / {featsAvailable} used
+          </span>
           {!confirmingReset ? (
             <button
               type="button"
@@ -226,9 +229,6 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
               </button>
             </div>
           )}
-          <span className={`text-sm font-mono ${overLimit ? "text-red-400" : "text-neutral-400"}`}>
-            {used} / {featsAvailable} used
-          </span>
         </div>
       </div>
 

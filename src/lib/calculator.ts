@@ -156,7 +156,15 @@ export function calculateBuild(build: Build): CalculatedBuild {
   const conMod = finalMods.CON;
 
   const classLevelCounts: Record<string, number> = {};
+  // baseAbilityScores only carries the base race's auto mod (applied at chargen). A subrace's own
+  // extra adjustment (races.json abilityAdjustments) isn't applied until the subrace template is
+  // picked in-game, which happens after character creation (level 1) but before level 2 — so
+  // level 1's skill points are earned and locked in at the pre-subrace INT, and only level 2
+  // onward should see the bump. Skill points aren't retroactively recalculated in NWN when an
+  // ability score changes later, unlike e.g. HP off current CON.
+  const raceDef = getRace(build.race);
   let runningIntScore = build.baseAbilityScores.INT;
+  let subraceIntApplied = false;
   const perLevel: LevelSnapshot[] = [];
 
   // Skill points are priced using the class taken at the level they were spent (NWN prices
@@ -188,9 +196,10 @@ export function calculateBuild(build: Build): CalculatedBuild {
         );
       }
       const cost = skillPointCost(alloc.ranks, costStatus);
-      spent += Number.isFinite(cost) ? cost : alloc.ranks * 2;
+      const finiteCost = Number.isFinite(cost) ? cost : alloc.ranks * 2;
+      spent += finiteCost;
       skillRanksSoFar[alloc.skillName] = (skillRanksSoFar[alloc.skillName] ?? 0) + alloc.ranks;
-      skillCostSoFar[alloc.skillName] = (skillCostSoFar[alloc.skillName] ?? 0) + cost;
+      skillCostSoFar[alloc.skillName] = (skillCostSoFar[alloc.skillName] ?? 0) + finiteCost;
 
       // Max ranks: class skill for any class taken so far (including this level) → full cap.
       const maxStatus = skillStatusForMaxRank(alloc.skillName, classesSoFar);
@@ -234,6 +243,10 @@ export function calculateBuild(build: Build): CalculatedBuild {
       continue;
     }
 
+    if (entry.level > 1 && !subraceIntApplied) {
+      runningIntScore += raceDef?.abilityAdjustments.INT ?? 0;
+      subraceIntApplied = true;
+    }
     if (entry.abilityIncrease === "INT") {
       runningIntScore += 1;
     }

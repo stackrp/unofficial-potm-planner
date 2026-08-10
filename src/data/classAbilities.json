@@ -2,6 +2,11 @@
   "Archivist": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons, light armor, and medium armor. Not proficient with shields."
+    },
+    {
+      "level": 1,
       "title": "Dark Knowledge (3x/day)",
       "description": "Grants allies benefits against the creatures they face."
     },
@@ -87,6 +92,11 @@
     }
   ],
   "Barbarian": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, light armor, medium armor, and shields."
+    },
     {
       "level": 1,
       "title": "Barbarian Fast Movement",
@@ -201,6 +211,11 @@
   "Bard": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons, light armor, medium armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Bardic Knowledge",
       "description": "+1 skill bonus to Lore for every Bard level."
     },
@@ -211,6 +226,11 @@
     }
   ],
   "Beguiler": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple weapons plus the rapier, shortbow, and short sword, and with light armor. Not proficient with shields."
+    },
     {
       "level": 1,
       "title": "Armored Mage",
@@ -250,11 +270,21 @@
   "Cleric": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons, light armor, medium armor, heavy armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Turn Undead",
       "description": "Cause undead to flee in terror."
     }
   ],
   "Druid": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with druidic weapons, light armor, medium armor, and shields."
+    },
     {
       "level": 1,
       "title": "Animal Companion",
@@ -349,6 +379,11 @@
   "Duskblade": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple and martial weapons, and with all armor and shields."
+    },
+    {
+      "level": 1,
       "title": "Arcane Attunement (3x/day + Int)",
       "description": "Cast amanuensis, daze, flare, light, and open/close as spell-like abilities."
     },
@@ -425,6 +460,11 @@
   ],
   "Favored Soul": [
     {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons, light armor, medium armor, and shields."
+    },
+    {
       "level": 2,
       "title": "Favored Weapon",
       "description": "Gain weapon proficiency for the deity's favored weapon."
@@ -465,8 +505,19 @@
       "description": "Gain 10/+3 damage reduction."
     }
   ],
-  "Fighter": [],
+  "Fighter": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, all armor, and shields."
+    }
+  ],
   "Healer": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons and light armor. Wearing heavier armor or a shield violates the healer's oaths and suppresses her powers."
+    },
     {
       "level": 1,
       "title": "Healing Hands",
@@ -706,6 +757,11 @@
   "Hexblade": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple and martial weapons, light armor, medium armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Hexblade's Curse (1x/day + Cha)",
       "description": "Target takes a -2 penalty on attacks, saves, armor class, skills, and damage rolls."
     },
@@ -771,6 +827,11 @@
     }
   ],
   "Monk": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with monk weapons. Not proficient with armor or shields."
+    },
     {
       "level": 1,
       "title": "Cleave",
@@ -895,6 +956,11 @@
   "Paladin": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, all armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Divine Grace",
       "description": "Add Charisma modifier to all saving throws."
     },
@@ -942,6 +1008,11 @@
   "Ranger": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, light armor, medium armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Trackless Step",
       "description": "+4 skill bonus to Hide and Move Silently in wilderness areas."
     },
@@ -982,6 +1053,11 @@
     }
   ],
   "Rogue": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with rogue weapons and light armor. Not proficient with shields."
+    },
     {
       "level": 1,
       "title": "Sneak Attack 1d6",
@@ -1071,6 +1147,11 @@
   "Shaman": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons and light armor."
+    },
+    {
+      "level": 1,
       "title": "Animal Companion",
       "description": "Summon an animal ally."
     },
@@ -1098,11 +1179,21 @@
   "Sorcerer": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple weapons. Not proficient with armor or shields."
+    },
+    {
+      "level": 1,
       "title": "Summon Familiar",
       "description": "Summon a magical creature as an ally."
     }
   ],
   "Voodan": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons and light armor. Not proficient with shields."
+    },
     {
       "level": 1,
       "title": "Turn Spirit",
@@ -1135,6 +1226,11 @@
     }
   ],
   "Warlock": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons and light armor."
+    },
     {
       "level": 1,
       "title": "Eldritch Blast",
@@ -1194,6 +1290,11 @@
   "Warmage": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons, light armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Armored Mage",
       "description": "No spell failure from light armor and small shields."
     },
@@ -1221,11 +1322,21 @@
   "Wizard": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with wizard weapons. Not proficient with armor or shields."
+    },
+    {
+      "level": 1,
       "title": "Summon Familiar",
       "description": "Summon a magical creature as an ally."
     }
   ],
   "Arcane Archer": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, light armor, medium armor, and shields."
+    },
     {
       "level": 1,
       "title": "Enchant Arrow +1",
@@ -1278,6 +1389,11 @@
     }
   ],
   "Avenger Knight": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, light armor, medium armor, and shields."
+    },
     {
       "level": 1,
       "title": "Sacred Defense I",
@@ -1365,6 +1481,11 @@
     }
   ],
   "Crypt Raider": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Grants proficiency with the whip."
+    },
     {
       "level": 1,
       "title": "Grave Robber",
@@ -1476,6 +1597,11 @@
   "Divine Champion": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, light armor, medium armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Lay on Hands",
       "description": "Can heal damage equal to class level multiplied by Charisma modifier."
     },
@@ -1523,6 +1649,11 @@
   "Duelist": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons. Grants no armor or shield proficiency."
+    },
+    {
+      "level": 1,
       "title": "Canny Defense",
       "description": "Add Intelligence bonus to AC when wearing light or no armor."
     },
@@ -1568,6 +1699,11 @@
     }
   ],
   "Dwarven Defender": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple and martial weapons, light armor, medium armor, heavy armor, and shields."
+    },
     {
       "level": 1,
       "title": "Defensive Stance (1x/day)",
@@ -1709,6 +1845,11 @@
   "Monster Hunter": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple weapons, light armor, and medium armor."
+    },
+    {
+      "level": 1,
       "title": "1st Favored Enemy [Excluding Human, Halfling, Elf, Dwarf, & Half Elf, but not Half Orc.]",
       "description": ""
     },
@@ -1795,6 +1936,11 @@
   "Assassin": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons and light armor."
+    },
+    {
+      "level": 1,
       "title": "Death Attack 1d6",
       "description": "Special sneak attack that has a chance of paralyzing opponent."
     },
@@ -1852,6 +1998,11 @@
   "Blackguard": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, all armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Use Poison",
       "description": "Automatic success when coating a weapon with poison."
     },
@@ -1907,6 +2058,11 @@
     }
   ],
   "Black Powder Avenger": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with all simple and martial weapons, all armor, and all shields."
+    },
     {
       "level": 1,
       "title": "Signature Weapon",
@@ -2242,6 +2398,11 @@
   "People's Champion": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple and martial weapons, light armor, medium armor, heavy armor, and shields."
+    },
+    {
+      "level": 1,
       "title": "Eye for Detail",
       "description": "+2 bonus to Appraise, Listen, Search and Spot checks."
     },
@@ -2262,6 +2423,11 @@
     }
   ],
   "Shadowdancer": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Proficient with simple weapons and light armor."
+    },
     {
       "level": 1,
       "title": "Hide in Plain Sight",
