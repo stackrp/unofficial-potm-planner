@@ -12,7 +12,14 @@ import { SkillPlanner } from "./components/SkillPlanner";
 import { SkillList } from "./components/SkillList";
 import { SummaryPanel } from "./components/SummaryPanel";
 import { Guidance } from "./components/Guidance";
-import { calculateBuild, finalAbilityScores, abilityModifier } from "./lib/calculator";
+import {
+  calculateBuild,
+  finalAbilityScores,
+  abilityModifier,
+  maxClassLevels,
+  totalEcl,
+  trimBuildToLevelCap,
+} from "./lib/calculator";
 import { loadBuildFromStorage, saveBuildToStorage } from "./lib/buildIO";
 import type { Build } from "./types";
 import { ABILITY_KEYS } from "./types";
@@ -31,7 +38,8 @@ const DEFAULT_BUILD: Build = {
 };
 
 function App() {
-  const [build, setBuild] = useState<Build>(() => loadBuildFromStorage(DEFAULT_BUILD));
+  // Trim any over-cap levels from older saves (pre-ECL cap was 40).
+  const [build, setBuild] = useState<Build>(() => trimBuildToLevelCap(loadBuildFromStorage(DEFAULT_BUILD)));
   const [confirmingReset, setConfirmingReset] = useState(false);
 
   useEffect(() => {
@@ -47,17 +55,29 @@ function App() {
   function handleRaceChange(race: string) {
     // Racial ability adjustments (base auto-mod + subrace extra) are applied in
     // finalAbilityScores — baseAbilityScores stay pure point-buy and are never mutated here.
-    setBuild((prev) => ({ ...prev, race }));
+    // Raising ECL may require dropping class levels past the new cap.
+    setBuild((prev) => trimBuildToLevelCap({ ...prev, race }));
+  }
+
+  function handleTemplateChange(template: string) {
+    setBuild((prev) => trimBuildToLevelCap({ ...prev, template }));
+  }
+
+  function handleImport(next: Build) {
+    setBuild(trimBuildToLevelCap(next));
   }
 
   function handleLevelsChange(levels: Build["levels"]) {
     // Levels are always contiguous 1..levels.length (LevelPlanner only appends/truncates), so
     // shrinking the array orphans any skill/feat allocation still pointing at a removed level
     // number — drop those too, or they'd silently keep affecting totals with no level to show for it.
-    const maxLevel = levels.length;
+    // Also never accept more levels than the ECL-adjusted cap (e.g. import / stale UI).
+    const cap = maxClassLevels(build.race, build.template);
+    const capped = levels.length > cap ? levels.slice(0, cap) : levels;
+    const maxLevel = capped.length;
     setBuild((prev) => ({
       ...prev,
-      levels,
+      levels: capped,
       skills: prev.skills.filter((s) => s.level <= maxLevel),
       feats: prev.feats.filter((f) => f.level <= maxLevel),
     }));
@@ -82,6 +102,11 @@ function App() {
       >,
     [finalScores]
   );
+  const ecl = useMemo(() => totalEcl(build.race, build.template), [build.race, build.template]);
+  const levelCap = useMemo(
+    () => maxClassLevels(build.race, build.template),
+    [build.race, build.template]
+  );
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -94,7 +119,7 @@ function App() {
             onChange={(e) => setBuild((prev) => ({ ...prev, name: e.target.value }))}
             className="bg-neutral-900 border border-neutral-700 rounded px-2 py-1 text-sm"
           />
-          <BuildImportExport build={build} defaultBuild={DEFAULT_BUILD} onImport={setBuild} />
+          <BuildImportExport build={build} defaultBuild={DEFAULT_BUILD} onImport={handleImport} />
         </div>
         <div className="flex items-center gap-3">
           <button
@@ -116,7 +141,7 @@ function App() {
           race={build.race}
           onChange={handleRaceChange}
           template={build.template}
-          onTemplateChange={(template) => setBuild((prev) => ({ ...prev, template }))}
+          onTemplateChange={handleTemplateChange}
         />
 
         <DeityPicker
@@ -142,7 +167,13 @@ function App() {
 
         <SummaryPanel totals={calculated.totals} errors={calculated.errors} />
 
-        <LevelPlanner levels={build.levels} onChange={handleLevelsChange} snapshots={calculated.perLevel} />
+        <LevelPlanner
+          levels={build.levels}
+          onChange={handleLevelsChange}
+          snapshots={calculated.perLevel}
+          maxLevels={levelCap}
+          ecl={ecl}
+        />
 
         <ClassAbilities levels={build.levels} />
 

@@ -27,6 +27,40 @@ const ALL_SKILLS_BY_NAME = Object.fromEntries(ALL_SKILLS.map((s) => [s.name, s])
 
 export const POINT_BUY_BUDGET = 30;
 
+/**
+ * Hard cap on class levels (hit dice) a PC can take in NWN/PoTM. Effective Character Level
+ * from race/subrace + template reduces how many of those levels remain available:
+ * max class levels = ABSOLUTE_LEVEL_CAP − total ECL.
+ */
+export const ABSOLUTE_LEVEL_CAP = 20;
+
+/** Combined ECL from race/subrace and template (null treated as 0). */
+export function totalEcl(race: string, template = ""): number {
+  const raceEcl = getRace(race)?.effectiveCharacterLevel ?? 0;
+  const templateEcl = getTemplate(template)?.effectiveCharacterLevel ?? 0;
+  return raceEcl + templateEcl;
+}
+
+/** Max class levels this race/template combination may take (never below 0). */
+export function maxClassLevels(race: string, template = ""): number {
+  return Math.max(0, ABSOLUTE_LEVEL_CAP - totalEcl(race, template));
+}
+
+/**
+ * If `build.levels` exceeds the ECL-adjusted cap, drop the excess tail and any skill/feat
+ * allocations that pointed at removed levels. Returns the same object when already within cap.
+ */
+export function trimBuildToLevelCap(build: Build): Build {
+  const cap = maxClassLevels(build.race, build.template);
+  if (build.levels.length <= cap) return build;
+  return {
+    ...build,
+    levels: build.levels.slice(0, cap),
+    skills: build.skills.filter((s) => s.level <= cap),
+    feats: build.feats.filter((f) => f.level <= cap),
+  };
+}
+
 export function abilityModifier(score: number): number {
   return Math.floor((score - 10) / 2);
 }
@@ -422,6 +456,17 @@ export function calculateBuild(build: Build): CalculatedBuild {
   const abilityPointsSpent = pointBuyCost(build.baseAbilityScores);
   if (abilityPointsSpent > POINT_BUY_BUDGET) {
     errors.push(`Ability scores cost ${abilityPointsSpent} points, exceeding the ${POINT_BUY_BUDGET}-point budget.`);
+  }
+
+  // Class-level cap: 20 − (race/subrace ECL + template ECL). ECL 1 → 19 levels, ECL 2 → 18, etc.
+  const ecl = totalEcl(build.race, build.template);
+  const classLevelCap = maxClassLevels(build.race, build.template);
+  if (build.levels.length > classLevelCap) {
+    errors.push(
+      ecl > 0
+        ? `Build has ${build.levels.length} class levels but ECL +${ecl} caps this character at ${classLevelCap} (absolute cap ${ABSOLUTE_LEVEL_CAP}).`
+        : `Build has ${build.levels.length} class levels, exceeding the ${ABSOLUTE_LEVEL_CAP}-level cap.`
+    );
   }
 
   // Ability point-up validation: 1 point every 4 levels.

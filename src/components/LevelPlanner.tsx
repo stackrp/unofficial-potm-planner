@@ -1,4 +1,5 @@
 import { CLASS_NAMES } from "../data/classes";
+import { ABSOLUTE_LEVEL_CAP } from "../lib/calculator";
 import { ABILITY_KEYS, type AbilityKey, type LevelEntry } from "../types";
 import type { LevelSnapshot } from "../lib/calculator";
 
@@ -6,18 +7,20 @@ interface Props {
   levels: LevelEntry[];
   onChange: (levels: LevelEntry[]) => void;
   snapshots: LevelSnapshot[];
+  /** Max class levels after ECL (20 − race/template ECL). */
+  maxLevels: number;
+  /** Combined ECL from race/subrace + template, for the caption. */
+  ecl: number;
 }
-
-const MAX_CHAR_LEVEL = 40;
 
 /** "-" for a level with no class chosen yet (and thus no snapshot), otherwise the stat itself. */
 function statCell(value: string | number | undefined): string | number {
   return value ?? "-";
 }
 
-export function LevelPlanner({ levels, onChange, snapshots }: Props) {
+export function LevelPlanner({ levels, onChange, snapshots, maxLevels, ecl }: Props) {
   function addLevel() {
-    if (levels.length >= MAX_CHAR_LEVEL) return;
+    if (levels.length >= maxLevels) return;
     const prevClass = levels[levels.length - 1]?.className ?? "";
     onChange([...levels, { level: levels.length + 1, className: prevClass }]);
   }
@@ -41,7 +44,18 @@ export function LevelPlanner({ levels, onChange, snapshots }: Props) {
   return (
     <section className="rounded-lg border border-neutral-700 bg-neutral-900/40 p-4">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-lg font-semibold text-neutral-100">Levels</h2>
+        <div className="flex items-baseline gap-3">
+          <h2 className="text-lg font-semibold text-neutral-100">Levels</h2>
+          <span className="text-sm font-mono text-neutral-400">
+            {levels.length} / {maxLevels}
+            {ecl > 0 && (
+              <span className="text-purple-400">
+                {" "}
+                (ECL +{ecl} → max {maxLevels} of {ABSOLUTE_LEVEL_CAP})
+              </span>
+            )}
+          </span>
+        </div>
         <div className="flex gap-2">
           <button
             type="button"
@@ -54,7 +68,14 @@ export function LevelPlanner({ levels, onChange, snapshots }: Props) {
           <button
             type="button"
             onClick={addLevel}
-            disabled={levels.length >= MAX_CHAR_LEVEL}
+            disabled={levels.length >= maxLevels}
+            title={
+              levels.length >= maxLevels
+                ? ecl > 0
+                  ? `Capped at ${maxLevels} class levels (ECL +${ecl})`
+                  : `Capped at ${maxLevels} class levels`
+                : undefined
+            }
             className="px-3 py-1 rounded bg-violet-700 hover:bg-violet-600 text-white disabled:opacity-30 text-sm"
           >
             Add level
@@ -132,7 +153,7 @@ export function LevelPlanner({ levels, onChange, snapshots }: Props) {
             {levels.length === 0 && (
               <tr>
                 <td colSpan={10} className="py-4 text-center text-neutral-500">
-                  No levels yet — click "Add level" to start planning.
+                  No levels yet — click &quot;Add level&quot; to start planning.
                 </td>
               </tr>
             )}
@@ -142,6 +163,8 @@ export function LevelPlanner({ levels, onChange, snapshots }: Props) {
       <p className="mt-2 text-xs text-neutral-500">
         * Class save progression only — ability modifiers, save-boosting feats, and class
         special abilities (Divine Grace, Sacred Defense, etc.) are added once in the totals below.
+        Max class levels is {ABSOLUTE_LEVEL_CAP}
+        {ecl > 0 ? ` minus ECL +${ecl} from race/subrace/template (= ${maxLevels}).` : "."}
       </p>
     </section>
   );

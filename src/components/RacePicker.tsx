@@ -7,7 +7,7 @@ import {
   subracesForCategoryGroupedBySetting,
 } from "../data/raceCategories";
 import { TEMPLATES, getTemplate } from "../data/templates";
-import { racialAbilityAdjustments } from "../lib/calculator";
+import { ABSOLUTE_LEVEL_CAP, racialAbilityAdjustments } from "../lib/calculator";
 import { ABILITY_KEYS, type AbilityKey } from "../types";
 
 interface Props {
@@ -308,6 +308,11 @@ export function RacePicker({ race, onChange, template, onTemplateChange }: Props
             <div>
               <span className="text-neutral-500">Effective Character Level: </span>
               <span className="text-purple-400 font-mono">+{combinedEcl}</span>
+              <span className="text-neutral-500">
+                {" "}
+                — max class levels {Math.max(0, ABSOLUTE_LEVEL_CAP - combinedEcl)} (of{" "}
+                {ABSOLUTE_LEVEL_CAP})
+              </span>
             </div>
           )}
           {(selected?.baseOutcastRating != null || templateDef?.outcastRatingIncrease != null) && (
