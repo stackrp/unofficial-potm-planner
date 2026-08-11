@@ -57,6 +57,7 @@ export function SkillOptimizerModal({ build, perLevel, open, onClose, onApply }:
   }
 
   function setPriority(skillName: string, priority: SkillPriority | null) {
+    if (priorityOf(skillName) === priority) return;
     setPrimarySkills((prev) => prev.filter((s) => s !== skillName));
     setSecondarySkills((prev) => prev.filter((s) => s !== skillName));
     if (priority === "primary") setPrimarySkills((prev) => [...prev, skillName]);

@@ -78,8 +78,11 @@ export function optimizeSkills(opts: SkillOptimizerOptions): SkillOptimizerResul
       const remaining = Math.min(target, cap) - (bought[skillName] ?? 0);
       if (remaining <= 0) return;
 
+      // Bank instead of buying cross-class now if a later level in the plan makes this skill a
+      // class skill — nextClassSkillLevel is always undefined at the final level (nothing comes
+      // after it), so this naturally still buys there if it's the only chance left.
       const cheaperLater = status === "crossClass" && nextClassSkillLevel(skillName, levels, entry.level) != null;
-      if (cheaperLater && entry.level !== finalLevel) return;
+      if (cheaperLater) return;
 
       const perRank = costPerRank(status);
       const buy = Math.min(remaining, Math.floor(budget / perRank));

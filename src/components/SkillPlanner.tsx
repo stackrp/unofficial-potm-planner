@@ -385,9 +385,10 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
           )}
           <p className="mt-2 text-xs text-neutral-500">
             Status and cost follow the class taken at this level only (1 pt/rank class, 2
-            cross-class). Max ranks use the multiclass rule: if any class you&apos;ve taken grants
-            the skill as a class skill, the cap is level+3. Unspent points bank forward — wait for
-            &quot;Class skill at Lv…&quot; to buy at 1 point/rank on a later class level.
+            cross-class). Max ranks follow the multiclass rule: the level+3 cap only applies at
+            levels where the skill was actually a class skill, not retroactively via a later
+            level in an unrelated class. Unspent points bank forward — wait for &quot;Class skill
+            at Lv…&quot; to buy at 1 point/rank on a later class level.
           </p>
         </>
       )}

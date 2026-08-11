@@ -71,16 +71,6 @@ export function skillMaxRank(skillName: string, levels: LevelEntry[], uptoLevel:
   return Math.max(bestClassCap, Math.floor((uptoLevel + 3) / 2));
 }
 
-/** Distinct classes the build has taken through (and including) `uptoLevel`, in the order first taken. */
-export function classesTakenThroughLevel(levels: LevelEntry[], uptoLevel: number): string[] {
-  const seen = new Set<string>();
-  for (const entry of levels) {
-    if (entry.level > uptoLevel) break;
-    if (entry.className) seen.add(entry.className);
-  }
-  return [...seen];
-}
-
 /**
  * The earliest future level (after `fromLevel`) at which a skill is a class skill for the
  * class taken on that level — i.e. when it becomes cheap to buy (1 point/rank). Used to flag

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FEATS, FEATS_BY_NAME } from "../data/feats";
 import { VANILLA_FEATS, VANILLA_FEATS_BY_NAME } from "../data/vanillaFeats";
 import { checkFeatPrereqs } from "../lib/featPrereqs";
@@ -201,10 +201,15 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
   const [requestedLevel, setRequestedLevel] = useState<number | null>(null);
   const [confirmingReset, setConfirmingReset] = useState(false);
   const [dragEntry, setDragEntry] = useState<FeatEntry | null>(null);
+  const [showExtraFinder, setShowExtraFinder] = useState(false);
   const level =
     requestedLevel != null && availableLevels.includes(requestedLevel)
       ? requestedLevel
       : (firstIncompleteLevel ?? availableLevels[availableLevels.length - 1] ?? null);
+
+  // Collapse the "add extra feat" search whenever the viewed level changes, so it doesn't look
+  // like a second required input alongside that level's actual open slots.
+  useEffect(() => setShowExtraFinder(false), [level]);
 
   const used = feats.length;
   const overLimit = used > featsAvailable;
@@ -409,23 +414,42 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
                     </div>
                   </div>
                 )}
-                <div className="flex items-center gap-2 pt-1.5">
-                  <span className="text-xs text-neutral-600 w-20 shrink-0">+ Extra</span>
-                  <InlineFeatFinder onSelect={(name) => addAt(level, name)} />
+                <div className="pt-1.5">
+                  {showExtraFinder ? (
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-neutral-600 w-20 shrink-0">+ Extra</span>
+                      <InlineFeatFinder onSelect={(name) => addAt(level, name)} />
+                      <button
+                        type="button"
+                        onClick={() => setShowExtraFinder(false)}
+                        className="text-neutral-600 hover:text-red-400 text-xs shrink-0"
+                      >
+                        cancel
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setShowExtraFinder(true)}
+                      className="text-xs text-neutral-500 hover:text-neutral-300"
+                    >
+                      + Add extra feat (DM-granted / homebrew)
+                    </button>
+                  )}
                 </div>
               </div>
             );
           })()}
 
-          <p className="text-xs text-neutral-500">
-            Feat slots are calculated from the Levels table (1st-level bonus, human bonus,
-            every-3rd-level bonus, and class bonus feat schedules) — no need to cross-check it
-            yourself. Use "+ Extra" to add a DM-granted or homebrew feat beyond the normal
-            schedule at any level. Feats beyond a level's earned slots show in{" "}
-            <span className="text-red-400">red</span> as bonus feats. Drag any feat to reorder it
-            or drop it on a different level to move it there — a level with no free slots left
-            turns the drop into a bonus (red) feat automatically.
-          </p>
+          <ul className="text-xs text-neutral-500 list-disc list-inside space-y-0.5">
+            <li>Feat slots are automatically determined by level, race, and class.</li>
+            <li>
+              Feats beyond a level's available slots show in{" "}
+              <span className="text-red-400">red</span> as extra feats.
+            </li>
+            <li>Use "+ Add extra feat" to add a DM-granted or homebrew feat.</li>
+            <li>Drag and drop feats below to help create your optimal path.</li>
+          </ul>
         </>
       )}
 

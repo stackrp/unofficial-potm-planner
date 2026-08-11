@@ -239,8 +239,9 @@ export function calculateBuild(build: Build): CalculatedBuild {
 
   // Skill points are priced using the class taken at the level they were spent (NWN prices
   // class vs cross-class off that level's class alone), then tracked as a running banked
-  // balance so a plan can show when banking for a cheaper level pays off. Max ranks use the
-  // any-class rule (class skill for any taken class → level+3 cap).
+  // balance so a plan can show when banking for a cheaper level pays off. Max ranks use
+  // skillMaxRank, which only credits the level+3 class cap at levels the skill was actually
+  // a class skill (see spendSkillPointsAtLevel below).
   const skillAllocationsByLevel = new Map<number, SkillAllocation[]>();
   for (const alloc of build.skills) {
     const arr = skillAllocationsByLevel.get(alloc.level) ?? [];
