@@ -2,15 +2,14 @@ import { useState } from "react";
 import { ALL_SKILLS } from "../data/skills";
 import type { LevelSnapshot } from "../lib/calculator";
 import {
-  classesTakenThroughLevel,
   nextClassSkillLevel,
   skillMaxRank,
   skillPointCost,
   skillStatusForClass,
-  skillStatusForMaxRank,
 } from "../lib/skillRules";
 import type { SkillStatus } from "../data/skills";
 import type { Build, SkillAllocation } from "../types";
+import { SkillOptimizerModal } from "./SkillOptimizerModal";
 
 interface Props {
   build: Build;
@@ -56,6 +55,7 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
   const [requestedLevel, setRequestedLevel] = useState<number | null>(null);
   const [collapsed, setCollapsed] = useState(false);
   const [confirmingReset, setConfirmingReset] = useState(false);
+  const [showOptimizer, setShowOptimizer] = useState(false);
   const [hiddenSkills, setHiddenSkills] = useState<Set<string>>(() => loadHiddenSkills());
   const level =
     requestedLevel != null && availableLevels.includes(requestedLevel)
@@ -80,10 +80,10 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
   const available = bankedBefore + earned;
   const bankedAfter = snap?.skillPointsBanked ?? available - spent;
 
-  // Cost/status at this level follows the class taken HERE (NWN rule). Max ranks use any class
-  // taken through this level — class skill for any of them unlocks the full level+3 cap.
+  // Cost/status at this level follows the class taken HERE (NWN rule). Max ranks use
+  // skillMaxRank, which credits the level+3 class cap only at levels the skill was actually a
+  // class skill (not retroactively via a later level in an unrelated class).
   const classAtLevel = entry.className;
-  const classesSoFar = classesTakenThroughLevel(build.levels, level);
 
   // Cumulative ranks purchased strictly before this level, per skill.
   const ranksBefore: Record<string, number> = {};
@@ -126,7 +126,6 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
   const rows = ALL_SKILLS.map((def) => ({
     def,
     status: skillStatusForClass(def.name, classAtLevel),
-    maxStatus: skillStatusForMaxRank(def.name, classesSoFar),
     invested: (ranksBefore[def.name] ?? 0) > 0,
   })).sort((a, b) => {
     if (a.invested !== b.invested) return a.invested ? -1 : 1;
@@ -149,14 +148,24 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
           </button>
           {!collapsed &&
             (!confirmingReset ? (
-              <button
-                type="button"
-                onClick={() => setConfirmingReset(true)}
-                disabled={build.skills.length === 0}
-                className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 disabled:opacity-30 text-sm"
-              >
-                ↻ Reset
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setShowOptimizer(true)}
+                  disabled={availableLevels.length === 0}
+                  className="px-2 py-1 rounded bg-violet-800 hover:bg-violet-700 text-white disabled:opacity-30 text-sm"
+                >
+                  ✨ Optimize
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setConfirmingReset(true)}
+                  disabled={build.skills.length === 0}
+                  className="px-2 py-1 rounded bg-neutral-800 hover:bg-neutral-700 text-neutral-200 disabled:opacity-30 text-sm"
+                >
+                  ↻ Reset
+                </button>
+              </div>
             ) : (
               <div className="flex items-center gap-2 text-sm flex-wrap justify-end">
                 <span className="text-amber-400">Reset all skill points on every level?</span>
@@ -262,11 +271,12 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
                 </tr>
               </thead>
               <tbody>
-                {visibleRows.map(({ def, status, maxStatus, invested }, i) => {
+                {visibleRows.map(({ def, status, invested }, i) => {
                   const before = ranksBefore[def.name] ?? 0;
                   const added = ranksThisLevel[def.name] ?? 0;
-                  // Cap follows any-class rule; cost follows this level's class only.
-                  const maxAtLevel = skillMaxRank(level, maxStatus);
+                  // Cap credits level+3 only at levels the skill was actually a class skill; cost
+                  // follows this level's class only.
+                  const maxAtLevel = skillMaxRank(def.name, build.levels, level);
                   const cost = skillPointCost(added, status);
                   const overMax = before + added > maxAtLevel;
                   const upgradeLevel =
@@ -381,6 +391,13 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
           </p>
         </>
       )}
+      <SkillOptimizerModal
+        build={build}
+        perLevel={perLevel}
+        open={showOptimizer}
+        onClose={() => setShowOptimizer(false)}
+        onApply={onChange}
+      />
     </section>
   );
 }

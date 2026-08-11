@@ -252,7 +252,6 @@ export function calculateBuild(build: Build): CalculatedBuild {
   let bankedSkillPoints = 0;
 
   function spendSkillPointsAtLevel(levelNum: number, classNameAtLevel: string): number {
-    const classesSoFar = Object.keys(classLevelCounts);
     let spent = 0;
     for (const alloc of skillAllocationsByLevel.get(levelNum) ?? []) {
       if (alloc.ranks <= 0) continue;
@@ -271,9 +270,9 @@ export function calculateBuild(build: Build): CalculatedBuild {
       skillRanksSoFar[alloc.skillName] = (skillRanksSoFar[alloc.skillName] ?? 0) + alloc.ranks;
       skillCostSoFar[alloc.skillName] = (skillCostSoFar[alloc.skillName] ?? 0) + finiteCost;
 
-      // Max ranks: class skill for any class taken so far (including this level) → full cap.
-      const maxStatus = skillStatusForMaxRank(alloc.skillName, classesSoFar);
-      const maxAtLevel = skillMaxRank(levelNum, maxStatus);
+      // Max ranks: the level+3 class cap is earned at the specific level(s) the skill was
+      // actually a class skill, not retroactively via a later level in an unrelated class.
+      const maxAtLevel = skillMaxRank(alloc.skillName, build.levels, levelNum);
       if (skillRanksSoFar[alloc.skillName] > maxAtLevel) {
         errors.push(
           `Level ${levelNum}: ${alloc.skillName} reaches ${skillRanksSoFar[alloc.skillName]} ranks, exceeding the max of ${maxAtLevel} at that level.`
@@ -510,12 +509,13 @@ export function calculateBuild(build: Build): CalculatedBuild {
 
   // Ranks and cost come from the per-level ledger above (skillRanksSoFar/skillCostSoFar), which
   // prices each rank at the class taken when it was bought — not the final status — and already
-  // validated overspending and max-rank-at-that-level in spendSkillPointsAtLevel(). Final-sheet
-  // status uses the any-class max-rank rule so the cap column matches NWN.
+  // validated overspending and max-rank-at-that-level in spendSkillPointsAtLevel(). The status
+  // label uses the any-class rule (informational only); the actual cap uses the level(s) the
+  // skill was really a class skill, so it matches NWN's real (non-retroactive) multiclass rule.
   const skills: SkillSnapshot[] = SKILL_NAMES.map((name) => {
     const status = skillStatusForMaxRank(name, classNamesTaken);
     const ranks = skillRanksSoFar[name] ?? 0;
-    const maxRank = skillMaxRank(totalLevel, status);
+    const maxRank = skillMaxRank(name, build.levels, totalLevel);
     const pointCost = skillCostSoFar[name] ?? 0;
     const skillDef = ALL_SKILLS_BY_NAME[name];
     const abilityMod = skillDef ? finalMods[skillDef.ability] : 0;
