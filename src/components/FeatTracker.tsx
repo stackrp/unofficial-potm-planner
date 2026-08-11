@@ -126,22 +126,54 @@ function FeatSlotRow({
   entry,
   onRemove,
   extra,
+  onDragStart,
+  onDropOn,
+  onDragEnd,
 }: {
   slotLabel: string;
   build: Build;
   entry: FeatEntry;
   onRemove: () => void;
   extra?: boolean;
+  onDragStart: (entry: FeatEntry) => void;
+  onDropOn: (entry: FeatEntry) => void;
+  onDragEnd: () => void;
 }) {
   const unmet = checkFeatPrereqs(build, entry.name, entry.level);
   const category = featCategoryTag(entry.name);
+  const [dragOver, setDragOver] = useState(false);
   return (
-    <div className={`rounded px-2 py-1 ${extra ? "bg-amber-950/10" : "bg-neutral-950/40"}`}>
+    <div
+      draggable
+      onDragStart={(e) => {
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("text/plain", entry.name);
+        onDragStart(entry);
+      }}
+      onDragEnd={onDragEnd}
+      onDragOver={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setDragOver(true);
+      }}
+      onDragLeave={() => setDragOver(false)}
+      onDrop={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setDragOver(false);
+        onDropOn(entry);
+      }}
+      className={`rounded px-2 py-1 cursor-grab active:cursor-grabbing transition-colors ${
+        extra ? "bg-red-950/20" : "bg-neutral-950/40"
+      } ${dragOver ? "ring-1 ring-violet-500" : ""}`}
+    >
       <div className="flex items-center justify-between text-sm">
-        <span className="text-neutral-300">
+        <span className={extra ? "text-red-400" : "text-neutral-300"}>
           <span className="text-neutral-600 font-mono mr-2 text-xs">{slotLabel}</span>
           {entry.name}
-          <span className="ml-2 text-xs text-neutral-600">({category ?? "custom"})</span>
+          <span className={`ml-2 text-xs ${extra ? "text-red-500/70" : "text-neutral-600"}`}>
+            ({category ?? "custom"})
+          </span>
         </span>
         <button type="button" onClick={onRemove} className="text-neutral-500 hover:text-red-400 text-xs">
           remove
@@ -168,6 +200,7 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
 
   const [requestedLevel, setRequestedLevel] = useState<number | null>(null);
   const [confirmingReset, setConfirmingReset] = useState(false);
+  const [dragEntry, setDragEntry] = useState<FeatEntry | null>(null);
   const level =
     requestedLevel != null && availableLevels.includes(requestedLevel)
       ? requestedLevel
@@ -182,6 +215,25 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
 
   function removeEntry(entry: FeatEntry) {
     onChange(feats.filter((f) => f !== entry));
+  }
+
+  /**
+   * Moves `source` to `targetLevel`, inserting it just before `beforeEntry` (or at the end of
+   * that level's block if omitted). Position within the level matters: the first N entries for a
+   * level fill its earned slots, everything after that renders as a red "bonus" feat — so
+   * dropping a feat past a level's earned slots is what turns it red, and dropping it earlier
+   * bumps something else past the line instead.
+   */
+  function moveEntry(source: FeatEntry, targetLevel: number, beforeEntry?: FeatEntry) {
+    if (source === beforeEntry) return;
+    const rest = feats.filter((f) => f !== source);
+    const moved: FeatEntry = source.level === targetLevel ? source : { ...source, level: targetLevel };
+    if (!beforeEntry) {
+      onChange([...rest, moved]);
+      return;
+    }
+    const idx = rest.indexOf(beforeEntry);
+    onChange(idx === -1 ? [...rest, moved] : [...rest.slice(0, idx), moved, ...rest.slice(idx)]);
   }
 
   function goTo(target: number) {
@@ -279,9 +331,20 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
             const extra = entries.slice(count);
 
             return (
-              <div className="space-y-1.5 mb-3">
+              <div
+                className="space-y-1.5 mb-3"
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  if (dragEntry) moveEntry(dragEntry, level);
+                  setDragEntry(null);
+                }}
+              >
                 {count === 0 && extra.length === 0 && (
-                  <p className="text-sm text-neutral-500">No feat slots earned at level {level}.</p>
+                  <p className="text-sm text-neutral-500">
+                    No feat slots earned at level {level}.
+                    {dragEntry ? " Drop here to add it as a bonus feat." : ""}
+                  </p>
                 )}
                 {filled.map((entry, i) => (
                   <FeatSlotRow
@@ -290,10 +353,29 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
                     build={build}
                     entry={entry}
                     onRemove={() => removeEntry(entry)}
+                    onDragStart={setDragEntry}
+                    onDragEnd={() => setDragEntry(null)}
+                    onDropOn={(target) => {
+                      if (dragEntry) moveEntry(dragEntry, level, target);
+                      setDragEntry(null);
+                    }}
                   />
                 ))}
                 {Array.from({ length: emptySlotCount }).map((_, i) => (
-                  <div key={`empty-${i}`} className="flex items-center gap-2">
+                  <div
+                    key={`empty-${i}`}
+                    className="flex items-center gap-2"
+                    onDragOver={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      if (dragEntry) moveEntry(dragEntry, level);
+                      setDragEntry(null);
+                    }}
+                  >
                     <span className="text-xs text-neutral-600 font-mono w-20 shrink-0">
                       Slot {filled.length + i + 1}/{count}
                     </span>
@@ -302,20 +384,26 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
                 ))}
                 {extra.length > 0 && (
                   <div className="pt-1.5 mt-1.5 border-t border-neutral-800">
-                    <div className="text-xs uppercase tracking-wide text-amber-500 mb-1.5">
+                    <div className="text-xs uppercase tracking-wide text-red-500 mb-1.5">
                       {count > 0
-                        ? `Extra feats at this level (beyond the ${count} earned)`
-                        : "Custom feats at this level (none normally earned here)"}
+                        ? `Bonus feats at this level (beyond the ${count} earned)`
+                        : "Bonus feats at this level (none normally earned here)"}
                     </div>
                     <div className="space-y-1.5">
                       {extra.map((entry, i) => (
                         <FeatSlotRow
                           key={`${entry.level}-${entry.name}-extra-${i}`}
-                          slotLabel="Extra"
+                          slotLabel="Bonus"
                           build={build}
                           entry={entry}
                           onRemove={() => removeEntry(entry)}
                           extra
+                          onDragStart={setDragEntry}
+                          onDragEnd={() => setDragEntry(null)}
+                          onDropOn={(target) => {
+                            if (dragEntry) moveEntry(dragEntry, level, target);
+                            setDragEntry(null);
+                          }}
                         />
                       ))}
                     </div>
@@ -333,52 +421,104 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
             Feat slots are calculated from the Levels table (1st-level bonus, human bonus,
             every-3rd-level bonus, and class bonus feat schedules) — no need to cross-check it
             yourself. Use "+ Extra" to add a DM-granted or homebrew feat beyond the normal
-            schedule at any level.
+            schedule at any level. Feats beyond a level's earned slots show in{" "}
+            <span className="text-red-400">red</span> as bonus feats. Drag any feat to reorder it
+            or drop it on a different level to move it there — a level with no free slots left
+            turns the drop into a bonus (red) feat automatically.
           </p>
         </>
       )}
 
-      {feats.length > 0 && (
+      {availableLevels.length > 0 && (
         <div className="mt-4 pt-3 border-t border-neutral-800">
-          <h3 className="text-sm font-semibold text-neutral-300 mb-2">All Selected Feats</h3>
+          <h3 className="text-sm font-semibold text-neutral-300 mb-2">
+            All Selected Feats{" "}
+            <span className="text-xs font-normal text-neutral-500">
+              (drag a feat onto another level to move it there)
+            </span>
+          </h3>
           <div className="space-y-1.5">
-            {[...new Map(
-              [...feats]
-                .sort((a, b) => a.level - b.level)
-                .reduce((byLevel, entry) => {
-                  const list = byLevel.get(entry.level) ?? [];
-                  list.push(entry);
-                  byLevel.set(entry.level, list);
-                  return byLevel;
-                }, new Map<number, FeatEntry[]>())
-            )].map(([lvl, entries]) => (
-              <div key={lvl} className="flex items-baseline gap-2 text-sm">
-                <span className="text-neutral-600 font-mono text-xs w-12 shrink-0">Lv {lvl}</span>
-                <div className="flex flex-wrap gap-x-2 gap-y-1">
-                  {entries
-                    .sort((a, b) => a.name.localeCompare(b.name))
-                    .map((entry, i) => {
-                      const category = featCategoryTag(entry.name);
-                      return (
-                        <span
-                          key={`${entry.level}-${entry.name}-${i}`}
-                          className="inline-flex items-center gap-1 bg-neutral-800/60 rounded px-2 py-0.5 text-neutral-300"
-                        >
-                          {entry.name}
-                          <span className="text-xs text-neutral-600">({category ?? "custom"})</span>
-                          <button
-                            type="button"
-                            onClick={() => removeEntry(entry)}
-                            className="text-neutral-600 hover:text-red-400 text-xs ml-1"
+            {(() => {
+              const byLevel = new Map<number, FeatEntry[]>();
+              for (const entry of feats) {
+                const list = byLevel.get(entry.level) ?? [];
+                list.push(entry);
+                byLevel.set(entry.level, list);
+              }
+              // Always show a row for every level that earns a feat, even with no feats
+              // assigned yet, so removing the last feat at a level doesn't remove its
+              // placeholder — it stays there as a drop target for reorganizing.
+              const levelsToShow = new Set<number>(availableLevels.filter((lvl) => slotsAtLevel(lvl) > 0));
+              for (const lvl of byLevel.keys()) levelsToShow.add(lvl);
+              return [...levelsToShow].sort((a, b) => a - b);
+            })().map((lvl) => {
+              const entries = feats.filter((f) => f.level === lvl);
+              const count = slotsAtLevel(lvl);
+              const tagged = entries.map((entry, i) => ({ entry, bonus: i >= count }));
+              return (
+                <div
+                  key={lvl}
+                  className="flex items-baseline gap-2 text-sm rounded"
+                  onDragOver={(e) => e.preventDefault()}
+                  onDrop={(e) => {
+                    e.preventDefault();
+                    if (dragEntry) moveEntry(dragEntry, lvl);
+                    setDragEntry(null);
+                  }}
+                >
+                  <span className="text-neutral-600 font-mono text-xs w-12 shrink-0">Lv {lvl}</span>
+                  <div className="flex flex-wrap gap-x-2 gap-y-1 items-center min-h-[1.375rem]">
+                    {tagged.length === 0 && (
+                      <span className="text-xs text-neutral-600 italic">
+                        {count > 0 ? `no feats assigned (${count} earned)` : "no feats assigned"}
+                      </span>
+                    )}
+                    {tagged
+                      .sort((a, b) => a.entry.name.localeCompare(b.entry.name))
+                      .map(({ entry, bonus }, i) => {
+                        const category = featCategoryTag(entry.name);
+                        return (
+                          <span
+                            key={`${entry.level}-${entry.name}-${i}`}
+                            draggable
+                            onDragStart={(e) => {
+                              e.dataTransfer.effectAllowed = "move";
+                              e.dataTransfer.setData("text/plain", entry.name);
+                              setDragEntry(entry);
+                            }}
+                            onDragEnd={() => setDragEntry(null)}
+                            onDragOver={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                            }}
+                            onDrop={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              if (dragEntry) moveEntry(dragEntry, lvl, entry);
+                              setDragEntry(null);
+                            }}
+                            className={`inline-flex items-center gap-1 rounded px-2 py-0.5 cursor-grab active:cursor-grabbing ${
+                              bonus ? "bg-red-950/30 text-red-400" : "bg-neutral-800/60 text-neutral-300"
+                            }`}
                           >
-                            ✕
-                          </button>
-                        </span>
-                      );
-                    })}
+                            {entry.name}
+                            <span className={`text-xs ${bonus ? "text-red-500/70" : "text-neutral-600"}`}>
+                              ({category ?? "custom"})
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => removeEntry(entry)}
+                              className="text-neutral-600 hover:text-red-400 text-xs ml-1"
+                            >
+                              ✕
+                            </button>
+                          </span>
+                        );
+                      })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}
