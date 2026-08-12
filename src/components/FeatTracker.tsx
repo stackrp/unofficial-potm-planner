@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { FEATS, FEATS_BY_NAME } from "../data/feats";
 import { VANILLA_FEATS, VANILLA_FEATS_BY_NAME } from "../data/vanillaFeats";
+import { classAbbr } from "../data/classAbbr";
 import { checkFeatPrereqs } from "../lib/featPrereqs";
 import type { LevelSnapshot } from "../lib/calculator";
 import type { Build, FeatEntry } from "../types";
@@ -479,6 +480,7 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
               const entries = feats.filter((f) => f.level === lvl);
               const count = slotsAtLevel(lvl);
               const tagged = entries.map((entry, i) => ({ entry, bonus: i >= count }));
+              const levelClass = build.levels.find((l) => l.level === lvl)?.className;
               return (
                 <div
                   key={lvl}
@@ -490,7 +492,10 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
                     setDragEntry(null);
                   }}
                 >
-                  <span className="text-neutral-600 font-mono text-xs w-12 shrink-0">Lv {lvl}</span>
+                  <span className="text-neutral-600 font-mono text-xs shrink-0 whitespace-nowrap">
+                    Lv {lvl}
+                    {levelClass && ` ${classAbbr(levelClass)} (${levelClass})`}
+                  </span>
                   <div className="flex flex-wrap gap-x-2 gap-y-1 items-center min-h-[1.375rem]">
                     {tagged.length === 0 && (
                       <span className="text-xs text-neutral-600 italic">

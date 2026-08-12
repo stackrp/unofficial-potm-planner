@@ -29,3 +29,6 @@ dist-ssr
 !.dev.vars.example
 .env*
 !.env.example
+
+# Local research/reference data (scraped source dumps, audit reports, etc.) — not shipped
+research_data/

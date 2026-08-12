@@ -68,7 +68,7 @@
     "subgroup": null
    },
    {
-    "name": "Apep*",
+    "name": "Apep",
     "altName": null,
     "gender": "m",
     "domains": [
@@ -951,7 +951,7 @@
     "subgroup": null
    },
    {
-    "name": "Rudri*",
+    "name": "Rudri",
     "altName": null,
     "gender": "f",
     "domains": [
@@ -5167,6 +5167,236 @@
      "Rain"
     ],
     "subgroup": "Yuan-ti Deities & Demons"
+   },
+   {
+    "name": "Azor'alq",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Scimitar",
+    "symbol": null,
+    "portfolio": [
+     "Light",
+     "Purity",
+     "Courage",
+     "Strength"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Chamarlaine",
+    "altName": null,
+    "gender": "f",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Heavy Mace",
+    "symbol": null,
+    "portfolio": [
+     "Keen Senses",
+     "Narrow Escapes"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Daern",
+    "altName": null,
+    "gender": "f",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Spear",
+    "symbol": null,
+    "portfolio": [
+     "Defense",
+     "Fortifications"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Daoud",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Quarterstaff",
+    "symbol": null,
+    "portfolio": [
+     "Humility",
+     "Clarity",
+     "Immediacy"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Gadhelyn",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Longbow",
+    "symbol": null,
+    "portfolio": [
+     "Independance",
+     "Outlawry",
+     "Feasting",
+     "Hunting"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Gendwar Argrim",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Dwarven Waraxe",
+    "symbol": null,
+    "portfolio": [
+     "Fatalism",
+     "Obsession"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Heward",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Quarterstaffe",
+    "symbol": null,
+    "portfolio": [
+     "Bards",
+     "Musicians"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Johydee",
+    "altName": null,
+    "gender": "f",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Shortsword",
+    "symbol": null,
+    "portfolio": [
+     "Deception",
+     "Espionnage",
+     "Protection"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Keoghtom",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Shortsword",
+    "symbol": null,
+    "portfolio": [
+     "Secret Pursuits",
+     "Natural Alchemy",
+     "Extraplanar Exploration"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Kuroth",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Dagger",
+    "symbol": null,
+    "portfolio": [
+     "Theft",
+     "Treasure-Finding"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Murlynd",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Longsword",
+    "symbol": null,
+    "portfolio": [
+     "Magical Technology"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Nazarn",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Shortsword",
+    "symbol": null,
+    "portfolio": [
+     "Formal and Public Combat"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Roykyn",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Spiked Gauntlet",
+    "symbol": null,
+    "portfolio": [
+     "Cruelty"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Tsolorandril",
+    "altName": null,
+    "gender": null,
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Spiked Chain",
+    "symbol": null,
+    "portfolio": [
+     "Wave Motions"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Vathris",
+    "altName": null,
+    "gender": "m",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Spear",
+    "symbol": null,
+    "portfolio": [
+     "Anguish",
+     "Lost Causes",
+     "Revenge"
+    ],
+    "subgroup": "Hero-Gods"
+   },
+   {
+    "name": "Zinzerena",
+    "altName": null,
+    "gender": "f",
+    "domains": [],
+    "alignment": null,
+    "favoredWeapon": "Shortsword",
+    "symbol": null,
+    "portfolio": [
+     "Deception",
+     "Humiliation",
+     "Ambush",
+     "Assassination"
+    ],
+    "subgroup": "Hero-Gods"
    }
   ]
  },
@@ -5602,7 +5832,7 @@
      "Fire",
      "Plant"
     ],
-    "alignment": "LG",
+    "alignment": "LG/LN",
     "favoredWeapon": "Quarterstaff",
     "symbol": null,
     "portfolio": [
@@ -6003,7 +6233,9 @@
     "favoredWeapon": "Natural Weapons",
     "symbol": null,
     "portfolio": [
-     "Preserving Dying Races & Cultures"
+     "Preserving Dying Races & Cultures",
+     "Lizardfolk",
+     "Dinosaurs"
     ],
     "subgroup": "Sphere of Matter"
    },
@@ -6053,7 +6285,7 @@
      "Earth",
      "Healing"
     ],
-    "alignment": "CG",
+    "alignment": "CG/CN",
     "favoredWeapon": "Dagger",
     "symbol": null,
     "portfolio": [
@@ -7138,6 +7370,27 @@
     "portfolio": [
      "Death",
      "the Dead"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Loviatar",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Evil",
+     "Law",
+     "Strength"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Scourge (Whip)",
+    "symbol": null,
+    "portfolio": [
+     "Agony",
+     "Hurt",
+     "Suffering",
+     "Torment",
+     "Torture"
     ],
     "subgroup": null
    },
@@ -8749,7 +9002,7 @@
      "Protection",
      "Travel"
     ],
-    "alignment": "LN",
+    "alignment": "LN, N, CN",
     "favoredWeapon": "Chakram (Cutting Wheel) or Heavy Mace",
     "symbol": null,
     "portfolio": [],
@@ -8807,6 +9060,1099 @@
      "Freedom"
     ],
     "subgroup": null
+   },
+   {
+    "name": "Kossuth",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Destruction",
+     "Fire"
+    ],
+    "alignment": "N(LN)",
+    "favoredWeapon": "Spiked Chain",
+    "symbol": null,
+    "portfolio": [
+     "Elemental Fire",
+     "Purification through Fire"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Lathander",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Good",
+     "Protection",
+     "Strength",
+     "Sun"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Mace",
+    "symbol": null,
+    "portfolio": [
+     "Athletics",
+     "Birth",
+     "Creativity",
+     "Dawn",
+     "Renewal",
+     "Self-perfection",
+     "Spring",
+     "Vitality",
+     "Youth"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Lliira",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Travel"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Shuriken",
+    "symbol": null,
+    "portfolio": [
+     "Dance",
+     "Festivals",
+     "Happiness",
+     "Joy",
+     "Freedom",
+     "Liberty"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Lurue",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Animal",
+     "Chaos",
+     "Good",
+     "Healing"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Spear",
+    "symbol": null,
+    "portfolio": [
+     "Intelligent nonhumanoid creatures",
+     "Talking beasts"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Malar",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Animal",
+     "Chaos",
+     "Evil",
+     "Strength"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Claw Bracer",
+    "symbol": null,
+    "portfolio": [
+     "Bloodlust",
+     "Evil lycanthropes",
+     "Hunters",
+     "Marauding beasts and monsters",
+     "Stalking"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Mask",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Darkness",
+     "Evil",
+     "Luck",
+     "Trickery"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Longsword",
+    "symbol": null,
+    "portfolio": [
+     "Shadows",
+     "Thievery",
+     "Thieves"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Mielikki",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Animal",
+     "Good",
+     "Plant",
+     "Travel"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Scimitar",
+    "symbol": null,
+    "portfolio": [
+     "Autumn",
+     "Dryads",
+     "Forest Creatures",
+     "Forests",
+     "Rangers"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Milil",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Good",
+     "Knowledge"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Rapier",
+    "symbol": null,
+    "portfolio": [
+     "Eloquence",
+     "Poetry",
+     "Song"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Mystra (2nd)",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Good",
+     "Knowledge",
+     "Magic"
+    ],
+    "alignment": "NG(LN)",
+    "favoredWeapon": "Shuriken",
+    "symbol": null,
+    "portfolio": [
+     "Magic",
+     "Spells",
+     "the Weave"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Nobanion",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Animal",
+     "Good",
+     "Law"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Heavy Pick",
+    "symbol": null,
+    "portfolio": [
+     "Royalty",
+     "Lions and Feline Beasts",
+     "Good Beasts"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Oghma",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Knowledge",
+     "Luck",
+     "Travel",
+     "Trickery"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Longsword",
+    "symbol": null,
+    "portfolio": [
+     "Bards",
+     "Inspiration",
+     "Invention",
+     "Knowledge"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Red Knight",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Law",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Longsword",
+    "symbol": null,
+    "portfolio": [
+     "Strategy",
+     "Planning",
+     "Tactics"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Savras",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Knowledge",
+     "Law",
+     "Magic"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Dagger",
+    "symbol": null,
+    "portfolio": [
+     "Divination",
+     "Fate",
+     "Truth"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Sharess",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Travel",
+     "Trickery"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Claw Bracer",
+    "symbol": null,
+    "portfolio": [
+     "Cats",
+     "Festhalls",
+     "Hedonism",
+     "Sensual Fulfillment"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Shaundakul",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Air",
+     "Chaos",
+     "Protection",
+     "Travel"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Greatsword",
+    "symbol": null,
+    "portfolio": [
+     "Caravans",
+     "Exploration",
+     "Miners",
+     "Portals",
+     "Travel"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Shiallia",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Animal",
+     "Good",
+     "Plant"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Quarterstaff",
+    "symbol": null,
+    "portfolio": [
+     "Growth",
+     "the High Forest",
+     "Neverwinter Wood",
+     "Woodland Fertility",
+     "Woodland Glades"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Siamorphe",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Knowledge",
+     "Law"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Light Mace",
+    "symbol": null,
+    "portfolio": [
+     "Nobles",
+     "Rightful Noble Rule",
+     "Human Royalty"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Silvanus",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Animal",
+     "Plant",
+     "Protection",
+     "Water"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Maul",
+    "symbol": null,
+    "portfolio": [
+     "Wild Nature",
+     "Druids"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Sune",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Protection"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Whip",
+    "symbol": null,
+    "portfolio": [
+     "Beauty",
+     "Love",
+     "Passion"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Talona",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Destruction",
+     "Evil"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Unarmed Strike",
+    "symbol": null,
+    "portfolio": [
+     "Disease",
+     "Poison"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Talos",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Destruction",
+     "Evil",
+     "Fire"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Spear",
+    "symbol": null,
+    "portfolio": [
+     "Conflagration",
+     "Destruction",
+     "Earthquakes",
+     "Rebellion",
+     "Storms",
+     "Vortices"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Tempus",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Protection",
+     "Strength",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Battleaxe",
+    "symbol": null,
+    "portfolio": [
+     "Battle",
+     "War",
+     "Warriors"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Tiamat",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Evil",
+     "Law"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Heavy Pick",
+    "symbol": null,
+    "portfolio": [
+     "Chessenta",
+     "Evil Dragons",
+     "Evil Reptiles",
+     "Greed"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Torm",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Good",
+     "Healing",
+     "Law",
+     "Protection",
+     "Strength"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Greatsword",
+    "symbol": null,
+    "portfolio": [
+     "Duty",
+     "Loyalty",
+     "Obedience",
+     "Paladins"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Tymora",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Luck",
+     "Protection",
+     "Travel"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Shuriken",
+    "symbol": null,
+    "portfolio": [
+     "Adventurers",
+     "Good Fortune",
+     "Skill",
+     "Victory"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Tyr",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Good",
+     "Knowledge",
+     "Law",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Longsword",
+    "symbol": null,
+    "portfolio": [
+     "Justice"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Ulutiu",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Animal",
+     "Law",
+     "Protection",
+     "Strength"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Spear",
+    "symbol": null,
+    "portfolio": [
+     "Arctic Dwellers",
+     "Glaciers",
+     "Polar Environments"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Umberlee",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Destruction",
+     "Evil",
+     "Water"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Trident",
+    "symbol": null,
+    "portfolio": [
+     "Currents",
+     "Oceans",
+     "Sea Winds",
+     "Waves"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Uthgar",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Animal",
+     "Chaos",
+     "Strength",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Battleaxe",
+    "symbol": null,
+    "portfolio": [
+     "Physical Strength",
+     "Uthgardt Barbarian Tribes"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Valkur",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Air",
+     "Chaos",
+     "Good",
+     "Protection"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Cutlass",
+    "symbol": null,
+    "portfolio": [
+     "Favorable Winds",
+     "Naval Combat",
+     "Sailors",
+     "Ships"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Velsharoon",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Death",
+     "Evil",
+     "Magic",
+     "Undeath"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Quarterstaff",
+    "symbol": null,
+    "portfolio": [
+     "Liches",
+     "Necromancy",
+     "Necromancers",
+     "Undeath"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Waukeen",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Knowledge",
+     "Protection",
+     "Travel"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Nunchaku",
+    "symbol": null,
+    "portfolio": [
+     "Trade",
+     "Money",
+     "Wealth"
+    ],
+    "subgroup": null
+   },
+   {
+    "name": "Corellon Larethian",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Magic",
+     "Protection",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Longsword",
+    "symbol": null,
+    "portfolio": [
+     "Arts",
+     "Crafts",
+     "Elves",
+     "Magic",
+     "Music",
+     "Bards",
+     "Poetry",
+     "War"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Aerdrie Faenya",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Air",
+     "Animal",
+     "Chaos",
+     "Good"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Quarterstaff",
+    "symbol": null,
+    "portfolio": [
+     "Air",
+     "Avariels",
+     "Avians",
+     "Fertility",
+     "Rain",
+     "Weather"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Angharrad",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Knowledge",
+     "Plant",
+     "Protection"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Spear",
+    "symbol": null,
+    "portfolio": [
+     "Birth",
+     "Defense",
+     "Fertility",
+     "Planting",
+     "Spring",
+     "Wisdom"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Deep Sashelas",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Knowledge",
+     "Water"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Trident",
+    "symbol": null,
+    "portfolio": [
+     "Oceans",
+     "Sea Elves",
+     "Creation",
+     "Knowledge",
+     "Beauty",
+     "Water Magic"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Erevan Ilesere",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Luck",
+     "Trickery"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Shortsword",
+    "symbol": null,
+    "portfolio": [
+     "Mischieve",
+     "Change",
+     "Rogues"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Fenmarel Mestarine",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Animal",
+     "Chaos",
+     "Plant",
+     "Travel"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Dagger",
+    "symbol": null,
+    "portfolio": [
+     "Druids",
+     "Elves",
+     "Outcasts",
+     "Scapegoats",
+     "Isolation"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Hanali Celanil",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Magic",
+     "Protection"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Dagger",
+    "symbol": null,
+    "portfolio": [
+     "Romance",
+     "Love",
+     "Beauty",
+     "Enchantment",
+     "Fine Arts",
+     "Artistry"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Labelas Enoreth",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Knowledge",
+     "Time"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Quarterstaff",
+    "symbol": null,
+    "portfolio": [
+     "Time",
+     "Longevity",
+     "History",
+     "The Moment of Choice"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Rellavar Danuvien",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Good",
+     "Protection",
+     "Water"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Spear",
+    "symbol": null,
+    "portfolio": [
+     "Frost Magic",
+     "Frost Sprites",
+     "Protection from the Elements"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Rillifane Rallathil",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Plant",
+     "Protection"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Quarterstaff",
+    "symbol": null,
+    "portfolio": [
+     "Woodlands",
+     "Nature",
+     "Wild Elves"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Sehanine Moonbow",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Knowledge",
+     "Repose",
+     "Travel"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Quarterstaff",
+    "symbol": null,
+    "portfolio": [
+     "The Moon",
+     "the Stars",
+     "the Heavens",
+     "Dreams",
+     "Mysticism",
+     "Journeys",
+     "Death",
+     "Moon Elves"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Shevarash",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Longbow",
+    "symbol": null,
+    "portfolio": [
+     "Hatred of Drow",
+     "Crusades",
+     "Loss",
+     "Vengeance"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Solonor Thelandira",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Good",
+     "Plant",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Longbow",
+    "symbol": null,
+    "portfolio": [
+     "Archery",
+     "Hunting",
+     "Wilderness Survival"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Tarsellis Meunniduin",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Earth",
+     "Plant",
+     "Water"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Spear",
+    "symbol": null,
+    "portfolio": [
+     "Mountains",
+     "Rivers",
+     "Wild Places"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Vandria Gilmadrith",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Law",
+     "Protection",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Longbow",
+    "symbol": null,
+    "portfolio": [
+     "War",
+     "Guardianship",
+     "Justice",
+     "Grief",
+     "Vigilance",
+     "Decisions"
+    ],
+    "subgroup": "The Seldarine"
+   },
+   {
+    "name": "Lolth",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Darkness",
+     "Destruction",
+     "Evil",
+     "Trickery"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Dagger",
+    "symbol": null,
+    "portfolio": [
+     "Assassins",
+     "Chaos",
+     "Darkness",
+     "Drow",
+     "Evil",
+     "Spiders"
+    ],
+    "subgroup": "Drow Pantheon"
+   },
+   {
+    "name": "Eilistraee",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Good"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Bastard Sword",
+    "symbol": null,
+    "portfolio": [
+     "Beauty",
+     "Dance",
+     "Hunting",
+     "Moonlight",
+     "Song",
+     "Swordwork"
+    ],
+    "subgroup": "Drow Pantheon"
+   },
+   {
+    "name": "Ghaunadaur",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Evil"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Warhammer",
+    "symbol": null,
+    "portfolio": [
+     "Oozes",
+     "Slimes",
+     "Outcasts",
+     "Rebels",
+     "All thing subterranean"
+    ],
+    "subgroup": "Drow Pantheon"
+   },
+   {
+    "name": "Kiaransalee",
+    "altName": null,
+    "gender": "f",
+    "domains": [
+     "Chaos",
+     "Evil",
+     "Undeath"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Dagger",
+    "symbol": null,
+    "portfolio": [
+     "Slavery",
+     "Vengeance",
+     "Undeath"
+    ],
+    "subgroup": "Drow Pantheon"
+   },
+   {
+    "name": "Selvetarm",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Evil",
+     "War"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Heavy Mace",
+    "symbol": null,
+    "portfolio": [
+     "Drow Warriors"
+    ],
+    "subgroup": "Drow Pantheon"
+   },
+   {
+    "name": "Vhaeraun",
+    "altName": null,
+    "gender": "m",
+    "domains": [
+     "Chaos",
+     "Evil",
+     "Travel",
+     "Trickery"
+    ],
+    "alignment": null,
+    "favoredWeapon": "Shortsword",
+    "symbol": null,
+    "portfolio": [
+     "Drow males",
+     "Evil activity on the surface",
+     "Thievery"
+    ],
+    "subgroup": "Drow Pantheon"
    }
   ]
  },
@@ -10693,7 +12039,11 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Blind Idiot God",
+     "Daemon Sultan",
+     "Nuclear Chaos"
+    ],
     "subgroup": null
    },
    {
@@ -10709,7 +12059,9 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The High Priest of the Outer Gods"
+    ],
     "subgroup": null
    },
    {
@@ -10724,7 +12076,9 @@
     "alignment": "NE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The King in Yellow"
+    ],
     "subgroup": null
    },
    {
@@ -10740,7 +12094,11 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Crawling Chaos",
+     "Black Pharaoh",
+     "Soul and Messenger of the Other Gods"
+    ],
     "subgroup": null
    },
    {
@@ -10757,7 +12115,9 @@
     "alignment": "CN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Black Goat of the Woods with a Thousand Young"
+    ],
     "subgroup": null
    },
    {
@@ -10773,7 +12133,10 @@
     "alignment": "TN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The All-in-One",
+     "The Lurker at the Threshold"
+    ],
     "subgroup": null
    },
    {
@@ -10788,7 +12151,10 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Horror from the Hills",
+     "The Feeder"
+    ],
     "subgroup": null
    },
    {
@@ -10802,7 +12168,10 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Living Flame",
+     "Burning One"
+    ],
     "subgroup": null
    },
    {
@@ -10816,7 +12185,9 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "God of the Deep Ones"
+    ],
     "subgroup": null
    },
    {
@@ -10830,7 +12201,9 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Goddess of the Deep Ones"
+    ],
     "subgroup": null
    },
    {
@@ -10844,7 +12217,10 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Pale Beast",
+     "God of the Labyrinth"
+    ],
     "subgroup": null
    },
    {
@@ -10858,7 +12234,9 @@
     "alignment": "CN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Inhabitant of the Lake"
+    ],
     "subgroup": null
    },
    {
@@ -10872,7 +12250,11 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Wind-Walker",
+     "Death-Walker",
+     "God of the Cold & Winds"
+    ],
     "subgroup": null
    },
    {
@@ -10886,7 +12268,10 @@
     "alignment": "TN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Charnel God",
+     "The Great Ghoul"
+    ],
     "subgroup": null
    },
    {
@@ -10902,7 +12287,9 @@
     "alignment": "TN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Lord of the Great Abyss"
+    ],
     "subgroup": null
    },
    {
@@ -10916,7 +12303,10 @@
     "alignment": "CN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Burrower Beneath",
+     "The Great Chthonian"
+    ],
     "subgroup": null
    },
    {
@@ -10931,7 +12321,9 @@
     "alignment": "NE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Whisperer in Darkness"
+    ],
     "subgroup": null
    },
    {
@@ -10947,7 +12339,9 @@
     "alignment": "NE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Father of Serpents"
+    ],
     "subgroup": null
    },
    {
@@ -10961,7 +12355,9 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Defiler"
+    ],
     "subgroup": null
    }
   ]
@@ -12880,7 +14276,10 @@
     "alignment": "NG",
     "favoredWeapon": "Sickle",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Seas",
+     "Waters"
+    ],
     "subgroup": null
    },
    {
@@ -12896,7 +14295,9 @@
     "alignment": "CE",
     "favoredWeapon": "Spear",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Evil"
+    ],
     "subgroup": null
    },
    {
@@ -12912,7 +14313,9 @@
     "alignment": "NG",
     "favoredWeapon": "Sling",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Mothers"
+    ],
     "subgroup": null
    },
    {
@@ -12928,7 +14331,9 @@
     "alignment": "CE",
     "favoredWeapon": "Unarmed Strike",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Sickness"
+    ],
     "subgroup": null
    },
    {
@@ -12943,7 +14348,10 @@
     "alignment": "LE",
     "favoredWeapon": "Dagger",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Pain",
+     "Torture"
+    ],
     "subgroup": null
    },
    {
@@ -12959,7 +14367,10 @@
     "alignment": "NG",
     "favoredWeapon": "Shortbow",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Nature",
+     "Forests"
+    ],
     "subgroup": null
    },
    {
@@ -12975,7 +14386,9 @@
     "alignment": "NE",
     "favoredWeapon": "Club",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Death"
+    ],
     "subgroup": null
    },
    {
@@ -12991,7 +14404,9 @@
     "alignment": "CE",
     "favoredWeapon": "Unarmed Strike",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Underworld"
+    ],
     "subgroup": null
    },
    {
@@ -13007,7 +14422,9 @@
     "alignment": "LN",
     "favoredWeapon": "Net (Unarmed Strike)",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Underworld"
+    ],
     "subgroup": null
    },
    {
@@ -13023,7 +14440,12 @@
     "alignment": "LN",
     "favoredWeapon": "Longsword",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Sky",
+     "Air",
+     "Weather",
+     "Avians"
+    ],
     "subgroup": null
    },
    {
@@ -13038,7 +14460,10 @@
     "alignment": "TN",
     "favoredWeapon": "Club",
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Sleep",
+     "Dreams"
+    ],
     "subgroup": null
    }
   ]
@@ -15084,7 +16509,7 @@
     "subgroup": null
    },
    {
-    "name": "Dukagsh*",
+    "name": "Dukagsh",
     "altName": null,
     "gender": "m",
     "domains": [
@@ -18375,9 +19800,12 @@
      "Strength"
     ],
     "alignment": "LG",
-    "favoredWeapon": "Longsword (Christianity)",
-    "symbol": null,
-    "portfolio": [],
+    "favoredWeapon": "Longsword (Christianity), Scimitar (Islam), Quarterstaff (Judaism)",
+    "symbol": "The Cross (Christianity), Crescent (Islam), Star of David (Judaism)",
+    "portfolio": [
+     "Creation",
+     "Life"
+    ],
     "subgroup": null
    }
   ]
@@ -19071,6 +20499,23 @@
      "Rage"
     ],
     "subgroup": "Asura Lords (Demons & Devils)"
+   },
+   {
+    "name": "The Three",
+    "altName": null,
+    "gender": null,
+    "domains": [
+     "Destruction",
+     "Knowledge",
+     "Sun"
+    ],
+    "alignment": "Any",
+    "favoredWeapon": "None",
+    "symbol": null,
+    "portfolio": [
+     "Everything"
+    ],
+    "subgroup": "Pranaism"
    }
   ]
  },
@@ -19090,7 +20535,10 @@
     "alignment": "LN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Lord of the Sea",
+     "Master of the Tides"
+    ],
     "subgroup": "Old World Loa",
     "specializations": ["Conjuration", "Evocation", "Transmutation"]
    },
@@ -19105,7 +20553,9 @@
     "alignment": "CN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Hidden Fire"
+    ],
     "subgroup": "New World Loa",
     "specializations": ["Conjuration", "Evocation", "Illusion"]
    },
@@ -19120,7 +20570,9 @@
     "alignment": "CG",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Rainbow"
+    ],
     "subgroup": "Old World Loa",
     "specializations": ["Evocation", "Illusion", "Transmutation"]
    },
@@ -19137,7 +20589,9 @@
     "alignment": "CE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Zombi Lord"
+    ],
     "subgroup": "New World Loa",
     "specializations": ["Illusion", "Necromancy", "Transmutation"]
    },
@@ -19153,7 +20607,9 @@
     "alignment": "LG",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Lord of the Midnight Crossroads"
+    ],
     "subgroup": "New World Loa",
     "specializations": ["Conjuration", "Divination", "Necromancy"]
    },
@@ -19169,7 +20625,9 @@
     "alignment": "LE",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Lord of the Scarlet Fields"
+    ],
     "subgroup": "New World Loa",
     "specializations": ["Abjuration", "Evocation", "Transmutation"]
    },
@@ -19185,7 +20643,9 @@
     "alignment": "LG",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The World Serpent"
+    ],
     "subgroup": "Old World Loa",
     "specializations": ["Abjuration", "Divination", "Enchantment"]
    },
@@ -19200,7 +20660,9 @@
     "alignment": "CN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "None (Loa of Freedom)"
+    ],
     "subgroup": "New World Loa",
     "specializations": ["Divination", "Illusion", "Transmutation"]
    },
@@ -19216,7 +20678,11 @@
     "alignment": "NG",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Tragic Mistress",
+     "the Queen of Beauty",
+     "Lady of Luxury"
+    ],
     "subgroup": "Old World Loa",
     "specializations": ["Enchantment", "Illusion", "Transmutation"]
    },
@@ -19233,7 +20699,10 @@
     "alignment": "CN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Laughter of the Grave",
+     "The Lord of the Dead"
+    ],
     "subgroup": "The Exceptions",
     "specializations": ["Conjuration", "Divination", "Necromancy"]
    },
@@ -19249,7 +20718,10 @@
     "alignment": "TN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "Lord of the Crossroads",
+     "the Wandering Sun"
+    ],
     "subgroup": "Old World Loa",
     "specializations": ["Divination", "Enchantment", "Necromancy"]
    },
@@ -19265,7 +20737,9 @@
     "alignment": "NG",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Great Patrons"
+    ],
     "subgroup": "The Exceptions",
     "specializations": ["Abjuration", "Conjuration", "Divination"]
    },
@@ -19282,7 +20756,11 @@
     "alignment": "CN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Master of Iron",
+     "Lord of Fire",
+     "The Wounded Hero"
+    ],
     "subgroup": "Old World Loa",
     "specializations": ["Abjuration", "Evocation", "Transmutation"]
    },
@@ -19298,7 +20776,10 @@
     "alignment": "TN",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Great Serpent",
+     "He-Who-Straddles-the-Waters"
+    ],
     "subgroup": "The Exceptions",
     "specializations": ["Divination", "Evocation", "Illusion"]
    },
@@ -19314,7 +20795,9 @@
     "alignment": "CG",
     "favoredWeapon": null,
     "symbol": null,
-    "portfolio": [],
+    "portfolio": [
+     "The Divine Twins"
+    ],
     "subgroup": "The Exceptions",
     "specializations": ["Evocation", "Necromancy", "Transmutation"]
    }
@@ -19660,7 +21143,7 @@
      "Good",
      "Trickery"
     ],
-    "alignment": "CG",
+    "alignment": "CG, CN, CE",
     "favoredWeapon": "Mace",
     "symbol": null,
     "portfolio": [
@@ -19911,7 +21394,7 @@
     "subgroup": null
    },
    {
-    "name": "Apep*",
+    "name": "Apep",
     "altName": null,
     "gender": "m",
     "domains": [
