@@ -51,6 +51,12 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   // --- Combat ---
   "Back to the Wall": { minBAB: 2 },
   "Crossbow Sniper": { minBAB: 1, requiredFeats: ["Weapon Focus"], notes: ["Weapon Focus with light or heavy crossbow"] },
+  "Dead Eye": {
+    minBAB: 14,
+    abilityScores: { DEX: 17 },
+    requiredFeats: ["Point Blank Shot", "Weapon Focus"],
+    notes: ["Weapon Focus with any ranged weapon"],
+  },
   "Improved Expertise": { minBAB: 6, abilityScores: { INT: 13 }, requiredFeats: ["Expertise"] },
   "Shield Parry": { abilityScores: { DEX: 15 }, requiredFeats: ["Shield Proficiency"] },
 
@@ -68,6 +74,11 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
     abilityScores: { DEX: 15 },
     requiredFeats: ["Two-Weapon Fighting"],
     notes: ["Rangers may qualify via Dual-Wield instead of Two-Weapon Fighting"],
+  },
+  "Improved Two-Weapon Defense": {
+    minBAB: 6,
+    abilityScores: { DEX: 17 },
+    requiredFeats: ["Two-Weapon Defense"],
   },
   "Greater Two-Weapon Defense": {
     minBAB: 11,
@@ -89,6 +100,7 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   },
 
   // --- General ---
+  "Battle Caster": { notes: ["Requires ability to ignore arcane spell failure chance from armor"] },
   "Clarity of Vision": { skillRanks: [{ skill: "Spot", ranks: 12 }] },
   "Cold Endurance": { notes: ["Requires a Fortitude save bonus of +2 or higher"] },
   Diehard: { requiredFeats: ["Endurance"] },
@@ -111,8 +123,11 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
     ],
     requiredFeats: ["Skill Focus: Hide", "Skill Focus: Perform"],
   },
+  Trapmaster: { abilityScores: { INT: 13 }, notes: ["Requires Uncanny Dodge III (Rogue class ability)"] },
+  "Warding Gesture": { abilityScores: { WIS: 11, CHA: 11 } },
 
   // --- Skill ---
+  "No Identity": { notes: ["Can only be taken at 1st level"] },
   "Recognize Imposter": { skillRanks: [{ skill: "Spot", ranks: 3 }] },
   "Urban Stealth": {
     skillRanks: [
@@ -174,6 +189,7 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
 
   // --- Spellcasting ---
   "Augment Healing": { skillRanks: [{ skill: "Heal", ranks: 4 }], notes: ["Requires ability to cast healing spells"] },
+  "Critical Spell Strike": { notes: ["Ability to cast 1st-level spells"] },
   "Misted Magic": { notes: ["Requires ability to cast 2nd-level spells"] },
   "Voice of Wrath": { notes: ["Requires ability to cast 1st-level spells"] },
 
@@ -230,8 +246,12 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   "Fury of Stone": { requiredFeats: ["Barbarian Rage"], notes: ["Requires Darkvision"] },
   "Indomitable Will": { requiredClass: { className: "Barbarian", level: 14 } },
   "Lightning Rage": { abilityScores: { DEX: 13 }, requiredFeats: ["Barbarian Rage"] },
+  Literacy: { requiredClass: { className: "Barbarian" }, notes: ["Barbarians are illiterate by default; this feat grants literacy"] },
+  "Mighty Rage": { requiredClass: { className: "Barbarian", level: 20 } },
   "Mystic Rage": { requiredClass: { className: "Barbarian", level: 10 } },
+  "Reckless Rage": { requiredFeats: ["Barbarian Rage", "Power Attack"] },
   "Stone Rage": { abilityScores: { CON: 13 }, requiredFeats: ["Barbarian Rage"] },
+  "Tireless Rage": { requiredClass: { className: "Barbarian", level: 17 } },
 
   // --- Bard ---
   "Bard Song": { requiredClass: { className: "Bard" } },
@@ -257,6 +277,12 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   Subsonics: { skillRanks: [{ skill: "Perform", ranks: 10 }], anyOfFeats: ["Bard Song", "Mora Domain"] },
   "Weapon Proficiency (Bard)": { requiredClass: { className: "Bard", level: 2 } },
 
+  // --- Duskblade ---
+  "Battle Magic Tactics": {
+    skillRanks: [{ skill: "Spellcraft", ranks: 6 }],
+    notes: ["Ability to cast 3rd-level arcane spells"],
+  },
+
   // --- Fighter ---
   "Armor Skin": { minBAB: 17, abilityScores: { CON: 15 }, requiredFeats: ["Toughness"] },
   "Combat Focus": { requiredClass: { className: "Fighter", level: 6 } },
@@ -281,6 +307,16 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
     requiredFeats: ["Combat Focus"],
     requiredClass: { className: "Fighter", level: 13 },
   },
+  "Combat Speed": {
+    abilityScores: { DEX: 13 },
+    requiredFeats: ["Combat Focus"],
+    requiredClass: { className: "Fighter", level: 16 },
+  },
+  "Combat Stability": {
+    abilityScores: { STR: 12 },
+    requiredFeats: ["Combat Focus"],
+    requiredClass: { className: "Fighter", level: 6 },
+  },
   "Combat Strike": {
     abilityScores: { INT: 13 },
     requiredFeats: ["Combat Focus"],
@@ -297,6 +333,13 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
     requiredClassAnyOf: [
       { className: "Fighter", level: 8 },
       { className: "Black Powder Avenger", level: 6 },
+    ],
+  },
+  "Greater Weapon Specialization": {
+    requiredFeats: ["Greater Weapon Focus", "Weapon Focus", "Weapon Specialization"],
+    requiredClassAnyOf: [
+      { className: "Fighter", level: 12 },
+      { className: "Black Powder Avenger", level: 8 },
     ],
   },
   "Inspire Competence": { abilityScores: { CHA: 12 }, requiredClass: { className: "Fighter", level: 12 } },
@@ -349,6 +392,7 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
     ],
   },
   "Extra Wild Shape": { requiredFeats: ["Wild Shape"] },
+  "Frozen Wild Shape": { requiredFeats: ["Wild Shape"], notes: ["Requires a Fortitude save bonus of +6 or higher"] },
   "Hawk's Vision": { skillRanks: [{ skill: "Spot", ranks: 4 }], requiredFeats: ["Wild Shape"] },
   "Oaken Resilience": {
     requiredFeats: ["Wild Shape"],
@@ -359,7 +403,16 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   },
   "Primeval Wild Shape": { requiredFeats: ["Wild Shape", "Cold Endurance"] },
   "Savage Mobility": { abilityScores: { DEX: 13 }, requiredFeats: ["Wild Shape"] },
+  "Scorching Wild Shape": { requiredFeats: ["Wild Shape"], notes: ["Requires a Fortitude save bonus of +6 or higher"] },
   "Swim like a Fish": { requiredFeats: ["Wild Shape"] },
+  "Verdant Wild Shape": { requiredFeats: ["Wild Shape"], notes: ["Requires a Fortitude save bonus of +6 or higher"] },
+  "Wild Shape": {
+    requiredClassAnyOf: [
+      { className: "Druid", level: 5 },
+      { className: "Shifter", level: 1 },
+    ],
+  },
+  "Wild Shape (non-aggressive)": { requiredClass: { className: "Druid", level: 5 } },
   "Wolverine's Rage": { requiredFeats: ["Wild Shape"] },
 
   // --- Monk ---
@@ -390,11 +443,40 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
     notes: ["Requires the Divine Grace class ability"],
   },
 
+  // --- Rogue ---
+  "Face in the Crowd": { requiredClass: { className: "Rogue", level: 10 } },
+  "Light Sleeper": { requiredClass: { className: "Rogue", level: 10 } },
+
   // --- Shaman ---
   "Ancestral Spirit Calling": {
     abilityScores: { CHA: 13 },
     requiredFeats: ["Turn Undead"],
     requiredClass: { className: "Shaman", level: 4 },
+  },
+  "Malicious Spirit Calling": {
+    abilityScores: { CHA: 13 },
+    requiredFeats: ["Turn Undead"],
+    requiredClass: { className: "Shaman", level: 4 },
+  },
+  "Wild Spirit Calling": {
+    abilityScores: { CHA: 13 },
+    requiredFeats: ["Turn Undead"],
+    requiredClass: { className: "Shaman", level: 8 },
+  },
+  "Savage Spirit Calling": {
+    abilityScores: { CHA: 13 },
+    requiredFeats: ["Turn Undead"],
+    requiredClass: { className: "Shaman", level: 8 },
+  },
+  "Nature Spirit Calling": {
+    abilityScores: { CHA: 13 },
+    requiredFeats: ["Turn Undead"],
+    requiredClass: { className: "Shaman", level: 12 },
+  },
+  "Calamitous Spirit Calling": {
+    abilityScores: { CHA: 13 },
+    requiredFeats: ["Turn Undead"],
+    requiredClass: { className: "Shaman", level: 12 },
   },
 
   // --- Blackguard ---
@@ -403,6 +485,9 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
 
   // --- Shadowdancer ---
   "Shadow Jump": { requiredClass: { className: "Shadowdancer", level: 4 } },
+
+  // --- Warlock ---
+  "Eldritch Claws": { requiredClass: { className: "Warlock", level: 3 } },
 
   // --- Warmage ---
   "Armored Mage": { requiredClass: { className: "Warmage", level: 1 } },
@@ -430,6 +515,15 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   "Humanoid Shape": { requiredClass: { className: "Shifter", level: 7 } },
   "Elemental Shape": { requiredClass: { className: "Shifter", level: 9 }, notes: ["Also requires Druid level 16 (automatic)"] },
   "Evershifting Form": { requiredClass: { className: "Shifter", level: 10 } },
+
+  // --- Dirgist ---
+  "Lament for the Fallen": { requiredClass: { className: "Dirgist", level: 1 } },
+  "Whispers of the Dead": { requiredClass: { className: "Dirgist", level: 1 } },
+
+  // --- Archivist ---
+  "Archivist of Nature": { requiredClass: { className: "Archivist", level: 1 } },
+  "Draconic Archivist": { requiredClass: { className: "Archivist", level: 1 } },
+  "Archivist of Dread": { requiredClass: { className: "Archivist", level: 1 } },
 
   // --- Base game feats (nwn.fandom.com), General/Metamagic/First-Level only ---
   // "Curse Song", "Improved Expertise", and "Rapid Reload" also exist as PoTM-modified feats
