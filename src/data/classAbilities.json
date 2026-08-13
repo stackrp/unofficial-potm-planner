@@ -1570,6 +1570,11 @@
   "Dirgist": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Does not gain any additional weapon or armor proficiencies."
+    },
+    {
+      "level": 1,
       "title": "Lament for the Fallen",
       "description": "Enemies who fail their saving throw suffer -2 attack and skill checks."
     },
@@ -1783,6 +1788,11 @@
   "Grimetrekker": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Does not gain any additional weapon or armor proficiencies."
+    },
+    {
+      "level": 1,
       "title": "Favored Enemy (Vermin)",
       "description": "Bonuses to damage and Listen, Spot, and Antagonize checks against vermin."
     },
@@ -1882,6 +1892,11 @@
   "Tattooed Monk": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Gains no proficiency with any weapon or armor."
+    },
+    {
+      "level": 1,
       "title": "Gain one tattoo",
       "description": ""
     },
@@ -1907,6 +1922,11 @@
     }
   ],
   "Weapon Master": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Does not gain any additional weapon or armor proficiencies."
+    },
     {
       "level": 1,
       "title": "Ki Damage",
@@ -2112,6 +2132,11 @@
   "Hallowed Witch": [
     {
       "level": 1,
+      "title": "Proficiencies",
+      "description": "Does not gain any additional weapon or armor proficiencies."
+    },
+    {
+      "level": 1,
       "title": "Minor Witchcraft Ability",
       "description": "Cast a minor spell as a spell-like ability 3 times / day."
     },
@@ -2172,6 +2197,11 @@
     }
   ],
   "Shifter": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Does not gain any additional weapon or armor proficiencies."
+    },
     {
       "level": 1,
       "title": "Shifter's Speech",
@@ -2294,6 +2324,11 @@
     }
   ],
   "Pale Master": [
+    {
+      "level": 1,
+      "title": "Proficiencies",
+      "description": "Does not gain any additional weapon or armor proficiencies."
+    },
     {
       "level": 1,
       "title": "Bone Skin +2",
