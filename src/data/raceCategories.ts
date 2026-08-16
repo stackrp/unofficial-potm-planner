@@ -40,7 +40,7 @@ export function autoModForRace(raceName: string): Partial<Record<AbilityKey, num
   return (category && BASE_RACE_AUTO_MOD[category]) || {};
 }
 
-export function subracesForCategory(category: string): string[] {
+function subracesForCategory(category: string): string[] {
   return CATEGORIES[category] ?? [];
 }
 

@@ -33,11 +33,6 @@ export function skillStatusForMaxRank(skillName: string, classNames: string[]): 
   return sawAvailable ? "crossClass" : "unavailable";
 }
 
-/** @deprecated Prefer skillStatusForClass (cost) or skillStatusForMaxRank (caps). */
-export function skillStatusForBuild(skillName: string, classNames: string[]): SkillStatus {
-  return skillStatusForMaxRank(skillName, classNames);
-}
-
 export function skillPointCost(ranks: number, status: SkillStatus): number {
   if (status === "unavailable") return Infinity;
   return status === "class" ? ranks : ranks * 2;
