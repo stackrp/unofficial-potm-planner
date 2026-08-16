@@ -4,6 +4,9 @@ import type { LevelEntry } from "../types";
 export interface GainedAbility {
   characterLevel: number;
   className: string;
+  /** Relative level within `className` (1st, 2nd, ... level taken in that class) this ability
+   * came from — distinct from `characterLevel`, which is when it lands in the overall build. */
+  classLevel: number;
   title: string;
   description: string;
 }
@@ -27,6 +30,7 @@ export function abilitiesGainedThroughBuild(levels: LevelEntry[]): GainedAbility
       gained.push({
         characterLevel: entry.level,
         className: entry.className,
+        classLevel: relLevel,
         title: ability.title,
         description: ability.description,
       });

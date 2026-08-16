@@ -45,7 +45,9 @@ export function ClassAbilities({ levels }: Props) {
                 <li key={i} className="rounded-md border border-neutral-800 bg-neutral-950/40 px-3 py-2">
                   <div className="flex flex-wrap items-baseline gap-2">
                     <span className="text-xs font-mono text-neutral-500">Lv{a.characterLevel}</span>
-                    <span className="text-xs text-neutral-500">{a.className}</span>
+                    <span className="text-xs text-neutral-500">
+                      {a.className} (class lvl {a.classLevel})
+                    </span>
                     <span className="text-sm font-medium text-neutral-200">{a.title}</span>
                   </div>
                   <p className="text-sm text-neutral-400 mt-0.5">{a.description}</p>
