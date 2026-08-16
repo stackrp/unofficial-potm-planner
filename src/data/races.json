@@ -1152,7 +1152,7 @@
  {
   "name": "Korobokuru",
   "abilityAdjustments": {
-   "CON": 2,
+   "CHA": 2,
    "INT": -2
   },
   "effectiveCharacterLevel": null,
@@ -1166,12 +1166,14 @@
    "Offensive training vs. Goblins",
    "Small Stature"
   ],
-  "notes": []
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +2 Cha, -2 Int will be applied once the subrace is selected in-game."
+  ]
  },
  {
   "name": "Ishikorobokuru",
   "abilityAdjustments": {
-   "CON": 2,
+   "CHA": 2,
    "INT": -2
   },
   "effectiveCharacterLevel": null,
@@ -1187,7 +1189,9 @@
    "100% Fire Damage Vulnerability",
    "Small Stature"
   ],
-  "notes": []
+  "notes": [
+   "At character creation, remember that the game engine automatically applies the default +2 Con, -2 Cha adjustment for standard dwarves. An extra +2 Cha, -2 Int will be applied once the subrace is selected in-game."
+  ]
  },
  {
   "name": "Dream Dwarf",
@@ -1945,12 +1949,11 @@
  {
   "name": "Eneko",
   "abilityAdjustments": {
-   "STR": 2,
    "CON": 2,
    "DEX": -2,
-   "CHA": -2
+   "INT": 2
   },
-  "effectiveCharacterLevel": null,
+  "effectiveCharacterLevel": 1,
   "baseOutcastRating": null,
   "traits": [
    "Darkvision",
@@ -1960,7 +1963,7 @@
    "ECL +1"
   ],
   "notes": [
-   "At character creation, remember that the game engine automatically applies the default +2 Str, -2 Int, -2 Cha adjustment for half-orcs."
+   "At character creation, remember that the game engine automatically applies the default +2 Str, -2 Int, -2 Cha adjustment for half-orcs. An extra +2 Con, -2 Dex, +2 Int will be applied once the subrace is selected in-game."
   ]
  },
  {
