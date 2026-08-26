@@ -1,5 +1,6 @@
 import type { Build } from "../types";
 import { categoryForRace } from "../data/raceCategories";
+import { grantedFeatNamesThroughLevel } from "../data/grantedFeats";
 import {
   ALIGNMENT_REQUIREMENT_LABELS,
   ARCANE_CASTER_CLASSES,
@@ -63,9 +64,16 @@ export function evaluatePrestigeClasses(build: Build, perLevel: LevelSnapshot[])
 
     const babBefore = firstIndex > 0 ? perLevel[firstIndex - 1]?.bab ?? 0 : 0;
 
+    // Include feats granted for free by this level — PoTM defaults (Knockdown, Disarm) and
+    // class features that are a fixed feat (Bard Song, Wild Shape, Turn Undead, ...) — so a
+    // prestige requirement like Dirgist's "Bard Song" is met by a Bard level without the player
+    // manually adding the auto-granted feat.
     const featsKnown = new Set(
       build.feats.filter((f) => f.level <= takenAtLevel).map((f) => f.name.trim().toLowerCase())
     );
+    for (const name of grantedFeatNamesThroughLevel(build, takenAtLevel)) {
+      featsKnown.add(name.trim().toLowerCase());
+    }
 
     // Levels in OTHER classes accumulated strictly before this class's own entry level.
     const priorClassLevelCounts: Record<string, number> = {};

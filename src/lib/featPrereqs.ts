@@ -1,4 +1,5 @@
 import { FEAT_PREREQS } from "../data/featPrereqs";
+import { grantedFeatNamesThroughLevel } from "../data/grantedFeats";
 import { categoryForRace } from "../data/raceCategories";
 import { CLASSES } from "../data/classes";
 import { applyAbilityDeltas, babAtLevel, racialAbilityAdjustments } from "./calculator";
@@ -82,7 +83,12 @@ export function checkFeatPrereqs(build: Build, featName: string, atLevel: number
     }
   }
 
+  // Feats the character has by `atLevel`: those explicitly planned, plus feats granted for free —
+  // PoTM defaults (Knockdown, Disarm) and class features that are a fixed feat (Bard Song from a
+  // Bard level, Barbarian Rage, Wild Shape, Turn Undead, ...). The player never adds those by hand,
+  // so without folding them in here dependent feats would wrongly report a missing prerequisite.
   const featsSoFar = new Set(build.feats.filter((f) => f.level <= atLevel).map((f) => f.name));
+  for (const name of grantedFeatNamesThroughLevel(build, atLevel)) featsSoFar.add(name);
 
   if (prereq.requiredFeats) {
     for (const name of prereq.requiredFeats) {
