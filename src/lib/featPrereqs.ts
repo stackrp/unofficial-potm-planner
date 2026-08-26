@@ -2,6 +2,7 @@ import { FEAT_PREREQS } from "../data/featPrereqs";
 import { categoryForRace } from "../data/raceCategories";
 import { CLASSES } from "../data/classes";
 import { applyAbilityDeltas, babAtLevel, racialAbilityAdjustments } from "./calculator";
+import { grantedFeatNamesThroughLevel } from "./autoFeats";
 import type { AbilityKey, AbilityScores, Build } from "../types";
 
 function abilityScoresThroughLevel(build: Build, atLevel: number): AbilityScores {
@@ -82,7 +83,10 @@ export function checkFeatPrereqs(build: Build, featName: string, atLevel: number
     }
   }
 
-  const featsSoFar = new Set(build.feats.filter((f) => f.level <= atLevel).map((f) => f.name));
+  const featsSoFar = new Set([
+    ...build.feats.filter((f) => f.level <= atLevel).map((f) => f.name),
+    ...grantedFeatNamesThroughLevel(build.levels, atLevel),
+  ]);
 
   if (prereq.requiredFeats) {
     for (const name of prereq.requiredFeats) {

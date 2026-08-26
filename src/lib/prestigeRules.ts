@@ -6,6 +6,7 @@ import {
   PRESTIGE_PREREQS,
   type AlignmentRequirement,
 } from "../data/prestigePrereqs";
+import { grantedFeatNamesThroughLevel } from "./autoFeats";
 import type { LevelSnapshot } from "./calculator";
 
 export interface RequirementCheck {
@@ -63,9 +64,15 @@ export function evaluatePrestigeClasses(build: Build, perLevel: LevelSnapshot[])
 
     const babBefore = firstIndex > 0 ? perLevel[firstIndex - 1]?.bab ?? 0 : 0;
 
+    // Entry requirements can be satisfied by a feat the character was granted for free (Bard Song
+    // for Dirgist, Wild Shape for Shifter, ...) just as well as one they added by hand — see
+    // lib/autoFeats.ts.
     const featsKnown = new Set(
       build.feats.filter((f) => f.level <= takenAtLevel).map((f) => f.name.trim().toLowerCase())
     );
+    for (const name of grantedFeatNamesThroughLevel(build.levels, takenAtLevel)) {
+      featsKnown.add(name.trim().toLowerCase());
+    }
 
     // Levels in OTHER classes accumulated strictly before this class's own entry level.
     const priorClassLevelCounts: Record<string, number> = {};

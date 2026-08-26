@@ -3,6 +3,7 @@ import { FEATS, FEATS_BY_NAME } from "../data/feats";
 import { VANILLA_FEATS, VANILLA_FEATS_BY_NAME } from "../data/vanillaFeats";
 import { classAbbr } from "../data/classAbbr";
 import { checkFeatPrereqs } from "../lib/featPrereqs";
+import { grantedFeats } from "../lib/autoFeats";
 import type { LevelSnapshot } from "../lib/calculator";
 import type { Build, FeatEntry } from "../types";
 
@@ -189,6 +190,7 @@ function FeatSlotRow({
 
 export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }: Props) {
   const availableLevels = build.levels.map((l) => l.level);
+  const granted = grantedFeats(build.levels);
 
   function slotsAtLevel(lvl: number): number {
     const idx = build.levels.findIndex((l) => l.level === lvl);
@@ -289,6 +291,26 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
           )}
         </div>
       </div>
+
+      {granted.length > 0 && (
+        <div className="mb-3 rounded-md border border-emerald-900/50 bg-emerald-950/20 px-3 py-2">
+          <div className="text-xs uppercase tracking-wide text-emerald-500 mb-1">
+            Automatically granted (free — not counted against feat slots)
+          </div>
+          <div className="flex flex-wrap gap-x-2 gap-y-1">
+            {granted.map((g, i) => (
+              <span
+                key={i}
+                className="inline-flex items-center gap-1 rounded px-2 py-0.5 bg-emerald-900/30 text-emerald-300 text-xs"
+                title={g.className ? `${g.className} class lvl ${g.classLevel}` : "Every character"}
+              >
+                {g.featName}
+                <span className="text-emerald-600">Lv{g.characterLevel}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
 
       {level == null ? (
         <p className="text-sm text-neutral-500">Add levels first to plan feats.</p>

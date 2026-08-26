@@ -1,9 +1,20 @@
 import { useState } from "react";
 import { abilitiesGainedThroughBuild } from "../lib/classAbilities";
+import { AUTO_CLASS_FEATS } from "../data/autoFeats";
 import type { LevelEntry } from "../types";
 
 interface Props {
   levels: LevelEntry[];
+}
+
+/** True if this class ability is also one of AUTO_CLASS_FEATS's automatic feat grants — i.e. it's
+ * a free feat the character already has, not an open feat-slot choice. */
+function grantedFeatFor(className: string, classLevel: number, title: string): string | null {
+  const normalized = title.replace(/\s*\([^)]*\)\s*$/, "").trim();
+  const grant = (AUTO_CLASS_FEATS[className] ?? []).find(
+    (g) => g.level === classLevel && g.featName === normalized
+  );
+  return grant ? grant.featName : null;
 }
 
 export function ClassAbilities({ levels }: Props) {
@@ -28,9 +39,10 @@ export function ClassAbilities({ levels }: Props) {
       {!collapsed && (
         <>
           <p className="text-xs text-neutral-500 mt-1 mb-3">
-            Class features from nwnravenloft.fandom.com, in the order your plan gains them. Some of
-            these grant a specific feat automatically (called out in the description) rather than a
-            free feat choice — check here before assuming an open feat slot at that level.
+            Class features from nwnravenloft.fandom.com, in the order your plan gains them. Entries
+            tagged <span className="text-emerald-400">free feat</span> grant a specific feat
+            automatically — the planner already counts it as owned for prerequisite checks, and it
+            doesn't use up a feat slot.
           </p>
 
           {gained.length === 0 ? (
@@ -41,18 +53,26 @@ export function ClassAbilities({ levels }: Props) {
             </p>
           ) : (
             <ul className="space-y-2">
-              {gained.map((a, i) => (
-                <li key={i} className="rounded-md border border-neutral-800 bg-neutral-950/40 px-3 py-2">
-                  <div className="flex flex-wrap items-baseline gap-2">
-                    <span className="text-xs font-mono text-neutral-500">Lv{a.characterLevel}</span>
-                    <span className="text-xs text-neutral-500">
-                      {a.className} (class lvl {a.classLevel})
-                    </span>
-                    <span className="text-sm font-medium text-neutral-200">{a.title}</span>
-                  </div>
-                  <p className="text-sm text-neutral-400 mt-0.5">{a.description}</p>
-                </li>
-              ))}
+              {gained.map((a, i) => {
+                const featName = grantedFeatFor(a.className, a.classLevel, a.title);
+                return (
+                  <li key={i} className="rounded-md border border-neutral-800 bg-neutral-950/40 px-3 py-2">
+                    <div className="flex flex-wrap items-baseline gap-2">
+                      <span className="text-xs font-mono text-neutral-500">Lv{a.characterLevel}</span>
+                      <span className="text-xs text-neutral-500">
+                        {a.className} (class lvl {a.classLevel})
+                      </span>
+                      <span className="text-sm font-medium text-neutral-200">{a.title}</span>
+                      {featName && (
+                        <span className="text-xs font-medium text-emerald-400 bg-emerald-950/40 rounded px-1.5 py-0.5">
+                          free feat: {featName}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-neutral-400 mt-0.5">{a.description}</p>
+                  </li>
+                );
+              })}
             </ul>
           )}
         </>

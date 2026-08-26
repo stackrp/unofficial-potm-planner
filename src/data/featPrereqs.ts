@@ -215,6 +215,7 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
       { className: "Monster Hunter", level: 3 },
       { className: "Paladin", level: 3 },
       { className: "Blackguard", level: 3 },
+      { className: "Shaman", level: 3 },
     ],
   },
   "Aura of Life Energy": { skillRanks: [{ skill: "Lore", ranks: 7 }], requiredFeats: ["Turn Undead"] },
@@ -234,6 +235,7 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   "Sacred Vitality": { requiredFeats: ["Turn Undead"] },
 
   // --- Lay on Hands ---
+  "Lay on Hands": { requiredClassAnyOf: [{ className: "Paladin" }, { className: "Divine Champion" }] },
   "Hands of a Healer": { abilityScores: { CHA: 16 }, requiredFeats: ["Lay on Hands"] },
 
   // --- Barbarian ---
@@ -487,6 +489,7 @@ export const FEAT_PREREQS: Record<string, FeatPrereq> = {
   "Shadow Jump": { requiredClass: { className: "Shadowdancer", level: 4 } },
 
   // --- Warlock ---
+  "Eldritch Blast": { requiredClass: { className: "Warlock" } },
   "Eldritch Claws": { requiredClass: { className: "Warlock", level: 3 } },
 
   // --- Warmage ---

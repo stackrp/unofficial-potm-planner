@@ -52,12 +52,13 @@ export const FEATS: FeatDef[] = [
   ]),
 
   ...group("Turn Undead", "Turn Undead", [
-    "Aura of Life Energy", "Death's Favor", "Divine Cleansing", "Divine Energy Focus", "Divine Resistance",
-    "Divine Vigor", "Energy Drain (Feat)", "Profane Boost", "Profane Lifeleech", "Profane Outburst",
-    "Sacred Boost", "Sacred Healing", "Sacred Purification", "Sacred Radiance", "Sacred Vitality",
+    "Turn Undead", "Aura of Life Energy", "Death's Favor", "Divine Cleansing", "Divine Energy Focus",
+    "Divine Resistance", "Divine Vigor", "Energy Drain (Feat)", "Profane Boost", "Profane Lifeleech",
+    "Profane Outburst", "Sacred Boost", "Sacred Healing", "Sacred Purification", "Sacred Radiance",
+    "Sacred Vitality",
   ]),
 
-  ...group("Lay on Hands", "Lay on Hands", ["Hands of a Healer"]),
+  ...group("Lay on Hands", "Lay on Hands", ["Lay on Hands", "Hands of a Healer"]),
 
   ...group("Class", "Barbarian", [
     "Barbarian Rage", "Blazing Berserker", "Channeled Rage (Half-Orc)", "Destructive Rage", "Extended Rage",
@@ -96,7 +97,7 @@ export const FEATS: FeatDef[] = [
   ]),
   ...group("Class", "Blackguard", ["Aura of Despair", "Detect Good"]),
   ...group("Class", "Shadowdancer", ["Shadow Jump"]),
-  ...group("Class", "Warlock", ["Eldritch Claws", "Invocation Focus", "Greater Invocation Focus"]),
+  ...group("Class", "Warlock", ["Eldritch Blast", "Eldritch Claws", "Invocation Focus", "Greater Invocation Focus"]),
   ...group("Class", "Warmage", ["Armored Mage", "Warmage Edge", "Extra Edge"]),
   ...group("Class", "Beguiler", ["Armored Mage (Beguiler)", "Cloaked Casting"]),
   ...group("Class", "Monster Hunter", ["Studied Foe"]),
