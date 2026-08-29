@@ -2,7 +2,12 @@ import { useMemo, useState } from "react";
 import { Modal } from "./Modal";
 import { ALL_SKILLS } from "../data/skills";
 import { skillMaxRank, skillStatusForClass } from "../lib/skillRules";
-import { optimizeSkills, type SkillPriority } from "../lib/skillOptimizer";
+import {
+  optimizeSkills,
+  type GreedMode,
+  type SkillOptimizerResult,
+  type SkillPriority,
+} from "../lib/skillOptimizer";
 import type { LevelSnapshot } from "../lib/calculator";
 import type { Build, SkillAllocation } from "../types";
 
@@ -41,11 +46,110 @@ const PRIORITY_OPTIONS: Array<{ value: SkillPriority | null; label: string }> = 
   { value: "primary", label: "Primary" },
 ];
 
+const GREED_OPTIONS: Array<{ value: GreedMode; label: string; blurb: string }> = [
+  { value: "eager", label: "Level as you go", blurb: "Buy ranks early, barely bank. Skills are online sooner; a few late-window skills may end lower." },
+  { value: "balanced", label: "Balanced", blurb: "Bank a moderate amount for cheaper/later levels." },
+  { value: "max", label: "Endgame-max", blurb: "Bank freely for the highest possible final ranks, even if skills sit low for a while." },
+];
+
+/** A fingerprint of the outcomes that matter, so the mode comparison hides itself when the
+ * three modes would give identical results. */
+function planSignature(r: SkillOptimizerResult): string {
+  return r.perSkill.map((s) => s.achieved).join(",") + `|${r.peakBanked}`;
+}
+
+/** The Banking mode picker, plus a side-by-side outcome table shown only when the modes diverge. */
+function BankingModeSection({
+  greed,
+  onChange,
+  results,
+  comparisonSkills,
+}: {
+  greed: GreedMode;
+  onChange: (greed: GreedMode) => void;
+  results: Record<GreedMode, SkillOptimizerResult>;
+  comparisonSkills: string[];
+}) {
+  const modesDiffer = new Set(GREED_OPTIONS.map((o) => planSignature(results[o.value]))).size > 1;
+
+  return (
+    <div className="mb-3">
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-xs uppercase tracking-wide text-neutral-500">Banking</span>
+        <div className="inline-flex rounded-md border border-neutral-700 overflow-hidden">
+          {GREED_OPTIONS.map((opt) => (
+            <button
+              key={opt.value}
+              type="button"
+              onClick={() => onChange(opt.value)}
+              className={`px-2.5 py-1 text-xs whitespace-nowrap ${
+                greed === opt.value
+                  ? "bg-violet-700 text-white"
+                  : "bg-neutral-900 text-neutral-400 hover:bg-neutral-800"
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+      </div>
+      <p className="mt-1 text-xs text-neutral-500">{GREED_OPTIONS.find((o) => o.value === greed)!.blurb}</p>
+
+      {comparisonSkills.length > 0 && modesDiffer && (
+        <div className="mt-2 overflow-x-auto rounded-md border border-neutral-800">
+          <table className="w-full text-xs border-collapse">
+            <thead>
+              <tr className="text-neutral-400 border-b border-neutral-700 bg-neutral-950/50">
+                <th className="py-2 px-3 text-left font-medium">Mode comparison</th>
+                {GREED_OPTIONS.map((o) => (
+                  <th
+                    key={o.value}
+                    className={`py-2 px-3 text-center font-medium whitespace-nowrap ${greed === o.value ? "text-violet-300" : ""}`}
+                  >
+                    {o.label}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody className="font-mono tabular-nums">
+              {comparisonSkills.map((name) => (
+                <tr key={name} className="border-b border-neutral-800/80">
+                  <td className="py-1.5 px-3 text-left font-sans text-neutral-300 whitespace-nowrap">{name}</td>
+                  {GREED_OPTIONS.map((o) => {
+                    const s = results[o.value].perSkill.find((r) => r.skillName === name);
+                    return (
+                      <td
+                        key={o.value}
+                        className={`py-1.5 px-3 text-center ${s?.fullyFunded ? "text-neutral-400" : "text-amber-400"}`}
+                      >
+                        {s ? `${s.achieved}/${s.target}` : "—"}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+              <tr>
+                <td className="py-1.5 px-3 text-left font-sans text-neutral-500 whitespace-nowrap">Peak points banked</td>
+                {GREED_OPTIONS.map((o) => (
+                  <td key={o.value} className="py-1.5 px-3 text-center text-neutral-400">
+                    {results[o.value].peakBanked}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function SkillOptimizerModal({ build, perLevel, open, onClose, onApply }: Props) {
   const [primarySkills, setPrimarySkills] = useState<string[]>([]);
   const [secondarySkills, setSecondarySkills] = useState<string[]>([]);
   const [caps, setCaps] = useState<Record<string, number>>({});
   const [dumpLeftover, setDumpLeftover] = useState(false);
+  const [greed, setGreed] = useState<GreedMode>("balanced");
   const [confirmingApply, setConfirmingApply] = useState(false);
 
   const finalLevel = build.levels.length > 0 ? build.levels[build.levels.length - 1].level : null;
@@ -77,18 +181,12 @@ export function SkillOptimizerModal({ build, perLevel, open, onClose, onApply }:
     setCaps((prev) => ({ ...prev, [skillName]: clamped }));
   }
 
-  const result = useMemo(
-    () =>
-      optimizeSkills({
-        levels: build.levels,
-        perLevel,
-        primarySkills,
-        secondarySkills,
-        dumpLeftover,
-        caps,
-      }),
-    [build.levels, perLevel, primarySkills, secondarySkills, dumpLeftover, caps]
-  );
+  const results = useMemo((): Record<GreedMode, SkillOptimizerResult> => {
+    const run = (g: GreedMode) =>
+      optimizeSkills({ levels: build.levels, perLevel, primarySkills, secondarySkills, dumpLeftover, caps, greed: g });
+    return { eager: run("eager"), balanced: run("balanced"), max: run("max") };
+  }, [build.levels, perLevel, primarySkills, secondarySkills, dumpLeftover, caps]);
+  const result = results[greed];
   const resultBySkill = useMemo(
     () => Object.fromEntries(result.perSkill.map((r) => [r.skillName, r])),
     [result]
@@ -140,6 +238,13 @@ export function SkillOptimizerModal({ build, perLevel, open, onClose, onApply }:
               </div>
             </div>
           </div>
+
+          <BankingModeSection
+            greed={greed}
+            onChange={setGreed}
+            results={results}
+            comparisonSkills={[...primarySkills, ...secondarySkills]}
+          />
 
           <label className="flex items-center gap-2 mb-3 text-sm text-neutral-300">
             <input
