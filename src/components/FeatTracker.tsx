@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { FEATS, FEATS_BY_NAME } from "../data/feats";
 import { VANILLA_FEATS, VANILLA_FEATS_BY_NAME } from "../data/vanillaFeats";
-import { classAbbr } from "../data/classAbbr";
 import { checkFeatPrereqs } from "../lib/featPrereqs";
+import { levelLabel } from "../lib/levelLabel";
 import { grantedFeats } from "../lib/autoFeats";
 import type { LevelSnapshot } from "../lib/calculator";
 import type { Build, FeatEntry } from "../types";
@@ -197,6 +197,19 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
     return idx >= 0 ? (perLevel[idx]?.featsGained ?? 0) : 0;
   }
 
+  // Running class level for each character level, e.g. char level 3 taking the first Fighter
+  // level → 1. Lets slot labels read "Lvl 3 (Fighter 1)".
+  const classLevelByLevel = useMemo(() => {
+    const counts: Record<string, number> = {};
+    const map = new Map<number, number>();
+    for (const l of build.levels) {
+      if (!l.className) continue;
+      counts[l.className] = (counts[l.className] ?? 0) + 1;
+      map.set(l.level, counts[l.className]);
+    }
+    return map;
+  }, [build.levels]);
+
   const firstIncompleteLevel = availableLevels.find(
     (lvl) => feats.filter((f) => f.level === lvl).length < slotsAtLevel(lvl)
   );
@@ -335,8 +348,8 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
                 const have = feats.filter((f) => f.level === l.level).length;
                 return (
                   <option key={l.level} value={l.level}>
-                    Level {l.level} — {l.className || "unset"}
-                    {count > 0 ? ` (${have}/${count} feats)` : ""}
+                    {levelLabel(l.level, l.className, classLevelByLevel.get(l.level))}
+                    {count > 0 ? ` — ${have}/${count} feats` : ""}
                   </option>
                 );
               })}
@@ -515,8 +528,9 @@ export function FeatTracker({ build, feats, onChange, featsAvailable, perLevel }
                   }}
                 >
                   <span className="text-neutral-600 font-mono text-xs shrink-0 whitespace-nowrap">
-                    Lv {lvl}
-                    {levelClass && ` ${classAbbr(levelClass)} (${levelClass})`}
+                    {levelClass
+                      ? levelLabel(lvl, levelClass, classLevelByLevel.get(lvl))
+                      : `Lvl ${lvl}`}
                   </span>
                   <div className="flex flex-wrap gap-x-2 gap-y-1 items-center min-h-[1.375rem]">
                     {tagged.length === 0 && (

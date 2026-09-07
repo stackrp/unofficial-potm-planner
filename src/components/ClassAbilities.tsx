@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { abilitiesGainedThroughBuild } from "../lib/classAbilities";
 import { AUTO_CLASS_FEATS } from "../data/autoFeats";
+import { levelLabel } from "../lib/levelLabel";
 import type { LevelEntry } from "../types";
 
 interface Props {
@@ -58,9 +59,8 @@ export function ClassAbilities({ levels }: Props) {
                 return (
                   <li key={i} className="rounded-md border border-neutral-800 bg-neutral-950/40 px-3 py-2">
                     <div className="flex flex-wrap items-baseline gap-2">
-                      <span className="text-xs font-mono text-neutral-500">Lv{a.characterLevel}</span>
-                      <span className="text-xs text-neutral-500">
-                        {a.className} (class lvl {a.classLevel})
+                      <span className="text-xs font-mono text-neutral-500">
+                        {levelLabel(a.characterLevel, a.className, a.classLevel)}
                       </span>
                       <span className="text-sm font-medium text-neutral-200">{a.title}</span>
                       {featName && (
