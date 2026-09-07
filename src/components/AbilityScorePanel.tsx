@@ -1,5 +1,5 @@
 import { ABILITY_KEYS, type AbilityKey, type AbilityScores } from "../types";
-import { POINT_BUY_BUDGET, pointBuyCost, racialAbilityAdjustments } from "../lib/calculator";
+import { POINT_BUY_BUDGET, abilityPointBuyCost, racialAbilityAdjustments } from "../lib/calculator";
 
 const LABELS: Record<AbilityKey, string> = {
   STR: "Strength",
@@ -23,7 +23,7 @@ interface Props {
 }
 
 export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, race, template }: Props) {
-  const spent = pointBuyCost(scores);
+  const spent = abilityPointBuyCost(scores, race, template);
   const remaining = POINT_BUY_BUDGET - spent;
   // Full free racial package shown under each score: base auto + subrace extra + template.
   // Entered scores are pure point-buy; finals add these on top (plus level-up increases).
@@ -67,7 +67,9 @@ export function AbilityScorePanel({ scores, onChange, finalScores, finalMods, ra
       <p className="text-xs text-neutral-500 mb-3">
         Enter pure point-buy scores (8–18). Base race auto-mods (e.g. an Elf&apos;s +2 Dex/−2 Con),
         any subrace extras, and template bonuses are listed in violet and applied in the final
-        totals below — they are not spent from the 30-point budget.
+        totals below. As in NWN, the budget is charged against the adjusted score: a racial bonus
+        that lifts a stat past 14 or 16 makes the points bought in that range cost more, and a
+        racial penalty on a stat left at 8 is free.
       </p>
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
         {ABILITY_KEYS.map((key) => {

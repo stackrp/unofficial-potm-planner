@@ -65,7 +65,7 @@ export function abilityModifier(score: number): number {
   return Math.floor((score - 10) / 2);
 }
 
-/** Point-buy cost table used by the original planner: 8-14 cost 1pt/rank, 15-16 cost 2pt/rank, 17-18 cost 3pt/rank. */
+/** Point-buy cost table: 8-14 cost 1pt/rank, 15-16 cost 2pt/rank, 17-18 cost 3pt/rank. */
 export function pointBuyCost(scores: AbilityScores): number {
   let total = 0;
   for (const key of ABILITY_KEYS) {
@@ -75,6 +75,26 @@ export function pointBuyCost(scores: AbilityScores): number {
     if (s > 16) total += s - 16;
   }
   return total;
+}
+
+const ALL_EIGHTS: AbilityScores = { STR: 8, DEX: 8, CON: 8, INT: 8, WIS: 8, CHA: 8 };
+
+/**
+ * Point-buy cost the way NWN/PoTM actually charges it: the on-screen score starts
+ * at 8 + racial adjustment, and every point you raise it is priced by the *target*
+ * score's bracket. A racial bonus is free but still pushes purchased points into
+ * the pricier 15-16 / 17-18 bands — so a +2-INT race dialing INT to a final 16
+ * pays as 10->16 (8 pts), not 8->14 (6 pts). A racial penalty on a stat left at
+ * its floor is free (both terms carry it, so it cancels).
+ *
+ * `base` is the pure point-buy input (8-18); racial/template mods are added here.
+ * Level-up increases aren't point-buy and are excluded.
+ */
+export function abilityPointBuyCost(base: AbilityScores, race: string, template = ""): number {
+  const adj = racialAbilityAdjustments(race, template);
+  return (
+    pointBuyCost(applyAbilityDeltas(base, adj)) - pointBuyCost(applyAbilityDeltas(ALL_EIGHTS, adj))
+  );
 }
 
 /**
@@ -453,7 +473,7 @@ export function calculateBuild(build: Build): CalculatedBuild {
     abilityModifiers: finalMods,
   };
 
-  const abilityPointsSpent = pointBuyCost(build.baseAbilityScores);
+  const abilityPointsSpent = abilityPointBuyCost(build.baseAbilityScores, build.race, build.template);
   if (abilityPointsSpent > POINT_BUY_BUDGET) {
     errors.push(`Ability scores cost ${abilityPointsSpent} points, exceeding the ${POINT_BUY_BUDGET}-point budget.`);
   }
