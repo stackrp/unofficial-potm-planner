@@ -6,9 +6,12 @@ interface Props {
   onClose: () => void;
   title: string;
   children: ReactNode;
+  /** Tailwind max-width class for the dialog. Defaults to a comfortable reading width; pass a
+   * wider one for dense tables that would otherwise overflow. */
+  widthClass?: string;
 }
 
-export function Modal({ open, onClose, title, children }: Props) {
+export function Modal({ open, onClose, title, children, widthClass = "max-w-3xl" }: Props) {
   useEffect(() => {
     if (!open) return;
     function onKeyDown(e: KeyboardEvent) {
@@ -30,7 +33,7 @@ export function Modal({ open, onClose, title, children }: Props) {
         aria-modal="true"
         aria-label={title}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-lg border border-neutral-700 bg-neutral-900 p-4 shadow-xl"
+        className={`w-full ${widthClass} max-h-[90vh] overflow-y-auto rounded-lg border border-neutral-700 bg-neutral-900 p-4 shadow-xl`}
       >
         <div className="mb-3 flex items-center justify-between gap-2">
           <h2 className="text-lg font-semibold text-neutral-100">{title}</h2>

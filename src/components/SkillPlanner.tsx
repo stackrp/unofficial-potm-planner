@@ -56,6 +56,8 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
   const [collapsed, setCollapsed] = useState(false);
   const [confirmingReset, setConfirmingReset] = useState(false);
   const [showOptimizer, setShowOptimizer] = useState(false);
+  // Bumped on Reset to remount the optimizer modal, clearing its picks / caps / requirements.
+  const [optimizerKey, setOptimizerKey] = useState(0);
   const [hiddenSkills, setHiddenSkills] = useState<Set<string>>(() => loadHiddenSkills());
   const level =
     requestedLevel != null && availableLevels.includes(requestedLevel)
@@ -119,6 +121,7 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
   function handleResetSkills() {
     onChange([]);
     setConfirmingReset(false);
+    setOptimizerKey((k) => k + 1);
   }
 
   // Skills with ranks from a previous level surface first, so you can quickly keep adding to what
@@ -393,6 +396,7 @@ export function SkillPlanner({ build, onChange, perLevel }: Props) {
         </>
       )}
       <SkillOptimizerModal
+        key={optimizerKey}
         build={build}
         perLevel={perLevel}
         open={showOptimizer}

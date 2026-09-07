@@ -30,6 +30,11 @@ export interface SkillOptimizerOptions {
   caps?: Record<string, number>;
   /** Banking aggressiveness. Defaults to "balanced". */
   greed?: GreedMode;
+  /** Hard "need N ranks by character level L" checkpoints (skillName -> [{ byLevel, ranks }]),
+   * from feat / prestige prerequisites the build commits to. The optimizer funds these ranks
+   * before merely-wanted skills and pushes their purchases to land at or before `byLevel`. A
+   * skill named here is planned even if it isn't in primary/secondary. */
+  deadlines?: Record<string, { byLevel: number; ranks: number }[]>;
 }
 
 export interface SkillOptimizerSkillResult {
@@ -41,9 +46,21 @@ export interface SkillOptimizerSkillResult {
   fullyFunded: boolean;
 }
 
+export interface SkillDeadlineResult {
+  skillName: string;
+  byLevel: number;
+  /** Ranks the prerequisite needs by `byLevel`. */
+  ranks: number;
+  /** Ranks the plan actually has by `byLevel`. */
+  achieved: number;
+  met: boolean;
+}
+
 export interface SkillOptimizerResult {
   allocations: SkillAllocation[];
   perSkill: SkillOptimizerSkillResult[];
+  /** One row per feat/prestige rank checkpoint the plan was asked to hit. */
+  deadlineResults: SkillDeadlineResult[];
   totalAvailable: number;
   totalSpent: number;
   endBanked: number;
@@ -57,6 +74,12 @@ const UNBOUNDED = Number.MAX_SAFE_INTEGER;
 // Per-rank pull for a wanted skill. Must dwarf the largest possible earliness cost on a path
 // (bounded by the number of levels), so funding a rank always beats buying it one level sooner.
 const FUND_REWARD = 1_000_000;
+
+// Added to a class-rate purchase's cost for every deadline it lands *after*, so the min-cost
+// solver spends a skill's early ranks on levels at or before its checkpoints. Well below
+// FUND_REWARD (a rank the plan can only buy late is still worth buying), well above any path's
+// earliness cost, and capped in use so several deadlines can't stack past FUND_REWARD.
+const LATE_PENALTY = 50_000;
 
 // "eager" / "balanced" carry limits, as a fraction of one level's average skill points.
 const EAGER_BANK_FRACTION = 0.35;
@@ -186,6 +209,17 @@ interface PlanContext {
    * levels the skill was actually a class skill — see `skillMaxRank`). */
   rankCeiling: (skillName: string, i: number) => number;
   status: (skillName: string, i: number) => SkillStatus;
+  /** Feat/prestige rank checkpoints for a skill, sorted by `byLevel`. Empty for most skills. */
+  deadlinesOf: (skillName: string) => { byLevel: number; ranks: number }[];
+}
+
+/** Cost of buying a class-rate rank of `s` at level index `i`: buy-early bias (`i`), plus a
+ * penalty for each of the skill's deadlines this level falls after. */
+function classEntryCost(ctx: PlanContext, s: string, i: number): number {
+  const charLevel = ctx.levels[i].level;
+  let late = 0;
+  for (const d of ctx.deadlinesOf(s)) if (charLevel > d.byLevel) late++;
+  return i + Math.min(late, 9) * LATE_PENALTY;
 }
 
 interface ClassRateSolution {
@@ -236,7 +270,9 @@ function solveClassRateByPriority(ctx: PlanContext): ClassRateSolution {
     entryEdge[s] = [];
     for (let i = 0; i < n; i++) {
       entryEdge[s][i] =
-        ctx.status(s, i) === "class" ? mcf.addEdge(budNode(i), capNode[s][i], UNBOUNDED, i) : null;
+        ctx.status(s, i) === "class"
+          ? mcf.addEdge(budNode(i), capNode[s][i], UNBOUNDED, classEntryCost(ctx, s, i))
+          : null;
       const onward = i < n - 1 ? capNode[s][i + 1] : sinkNode[s];
       mcf.addEdge(capNode[s][i], onward, ctx.rankCeiling(s, i), 0);
     }
@@ -374,14 +410,10 @@ export function optimizeSkills(opts: SkillOptimizerOptions): SkillOptimizerResul
   const { levels, perLevel, primarySkills, secondarySkills, dumpLeftover, caps } = opts;
   const greed: GreedMode = opts.greed ?? "balanced";
 
-  const priorityOf: Record<string, SkillPriority> = {};
-  for (const name of primarySkills) priorityOf[name] = "primary";
-  for (const name of secondarySkills) priorityOf[name] = "secondary";
-  const selected = [...primarySkills, ...secondarySkills].filter((s, i, a) => a.indexOf(s) === i);
-
   if (levels.length === 0) {
     return {
-      allocations: [], perSkill: [], totalAvailable: 0, totalSpent: 0, endBanked: 0, peakBanked: 0,
+      allocations: [], perSkill: [], deadlineResults: [],
+      totalAvailable: 0, totalSpent: 0, endBanked: 0, peakBanked: 0,
     };
   }
 
@@ -390,6 +422,38 @@ export function optimizeSkills(opts: SkillOptimizerOptions): SkillOptimizerResul
   const totalAvailable = sum(points);
   const finalLevel = levels[n - 1].level;
 
+  // Normalize deadlines: keep only real, still-reachable requirements, one per (skill, byLevel).
+  const deadlines: Record<string, { byLevel: number; ranks: number }[]> = {};
+  for (const [skillName, list] of Object.entries(opts.deadlines ?? {})) {
+    const naturalMax = skillMaxRank(skillName, levels, finalLevel);
+    const perByLevel = new Map<number, number>();
+    for (const { byLevel, ranks } of list) {
+      const clamped = Math.min(ranks, naturalMax);
+      if (clamped <= 0 || byLevel <= 0) continue;
+      perByLevel.set(byLevel, Math.max(perByLevel.get(byLevel) ?? 0, clamped));
+    }
+    if (perByLevel.size > 0) {
+      deadlines[skillName] = [...perByLevel.entries()]
+        .map(([byLevel, ranks]) => ({ byLevel, ranks }))
+        .sort((a, b) => a.byLevel - b.byLevel);
+    }
+  }
+
+  const priorityOf: Record<string, SkillPriority> = {};
+  for (const name of primarySkills) priorityOf[name] = "primary";
+  for (const name of secondarySkills) priorityOf[name] = "secondary";
+  // A skill with a deadline is planned whether or not the user marked it, and is funded first —
+  // earliest checkpoint first — so a feat/prestige requirement outranks a nice-to-have skill.
+  for (const name of Object.keys(deadlines)) priorityOf[name] ??= "primary";
+  const deadlineSkills = Object.keys(deadlines).sort(
+    (a, b) => deadlines[a][0].byLevel - deadlines[b][0].byLevel || a.localeCompare(b),
+  );
+  const selected = [
+    ...deadlineSkills,
+    ...primarySkills.filter((s) => !deadlines[s]),
+    ...secondarySkills.filter((s) => !deadlines[s]),
+  ].filter((s, i, a) => a.indexOf(s) === i);
+
   const ctx: PlanContext = {
     levels,
     n,
@@ -397,6 +461,7 @@ export function optimizeSkills(opts: SkillOptimizerOptions): SkillOptimizerResul
     bankCap: bankCapFor(greed, points),
     selected,
     priorityOf,
+    deadlinesOf: (skillName) => deadlines[skillName] ?? [],
     target: (skillName) => {
       const naturalMax = skillMaxRank(skillName, levels, finalLevel);
       const cap = caps?.[skillName];
@@ -434,6 +499,17 @@ export function optimizeSkills(opts: SkillOptimizerOptions): SkillOptimizerResul
     return { skillName, priority: priorityOf[skillName], target, achieved, fullyFunded: achieved >= target };
   });
 
+  const deadlineResults: SkillDeadlineResult[] = Object.entries(deadlines)
+    .flatMap(([skillName, list]) =>
+      list.map(({ byLevel, ranks }) => {
+        const achieved = allocations
+          .filter((a) => a.skillName === skillName && a.level <= byLevel)
+          .reduce((s, a) => s + a.ranks, 0);
+        return { skillName, byLevel, ranks, achieved, met: achieved >= ranks };
+      }),
+    )
+    .sort((a, b) => a.byLevel - b.byLevel || a.skillName.localeCompare(b.skillName));
+
   const spentByLevel = new Array(n).fill(0);
   for (const s of selected) for (let i = 0; i < n; i++) spentByLevel[i] += classBought[s][i] + crossBought[s][i] * 2;
   for (const s of dumpNames) for (let i = 0; i < n; i++) spentByLevel[i] += dumpBought[s][i];
@@ -451,6 +527,7 @@ export function optimizeSkills(opts: SkillOptimizerOptions): SkillOptimizerResul
   return {
     allocations,
     perSkill,
+    deadlineResults,
     totalAvailable,
     totalSpent,
     endBanked: totalAvailable - totalSpent,
